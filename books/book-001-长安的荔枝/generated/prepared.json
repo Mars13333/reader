@@ -1,0 +1,951 @@
+{
+  "bookId": "book-001-长安的荔枝",
+  "scriptSha256": "FD7143BB99FD808739CDF5E2EF5FEFB50023477205AB71A5B895DF75BCE65C29",
+  "title": "《长安的荔枝》：职场人真正该学的，不是拼命",
+  "author": "马伯庸",
+  "angle": "从不可能指标、项目验证、跨部门协作与隐藏成本四个角度复盘李善德的选择",
+  "deliveryMode": "audio-master",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 18821,
+  "totalDurationSeconds": 627.3666666666667,
+  "audioFile": "assets/audio/changan-lychee-liufei.wav",
+  "voice": {
+    "engine": "火山引擎豆包语音合成2.0",
+    "name": "刘飞男声",
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  },
+  "segments": [
+    {
+      "id": "01-hook",
+      "section": "开场",
+      "kicker": "一个不可能完成的指标",
+      "narration": "如果领导突然交给你一个任务：把五千多里之外的鲜荔枝，在变味之前送到长安。没有成熟方案，没有明确预算，失败还可能丢掉性命。你会怎么办？今天我们不把《长安的荔枝》当成传奇故事，而把它当成一次大型项目复盘。你会发现，李善德真正厉害的地方，不是拼命，而是把一句荒唐命令，变成了可以验证、可以拆解、也可以追责的系统工程。更值得警惕的是，目标越荒唐，组织越可能用热血口号掩盖管理失灵。",
+      "sourceRefs": [
+        {
+          "label": "任务与距离",
+          "lines": "1-2, 90-105"
+        }
+      ],
+      "narrationDurationSeconds": 40.25975,
+      "narrationStartFrame": 15,
+      "narrationEndFrame": 1223,
+      "startFrame": 0,
+      "durationInFrames": 1235
+    },
+    {
+      "id": "02-context",
+      "section": "故事背景",
+      "kicker": "先分清小说与史实",
+      "narration": "马伯庸写的是一部历史小说。主人公李善德、十一天路线和许多具体情节，都经过文学创作，不能直接当成唐代史料。作者在文后也明确说明，荔枝来自哪里历来有不同说法，书中的保鲜方法还综合了宋代到清代的记载。但这并不妨碍小说提出一个极现代的问题：上面一句轻飘飘的要求，到了执行层，究竟会变成多少流程、成本和人的命运？所以我们要讨论的不是技术考据，而是权力如何把一句话变成一连串现实代价。",
+      "sourceRefs": [
+        {
+          "label": "文后说明",
+          "lines": "1289-1309"
+        }
+      ],
+      "narrationDurationSeconds": 38.220333333333336,
+      "narrationStartFrame": 1235,
+      "narrationEndFrame": 2382,
+      "startFrame": 1235,
+      "durationInFrames": 1160
+    },
+    {
+      "id": "03-assignment",
+      "section": "第一层",
+      "kicker": "烂任务为什么总落到老实人头上",
+      "narration": "李善德只是上林署里一个从九品小吏。他刚借钱买下一间小宅子，背着沉重房贷，只想让妻子和女儿安稳生活。偏偏同僚把一份人人看见都躲的差事塞给了他：为贵妃生辰运送鲜荔枝。文书在多个衙门之间一路下压，最后由最没有议价能力的人签字承担。这像不像职场里那种目标先定、责任下沉、资源以后再说的项目？当资源和权限没有同步下放时，所谓信任，常常只是把风险单方面转给执行者。",
+      "sourceRefs": [
+        {
+          "label": "买房与差遣",
+          "lines": "6-32, 44-105"
+        }
+      ],
+      "narrationDurationSeconds": 36.890875,
+      "narrationStartFrame": 2395,
+      "narrationEndFrame": 3501,
+      "startFrame": 2395,
+      "durationInFrames": 1119
+    },
+    {
+      "id": "04-measure",
+      "section": "第二层",
+      "kicker": "别争论不可能，先定义不可能",
+      "narration": "大多数人面对这种任务，第一反应是争论：做不到。但李善德是明算科出身，他追问的是：荔枝到底几天变色、变香、变味？哪一种更耐放？马能跑多快？水路能不能昼夜前进？每个关卡会耽误多久？他把一个模糊的绝望，拆成品种、采摘、容器、路线、载具、气候和交接七类变量。只要变量能够被测量，所谓不可能，就不再是一句情绪，而是一组等待验证的假设。这一步看似慢，实际上是在争取判断权：先把问题说清楚，才知道该向哪里用力。",
+      "sourceRefs": [
+        {
+          "label": "变量拆解",
+          "lines": "374-381"
+        }
+      ],
+      "narrationDurationSeconds": 46.05375,
+      "narrationStartFrame": 3514,
+      "narrationEndFrame": 4896,
+      "startFrame": 3514,
+      "durationInFrames": 1394
+    },
+    {
+      "id": "05-experiment",
+      "section": "第三层",
+      "kicker": "先做小实验，再押上全部资源",
+      "narration": "他没有直接组织一支声势浩大的队伍，而是先做试验。四支小队走四条路线，用双层瓮、盐水清洗和不同换乘方式，跑到荔枝彻底变味为止。第一次失败，就记录每条路线倒在哪里；第二次改良容器和速度；第三次再组合最优路线。书里最适合项目经理记住的一句话是：就算失败，我也想知道，自己倒在距离终点多远的地方。失败如果能产生数据，就不是白白失败。真正有效的复盘不是寻找一个背锅者，而是把下一次决策需要的证据保留下来。",
+      "sourceRefs": [
+        {
+          "label": "四路实验",
+          "lines": "363-400, 403-405"
+        }
+      ],
+      "narrationDurationSeconds": 45.138416666666664,
+      "narrationStartFrame": 4908,
+      "narrationEndFrame": 6262,
+      "startFrame": 4908,
+      "durationInFrames": 1367
+    },
+    {
+      "id": "06-breakthrough",
+      "section": "验证结果",
+      "kicker": "十一天，不是灵感，是迭代结果",
+      "narration": "转机来自一个很小的现场知识：荔枝不要一颗颗摘，而要连枝切下。李善德由此想到，把枝条直接植入瓮中，枝条枯萎后再摘果，改用盐洗、隔水、竹箨和冰镇。第三次试验里，保鲜时间被推到十一天。民间队伍只跑到丹江口，但数据证明，如果朝廷提高换马频率、减少关津等待，并在江陵以后调冰接力，十一天理论上可以抵达长安。方案终于从愿望变成了证据。所谓经验，并不是资历带来的直觉，而是现场观察经过试验后形成的可重复方法。",
+      "sourceRefs": [
+        {
+          "label": "连枝与十一天",
+          "lines": "539-615, 663-683"
+        }
+      ],
+      "narrationDurationSeconds": 44.0205,
+      "narrationStartFrame": 6275,
+      "narrationEndFrame": 7596,
+      "startFrame": 6275,
+      "durationInFrames": 1333
+    },
+    {
+      "id": "07-system",
+      "section": "第四层",
+      "kicker": "交付靠系统，不靠一个英雄",
+      "narration": "很多人会把这个故事理解成一个小人物靠意志创造奇迹。但真正让荔枝抵达长安的，不是某匹日行千里的神马，而是一整条接力网络：二十多个州县、驿站、船只、骑手、冰窖和关卡，在准确时间完成交接。李善德设计格眼簿，把职责、数量、地点和时限写清楚，两个部门需要配合时，簿子还能合并核对。这其实就是古代版的任务看板、接口协议和责任矩阵。英雄可以解决一次危机，稳定的接口、节奏和备份机制，才能持续完成同类交付。",
+      "sourceRefs": [
+        {
+          "label": "协作与格眼簿",
+          "lines": "684-708, 869-885"
+        }
+      ],
+      "narrationDurationSeconds": 39.5075,
+      "narrationStartFrame": 7608,
+      "narrationEndFrame": 8793,
+      "startFrame": 7608,
+      "durationInFrames": 1198
+    },
+    {
+      "id": "08-communication",
+      "section": "向上沟通",
+      "kicker": "方案还必须让决策者听懂",
+      "narration": "李善德回到长安后，发现技术方案只是第一关。他在权相面前用一面白墙汇报：先讲物性和难点，再讲三次试验，然后给出路线、职责、成本和死线。没有空话，所有数字都能互相对上。他把复杂项目压缩成一个清楚结论：十一天。职场里的专业价值，不只在于你做了多少分析，更在于你能不能把分析变成决策者可以判断、资源方可以执行的方案。汇报的目的不是展示自己辛苦，而是帮助拥有资源的人尽快看清选择和后果。",
+      "sourceRefs": [
+        {
+          "label": "白墙汇报",
+          "lines": "818-843"
+        }
+      ],
+      "narrationDurationSeconds": 37.57225,
+      "narrationStartFrame": 8806,
+      "narrationEndFrame": 9933,
+      "startFrame": 8806,
+      "durationInFrames": 1140
+    },
+    {
+      "id": "09-power",
+      "section": "成功之后",
+      "kicker": "功劳会向上走，代价会向下走",
+      "narration": "方案一旦被证明可行，原本躲着这件事的人纷纷出现。权力接管了项目，功劳有了新的归属；曾经借钱、提供商路、陪他试错的胡商苏谅，却在利益重新分配时被排除。李善德越接近成功，朋友越少，心里的亏欠越重。小说在这里提醒我们：项目上线不等于项目成功。还要看承诺有没有兑现，伙伴有没有被牺牲，以及成果最终服务了谁。如果合作关系只在困难时被需要、成功后被遗忘，再漂亮的结果也透支了下一次协作。",
+      "sourceRefs": [
+        {
+          "label": "苏谅与利益重分配",
+          "lines": "901-934"
+        }
+      ],
+      "narrationDurationSeconds": 37.89383333333333,
+      "narrationStartFrame": 9946,
+      "narrationEndFrame": 11083,
+      "startFrame": 9946,
+      "durationInFrames": 1149
+    },
+    {
+      "id": "10-cost",
+      "section": "真正的成本",
+      "kicker": "预算表里没有的人，也在付款",
+      "narration": "书中最锋利的部分，不是荔枝送到长安，而是李善德终于看见了成功背后的账。最初方案估算，两瓮荔枝至少七百贯，平均一枚十七贯五百钱，比一头波斯骆驼还贵。后来权相说不用国库一文钱，听起来像极了零预算完成。可钱没有消失，它只是被转嫁：驿户多交钱，农民服额外徭役，马匹累死，骑手受伤，果园为了取枝被成片砍坏。对上面是一个惊喜，对下面却可能是一场灾难。预算没有写下的损耗并不会消失，它只会以抱怨、离职、事故和信任崩塌的形式回来。",
+      "sourceRefs": [
+        {
+          "label": "预算与转嫁",
+          "lines": "706-708, 1029-1169"
+        }
+      ],
+      "narrationDurationSeconds": 47.968625,
+      "narrationStartFrame": 11095,
+      "narrationEndFrame": 12534,
+      "startFrame": 11095,
+      "durationInFrames": 1452
+    },
+    {
+      "id": "11-boundary",
+      "section": "人的边界",
+      "kicker": "执行力不能代替价值判断",
+      "narration": "李善德曾经为了项目继续，默许果园被毁，也辜负了帮助他的朋友。可当鲜荔枝真的送进宫门，他没有喜悦，只有厌恶。他拿着沿途账册去见权相，问出那个最关键的问题：不从国库出，不从内帑出，成本到底从哪里来？当然只能从驿站、果园和百姓身上榨取。他因此失去前途，却重新确认了一件事：一个人不能只对交付负责，也要对交付造成的后果负责。这不是鼓励逞强，而是提醒我们：专业判断里，本来就应该包含对人的影响。",
+      "sourceRefs": [
+        {
+          "label": "对质与反思",
+          "lines": "1158-1175, 1185-1188"
+        }
+      ],
+      "narrationDurationSeconds": 41.57625,
+      "narrationStartFrame": 12547,
+      "narrationEndFrame": 13794,
+      "startFrame": 12547,
+      "durationInFrames": 1260
+    },
+    {
+      "id": "12-lessons-a",
+      "section": "职场启示一",
+      "kicker": "先把目标从口号变成约束",
+      "narration": "如果把这本小说放回今天的职场，第一条启示是：收到不合理目标时，不要只说能或不能。先写清截止时间、质量标准、预算、资源和失败责任，再把关键假设列出来。第二条启示是：在重投入之前做最小验证。用小样本测试最危险的环节，保留每次失败的数据。你不一定马上找到成功路线，但至少可以尽早排除错误路线，并让风险从个人感觉变成团队共同看得见的事实。把这些条件留在会议纪要里，也是在为项目和自己建立必要的证据链。",
+      "sourceRefs": [
+        {
+          "label": "实验方法",
+          "lines": "374-400, 517-528"
+        }
+      ],
+      "narrationDurationSeconds": 42.041583333333335,
+      "narrationStartFrame": 13807,
+      "narrationEndFrame": 15068,
+      "startFrame": 13807,
+      "durationInFrames": 1274
+    },
+    {
+      "id": "13-lessons-b",
+      "section": "职场启示二",
+      "kicker": "再追问谁承担了系统成本",
+      "narration": "第三条启示是：把交付设计成接力系统。每个节点只有明确输入、输出、负责人和最晚完成时间，整体速度才不会依赖某个英雄透支。第四条更重要：成本不只是财务数字。加班、健康、供应商关系、基层损耗、用户信任，都是项目成本。所谓零预算、无条件配合和使命必达，往往只是把价格藏到了更弱的人身上。真正成熟的负责人，必须把这些外部代价也写进决策。管理者真正要优化的，不只是交付速度，还包括系统能不能让人长期待下去。",
+      "sourceRefs": [
+        {
+          "label": "系统与成本",
+          "lines": "663-708, 1149-1171"
+        }
+      ],
+      "narrationDurationSeconds": 42.197125,
+      "narrationStartFrame": 15081,
+      "narrationEndFrame": 16346,
+      "startFrame": 15081,
+      "durationInFrames": 1278
+    },
+    {
+      "id": "14-ending",
+      "section": "结局",
+      "kicker": "他丢了长安，却找回了自己",
+      "narration": "李善德最后被杖责并流放岭南，刚买的长安宅子也没住成。他带着家人回到荔枝园，补种被砍坏的树，过起普通农人的生活。一年后安史之乱爆发，长安陷落，他反而因为离开权力中心保全了家人。这个结局并不是说离职就能获得自由，而是在提醒我们：职位、房子和体面都很重要，但它们不该重要到让一个人永远闭嘴，或者把自己珍视的原则全部抵押出去。真正的选择不是体面和失败二选一，而是弄清哪些代价可以承受，哪些不能交换。",
+      "sourceRefs": [
+        {
+          "label": "流放与果园结局",
+          "lines": "1241-1288"
+        }
+      ],
+      "narrationDurationSeconds": 40.43245833333334,
+      "narrationStartFrame": 16359,
+      "narrationEndFrame": 17572,
+      "startFrame": 16359,
+      "durationInFrames": 1226
+    },
+    {
+      "id": "15-close",
+      "section": "最后",
+      "kicker": "千古艰难，唯有做事",
+      "narration": "作者在文后写：千古艰难唯做事，一事功成万头秃。但《长安的荔枝》真正留下的问题是，事情做成以后，你是否还认得镜子里的自己。下一次再遇到不可能任务，希望你既有李善德拆解问题、验证路线的本事，也保留追问代价、守住边界的勇气。做成事情是一种能力，知道什么不该被牺牲，则决定了这种能力最终会把人带向哪里。这里是十分钟读懂一本书。你最近遇到过最不合理的职场指标是什么？欢迎写在评论区。",
+      "sourceRefs": [
+        {
+          "label": "作者创作主题",
+          "lines": "1289-1299"
+        }
+      ],
+      "narrationDurationSeconds": 39.8075,
+      "narrationStartFrame": 17585,
+      "narrationEndFrame": 18779,
+      "startFrame": 17585,
+      "durationInFrames": 1236
+    }
+  ],
+  "shots": [
+    {
+      "id": "01-hook-01",
+      "segmentId": "01-hook",
+      "section": "开场",
+      "kicker": "一个不可能完成的指标",
+      "image": "assets/storyboards/01-hook.png",
+      "panel": 0,
+      "label": "卷宗高墙下的不可能任务",
+      "isSegmentStart": true,
+      "startFrame": 0,
+      "durationInFrames": 308
+    },
+    {
+      "id": "01-hook-02",
+      "segmentId": "01-hook",
+      "section": "开场",
+      "kicker": "一个不可能完成的指标",
+      "image": "assets/storyboards/01-hook.png",
+      "panel": 1,
+      "label": "危险文书突然落到李善德手中",
+      "isSegmentStart": false,
+      "startFrame": 308,
+      "durationInFrames": 308
+    },
+    {
+      "id": "01-hook-03",
+      "segmentId": "01-hook",
+      "section": "开场",
+      "kicker": "一个不可能完成的指标",
+      "image": "assets/storyboards/01-hook.png",
+      "panel": 2,
+      "label": "一枚荔枝、路线与截止期限",
+      "isSegmentStart": false,
+      "startFrame": 616,
+      "durationInFrames": 308
+    },
+    {
+      "id": "01-hook-04",
+      "segmentId": "01-hook",
+      "section": "开场",
+      "kicker": "一个不可能完成的指标",
+      "image": "assets/storyboards/01-hook.png",
+      "panel": 3,
+      "label": "把荒唐命令拆成系统工程",
+      "isSegmentStart": false,
+      "startFrame": 924,
+      "durationInFrames": 311
+    },
+    {
+      "id": "02-context-01",
+      "segmentId": "02-context",
+      "section": "故事背景",
+      "kicker": "先分清小说与史实",
+      "image": "assets/storyboards/02-context.png",
+      "panel": 0,
+      "label": "不同时代的史料与路线记录",
+      "isSegmentStart": true,
+      "startFrame": 1235,
+      "durationInFrames": 386
+    },
+    {
+      "id": "02-context-02",
+      "segmentId": "02-context",
+      "section": "故事背景",
+      "kicker": "先分清小说与史实",
+      "image": "assets/storyboards/02-context.png",
+      "panel": 1,
+      "label": "文学想象与历史记录的边界",
+      "isSegmentStart": false,
+      "startFrame": 1621,
+      "durationInFrames": 386
+    },
+    {
+      "id": "02-context-03",
+      "segmentId": "02-context",
+      "section": "故事背景",
+      "kicker": "先分清小说与史实",
+      "image": "assets/storyboards/02-context.png",
+      "panel": 3,
+      "label": "上层命令转化为基层流程与成本",
+      "isSegmentStart": false,
+      "startFrame": 2007,
+      "durationInFrames": 388
+    },
+    {
+      "id": "03-assignment-01",
+      "segmentId": "03-assignment",
+      "section": "第一层",
+      "kicker": "烂任务为什么总落到老实人头上",
+      "image": "assets/storyboards/03-assignment.png",
+      "panel": 0,
+      "label": "刚买下小宅的一家人",
+      "isSegmentStart": true,
+      "startFrame": 2395,
+      "durationInFrames": 373
+    },
+    {
+      "id": "03-assignment-02",
+      "segmentId": "03-assignment",
+      "section": "第一层",
+      "kicker": "烂任务为什么总落到老实人头上",
+      "image": "assets/storyboards/03-assignment.png",
+      "panel": 2,
+      "label": "危险差事在衙门中层层下压",
+      "isSegmentStart": false,
+      "startFrame": 2768,
+      "durationInFrames": 373
+    },
+    {
+      "id": "03-assignment-03",
+      "segmentId": "03-assignment",
+      "section": "第一层",
+      "kicker": "烂任务为什么总落到老实人头上",
+      "image": "assets/storyboards/03-assignment.png",
+      "panel": 3,
+      "label": "最没议价能力的人独自签字",
+      "isSegmentStart": false,
+      "startFrame": 3141,
+      "durationInFrames": 373
+    },
+    {
+      "id": "04-measure-01",
+      "segmentId": "04-measure",
+      "section": "第二层",
+      "kicker": "别争论不可能，先定义不可能",
+      "image": "assets/storyboards/04-measure.png",
+      "panel": 0,
+      "label": "观察荔枝从新鲜到腐坏的变化",
+      "isSegmentStart": true,
+      "startFrame": 3514,
+      "durationInFrames": 348
+    },
+    {
+      "id": "04-measure-02",
+      "segmentId": "04-measure",
+      "section": "第二层",
+      "kicker": "别争论不可能，先定义不可能",
+      "image": "assets/storyboards/04-measure.png",
+      "panel": 1,
+      "label": "在果园比较不同品种",
+      "isSegmentStart": false,
+      "startFrame": 3862,
+      "durationInFrames": 348
+    },
+    {
+      "id": "04-measure-03",
+      "segmentId": "04-measure",
+      "section": "第二层",
+      "kicker": "别争论不可能，先定义不可能",
+      "image": "assets/storyboards/04-measure.png",
+      "panel": 2,
+      "label": "测量马程、水路与关卡时间",
+      "isSegmentStart": false,
+      "startFrame": 4210,
+      "durationInFrames": 348
+    },
+    {
+      "id": "04-measure-04",
+      "segmentId": "04-measure",
+      "section": "第二层",
+      "kicker": "别争论不可能，先定义不可能",
+      "image": "assets/storyboards/04-measure.png",
+      "panel": 3,
+      "label": "把模糊绝望拆成可测变量",
+      "isSegmentStart": false,
+      "startFrame": 4558,
+      "durationInFrames": 350
+    },
+    {
+      "id": "05-experiment-01",
+      "segmentId": "05-experiment",
+      "section": "第三层",
+      "kicker": "先做小实验，再押上全部资源",
+      "image": "assets/storyboards/05-experiment.png",
+      "panel": 0,
+      "label": "四支小队走四条试验路线",
+      "isSegmentStart": true,
+      "startFrame": 4908,
+      "durationInFrames": 341
+    },
+    {
+      "id": "05-experiment-02",
+      "segmentId": "05-experiment",
+      "section": "第三层",
+      "kicker": "先做小实验，再押上全部资源",
+      "image": "assets/storyboards/05-experiment.png",
+      "panel": 1,
+      "label": "测试容器、盐洗与包装",
+      "isSegmentStart": false,
+      "startFrame": 5249,
+      "durationInFrames": 341
+    },
+    {
+      "id": "05-experiment-03",
+      "segmentId": "05-experiment",
+      "section": "第三层",
+      "kicker": "先做小实验，再押上全部资源",
+      "image": "assets/storyboards/05-experiment.png",
+      "panel": 2,
+      "label": "记录每条失败路线的终点",
+      "isSegmentStart": false,
+      "startFrame": 5590,
+      "durationInFrames": 341
+    },
+    {
+      "id": "05-experiment-04",
+      "segmentId": "05-experiment",
+      "section": "第三层",
+      "kicker": "先做小实验，再押上全部资源",
+      "image": "assets/storyboards/05-experiment.png",
+      "panel": 3,
+      "label": "用失败数据组合下一轮方案",
+      "isSegmentStart": false,
+      "startFrame": 5931,
+      "durationInFrames": 344
+    },
+    {
+      "id": "06-breakthrough-01",
+      "segmentId": "06-breakthrough",
+      "section": "验证结果",
+      "kicker": "十一天，不是灵感，是迭代结果",
+      "image": "assets/storyboards/06-breakthrough.png",
+      "panel": 0,
+      "label": "果农连枝砍下带来现场启发",
+      "isSegmentStart": true,
+      "startFrame": 6275,
+      "durationInFrames": 333
+    },
+    {
+      "id": "06-breakthrough-02",
+      "segmentId": "06-breakthrough",
+      "section": "验证结果",
+      "kicker": "十一天，不是灵感，是迭代结果",
+      "image": "assets/storyboards/06-breakthrough.png",
+      "panel": 1,
+      "label": "把带果枝条直接植入瓮中",
+      "isSegmentStart": false,
+      "startFrame": 6608,
+      "durationInFrames": 333
+    },
+    {
+      "id": "06-breakthrough-03",
+      "segmentId": "06-breakthrough",
+      "section": "验证结果",
+      "kicker": "十一天，不是灵感，是迭代结果",
+      "image": "assets/storyboards/06-breakthrough.png",
+      "panel": 2,
+      "label": "盐洗、竹箨、隔水与冰镇",
+      "isSegmentStart": false,
+      "startFrame": 6941,
+      "durationInFrames": 333
+    },
+    {
+      "id": "06-breakthrough-04",
+      "segmentId": "06-breakthrough",
+      "section": "验证结果",
+      "kicker": "十一天，不是灵感，是迭代结果",
+      "image": "assets/storyboards/06-breakthrough.png",
+      "panel": 3,
+      "label": "远程试验验证保鲜突破",
+      "isSegmentStart": false,
+      "startFrame": 7274,
+      "durationInFrames": 334
+    },
+    {
+      "id": "07-system-01",
+      "segmentId": "07-system",
+      "section": "第四层",
+      "kicker": "交付靠系统，不靠一个英雄",
+      "image": "assets/storyboards/07-system.png",
+      "panel": 0,
+      "label": "照亮南方到长安的接力网络",
+      "isSegmentStart": true,
+      "startFrame": 7608,
+      "durationInFrames": 299
+    },
+    {
+      "id": "07-system-02",
+      "segmentId": "07-system",
+      "section": "第四层",
+      "kicker": "交付靠系统，不靠一个英雄",
+      "image": "assets/storyboards/07-system.png",
+      "panel": 1,
+      "label": "驿站骑手与马匹无缝交接",
+      "isSegmentStart": false,
+      "startFrame": 7907,
+      "durationInFrames": 299
+    },
+    {
+      "id": "07-system-03",
+      "segmentId": "07-system",
+      "section": "第四层",
+      "kicker": "交付靠系统，不靠一个英雄",
+      "image": "assets/storyboards/07-system.png",
+      "panel": 2,
+      "label": "船、骑手和冰块在码头协同",
+      "isSegmentStart": false,
+      "startFrame": 8206,
+      "durationInFrames": 299
+    },
+    {
+      "id": "07-system-04",
+      "segmentId": "07-system",
+      "section": "第四层",
+      "kicker": "交付靠系统，不靠一个英雄",
+      "image": "assets/storyboards/07-system.png",
+      "panel": 3,
+      "label": "格眼簿核对职责与时限",
+      "isSegmentStart": false,
+      "startFrame": 8505,
+      "durationInFrames": 301
+    },
+    {
+      "id": "08-communication-01",
+      "segmentId": "08-communication",
+      "section": "向上沟通",
+      "kicker": "方案还必须让决策者听懂",
+      "image": "assets/storyboards/08-communication.png",
+      "panel": 0,
+      "label": "把复杂分析压缩为清晰方案",
+      "isSegmentStart": true,
+      "startFrame": 8806,
+      "durationInFrames": 285
+    },
+    {
+      "id": "08-communication-02",
+      "segmentId": "08-communication",
+      "section": "向上沟通",
+      "kicker": "方案还必须让决策者听懂",
+      "image": "assets/storyboards/08-communication.png",
+      "panel": 1,
+      "label": "在白墙前汇报路线和试验",
+      "isSegmentStart": false,
+      "startFrame": 9091,
+      "durationInFrames": 285
+    },
+    {
+      "id": "08-communication-03",
+      "segmentId": "08-communication",
+      "section": "向上沟通",
+      "kicker": "方案还必须让决策者听懂",
+      "image": "assets/storyboards/08-communication.png",
+      "panel": 2,
+      "label": "决策者判断资源、成本与死线",
+      "isSegmentStart": false,
+      "startFrame": 9376,
+      "durationInFrames": 285
+    },
+    {
+      "id": "08-communication-04",
+      "segmentId": "08-communication",
+      "section": "向上沟通",
+      "kicker": "方案还必须让决策者听懂",
+      "image": "assets/storyboards/08-communication.png",
+      "panel": 3,
+      "label": "多个部门接收同一执行方案",
+      "isSegmentStart": false,
+      "startFrame": 9661,
+      "durationInFrames": 285
+    },
+    {
+      "id": "09-power-01",
+      "segmentId": "09-power",
+      "section": "成功之后",
+      "kicker": "功劳会向上走，代价会向下走",
+      "image": "assets/storyboards/09-power.png",
+      "panel": 0,
+      "label": "方案可行后权力迅速接管",
+      "isSegmentStart": true,
+      "startFrame": 9946,
+      "durationInFrames": 383
+    },
+    {
+      "id": "09-power-02",
+      "segmentId": "09-power",
+      "section": "成功之后",
+      "kicker": "功劳会向上走，代价会向下走",
+      "image": "assets/storyboards/09-power.png",
+      "panel": 2,
+      "label": "苏谅被排除在利益分配之外",
+      "isSegmentStart": false,
+      "startFrame": 10329,
+      "durationInFrames": 383
+    },
+    {
+      "id": "09-power-03",
+      "segmentId": "09-power",
+      "section": "成功之后",
+      "kicker": "功劳会向上走，代价会向下走",
+      "image": "assets/storyboards/09-power.png",
+      "panel": 3,
+      "label": "庆功声中李善德独自愧疚",
+      "isSegmentStart": false,
+      "startFrame": 10712,
+      "durationInFrames": 383
+    },
+    {
+      "id": "10-cost-01",
+      "segmentId": "10-cost",
+      "section": "真正的成本",
+      "kicker": "预算表里没有的人，也在付款",
+      "image": "assets/storyboards/10-cost.png",
+      "panel": 0,
+      "label": "两瓮荔枝背后的天价成本",
+      "isSegmentStart": true,
+      "startFrame": 11095,
+      "durationInFrames": 363
+    },
+    {
+      "id": "10-cost-02",
+      "segmentId": "10-cost",
+      "section": "真正的成本",
+      "kicker": "预算表里没有的人，也在付款",
+      "image": "assets/storyboards/10-cost.png",
+      "panel": 1,
+      "label": "零国库预算只是把命令继续下压",
+      "isSegmentStart": false,
+      "startFrame": 11458,
+      "durationInFrames": 363
+    },
+    {
+      "id": "10-cost-03",
+      "segmentId": "10-cost",
+      "section": "真正的成本",
+      "kicker": "预算表里没有的人，也在付款",
+      "image": "assets/storyboards/10-cost.png",
+      "panel": 2,
+      "label": "驿卒、骑手与马匹承担损耗",
+      "isSegmentStart": false,
+      "startFrame": 11821,
+      "durationInFrames": 363
+    },
+    {
+      "id": "10-cost-04",
+      "segmentId": "10-cost",
+      "section": "真正的成本",
+      "kicker": "预算表里没有的人，也在付款",
+      "image": "assets/storyboards/10-cost.png",
+      "panel": 3,
+      "label": "果园和农户为项目付款",
+      "isSegmentStart": false,
+      "startFrame": 12184,
+      "durationInFrames": 363
+    },
+    {
+      "id": "11-boundary-01",
+      "segmentId": "11-boundary",
+      "section": "人的边界",
+      "kicker": "执行力不能代替价值判断",
+      "image": "assets/storyboards/11-boundary.png",
+      "panel": 0,
+      "label": "荔枝进宫时他只感到厌恶",
+      "isSegmentStart": true,
+      "startFrame": 12547,
+      "durationInFrames": 315
+    },
+    {
+      "id": "11-boundary-02",
+      "segmentId": "11-boundary",
+      "section": "人的边界",
+      "kicker": "执行力不能代替价值判断",
+      "image": "assets/storyboards/11-boundary.png",
+      "panel": 1,
+      "label": "账册浮现沿途真实代价",
+      "isSegmentStart": false,
+      "startFrame": 12862,
+      "durationInFrames": 315
+    },
+    {
+      "id": "11-boundary-03",
+      "segmentId": "11-boundary",
+      "section": "人的边界",
+      "kicker": "执行力不能代替价值判断",
+      "image": "assets/storyboards/11-boundary.png",
+      "panel": 2,
+      "label": "拿着成本账册质问权相",
+      "isSegmentStart": false,
+      "startFrame": 13177,
+      "durationInFrames": 315
+    },
+    {
+      "id": "11-boundary-04",
+      "segmentId": "11-boundary",
+      "section": "人的边界",
+      "kicker": "执行力不能代替价值判断",
+      "image": "assets/storyboards/11-boundary.png",
+      "panel": 3,
+      "label": "失去前途却重新站直",
+      "isSegmentStart": false,
+      "startFrame": 13492,
+      "durationInFrames": 315
+    },
+    {
+      "id": "12-lessons-a-01",
+      "segmentId": "12-lessons-a",
+      "section": "职场启示一",
+      "kicker": "先把目标从口号变成约束",
+      "image": "assets/storyboards/12-lessons-a.png",
+      "panel": 0,
+      "label": "现代职场中的不合理目标",
+      "isSegmentStart": true,
+      "startFrame": 13807,
+      "durationInFrames": 318
+    },
+    {
+      "id": "12-lessons-a-02",
+      "segmentId": "12-lessons-a",
+      "section": "职场启示一",
+      "kicker": "先把目标从口号变成约束",
+      "image": "assets/storyboards/12-lessons-a.png",
+      "panel": 1,
+      "label": "先定义期限、质量、预算与责任",
+      "isSegmentStart": false,
+      "startFrame": 14125,
+      "durationInFrames": 318
+    },
+    {
+      "id": "12-lessons-a-03",
+      "segmentId": "12-lessons-a",
+      "section": "职场启示一",
+      "kicker": "先把目标从口号变成约束",
+      "image": "assets/storyboards/12-lessons-a.png",
+      "panel": 2,
+      "label": "用小成本验证最危险环节",
+      "isSegmentStart": false,
+      "startFrame": 14443,
+      "durationInFrames": 318
+    },
+    {
+      "id": "12-lessons-a-04",
+      "segmentId": "12-lessons-a",
+      "section": "职场启示一",
+      "kicker": "先把目标从口号变成约束",
+      "image": "assets/storyboards/12-lessons-a.png",
+      "panel": 3,
+      "label": "公开失败数据而不是追责个人",
+      "isSegmentStart": false,
+      "startFrame": 14761,
+      "durationInFrames": 320
+    },
+    {
+      "id": "13-lessons-b-01",
+      "segmentId": "13-lessons-b",
+      "section": "职场启示二",
+      "kicker": "再追问谁承担了系统成本",
+      "image": "assets/storyboards/13-lessons-b.png",
+      "panel": 0,
+      "label": "把交付设计为清晰接力",
+      "isSegmentStart": true,
+      "startFrame": 15081,
+      "durationInFrames": 319
+    },
+    {
+      "id": "13-lessons-b-02",
+      "segmentId": "13-lessons-b",
+      "section": "职场启示二",
+      "kicker": "再追问谁承担了系统成本",
+      "image": "assets/storyboards/13-lessons-b.png",
+      "panel": 1,
+      "label": "系统协作替代英雄式透支",
+      "isSegmentStart": false,
+      "startFrame": 15400,
+      "durationInFrames": 319
+    },
+    {
+      "id": "13-lessons-b-03",
+      "segmentId": "13-lessons-b",
+      "section": "职场启示二",
+      "kicker": "再追问谁承担了系统成本",
+      "image": "assets/storyboards/13-lessons-b.png",
+      "panel": 2,
+      "label": "看见健康、关系和信任成本",
+      "isSegmentStart": false,
+      "startFrame": 15719,
+      "durationInFrames": 319
+    },
+    {
+      "id": "13-lessons-b-04",
+      "segmentId": "13-lessons-b",
+      "section": "职场启示二",
+      "kicker": "再追问谁承担了系统成本",
+      "image": "assets/storyboards/13-lessons-b.png",
+      "panel": 3,
+      "label": "在结果与人的代价之间决策",
+      "isSegmentStart": false,
+      "startFrame": 16038,
+      "durationInFrames": 321
+    },
+    {
+      "id": "14-ending-01",
+      "segmentId": "14-ending",
+      "section": "结局",
+      "kicker": "他丢了长安，却找回了自己",
+      "image": "assets/storyboards/14-ending.png",
+      "panel": 0,
+      "label": "一家人离开长安踏上流放路",
+      "isSegmentStart": true,
+      "startFrame": 16359,
+      "durationInFrames": 306
+    },
+    {
+      "id": "14-ending-02",
+      "segmentId": "14-ending",
+      "section": "结局",
+      "kicker": "他丢了长安，却找回了自己",
+      "image": "assets/storyboards/14-ending.png",
+      "panel": 1,
+      "label": "回到岭南补种被毁果树",
+      "isSegmentStart": false,
+      "startFrame": 16665,
+      "durationInFrames": 306
+    },
+    {
+      "id": "14-ending-03",
+      "segmentId": "14-ending",
+      "section": "结局",
+      "kicker": "他丢了长安，却找回了自己",
+      "image": "assets/storyboards/14-ending.png",
+      "panel": 2,
+      "label": "成为普通果农后的安稳生活",
+      "isSegmentStart": false,
+      "startFrame": 16971,
+      "durationInFrames": 306
+    },
+    {
+      "id": "14-ending-04",
+      "segmentId": "14-ending",
+      "section": "结局",
+      "kicker": "他丢了长安，却找回了自己",
+      "image": "assets/storyboards/14-ending.png",
+      "panel": 3,
+      "label": "乱世中的远离与保全",
+      "isSegmentStart": false,
+      "startFrame": 17277,
+      "durationInFrames": 308
+    },
+    {
+      "id": "15-close-01",
+      "segmentId": "15-close",
+      "section": "最后",
+      "kicker": "千古艰难，唯有做事",
+      "image": "assets/storyboards/15-close.png",
+      "panel": 0,
+      "label": "项目做成后是否仍认得自己",
+      "isSegmentStart": true,
+      "startFrame": 17585,
+      "durationInFrames": 412
+    },
+    {
+      "id": "15-close-02",
+      "segmentId": "15-close",
+      "section": "最后",
+      "kicker": "千古艰难，唯有做事",
+      "image": "assets/storyboards/15-close.png",
+      "panel": 1,
+      "label": "古代小吏与现代职场人的平行处境",
+      "isSegmentStart": false,
+      "startFrame": 17997,
+      "durationInFrames": 412
+    },
+    {
+      "id": "15-close-03",
+      "segmentId": "15-close",
+      "section": "最后",
+      "kicker": "千古艰难，唯有做事",
+      "image": "assets/storyboards/15-close.png",
+      "panel": 3,
+      "label": "守住边界后重新生长的道路",
+      "isSegmentStart": false,
+      "startFrame": 18409,
+      "durationInFrames": 412
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "showProgressBar": false,
+  "header": {
+    "text": "《长安的荔枝》· 职场项目复盘",
+    "top": 290,
+    "sideMargin": 120,
+    "fontSize": 34
+  },
+  "keywordCard": {
+    "top": 500
+  }
+}

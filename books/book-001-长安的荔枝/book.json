@@ -1,0 +1,29 @@
+{
+  "id": "book-001-长安的荔枝",
+  "title": "长安的荔枝",
+  "author": "马伯庸",
+  "audience": "25～40岁职场人",
+  "status": "completed",
+  "createdAt": "2026-08-20T00:00:00.000Z",
+  "updatedAt": "2026-08-20T12:46:00.684Z",
+  "completedAt": "2026-08-20T12:25:00.000Z",
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "voiceName": "刘飞男声",
+    "speechRate": -10
+  },
+  "editorialStandards": {
+    "allowClosingBrandLine": true,
+    "note": "历史成片保持原样；从 book-002 开始禁止使用“这里是十分钟读懂一本书”。"
+  },
+  "deliverables": {
+    "video": "output/final.mp4",
+    "covers": [
+      "output/cover-9x16.png",
+      "output/cover-3x4.png",
+      "output/cover-4x3.png"
+    ],
+    "subtitles": false,
+    "standaloneAudio": false
+  }
+}

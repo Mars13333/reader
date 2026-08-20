@@ -1,0 +1,152 @@
+{
+  "panelLayout": "2x2",
+  "panelOrder": ["top-left", "top-right", "bottom-left", "bottom-right"],
+  "segments": [
+    {
+      "id": "01-hook",
+      "image": "assets/storyboards/01-hook.png",
+      "shots": [
+        {"panel": 0, "label": "卷宗高墙下的不可能任务"},
+        {"panel": 1, "label": "危险文书突然落到李善德手中"},
+        {"panel": 2, "label": "一枚荔枝、路线与截止期限"},
+        {"panel": 3, "label": "把荒唐命令拆成系统工程"}
+      ]
+    },
+    {
+      "id": "02-context",
+      "image": "assets/storyboards/02-context.png",
+      "shots": [
+        {"panel": 0, "label": "不同时代的史料与路线记录"},
+        {"panel": 1, "label": "文学想象与历史记录的边界"},
+        {"panel": 3, "label": "上层命令转化为基层流程与成本"}
+      ]
+    },
+    {
+      "id": "03-assignment",
+      "image": "assets/storyboards/03-assignment.png",
+      "shots": [
+        {"panel": 0, "label": "刚买下小宅的一家人"},
+        {"panel": 2, "label": "危险差事在衙门中层层下压"},
+        {"panel": 3, "label": "最没议价能力的人独自签字"}
+      ]
+    },
+    {
+      "id": "04-measure",
+      "image": "assets/storyboards/04-measure.png",
+      "shots": [
+        {"panel": 0, "label": "观察荔枝从新鲜到腐坏的变化"},
+        {"panel": 1, "label": "在果园比较不同品种"},
+        {"panel": 2, "label": "测量马程、水路与关卡时间"},
+        {"panel": 3, "label": "把模糊绝望拆成可测变量"}
+      ]
+    },
+    {
+      "id": "05-experiment",
+      "image": "assets/storyboards/05-experiment.png",
+      "shots": [
+        {"panel": 0, "label": "四支小队走四条试验路线"},
+        {"panel": 1, "label": "测试容器、盐洗与包装"},
+        {"panel": 2, "label": "记录每条失败路线的终点"},
+        {"panel": 3, "label": "用失败数据组合下一轮方案"}
+      ]
+    },
+    {
+      "id": "06-breakthrough",
+      "image": "assets/storyboards/06-breakthrough.png",
+      "shots": [
+        {"panel": 0, "label": "果农连枝砍下带来现场启发"},
+        {"panel": 1, "label": "把带果枝条直接植入瓮中"},
+        {"panel": 2, "label": "盐洗、竹箨、隔水与冰镇"},
+        {"panel": 3, "label": "远程试验验证保鲜突破"}
+      ]
+    },
+    {
+      "id": "07-system",
+      "image": "assets/storyboards/07-system.png",
+      "shots": [
+        {"panel": 0, "label": "照亮南方到长安的接力网络"},
+        {"panel": 1, "label": "驿站骑手与马匹无缝交接"},
+        {"panel": 2, "label": "船、骑手和冰块在码头协同"},
+        {"panel": 3, "label": "格眼簿核对职责与时限"}
+      ]
+    },
+    {
+      "id": "08-communication",
+      "image": "assets/storyboards/08-communication.png",
+      "shots": [
+        {"panel": 0, "label": "把复杂分析压缩为清晰方案"},
+        {"panel": 1, "label": "在白墙前汇报路线和试验"},
+        {"panel": 2, "label": "决策者判断资源、成本与死线"},
+        {"panel": 3, "label": "多个部门接收同一执行方案"}
+      ]
+    },
+    {
+      "id": "09-power",
+      "image": "assets/storyboards/09-power.png",
+      "shots": [
+        {"panel": 0, "label": "方案可行后权力迅速接管"},
+        {"panel": 2, "label": "苏谅被排除在利益分配之外"},
+        {"panel": 3, "label": "庆功声中李善德独自愧疚"}
+      ]
+    },
+    {
+      "id": "10-cost",
+      "image": "assets/storyboards/10-cost.png",
+      "shots": [
+        {"panel": 0, "label": "两瓮荔枝背后的天价成本"},
+        {"panel": 1, "label": "零国库预算只是把命令继续下压"},
+        {"panel": 2, "label": "驿卒、骑手与马匹承担损耗"},
+        {"panel": 3, "label": "果园和农户为项目付款"}
+      ]
+    },
+    {
+      "id": "11-boundary",
+      "image": "assets/storyboards/11-boundary.png",
+      "shots": [
+        {"panel": 0, "label": "荔枝进宫时他只感到厌恶"},
+        {"panel": 1, "label": "账册浮现沿途真实代价"},
+        {"panel": 2, "label": "拿着成本账册质问权相"},
+        {"panel": 3, "label": "失去前途却重新站直"}
+      ]
+    },
+    {
+      "id": "12-lessons-a",
+      "image": "assets/storyboards/12-lessons-a.png",
+      "shots": [
+        {"panel": 0, "label": "现代职场中的不合理目标"},
+        {"panel": 1, "label": "先定义期限、质量、预算与责任"},
+        {"panel": 2, "label": "用小成本验证最危险环节"},
+        {"panel": 3, "label": "公开失败数据而不是追责个人"}
+      ]
+    },
+    {
+      "id": "13-lessons-b",
+      "image": "assets/storyboards/13-lessons-b.png",
+      "shots": [
+        {"panel": 0, "label": "把交付设计为清晰接力"},
+        {"panel": 1, "label": "系统协作替代英雄式透支"},
+        {"panel": 2, "label": "看见健康、关系和信任成本"},
+        {"panel": 3, "label": "在结果与人的代价之间决策"}
+      ]
+    },
+    {
+      "id": "14-ending",
+      "image": "assets/storyboards/14-ending.png",
+      "shots": [
+        {"panel": 0, "label": "一家人离开长安踏上流放路"},
+        {"panel": 1, "label": "回到岭南补种被毁果树"},
+        {"panel": 2, "label": "成为普通果农后的安稳生活"},
+        {"panel": 3, "label": "乱世中的远离与保全"}
+      ]
+    },
+    {
+      "id": "15-close",
+      "image": "assets/storyboards/15-close.png",
+      "shots": [
+        {"panel": 0, "label": "项目做成后是否仍认得自己"},
+        {"panel": 1, "label": "古代小吏与现代职场人的平行处境"},
+        {"panel": 3, "label": "守住边界后重新生长的道路"}
+      ]
+    }
+  ]
+}

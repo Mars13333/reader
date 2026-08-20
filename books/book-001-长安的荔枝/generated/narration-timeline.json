@@ -1,0 +1,135 @@
+{
+  "bookId": "book-001-长安的荔枝",
+  "scriptSha256": "FD7143BB99FD808739CDF5E2EF5FEFB50023477205AB71A5B895DF75BCE65C29",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "audioFile": "assets/audio/changan-lychee-liufei.wav",
+  "totalDurationSeconds": 627.36075,
+  "segments": [
+    {
+      "id": "01-hook",
+      "section": "开场",
+      "startSeconds": 0.5,
+      "endSeconds": 40.75975,
+      "durationSeconds": 40.25975,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "02-context",
+      "section": "故事背景",
+      "startSeconds": 41.17975,
+      "endSeconds": 79.40008333333333,
+      "durationSeconds": 38.220333333333336,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "03-assignment",
+      "section": "第一层",
+      "startSeconds": 79.82008333333333,
+      "endSeconds": 116.71095833333334,
+      "durationSeconds": 36.890875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "04-measure",
+      "section": "第二层",
+      "startSeconds": 117.13095833333334,
+      "endSeconds": 163.18470833333333,
+      "durationSeconds": 46.05375,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "05-experiment",
+      "section": "第三层",
+      "startSeconds": 163.60470833333332,
+      "endSeconds": 208.743125,
+      "durationSeconds": 45.138416666666664,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "06-breakthrough",
+      "section": "验证结果",
+      "startSeconds": 209.16312499999998,
+      "endSeconds": 253.18362499999998,
+      "durationSeconds": 44.0205,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "07-system",
+      "section": "第四层",
+      "startSeconds": 253.60362499999997,
+      "endSeconds": 293.11112499999996,
+      "durationSeconds": 39.5075,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "08-communication",
+      "section": "向上沟通",
+      "startSeconds": 293.531125,
+      "endSeconds": 331.10337499999997,
+      "durationSeconds": 37.57225,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "09-power",
+      "section": "成功之后",
+      "startSeconds": 331.523375,
+      "endSeconds": 369.4172083333333,
+      "durationSeconds": 37.89383333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "10-cost",
+      "section": "真正的成本",
+      "startSeconds": 369.8372083333333,
+      "endSeconds": 417.80583333333334,
+      "durationSeconds": 47.968625,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "11-boundary",
+      "section": "人的边界",
+      "startSeconds": 418.22583333333336,
+      "endSeconds": 459.80208333333337,
+      "durationSeconds": 41.57625,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "12-lessons-a",
+      "section": "职场启示一",
+      "startSeconds": 460.2220833333334,
+      "endSeconds": 502.2636666666667,
+      "durationSeconds": 42.041583333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "13-lessons-b",
+      "section": "职场启示二",
+      "startSeconds": 502.68366666666674,
+      "endSeconds": 544.8807916666667,
+      "durationSeconds": 42.197125,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "14-ending",
+      "section": "结局",
+      "startSeconds": 545.3007916666667,
+      "endSeconds": 585.73325,
+      "durationSeconds": 40.43245833333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "15-close",
+      "section": "最后",
+      "startSeconds": 586.15325,
+      "endSeconds": 625.96075,
+      "durationSeconds": 39.8075,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

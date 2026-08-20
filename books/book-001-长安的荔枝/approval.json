@@ -1,0 +1,12 @@
+{
+  "bookId": "book-001-长安的荔枝",
+  "status": "approved",
+  "version": 1,
+  "scriptSha256": "FD7143BB99FD808739CDF5E2EF5FEFB50023477205AB71A5B895DF75BCE65C29",
+  "approvedAt": "2026-08-20T12:22:33.112Z",
+  "segments": 15,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

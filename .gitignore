@@ -1,0 +1,8 @@
+node_modules/
+books/*/generated/.narration-build/
+books/*/output/preview.mp4
+.runtime/
+*.log
+.env
+.env.*
+!.env.example

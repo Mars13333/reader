@@ -1,0 +1,49 @@
+{
+  "name": "ai-book-video",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "book:new": "node scripts/book-manager.mjs new",
+    "book:list": "node scripts/book-manager.mjs list",
+    "book:use": "node scripts/book-manager.mjs use",
+    "book:status": "node scripts/book-manager.mjs status",
+    "book:draft": "node scripts/generate-review.mjs",
+    "book:review": "node scripts/generate-review.mjs",
+    "book:approve": "node scripts/approve-script.mjs",
+    "book:approval-check": "node scripts/approve-script.mjs --check",
+    "book:preflight": "node scripts/preflight.mjs",
+    "book:voice": "node scripts/generate-narration.mjs",
+    "book:voice:force": "node scripts/generate-narration.mjs --force",
+    "book:prepare": "node scripts/prepare.mjs",
+    "book:check": "node scripts/check.mjs",
+    "book:render": "npm run book:prepare && node scripts/render-book.mjs all",
+    "book:covers": "npm run book:prepare && node scripts/render-book.mjs covers",
+    "book:studio": "npm run book:prepare && node scripts/render-book.mjs studio",
+    "book:produce": "node scripts/produce.mjs",
+    "voice:generate": "npm run book:voice",
+    "voice:regenerate": "npm run book:voice:force",
+    "prepare": "npm run book:prepare",
+    "studio": "npm run book:studio",
+    "render:video": "npm run book:prepare && node scripts/render-book.mjs video",
+    "render:covers": "npm run book:covers",
+    "render": "npm run book:render",
+    "render:preview": "npm run book:prepare && node scripts/render-book.mjs preview",
+    "build": "npm run book:produce",
+    "compositions": "npm run book:prepare && node scripts/render-book.mjs compositions",
+    "lint": "tsc --noEmit",
+    "test": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.513",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.513"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "typescript": "^5.9.2"
+  }
+}

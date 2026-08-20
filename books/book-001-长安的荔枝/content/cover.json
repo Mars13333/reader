@@ -1,0 +1,29 @@
+{
+  "image": "assets/cover/changan-lychee-cover-art.png",
+  "eyebrow": "马伯庸《长安的荔枝》",
+  "headline": ["皇帝一句话", "打工人", "跑断腿"],
+  "badge": "10分钟职场复盘",
+  "layouts": {
+    "vertical9x16": {
+      "left": 72,
+      "eyebrowTop": 150,
+      "headlineTop": 260,
+      "badgeTop": 730,
+      "artObjectPosition": "center center"
+    },
+    "portrait3x4": {
+      "left": 64,
+      "eyebrowTop": 70,
+      "headlineTop": 160,
+      "badgeTop": 610,
+      "artObjectPosition": "center 50%"
+    },
+    "landscape4x3": {
+      "left": 80,
+      "eyebrowTop": 64,
+      "headlineTop": 178,
+      "badgeTop": 720,
+      "artObjectPosition": "center 36%"
+    }
+  }
+}
