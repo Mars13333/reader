@@ -11,6 +11,8 @@ import {
   assertFixedNarration,
   assertScriptApproved,
   getBookContext,
+  getPronunciationOverrides,
+  getPronunciationOverridesSha256,
   readJson,
 } from './book-context.mjs';
 
@@ -19,6 +21,9 @@ const {approval, scriptState} = assertScriptApproved(context);
 const config = readJson(path.join(context.contentDir, 'narration-config.json'));
 const script = scriptState.script;
 assertFixedNarration(config);
+const pronunciationOverrides = getPronunciationOverrides(config);
+const pronunciationOverridesSha256 =
+  getPronunciationOverridesSha256(config);
 
 const buildDirectory = path.join(context.generatedDir, '.narration-build');
 const wavPath = path.join(context.publicDir, config.audioFile);
@@ -32,7 +37,9 @@ if (!force && existsSync(wavPath) && existsSync(timelinePath)) {
     cachedTimeline.scriptSha256 === approval.scriptSha256 &&
     cachedTimeline.speaker === config.speaker &&
     cachedTimeline.speechRate === config.speechRate &&
-    cachedTimeline.sampleRate === config.sampleRate;
+    cachedTimeline.sampleRate === config.sampleRate &&
+    cachedTimeline.pronunciationOverridesSha256 ===
+      pronunciationOverridesSha256;
   if (cacheMatches) {
     console.log(`已复用批准脚本对应的口播主音频：${wavPath}`);
     process.exit(0);
@@ -117,6 +124,30 @@ const formatClock = (seconds) => {
   return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}.${String(millis).padStart(3, '0')}`;
 };
 
+const applyPronunciationOverrides = (text) => {
+  let ttsText = text;
+  for (const override of pronunciationOverrides) {
+    ttsText = ttsText.split(override.term).join(override.ttsText);
+  }
+  return ttsText;
+};
+
+for (const override of pronunciationOverrides) {
+  const uses = script.segments.reduce(
+    (count, segment) =>
+      count + segment.narration.split(override.term).length - 1,
+    0,
+  );
+  if (uses === 0) {
+    throw new Error(
+      `Pronunciation override is unused in the approved script: ${override.term}`,
+    );
+  }
+  console.log(
+    `发音覆盖：${override.term} → ${override.ttsText}（${override.pronunciation}），共 ${uses} 处；仅改变合成文本。`,
+  );
+}
+
 rmSync(buildDirectory, {recursive: true, force: true});
 mkdirSync(buildDirectory, {recursive: true});
 mkdirSync(path.dirname(wavPath), {recursive: true});
@@ -137,7 +168,7 @@ try {
     );
     console.log(`TTS ${index + 1}/${script.segments.length}: ${segment.section}`);
     const result = await synthesize({
-      text: segment.narration,
+      text: applyPronunciationOverrides(segment.narration),
       speaker: config.speaker,
       resourceId: config.resourceId,
       outputPath: rawPath,
@@ -188,6 +219,8 @@ try {
     speechRate: config.speechRate,
     pitchRate: config.pitchRate,
     sampleRate,
+    pronunciationOverrides,
+    pronunciationOverridesSha256,
     audioFile: config.audioFile,
     totalDurationSeconds: finalPcm.length / bytesPerSecond,
     segments: timelineSegments,
@@ -202,6 +235,16 @@ try {
     `- 语速：${config.speechRate}`,
     `- 实际总时长：${(timeline.totalDurationSeconds / 60).toFixed(2)} 分钟`,
     `- 段间停顿：${config.interSegmentPauseMs}ms`,
+    `- 发音覆盖：${
+      pronunciationOverrides.length
+        ? pronunciationOverrides
+            .map(
+              (override) =>
+                `${override.term} → ${override.ttsText}（${override.pronunciation}）`,
+            )
+            .join('；')
+        : '无'
+    }`,
     '- 时间轴：以合成 PCM 的真实采样数为主时钟；仅记录口播章节边界供画面排期使用。',
     '',
     '| 开始 | 时长 | 章节 |',

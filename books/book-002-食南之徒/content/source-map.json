@@ -1,0 +1,134 @@
+{
+  "book": "食南之徒",
+  "author": "马伯庸",
+  "sourceMode": "web-research",
+  "sourcePath": "",
+  "sourceSha256": "",
+  "sourceEncoding": "",
+  "accessedAt": "2026-08-20",
+  "chapterLines": {},
+  "webSources": [
+    {
+      "id": "WEB-01",
+      "title": "《食南之徒》图书页面",
+      "publisher": "云太图图书馆服务平台",
+      "url": "https://www.yuntaigo.com/book.action?recordid=bnptbmtubmM5Nzg3NTcyNjE2MDk5",
+      "publishedAt": "2024-04",
+      "supports": ["作者、出版社、ISBN与出版时间", "官方导语和内容简介", "唐蒙、南越、美食与政争的基本设定"]
+    },
+    {
+      "id": "WEB-02",
+      "title": "《食南之徒》，马伯庸谈重游南越",
+      "publisher": "南越王博物院",
+      "url": "https://www.nywmuseum.org.cn/News/Details/yfzx?nid=11297",
+      "publishedAt": "2024-04-25",
+      "supports": ["作品的古代美食故事定位", "南越王宫木简的创作灵感", "作者对赵佗乡愁的文学想象", "岭南文化表达"]
+    },
+    {
+      "id": "WEB-03",
+      "title": "马伯庸：对食物的态度，就是对人生的态度",
+      "publisher": "南方+／南方周末",
+      "url": "https://static.nfnews.com/content/202405/23/c8899304.html?enterColumnId=4285",
+      "publishedAt": "2024-05-23",
+      "supports": ["美食撬动政治版图和地理认知的创作主题", "汉代食物与烹饪技法的考据方法", "唐蒙的人物投射", "饮食多元、开放心态与换位思考", "地理是理解历史的关键"]
+    },
+    {
+      "id": "WEB-04",
+      "title": "访谈｜马伯庸：作家是一种状态，当你停笔不写，就不再是作家",
+      "publisher": "澎湃新闻",
+      "url": "https://m.thepaper.cn/detail/27914005",
+      "publishedAt": "2024-06-30",
+      "supports": ["壶枣木简与故事由头", "作者把美食与人物命运紧密相连的创作原则", "作者的小人物历史观"]
+    },
+    {
+      "id": "WEB-05",
+      "title": "西汉南越王博物馆举办‘寻找夜郎’展",
+      "publisher": "广州市委网信办／西汉南越王博物馆",
+      "url": "https://gzwxb.gov.cn/context/contextId/200358",
+      "publishedAt": "2020-09-25",
+      "supports": ["夜郎与南越的商贸联系", "蜀枸酱经夜郎转贩至南越", "唐蒙与南夷道计划的史料核心"]
+    },
+    {
+      "id": "WEB-06",
+      "title": "历史视角下的人性显微",
+      "publisher": "文艺报／中国作家网",
+      "url": "https://wyb.chinawriter.com.cn/content/202501/03/content77637.html",
+      "publishedAt": "2025-01-03",
+      "supports": ["食物、文化乡愁与人性底色的文学解读", "小人物视角与宏大叙事的关系", "史实骨架与文学想象的区分"]
+    },
+    {
+      "id": "WEB-07",
+      "title": "这个吃货很特别",
+      "publisher": "泉州晚报",
+      "url": "https://szb.qzwb.com/qzwb/pc/att/202407/16/f72a664c-83e5-4066-ae85-2005bd4d5498.pdf",
+      "publishedAt": "2024-07-16",
+      "supports": ["唐蒙、庄助、甘蔗、甘叶和南越王宫案的公开剧情概述", "小说结局与唐蒙开辟道路的文学处理"]
+    }
+  ],
+  "terminology": [
+    {
+      "canonical": "枸酱",
+      "pronunciation": "jǔ jiàng",
+      "aliases": ["蒟酱"],
+      "avoid": ["构酱"],
+      "note": "书中和史料的核心食物与地理线索；枸在此读 jǔ。",
+      "sourceRefs": ["WEB-03", "WEB-05"]
+    },
+    {
+      "canonical": "牂牁江",
+      "pronunciation": "zāng kē jiāng",
+      "aliases": ["牂柯江"],
+      "avoid": ["牲牱江"],
+      "note": "汉代夜郎通往南越的历史水路名。",
+      "sourceRefs": ["WEB-05"]
+    },
+    {
+      "canonical": "番禺",
+      "pronunciation": "Pānyú",
+      "aliases": ["今广州"],
+      "avoid": [],
+      "note": "南越国都城，注意番在此读 Pān。",
+      "sourceRefs": ["WEB-05"]
+    },
+    {
+      "canonical": "赵佗",
+      "pronunciation": "Zhào Tuó",
+      "aliases": ["南越武王"],
+      "avoid": [],
+      "note": "南越国建立者，佗读 Tuó。",
+      "sourceRefs": ["WEB-02", "WEB-06"]
+    },
+    {
+      "canonical": "甘蔗",
+      "pronunciation": "Gānzhè",
+      "aliases": [],
+      "avoid": [],
+      "note": "小说人物名，与普通名词同形。",
+      "sourceRefs": ["WEB-07"]
+    }
+  ],
+  "selfReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-20T22:03:23.5068952+08:00",
+    "scriptSha256": "41B75ACB8D28210315A2D3BFC01B1D61545FE7DC12255A277A5C851B6D00B866",
+    "checks": {
+      "terminologyVerified": true,
+      "openingRetentionReviewed": true,
+      "sentenceFluencyReviewed": true,
+      "sourceConsistencyReviewed": true,
+      "originalityAndCommentaryReviewed": true
+    }
+  },
+  "limitations": [
+    "本稿使用正规公开材料，未读取完整原文，定位为主题解读型草稿，不声称逐章覆盖。",
+    "涉及甘蔗、甘叶与王宫案的细节仅按公开书评概括，已避免使用无法交叉核验的细节。",
+    "唐蒙、枸酱、夜郎与南夷道属史料骨架；王宫推理、人物关系与个人动机属小说创作，写作时在相关叙述中自然区分，不设置独立免责段。"
+  ],
+  "editorialRules": [
+    "成片是原创评论，不是有声书或逐章复述。",
+    "仅使用必要的短语‘食物不会骗人’，其余全部为概括与评论。",
+    "不得把唐蒙与枸酱的史料骨架、小说情节和解读者判断相互冒充；必要说明应自然融入相关叙述。",
+    "不展示原书封面、书页、连续长段文字、有声书内容或影视演员形象。",
+    "结尾不使用固定栏目口号‘这里是十分钟读懂一本书’。"
+  ]
+}

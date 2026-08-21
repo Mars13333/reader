@@ -9,9 +9,11 @@ export const BookCover: React.FC<CoverRenderProps> = ({
   eyebrow,
   headline,
   badge,
+  treatment,
   variant,
   layout,
 }) => {
+  const isBright = treatment === 'bright';
   const isLandscape = variant === 'landscape4x3';
   const isPortrait3x4 = variant === 'portrait3x4';
   const typography = isLandscape
@@ -19,6 +21,9 @@ export const BookCover: React.FC<CoverRenderProps> = ({
     : isPortrait3x4
       ? {eyebrow: 32, first: 76, emphasis: 112, last: 114, badge: 34}
       : {eyebrow: 37, first: 88, emphasis: 136, last: 138, badge: 40};
+  const coverTextShadow = isBright
+    ? '0 4px 0 rgba(7,19,26,.72), 0 9px 22px rgba(0,0,0,.55)'
+    : textShadow;
 
   return (
     <AbsoluteFill style={{backgroundColor: '#07131a', overflow: 'hidden'}}>
@@ -29,19 +34,26 @@ export const BookCover: React.FC<CoverRenderProps> = ({
           height: '100%',
           objectFit: 'cover',
           objectPosition: layout.artObjectPosition,
+          filter: isBright ? 'brightness(1.06) saturate(1.03) contrast(.98)' : undefined,
         }}
       />
 
       <AbsoluteFill
         style={{
-          background: isLandscape
-            ? 'linear-gradient(90deg, rgba(3,10,15,.98) 0%, rgba(3,10,15,.86) 38%, rgba(3,10,15,.30) 62%, rgba(3,10,15,.08) 100%)'
-            : 'linear-gradient(180deg, rgba(3,10,15,.96) 0%, rgba(3,10,15,.72) 24%, rgba(3,10,15,.06) 47%, rgba(3,10,15,.04) 70%, rgba(3,10,15,.88) 100%)',
+          background: isBright
+            ? isLandscape
+              ? 'linear-gradient(90deg, rgba(3,10,15,.60) 0%, rgba(3,10,15,.38) 38%, rgba(3,10,15,.10) 62%, rgba(3,10,15,0) 100%)'
+              : 'linear-gradient(180deg, rgba(3,10,15,.48) 0%, rgba(3,10,15,.24) 24%, rgba(3,10,15,0) 47%, rgba(3,10,15,0) 70%, rgba(3,10,15,.20) 100%)'
+            : isLandscape
+              ? 'linear-gradient(90deg, rgba(3,10,15,.98) 0%, rgba(3,10,15,.86) 38%, rgba(3,10,15,.30) 62%, rgba(3,10,15,.08) 100%)'
+              : 'linear-gradient(180deg, rgba(3,10,15,.96) 0%, rgba(3,10,15,.72) 24%, rgba(3,10,15,.06) 47%, rgba(3,10,15,.04) 70%, rgba(3,10,15,.88) 100%)',
         }}
       />
       <AbsoluteFill
         style={{
-          boxShadow: 'inset 0 0 150px 45px rgba(0,0,0,.52)',
+          boxShadow: isBright
+            ? 'inset 0 0 90px 24px rgba(0,0,0,.16)'
+            : 'inset 0 0 150px 45px rgba(0,0,0,.52)',
           border: '14px solid rgba(199,168,103,.18)',
         }}
       />
@@ -78,7 +90,9 @@ export const BookCover: React.FC<CoverRenderProps> = ({
           lineHeight: 0.98,
         }}
       >
-        <div style={{fontSize: typography.first, color: '#efe2c1', textShadow}}>
+        <div
+          style={{fontSize: typography.first, color: '#efe2c1', textShadow: coverTextShadow}}
+        >
           {headline[0]}
         </div>
         <div
@@ -99,7 +113,7 @@ export const BookCover: React.FC<CoverRenderProps> = ({
             marginTop: isLandscape ? 14 : 20,
             fontSize: typography.last,
             color: '#f4d48b',
-            textShadow,
+            textShadow: coverTextShadow,
           }}
         >
           {headline[2]}
@@ -126,7 +140,7 @@ export const BookCover: React.FC<CoverRenderProps> = ({
         {badge}
       </div>
 
-      {isLandscape ? (
+      {isLandscape && !isBright ? (
         <div
           style={{
             position: 'absolute',

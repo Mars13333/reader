@@ -28,7 +28,7 @@ const targetSeconds = Number(script.targetDurationSeconds ?? 600);
 const markdown = [
   `# ${script.title}`,
   '',
-  '> 当前文件仅用于脚本审批。尚未生成分镜、插画、配音或视频。',
+  '> 当前文件是 Codex 自审后的内部归档。尚未生成分镜、插画、配音或视频。',
   '',
   `- 书籍：${context.book.title}`,
   `- 作者：${script.author || context.book.author}`,
@@ -40,13 +40,13 @@ const markdown = [
   `- 固定配音：刘飞男声，语速 -10`,
   `- 脚本 SHA-256：${hash}`,
   '',
-  '## 审批重点',
+  '## Codex 自审重点',
   '',
-  '- 开头是否足够抓人。',
-  '- 是否存在过多剧情复述。',
-  '- 解读角度是否符合这本书，而不是套用固定职场模板。',
-  '- 事实、小说情节与个人评论是否区分清楚。',
-  '- 结尾是否自然，互动问题是否愿意保留。',
+  '- 已逐项核对专名、读音、别名和易错写法。',
+  '- 已复核前两段留存，没有独立免责声明消耗开场。',
+  '- 已逐句按口播朗读，清除病句、生造口语、歧义和重复。',
+  '- 已核对来源，事实、小说情节与评论判断各归其位。',
+  '- 已确认观点来自本书，没有照搬上一册结构或用剧情复述代替评论。',
   '',
   ...script.segments.flatMap((segment, index) => [
     `## ${index + 1}. ${segment.section}｜${segment.kicker}`,
@@ -58,10 +58,11 @@ const markdown = [
     `出处：${(segment.sourceRefs ?? []).map((reference) => `${reference.label}（${reference.lines}）`).join('；') || '待补充'}`,
     '',
   ]),
-  '## 审批操作',
+  '## 后续授权',
   '',
-  '- 需要修改：直接告诉 Codex 修改意见，然后重新运行 `npm run book:review`。',
-  '- 内容通过：运行 `npm run book:approve`，之后才允许进入分镜、插画、配音和渲染。',
+  '- Codex 自审通过后只向用户交接：“审核通过，继续下一步就行。”',
+  '- 用户回复“脚本已批准，开始生成分镜、原创插画和三种封面”后，Codex 才运行 `npm run book:approve`。',
+  '- 用户主动提出修改时，回到脚本自审并重新生成本归档。',
 ].join('\n');
 
 const reviewPath = path.join(context.generatedDir, 'script-review.md');
@@ -79,7 +80,7 @@ book.status = 'review';
 book.updatedAt = new Date().toISOString();
 writeJson(context.bookConfigPath, book);
 
-console.log(`审稿文件：${reviewPath}`);
+console.log(`自审归档：${reviewPath}`);
 console.log(`脚本哈希：${hash}`);
 if (existsSync(context.approvalPath)) {
   console.log('提示：已有批准记录；如脚本哈希已变化，必须重新批准。');

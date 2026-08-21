@@ -1,0 +1,184 @@
+{
+  "panelLayout": "2x2",
+  "panelOrder": ["top-left", "top-right", "bottom-left", "bottom-right"],
+  "visualDirection": {
+    "style": "明亮的当代中国编辑插画，工笔线描结合平涂水粉与轻微纸张肌理",
+    "palette": ["暖象牙白", "矿物青绿", "晴空青", "柿子橙", "朱砂红", "日光金"],
+    "lighting": "白天自然光或明亮室内天光，曝光充足，暗部保留纹理",
+    "avoid": ["低调夜景", "大面积纯黑", "浑浊棕灰", "重度暗角", "影视演员相貌", "文字与水印"]
+  },
+  "segments": [
+    {
+      "id": "01-hook",
+      "image": "assets/storyboards/01-hook.png",
+      "shots": [
+        {"panel": 0, "label": "日光下的一勺蜀枸酱成为视觉焦点"},
+        {"panel": 1, "label": "唐蒙在南越宴席上尝到陌生酱料"},
+        {"panel": 2, "label": "味道化作经夜郎通向南越的水路地图"}
+      ]
+    },
+    {
+      "id": "02-mission",
+      "image": "assets/storyboards/02-mission.png",
+      "shots": [
+        {"panel": 0, "label": "汉朝使团沿明亮江道进入岭南"},
+        {"panel": 1, "label": "众人观察礼仪时唐蒙专注餐桌"},
+        {"panel": 3, "label": "食材背后浮现产地身份利益与人心"}
+      ]
+    },
+    {
+      "id": "03-protagonist",
+      "image": "assets/storyboards/03-protagonist.png",
+      "shots": [
+        {"panel": 0, "label": "唐蒙展开地图辨认山川道路"},
+        {"panel": 1, "label": "他细看一盘食物追问来处"},
+        {"panel": 2, "label": "食材道路与人群流动在桌上连成线索"}
+      ]
+    },
+    {
+      "id": "04-feast",
+      "image": "assets/storyboards/04-feast.png",
+      "shots": [
+        {"panel": 0, "label": "岭南明亮集市陈列仙草膏与乌橄榄"},
+        {"panel": 1, "label": "嘉鱼与地方烹饪技艺的清爽近景"},
+        {"panel": 3, "label": "唐蒙在丰盛宴席中放下成见"}
+      ]
+    },
+    {
+      "id": "05-method",
+      "image": "assets/storyboards/05-method.png",
+      "shots": [
+        {"panel": 0, "label": "唐蒙观察食材色泽与产地细节"},
+        {"panel": 1, "label": "厨案上的火候调料和器皿成为证据"},
+        {"panel": 2, "label": "宴席人物彼此试探而食物安静留痕"},
+        {"panel": 3, "label": "唐蒙把零散味觉线索连成证据链"}
+      ]
+    },
+    {
+      "id": "06-mystery",
+      "image": "assets/storyboards/06-mystery.png",
+      "shots": [
+        {"panel": 0, "label": "明亮王宫厨房里留下的一碗壶枣粥"},
+        {"panel": 1, "label": "厨师甘叶被众人指认为罪人"},
+        {"panel": 2, "label": "甘蔗带着母亲遗物向唐蒙求助"}
+      ]
+    },
+    {
+      "id": "07-partnership",
+      "image": "assets/storyboards/07-partnership.png",
+      "shots": [
+        {"panel": 0, "label": "唐蒙与甘蔗隔着厨案共同查看线索"},
+        {"panel": 1, "label": "甘蔗回忆母亲在王宫厨房劳作"},
+        {"panel": 2, "label": "唐蒙用味觉追问事实"},
+        {"panel": 3, "label": "甘蔗让抽象线索重新落回人的命运"}
+      ]
+    },
+    {
+      "id": "08-politics",
+      "image": "assets/storyboards/08-politics.png",
+      "shots": [
+        {"panel": 0, "label": "南越王庭宴席呈现清晰座次"},
+        {"panel": 1, "label": "中原移民与本地族群分列交锋"},
+        {"panel": 2, "label": "王权与相权在餐桌两端暗中角力"},
+        {"panel": 3, "label": "厨房小人物承担权力争斗的后果"}
+      ]
+    },
+    {
+      "id": "09-jujube",
+      "image": "assets/storyboards/09-jujube.png",
+      "shots": [
+        {"panel": 0, "label": "南越王宫木简与壶枣记录的特写"},
+        {"panel": 1, "label": "赵佗在岭南庭院亲看北方枣树"},
+        {"panel": 3, "label": "一颗枣连接老人和遥远故乡"}
+      ]
+    },
+    {
+      "id": "10-openness",
+      "image": "assets/storyboards/10-openness.png",
+      "shots": [
+        {"panel": 0, "label": "唐蒙第一次尝试陌生岭南食物"},
+        {"panel": 1, "label": "当地厨师向他解释食材与做法"},
+        {"panel": 2, "label": "不同地域的人围桌交换味道"},
+        {"panel": 3, "label": "唐蒙在新体验中修正原有成见"}
+      ]
+    },
+    {
+      "id": "11-truth",
+      "image": "assets/storyboards/11-truth.png",
+      "shots": [
+        {"panel": 0, "label": "甘蔗指导王宫厨师重做壶枣粥"},
+        {"panel": 1, "label": "众人注视南越王当场品尝"},
+        {"panel": 2, "label": "甘叶旧案的错误说法被事实击破"},
+        {"panel": 3, "label": "真相揭开后权力格局重新洗牌"}
+      ]
+    },
+    {
+      "id": "12-sauce-route",
+      "image": "assets/storyboards/12-sauce-route.png",
+      "shots": [
+        {"panel": 0, "label": "枸酱陶罐与蜀地产地的日光特写"},
+        {"panel": 1, "label": "商旅把货物从巴蜀运入夜郎"},
+        {"panel": 2, "label": "木舟沿牂牁江水系驶向南越"},
+        {"panel": 3, "label": "唐蒙在地图上连出隐藏水路"}
+      ]
+    },
+    {
+      "id": "13-map",
+      "image": "assets/storyboards/13-map.png",
+      "shots": [
+        {"panel": 0, "label": "货船沿新通道带来交流"},
+        {"panel": 1, "label": "同一条水路上出现军队阴影"},
+        {"panel": 2, "label": "唐蒙站在百姓饭碗与帝国地图之间"},
+        {"panel": 3, "label": "明亮地图呈现发现的双刃结果"}
+      ]
+    },
+    {
+      "id": "14-cost",
+      "image": "assets/storyboards/14-cost.png",
+      "shots": [
+        {"panel": 0, "label": "山中百姓与役夫开凿漫长道路"},
+        {"panel": 1, "label": "唐蒙在多年工地上回想甘蔗"},
+        {"panel": 3, "label": "道路郡县背后浮现被遗忘的人名"}
+      ]
+    },
+    {
+      "id": "15-lessons",
+      "image": "assets/storyboards/15-lessons.png",
+      "shots": [
+        {"panel": 0, "label": "陌生文化面前先体验再判断"},
+        {"panel": 1, "label": "权威结论面前回到物证细节"},
+        {"panel": 2, "label": "宏大地图旁继续看见普通人"},
+        {"panel": 3, "label": "发现新路时同时思考后果"}
+      ]
+    },
+    {
+      "id": "16-modern-map",
+      "image": "assets/storyboards/16-modern-map.png",
+      "shots": [
+        {"panel": 1, "label": "果子从种植运输到市场的链路"},
+        {"panel": 2, "label": "手机背后连接技术劳动与物流"},
+        {"panel": 3, "label": "日常商品展开成一张明亮世界地图"}
+      ]
+    },
+    {
+      "id": "17-appetite",
+      "image": "assets/storyboards/17-appetite.png",
+      "shots": [
+        {"panel": 0, "label": "唐蒙仍然开心享用一顿好饭"},
+        {"panel": 1, "label": "他在饭桌旁注意到受委屈的小人物"},
+        {"panel": 2, "label": "热爱生活与承担责任同时存在"},
+        {"panel": 3, "label": "普通人都能安稳吃完自己的饭"}
+      ]
+    },
+    {
+      "id": "18-close",
+      "image": "assets/storyboards/18-close.png",
+      "shots": [
+        {"panel": 0, "label": "唐蒙沿江向南品尝与观察"},
+        {"panel": 1, "label": "味觉穿过文化偏见"},
+        {"panel": 2, "label": "地图显露道路背后的权力"},
+        {"panel": 3, "label": "明亮长桌上留下多道岭南食物供观众选择"}
+      ]
+    }
+  ]
+}

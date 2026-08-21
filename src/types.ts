@@ -68,6 +68,7 @@ export type CoverConfig = {
   eyebrow: string;
   headline: [string, string, string];
   badge: string;
+  treatment?: 'standard' | 'bright';
   layouts: {
     vertical9x16: CoverLayout;
     portrait3x4: CoverLayout;

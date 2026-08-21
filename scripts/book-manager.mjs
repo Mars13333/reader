@@ -121,10 +121,25 @@ const createBook = async () => {
   writeJson(path.join(bookRoot, 'content', 'source-map.json'), {
     book: answers.title,
     author: answers.author,
+    sourceMode: '',
     sourcePath: '',
     sourceSha256: '',
     sourceEncoding: '',
     chapterLines: {},
+    webSources: [],
+    terminology: [],
+    selfReview: {
+      status: 'pending',
+      reviewedAt: '',
+      scriptSha256: '',
+      checks: {
+        terminologyVerified: false,
+        openingRetentionReviewed: false,
+        sentenceFluencyReviewed: false,
+        sourceConsistencyReviewed: false,
+        originalityAndCommentaryReviewed: false,
+      },
+    },
     editorialRules: [
       '成片是原创评论，不是有声书或逐章复述。',
       '不展示原书内页、连续长段文字、影视剧照或演员形象。',
@@ -141,6 +156,7 @@ const createBook = async () => {
     interSegmentPauseMs: 420,
     tailMs: 1400,
     silenceThreshold: 180,
+    pronunciationOverrides: [],
     audioFile: 'assets/audio/narration.wav',
   });
   writeJson(path.join(bookRoot, 'content', 'video-layout.json'), {
@@ -154,12 +170,21 @@ const createBook = async () => {
     keywordCard: {
       top: 500,
     },
+    visualTreatment: {
+      brightness: 1.08,
+      saturation: 1.02,
+      contrast: 0.98,
+      topShade: 0.16,
+      bottomShade: 0.28,
+      backgroundColor: '#ead9ad',
+    },
   });
   writeJson(path.join(bookRoot, 'content', 'cover.json'), {
     image: 'assets/cover/cover-art.png',
     eyebrow: `${answers.author}《${answers.title}》`,
     headline: ['待填写', '封面主标题', '第三行'],
     badge: '10分钟读书',
+    treatment: 'bright',
     layouts: {
       vertical9x16: {left: 72, eyebrowTop: 150, headlineTop: 260, badgeTop: 730, artObjectPosition: 'center center'},
       portrait3x4: {left: 64, eyebrowTop: 70, headlineTop: 160, badgeTop: 610, artObjectPosition: 'center 50%'},
@@ -169,7 +194,7 @@ const createBook = async () => {
   setActiveBook(bookId);
   console.log(`已创建并选中：${bookId}`);
   console.log(`目录：${bookRoot}`);
-  console.log('下一步：让 Codex 完成 content/script.json，然后运行 npm run book:review。');
+  console.log('下一步：让 Codex 完成 content/script.json 与 content/source-map.json，并完成自审和质量门。');
 };
 
 const listBooks = () => {

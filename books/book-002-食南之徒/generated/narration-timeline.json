@@ -1,0 +1,167 @@
+{
+  "bookId": "book-002-食南之徒",
+  "scriptSha256": "41B75ACB8D28210315A2D3BFC01B1D61545FE7DC12255A277A5C851B6D00B866",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [
+    {
+      "term": "枸酱",
+      "ttsText": "举酱",
+      "pronunciation": "jǔ jiàng"
+    }
+  ],
+  "pronunciationOverridesSha256": "4035C1A7FA29F3C574457C70F49F73C44022CC27B230C281BEF6FB4E580D165F",
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 601.2796666666667,
+  "segments": [
+    {
+      "id": "01-hook",
+      "section": "开场",
+      "startSeconds": 0.5,
+      "endSeconds": 32.514583333333334,
+      "durationSeconds": 32.014583333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "02-mission",
+      "section": "故事起点",
+      "startSeconds": 32.934583333333336,
+      "endSeconds": 63.84266666666667,
+      "durationSeconds": 30.908083333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "03-protagonist",
+      "section": "主人公",
+      "startSeconds": 64.26266666666668,
+      "endSeconds": 94.06858333333335,
+      "durationSeconds": 29.80591666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "04-feast",
+      "section": "第一层",
+      "startSeconds": 94.48858333333335,
+      "endSeconds": 126.36933333333334,
+      "durationSeconds": 31.88075,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "05-method",
+      "section": "第二层",
+      "startSeconds": 126.78933333333335,
+      "endSeconds": 157.2612916666667,
+      "durationSeconds": 30.471958333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "06-mystery",
+      "section": "悬疑主线",
+      "startSeconds": 157.68129166666668,
+      "endSeconds": 190.7479166666667,
+      "durationSeconds": 33.066625,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "07-partnership",
+      "section": "人物关系",
+      "startSeconds": 191.16791666666668,
+      "endSeconds": 228.7435,
+      "durationSeconds": 37.575583333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "08-politics",
+      "section": "第三层",
+      "startSeconds": 229.1635,
+      "endSeconds": 264.2767083333333,
+      "durationSeconds": 35.11320833333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "09-jujube",
+      "section": "人心入口",
+      "startSeconds": 264.69670833333333,
+      "endSeconds": 297.989125,
+      "durationSeconds": 33.29241666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "10-openness",
+      "section": "人生态度",
+      "startSeconds": 298.409125,
+      "endSeconds": 328.88845833333335,
+      "durationSeconds": 30.479333333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "11-truth",
+      "section": "破局",
+      "startSeconds": 329.30845833333336,
+      "endSeconds": 361.4934166666667,
+      "durationSeconds": 32.184958333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "12-sauce-route",
+      "section": "历史锚点",
+      "startSeconds": 361.9134166666667,
+      "endSeconds": 395.3991666666667,
+      "durationSeconds": 33.48575,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "13-map",
+      "section": "第四层",
+      "startSeconds": 395.8191666666667,
+      "endSeconds": 429.33512500000006,
+      "durationSeconds": 33.51595833333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "14-cost",
+      "section": "人的代价",
+      "startSeconds": 429.7551250000001,
+      "endSeconds": 461.0954166666667,
+      "durationSeconds": 31.340291666666666,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "15-lessons",
+      "section": "留给今天",
+      "startSeconds": 461.51541666666674,
+      "endSeconds": 495.78054166666675,
+      "durationSeconds": 34.265125,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "16-modern-map",
+      "section": "现实对照",
+      "startSeconds": 496.20054166666677,
+      "endSeconds": 527.5491250000001,
+      "durationSeconds": 31.348583333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "17-appetite",
+      "section": "人物余味",
+      "startSeconds": 527.9691250000001,
+      "endSeconds": 563.0935833333334,
+      "durationSeconds": 35.12445833333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "18-close",
+      "section": "最后",
+      "startSeconds": 563.5135833333334,
+      "endSeconds": 599.8796666666667,
+      "durationSeconds": 36.366083333333336,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

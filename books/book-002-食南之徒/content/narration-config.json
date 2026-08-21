@@ -1,0 +1,21 @@
+{
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "leadInMs": 500,
+  "interSegmentPauseMs": 420,
+  "tailMs": 1400,
+  "silenceThreshold": 180,
+  "pronunciationOverrides": [
+    {
+      "term": "枸酱",
+      "ttsText": "举酱",
+      "pronunciation": "jǔ jiàng"
+    }
+  ],
+  "audioFile": "assets/audio/narration.wav"
+}

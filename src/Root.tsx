@@ -13,6 +13,7 @@ const coverBase = {
   eyebrow: bookCover.eyebrow,
   headline: bookCover.headline,
   badge: bookCover.badge,
+  treatment: bookCover.treatment,
 };
 
 export const Root: React.FC = () => {

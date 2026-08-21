@@ -1,0 +1,28 @@
+{
+  "id": "book-002-食南之徒",
+  "title": "食南之徒",
+  "author": "马伯庸",
+  "audience": "25～40岁泛读书用户",
+  "status": "completed",
+  "createdAt": "2026-08-20T13:02:15.633Z",
+  "updatedAt": "2026-08-20T16:02:59.284Z",
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "voiceName": "刘飞男声",
+    "speechRate": -10
+  },
+  "editorialStandards": {
+    "allowClosingBrandLine": false
+  },
+  "deliverables": {
+    "video": "output/final.mp4",
+    "covers": [
+      "output/cover-9x16.png",
+      "output/cover-3x4.png",
+      "output/cover-4x3.png"
+    ],
+    "subtitles": false,
+    "standaloneAudio": false
+  },
+  "completedAt": "2026-08-20T16:02:59.285Z"
+}

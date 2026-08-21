@@ -1,0 +1,12 @@
+{
+  "bookId": "book-002-食南之徒",
+  "status": "approved",
+  "version": 1,
+  "scriptSha256": "41B75ACB8D28210315A2D3BFC01B1D61545FE7DC12255A277A5C851B6D00B866",
+  "approvedAt": "2026-08-20T14:07:30.361Z",
+  "segments": 18,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

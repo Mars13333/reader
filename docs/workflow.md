@@ -3,19 +3,33 @@
 ## 阶段 A：新建与脚本审批
 
 1. `npm run book:new` 创建并选中新书。
-2. Codex 只生成 `content/script.json` 与来源映射。
-3. `npm run book:review` 生成 `generated/script-review.md`。
-4. 用户提出修改时回到第 2 步。
-5. 用户确认后运行 `npm run book:approve`，用 SHA-256 锁定脚本。
+2. Codex 优先自行寻找正规公开材料；不足时才请求用户提供合法取得的本地原文。
+3. Codex 只生成 `content/script.json` 与 `content/source-map.json`。
+4. Codex 先完成专名与读音、开场留存、逐句通顺、来源一致性和原创评论五项自审，并把当前脚本 SHA-256 写入 `source-map.json.selfReview`。
+5. `npm run book:quality` 通过后，`npm run book:review` 生成内部审稿归档；`book:review` 会自动复跑质量门。
+6. Codex 只向用户交接“审核通过，继续下一步就行”，用户默认无需逐字审稿。
+7. 用户提出修改时回到第 3～5 步；否则用户以“脚本已批准，开始生成分镜、原创插画和三种封面”明确授权进入视觉阶段。
+8. Codex 收到授权后运行 `npm run book:approve` 和 `npm run book:approval-check`，用 SHA-256 锁定脚本，再进入阶段 B。
 
 这一阶段不生成分镜、插画、配音和视频，不产生 TTS 与图片生成成本。
+
+### 脚本自审硬规则
+
+- 前两段必须服务于抓人和展开核心问题。默认不得设置“阅读边界”“先分清史实和小说”等独立免责声明段；事实边界只在具体内容需要时自然嵌入。
+- `source-map.json.terminology` 至少登记一组需要核对的专名，并列出标准写法；遇到多音字时同时记录读音，遇到易错字时列出 `avoid`。
+- Codex 必须逐句按口播朗读，主动发现病句、生造口语、歧义、重复和凑字数内容。
+- 工程校验通过只表示结构、引用和规则可执行，不代表文案已经通过编辑审查。
+- Codex 必须自行完成编辑审查；质量门失败或语义自审存疑时继续修改，不得要求用户逐字排错。
+- `selfReview.scriptSha256` 必须等于当前 `script.json` 的 SHA-256；脚本变动后旧自审立即失效。
 
 ## 阶段 B：视觉制作
 
 1. Codex 根据批准脚本设计 `content/visual-plan.json`。
 2. 每个叙事关键位置必须有对应画面，普通镜头约 8～15 秒切换。
 3. 生成原创分镜插画和封面插画。
-4. 顶部常驻书名横向居中并放在搜索框安全区以下；章节重点大字同步下移；封面文案分别遵守 9:16、3:4、4:3 安全区。
+4. 默认使用明亮日光或充足天光，暗部保留细节；严肃题材也不得自动转为低调黑暗画面。
+5. 顶部常驻书名横向居中并放在搜索框安全区以下；章节重点大字同步下移；封面文案分别遵守 9:16、3:4、4:3 安全区。
+6. 将 `source-map.json.terminology` 中 TTS 可能误读的多音字写入 `narration-config.json.pronunciationOverrides`；正文保持标准写法，替换文本只发送给 TTS。
 
 ## 阶段 C：自动生产
 
@@ -43,6 +57,7 @@
 ## 返工规则
 
 - 修改脚本：重新 `book:review`、`book:approve`，口播会因哈希变化自动重做。
+- 修改多音字发音覆盖：不改批准脚本；发音规则哈希变化会自动使旧口播缓存失效，再运行 `npm run book:produce`。
 - 只改分镜或插画：保持批准脚本不变，复用原口播。
 - 只改封面：运行 `npm run book:covers`。
 - 只改视频模板：运行 `npm run book:render`。

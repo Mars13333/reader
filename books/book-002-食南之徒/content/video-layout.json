@@ -1,0 +1,20 @@
+{
+  "showProgressBar": false,
+  "header": {
+    "text": "《食南之徒》· 10分钟读书",
+    "top": 290,
+    "sideMargin": 120,
+    "fontSize": 34
+  },
+  "keywordCard": {
+    "top": 500
+  },
+  "visualTreatment": {
+    "brightness": 1.08,
+    "saturation": 1.02,
+    "contrast": 0.98,
+    "topShade": 0.16,
+    "bottomShade": 0.28,
+    "backgroundColor": "#ead9ad"
+  }
+}

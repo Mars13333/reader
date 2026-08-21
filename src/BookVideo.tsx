@@ -18,6 +18,24 @@ const COLORS = {
   gold: '#c7a867',
 };
 
+const visualTreatment =
+  (videoLayout as {
+    visualTreatment?: {
+      brightness?: number;
+      saturation?: number;
+      contrast?: number;
+      topShade?: number;
+      bottomShade?: number;
+      backgroundColor?: string;
+    };
+  }).visualTreatment ?? {};
+const imageBrightness = visualTreatment.brightness ?? 0.9;
+const imageSaturation = visualTreatment.saturation ?? 0.94;
+const imageContrast = visualTreatment.contrast ?? 1.04;
+const topShade = visualTreatment.topShade ?? 0.42;
+const bottomShade = visualTreatment.bottomShade ?? 0.68;
+const sceneBackground = visualTreatment.backgroundColor ?? COLORS.ink;
+
 const StoryboardPanel: React.FC<{
   shot: PreparedShot;
   index: number;
@@ -48,7 +66,7 @@ const StoryboardPanel: React.FC<{
   });
 
   return (
-    <AbsoluteFill style={{backgroundColor: COLORS.ink, opacity: entrance}}>
+    <AbsoluteFill style={{backgroundColor: sceneBackground, opacity: entrance}}>
       <AbsoluteFill style={{overflow: 'hidden'}}>
         <AbsoluteFill
           style={{
@@ -64,7 +82,7 @@ const StoryboardPanel: React.FC<{
               left: `${-column * 100}%`,
               top: `${-row * 100}%`,
               objectFit: 'fill',
-              filter: 'saturate(0.94) contrast(1.04) brightness(0.9)',
+              filter: `saturate(${imageSaturation}) contrast(${imageContrast}) brightness(${imageBrightness})`,
             }}
           />
         </AbsoluteFill>
@@ -72,7 +90,7 @@ const StoryboardPanel: React.FC<{
       <AbsoluteFill
         style={{
           background:
-            'linear-gradient(180deg, rgba(4,12,17,.42) 0%, rgba(4,12,17,.03) 25%, rgba(4,12,17,.08) 65%, rgba(4,12,17,.68) 100%)',
+            `linear-gradient(180deg, rgba(4,12,17,${topShade}) 0%, rgba(4,12,17,.02) 25%, rgba(4,12,17,.04) 65%, rgba(4,12,17,${bottomShade}) 100%)`,
         }}
       />
       <AbsoluteFill
@@ -152,7 +170,7 @@ export const BookVideo: React.FC<PreparedVideo> = (props) => {
   const transitionFrames = 12;
 
   return (
-    <AbsoluteFill style={{backgroundColor: COLORS.ink}}>
+    <AbsoluteFill style={{backgroundColor: sceneBackground}}>
       <Audio src={staticFile(props.audioFile)} />
       {props.shots.map((shot, index) => (
         <Sequence

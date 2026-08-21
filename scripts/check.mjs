@@ -5,6 +5,7 @@ import {
   assertFixedNarration,
   assertScriptApproved,
   getBookContext,
+  getPronunciationOverridesSha256,
   readJson,
 } from './book-context.mjs';
 
@@ -31,6 +32,7 @@ if (prepared.bookId !== context.bookId) errors.push('Prepared data belongs to an
 if (prepared.scriptSha256 !== approval.scriptSha256) errors.push('Prepared data does not match the approved script.');
 if (timeline.bookId !== context.bookId) errors.push('Narration timeline belongs to another book.');
 if (timeline.scriptSha256 !== approval.scriptSha256) errors.push('Narration timeline does not match the approved script.');
+if (timeline.pronunciationOverridesSha256 !== getPronunciationOverridesSha256(narrationConfig)) errors.push('Narration timeline does not match the current pronunciation overrides.');
 if (prepared.width !== 1080 || prepared.height !== 1920) errors.push(`Expected 1080x1920, got ${prepared.width}x${prepared.height}.`);
 if (prepared.fps !== 30) errors.push(`Expected 30 FPS, got ${prepared.fps}.`);
 if (prepared.totalDurationSeconds < 570 || prepared.totalDurationSeconds > 630) errors.push(`Runtime ${(prepared.totalDurationSeconds / 60).toFixed(2)} minutes is outside 9:30-10:30.`);

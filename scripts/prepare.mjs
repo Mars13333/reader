@@ -4,6 +4,7 @@ import {
   assertFixedNarration,
   assertScriptApproved,
   getBookContext,
+  getPronunciationOverridesSha256,
   readJson,
 } from './book-context.mjs';
 
@@ -36,6 +37,14 @@ if (timeline.speechRate !== -10) {
 }
 if (timeline.scriptSha256 !== approval.scriptSha256) {
   throw new Error('Narration timeline does not match the approved script.');
+}
+if (
+  timeline.pronunciationOverridesSha256 !==
+  getPronunciationOverridesSha256(narrationConfig)
+) {
+  throw new Error(
+    'Narration timeline does not match the current pronunciation overrides. Run npm run book:voice first.',
+  );
 }
 if (timeline.segments.length !== script.segments.length) {
   throw new Error('Narration timeline and editorial script have different segment counts.');

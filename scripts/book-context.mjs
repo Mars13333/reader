@@ -101,6 +101,41 @@ const setActiveBook = (bookId) => {
 const hashText = (value) =>
   createHash('sha256').update(value, 'utf8').digest('hex').toUpperCase();
 
+const getPronunciationOverrides = (config) => {
+  const overrides = config.pronunciationOverrides ?? [];
+  if (!Array.isArray(overrides)) {
+    throw new Error('pronunciationOverrides must be an array.');
+  }
+  const seenTerms = new Set();
+  return overrides.map((override, index) => {
+    const term = typeof override?.term === 'string' ? override.term.trim() : '';
+    const ttsText =
+      typeof override?.ttsText === 'string' ? override.ttsText.trim() : '';
+    const pronunciation =
+      typeof override?.pronunciation === 'string'
+        ? override.pronunciation.trim()
+        : '';
+    if (!term || !ttsText || !pronunciation) {
+      throw new Error(
+        `pronunciationOverrides[${index}] must contain non-empty term, ttsText, and pronunciation.`,
+      );
+    }
+    if (term === ttsText) {
+      throw new Error(
+        `pronunciationOverrides[${index}] must use a distinct TTS-only spelling.`,
+      );
+    }
+    if (seenTerms.has(term)) {
+      throw new Error(`Duplicate pronunciation override: ${term}`);
+    }
+    seenTerms.add(term);
+    return {term, ttsText, pronunciation};
+  });
+};
+
+const getPronunciationOverridesSha256 = (config) =>
+  hashText(JSON.stringify(getPronunciationOverrides(config)));
+
 const getScriptState = (context) => {
   const scriptPath = path.join(context.contentDir, 'script.json');
   if (!existsSync(scriptPath)) throw new Error(`缺少脚本：${scriptPath}`);
@@ -120,6 +155,7 @@ const assertFixedNarration = (config) => {
       `配音标准不允许修改；必须使用刘飞男声、语速 -10。异常字段：${mismatches.join(', ')}`,
     );
   }
+  getPronunciationOverrides(config);
 };
 
 const assertEditorialStandards = (context, script) => {
@@ -156,6 +192,8 @@ export {
   booksRoot,
   getBookContext,
   getCliOption,
+  getPronunciationOverrides,
+  getPronunciationOverridesSha256,
   getScriptState,
   hashText,
   readActiveBookId,

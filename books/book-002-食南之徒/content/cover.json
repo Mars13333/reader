@@ -1,0 +1,34 @@
+{
+  "image": "assets/cover/shinan-cover-art.png",
+  "eyebrow": "马伯庸《食南之徒》",
+  "headline": [
+    "一勺枸酱",
+    "竟能改写",
+    "帝国地图"
+  ],
+  "badge": "10分钟美食悬疑",
+  "treatment": "bright",
+  "layouts": {
+    "vertical9x16": {
+      "left": 72,
+      "eyebrowTop": 150,
+      "headlineTop": 260,
+      "badgeTop": 730,
+      "artObjectPosition": "58% center"
+    },
+    "portrait3x4": {
+      "left": 64,
+      "eyebrowTop": 70,
+      "headlineTop": 160,
+      "badgeTop": 610,
+      "artObjectPosition": "58% 50%"
+    },
+    "landscape4x3": {
+      "left": 80,
+      "eyebrowTop": 64,
+      "headlineTop": 178,
+      "badgeTop": 720,
+      "artObjectPosition": "62% 42%"
+    }
+  }
+}
