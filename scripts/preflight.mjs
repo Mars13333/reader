@@ -7,6 +7,7 @@ import {
   getBookContext,
   readJson,
 } from './book-context.mjs';
+import {readPublishMaterials} from './publish-materials.mjs';
 
 const context = getBookContext();
 const {scriptState} = assertScriptApproved(context);
@@ -18,6 +19,11 @@ const layout = readJson(path.join(context.contentDir, 'video-layout.json'));
 assertFixedNarration(narration);
 
 const errors = [];
+const usesBookJacketV2 = context.book.editorialStandards?.visualStandard === 'book-jacket-v2';
+if (context.book.deliverables?.publishCopy) {
+  const {errors: publishErrors} = readPublishMaterials(context);
+  errors.push(...publishErrors);
+}
 const visualById = new Map((visualPlan.segments ?? []).map((segment) => [segment.id, segment]));
 for (const segment of scriptState.script.segments ?? []) {
   const visual = visualById.get(segment.id);
@@ -41,8 +47,17 @@ const coverPath = path.join(context.publicDir, cover.image ?? '');
 if (!existsSync(coverPath) || statSync(coverPath).size < 1_000_000) {
   errors.push(`缺少或无效的封面插画：${coverPath}`);
 }
-if (!Array.isArray(cover.headline) || cover.headline.length !== 3) {
-  errors.push('封面主标题必须正好三行。');
+if (usesBookJacketV2) {
+  if (cover.design !== 'book-jacket-v2') errors.push('新书封面必须使用 book-jacket-v2 书籍正面版式。');
+  if (cover.bookTitle !== context.book.title) errors.push('封面书名必须与 book.json 中的书名完全一致。');
+  if (!cover.subtitle?.trim() || cover.subtitle.includes('待填写')) errors.push('封面推荐语尚未完成。');
+  if (layout.visualTreatment?.backgroundColor !== '#000000') errors.push('新书首帧画布必须使用纯黑背景。');
+  if (layout.header?.fontSize < 42 || layout.header?.fontSize > 48) errors.push('新书顶部常驻书名字号必须为 42～48px。');
+  if (layout.keywordCard?.minimumVisibleSeconds < 6) errors.push('章节重点字至少展示 6 秒。');
+  const expectedCovers = ['output/cover-3x4.png', 'output/cover-4x3.png'];
+  if (JSON.stringify(context.book.deliverables?.covers) !== JSON.stringify(expectedCovers)) errors.push('新书只交付 3:4 和 4:3 两种封面。');
+} else if (!Array.isArray(cover.headline) || cover.headline.length !== 3) {
+  errors.push('旧版封面主标题必须正好三行。');
 }
 if (layout.showProgressBar !== false) errors.push('视频不得生成自制播放进度条。');
 if (layout.header?.top < 270 || layout.header?.top > 330) {

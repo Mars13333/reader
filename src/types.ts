@@ -64,13 +64,16 @@ export type CoverLayout = {
 };
 
 export type CoverConfig = {
+  design?: 'legacy-poster' | 'book-jacket-v2';
   image: string;
+  bookTitle?: string;
   eyebrow: string;
-  headline: [string, string, string];
+  headline?: [string, string, string];
+  subtitle?: string;
   badge: string;
   treatment?: 'standard' | 'bright';
   layouts: {
-    vertical9x16: CoverLayout;
+    vertical9x16?: CoverLayout;
     portrait3x4: CoverLayout;
     landscape4x3: CoverLayout;
   };

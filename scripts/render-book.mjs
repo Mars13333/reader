@@ -35,10 +35,25 @@ const renderVideo = () =>
     '--codec=h264', '--crf=23', '--pixel-format=yuv420p', '--audio-codec=aac',
   ]);
 
+const coverTargets = new Map([
+  ['output/cover-9x16.png', {composition: 'BookCover', fileName: 'cover-9x16.png'}],
+  ['output/cover-3x4.png', {composition: 'BookCover3x4', fileName: 'cover-3x4.png'}],
+  ['output/cover-4x3.png', {composition: 'BookCover4x3', fileName: 'cover-4x3.png'}],
+]);
+
 const renderCovers = () => {
-  run(['still', entry, 'BookCover', path.join(context.outputDir, 'cover-9x16.png'), '--image-format=png']);
-  run(['still', entry, 'BookCover3x4', path.join(context.outputDir, 'cover-3x4.png'), '--image-format=png']);
-  run(['still', entry, 'BookCover4x3', path.join(context.outputDir, 'cover-4x3.png'), '--image-format=png']);
+  const declaredCovers = context.book.deliverables?.covers ?? [...coverTargets.keys()];
+  for (const deliveryPath of declaredCovers) {
+    const target = coverTargets.get(deliveryPath.replaceAll('\\', '/'));
+    if (!target) throw new Error(`不支持的封面交付路径：${deliveryPath}`);
+    run([
+      'still',
+      entry,
+      target.composition,
+      path.join(context.outputDir, target.fileName),
+      '--image-format=png',
+    ]);
+  }
 };
 
 if (!existsSync(path.join(context.runtimeDir, 'prepared.json'))) {

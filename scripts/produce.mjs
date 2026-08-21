@@ -24,6 +24,7 @@ run('scripts/generate-narration.mjs', process.argv.includes('--force-voice') ? [
 run('scripts/prepare.mjs');
 run('scripts/check.mjs');
 run('scripts/render-book.mjs', ['all']);
+run('scripts/generate-publish-copy.mjs');
 run('scripts/check.mjs', ['--outputs']);
 
 const book = readJson(context.bookConfigPath);

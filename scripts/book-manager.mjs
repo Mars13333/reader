@@ -96,14 +96,16 @@ const createBook = async () => {
     },
     editorialStandards: {
       allowClosingBrandLine: false,
+      retentionStandard: 'hook-payoff-loops-v1',
+      visualStandard: 'book-jacket-v2',
     },
     deliverables: {
       video: 'output/final.mp4',
       covers: [
-        'output/cover-9x16.png',
         'output/cover-3x4.png',
         'output/cover-4x3.png',
       ],
+      publishCopy: 'output/publish-copy.txt',
       subtitles: false,
       standaloneAudio: false,
     },
@@ -116,6 +118,15 @@ const createBook = async () => {
     fps: 30,
     width: 1080,
     height: 1920,
+    retentionPlan: {
+      standard: 'hook-payoff-loops-v1',
+      hookDeadlineSeconds: 2,
+      firstPayoffDeadlineSeconds: 20,
+      loopCadenceSeconds: 30,
+      openingHook: '',
+      firstPayoff: '',
+      segmentBeats: [],
+    },
     segments: [],
   });
   writeJson(path.join(bookRoot, 'content', 'source-map.json'), {
@@ -135,6 +146,7 @@ const createBook = async () => {
       checks: {
         terminologyVerified: false,
         openingRetentionReviewed: false,
+        retentionStructureReviewed: false,
         sentenceFluencyReviewed: false,
         sourceConsistencyReviewed: false,
         originalityAndCommentaryReviewed: false,
@@ -144,6 +156,10 @@ const createBook = async () => {
       '成片是原创评论，不是有声书或逐章复述。',
       '不展示原书内页、连续长段文字、影视剧照或演员形象。',
     ],
+  });
+  writeJson(path.join(bookRoot, 'content', 'publish.json'), {
+    title: '',
+    descriptionLines: [],
   });
   writeJson(path.join(bookRoot, 'content', 'visual-plan.json'), {
     panelLayout: '2x2',
@@ -165,10 +181,12 @@ const createBook = async () => {
       text: `《${answers.title}》· 10分钟读书`,
       top: 290,
       sideMargin: 120,
-      fontSize: 34,
+      fontSize: 44,
     },
     keywordCard: {
       top: 500,
+      minimumVisibleSeconds: 6,
+      secondsPerCharacter: 0.35,
     },
     visualTreatment: {
       brightness: 1.08,
@@ -176,25 +194,26 @@ const createBook = async () => {
       contrast: 0.98,
       topShade: 0.16,
       bottomShade: 0.28,
-      backgroundColor: '#ead9ad',
+      backgroundColor: '#000000',
     },
   });
   writeJson(path.join(bookRoot, 'content', 'cover.json'), {
+    design: 'book-jacket-v2',
     image: 'assets/cover/cover-art.png',
-    eyebrow: `${answers.author}《${answers.title}》`,
-    headline: ['待填写', '封面主标题', '第三行'],
+    bookTitle: answers.title,
+    eyebrow: `${answers.author} 著`,
+    subtitle: '待填写：一句与本书核心观点一致的推荐语',
     badge: '10分钟读书',
     treatment: 'bright',
     layouts: {
-      vertical9x16: {left: 72, eyebrowTop: 150, headlineTop: 260, badgeTop: 730, artObjectPosition: 'center center'},
-      portrait3x4: {left: 64, eyebrowTop: 70, headlineTop: 160, badgeTop: 610, artObjectPosition: 'center 50%'},
-      landscape4x3: {left: 80, eyebrowTop: 64, headlineTop: 178, badgeTop: 720, artObjectPosition: 'center 36%'},
+      portrait3x4: {left: 72, eyebrowTop: 78, headlineTop: 220, badgeTop: 1220, artObjectPosition: 'center 50%'},
+      landscape4x3: {left: 88, eyebrowTop: 70, headlineTop: 180, badgeTop: 870, artObjectPosition: 'center 40%'},
     },
   });
   setActiveBook(bookId);
   console.log(`已创建并选中：${bookId}`);
   console.log(`目录：${bookRoot}`);
-  console.log('下一步：让 Codex 完成 content/script.json 与 content/source-map.json，并完成自审和质量门。');
+  console.log('下一步：让 Codex 完成 script、source-map 与 publish 内容，并完成自审和质量门。');
 };
 
 const listBooks = () => {

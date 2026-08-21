@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "book:auto": "node scripts/book-auto.mjs",
+    "book:auto:check": "node scripts/book-auto.mjs --check",
     "book:new": "node scripts/book-manager.mjs new",
     "book:list": "node scripts/book-manager.mjs list",
     "book:use": "node scripts/book-manager.mjs use",
@@ -20,6 +22,7 @@
     "book:check": "node scripts/check.mjs",
     "book:render": "npm run book:prepare && node scripts/render-book.mjs all",
     "book:covers": "node scripts/prepare-cover-runtime.mjs && node scripts/render-book.mjs covers",
+    "book:publish-copy": "node scripts/generate-publish-copy.mjs",
     "book:studio": "npm run book:prepare && node scripts/render-book.mjs studio",
     "book:produce": "node scripts/produce.mjs",
     "voice:generate": "npm run book:voice",
@@ -33,7 +36,8 @@
     "build": "npm run book:produce",
     "compositions": "npm run book:prepare && node scripts/render-book.mjs compositions",
     "lint": "tsc --noEmit",
-    "test": "node scripts/check.mjs"
+    "test": "node scripts/check.mjs",
+    "test:book-auto": "node --test scripts/book-auto.test.mjs scripts/book-manager.test.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.513",

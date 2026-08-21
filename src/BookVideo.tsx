@@ -8,6 +8,7 @@ import {
   interpolate,
   staticFile,
   useCurrentFrame,
+  useVideoConfig,
 } from 'remotion';
 import type {PreparedShot, PreparedVideo} from './types';
 
@@ -35,6 +36,15 @@ const imageContrast = visualTreatment.contrast ?? 1.04;
 const topShade = visualTreatment.topShade ?? 0.42;
 const bottomShade = visualTreatment.bottomShade ?? 0.68;
 const sceneBackground = visualTreatment.backgroundColor ?? COLORS.ink;
+const keywordCardLayout = (
+  videoLayout as {
+    keywordCard: {
+      top: number;
+      minimumVisibleSeconds?: number;
+      secondsPerCharacter?: number;
+    };
+  }
+).keywordCard;
 
 const StoryboardPanel: React.FC<{
   shot: PreparedShot;
@@ -108,8 +118,25 @@ const StoryboardPanel: React.FC<{
 
 const KeywordCard: React.FC<{shot: PreparedShot}> = ({shot}) => {
   const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
   if (!shot.isSegmentStart) return null;
-  const opacity = interpolate(frame, [4, 18, 88, 108], [0, 1, 1, 0], {
+  const legacyTiming = keywordCardLayout.minimumVisibleSeconds === undefined;
+  const requestedReadableFrames = Math.round(
+    Math.max(
+      keywordCardLayout.minimumVisibleSeconds ?? 3.6,
+      shot.kicker.length * (keywordCardLayout.secondsPerCharacter ?? 0),
+    ) * fps,
+  );
+  const fadeOutStart = legacyTiming
+    ? 88
+    : Math.max(
+        18,
+        Math.min(shot.durationInFrames - 22, 18 + requestedReadableFrames),
+      );
+  const fadeOutEnd = legacyTiming
+    ? 108
+    : Math.min(shot.durationInFrames - 4, fadeOutStart + 18);
+  const opacity = interpolate(frame, [4, 18, fadeOutStart, fadeOutEnd], [0, 1, 1, 0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
@@ -118,7 +145,7 @@ const KeywordCard: React.FC<{shot: PreparedShot}> = ({shot}) => {
     <div
       style={{
         position: 'absolute',
-        top: videoLayout.keywordCard.top,
+        top: keywordCardLayout.top,
         left: 72,
         right: 72,
         opacity,

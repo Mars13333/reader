@@ -6,6 +6,7 @@ import {
   getScriptState,
   readJson,
 } from './book-context.mjs';
+import {readPublishMaterials} from './publish-materials.mjs';
 
 const context = getBookContext();
 const {script, hash} = getScriptState(context);
@@ -69,6 +70,87 @@ if (narrationCharacters < recommendedMinimum || narrationCharacters > recommende
   addWarning(
     `口播共 ${narrationCharacters} 字；按当前固定配音经验，${targetSeconds} 秒目标建议先控制在 ${recommendedMinimum}～${recommendedMaximum} 字，再以真实音频为准。`,
   );
+}
+
+if (context.book.deliverables?.publishCopy) {
+  const {errors: publishErrors} = readPublishMaterials(context);
+  for (const error of publishErrors) addError(error);
+}
+
+const retentionStandard = context.book.editorialStandards?.retentionStandard;
+if (retentionStandard) {
+  const retentionPlan = script.retentionPlan;
+  if (retentionStandard !== 'hook-payoff-loops-v1') {
+    addError(`不支持的留存标准：${retentionStandard}`);
+  } else if (!retentionPlan || typeof retentionPlan !== 'object') {
+    addError('新作品必须填写 script.retentionPlan，记录开场钩子、首次兑现和后续悬念链。');
+  } else {
+    if (retentionPlan.standard !== retentionStandard) {
+      addError(`retentionPlan.standard 必须为 ${retentionStandard}。`);
+    }
+
+    const hookDeadlineSeconds = Number(retentionPlan.hookDeadlineSeconds);
+    const firstPayoffDeadlineSeconds = Number(retentionPlan.firstPayoffDeadlineSeconds);
+    const loopCadenceSeconds = Number(retentionPlan.loopCadenceSeconds);
+    if (!Number.isFinite(hookDeadlineSeconds) || hookDeadlineSeconds <= 0 || hookDeadlineSeconds > 2) {
+      addError('开场钩子必须在前 2 秒内出现：hookDeadlineSeconds 应大于 0 且不超过 2。');
+    }
+    if (
+      !Number.isFinite(firstPayoffDeadlineSeconds) ||
+      firstPayoffDeadlineSeconds < 10 ||
+      firstPayoffDeadlineSeconds > 20
+    ) {
+      addError('首次价值兑现必须在前 10～20 秒完成：firstPayoffDeadlineSeconds 应晚于钩子且不超过 20。');
+    }
+    if (!Number.isFinite(loopCadenceSeconds) || loopCadenceSeconds < 20 || loopCadenceSeconds > 40) {
+      addError('后续小悬念的计划间隔必须为 20～40 秒。');
+    }
+
+    const firstNarration = String(segments[0]?.narration ?? '');
+    const normalizedFirstNarration = firstNarration.replace(/\s/gu, '');
+    const openingHook = String(retentionPlan.openingHook ?? '').replace(/\s/gu, '');
+    const firstPayoff = String(retentionPlan.firstPayoff ?? '').replace(/\s/gu, '');
+    if (!openingHook) {
+      addError('retentionPlan.openingHook 不能为空。');
+    } else if (!normalizedFirstNarration.startsWith(openingHook)) {
+      addError('第一段口播必须直接以 retentionPlan.openingHook 开始，不得先报书名、作者或栏目介绍。');
+    }
+    if (!firstPayoff) {
+      addError('retentionPlan.firstPayoff 不能为空。');
+    } else if (!normalizedFirstNarration.includes(firstPayoff)) {
+      addError('第一段口播必须包含 retentionPlan.firstPayoff，在前 20 秒内兑现第一份价值。');
+    }
+    if (Number.isFinite(firstPayoffDeadlineSeconds)) {
+      const openingCharacterLimit = Math.round(firstPayoffDeadlineSeconds * 5.2);
+      if (countCharacters(firstNarration) > openingCharacterLimit) {
+        addError(
+          `第一段口播共 ${countCharacters(firstNarration)} 字；为确保首次兑现不晚于 ${firstPayoffDeadlineSeconds} 秒，按固定配音经验应不超过 ${openingCharacterLimit} 字。`,
+        );
+      }
+    }
+
+    const segmentBeats = retentionPlan.segmentBeats;
+    if (!Array.isArray(segmentBeats) || segmentBeats.length !== segments.length) {
+      addError('retentionPlan.segmentBeats 必须与口播段落一一对应，记录每段兑现内容和下一悬念。');
+    } else {
+      for (const [index, segment] of segments.entries()) {
+        const beat = segmentBeats[index];
+        const label = `segmentBeats[${index}]`;
+        if (beat?.segmentId !== segment.id) {
+          addError(`${label}.segmentId 必须按顺序对应 ${segment.id}。`);
+        }
+        if (typeof beat?.payoff !== 'string' || !beat.payoff.trim()) {
+          addError(`${label}.payoff 不能为空。`);
+        }
+        if (
+          index < segments.length - 1 &&
+          (typeof beat?.nextHook !== 'string' || !beat.nextHook.trim())
+        ) {
+          addError(`${label}.nextHook 不能为空；每段兑现后必须自然引出下一问题。`);
+        }
+      }
+    }
+  }
 }
 
 const openingText = segments
@@ -171,6 +253,7 @@ const selfReview = sourceMap.selfReview;
 const requiredReviewChecks = [
   'terminologyVerified',
   'openingRetentionReviewed',
+  ...(retentionStandard ? ['retentionStructureReviewed'] : []),
   'sentenceFluencyReviewed',
   'sourceConsistencyReviewed',
   'originalityAndCommentaryReviewed',
@@ -214,4 +297,6 @@ console.log(`脚本质量门通过：${context.bookId}`);
 console.log(`脚本 SHA-256：${hash}`);
 console.log(`口播段落：${segments.length} 段`);
 console.log(`口播字符：${narrationCharacters} 个（不含空白）`);
-console.log('已验证：专名、自审记录、开场留存、来源引用、编辑禁则与基础结构。');
+console.log(
+  `已验证：专名、自审记录、开场留存、${retentionStandard ? '留存结构、' : ''}来源引用、编辑禁则与基础结构。`,
+);

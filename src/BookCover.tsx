@@ -4,15 +4,149 @@ import type {CoverRenderProps} from './types';
 
 const textShadow = '0 5px 0 rgba(7,19,26,.9), 0 12px 30px rgba(0,0,0,.8)';
 
-export const BookCover: React.FC<CoverRenderProps> = ({
+const BookJacketCover: React.FC<CoverRenderProps> = ({
   image,
+  bookTitle = '',
   eyebrow,
-  headline,
+  subtitle = '',
   badge,
   treatment,
   variant,
   layout,
 }) => {
+  const isBright = treatment === 'bright';
+  const isLandscape = variant === 'landscape4x3';
+  const titleLength = Array.from(bookTitle).length;
+  const titleFontSize = isLandscape
+    ? titleLength <= 6
+      ? 138
+      : titleLength <= 10
+        ? 112
+        : 88
+    : titleLength <= 6
+      ? 154
+      : titleLength <= 10
+        ? 124
+        : 96;
+
+  return (
+    <AbsoluteFill style={{backgroundColor: '#07131a', overflow: 'hidden'}}>
+      <Img
+        src={staticFile(image)}
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: layout.artObjectPosition,
+          filter: isBright ? 'brightness(1.04) saturate(1.02) contrast(.98)' : undefined,
+        }}
+      />
+      <AbsoluteFill
+        style={{
+          background: isLandscape
+            ? 'linear-gradient(90deg, rgba(3,10,15,.88) 0%, rgba(3,10,15,.72) 48%, rgba(3,10,15,.14) 76%, rgba(3,10,15,.04) 100%)'
+            : 'linear-gradient(180deg, rgba(3,10,15,.62) 0%, rgba(3,10,15,.28) 48%, rgba(3,10,15,.72) 100%)',
+        }}
+      />
+      <AbsoluteFill
+        style={{
+          boxShadow: 'inset 0 0 110px 26px rgba(0,0,0,.28)',
+          border: '14px solid rgba(239,226,193,.22)',
+        }}
+      />
+
+      <div
+        style={{
+          position: 'absolute',
+          top: layout.eyebrowTop,
+          left: layout.left,
+          color: '#fff8e9',
+          fontFamily: 'Microsoft YaHei, Noto Sans CJK SC, sans-serif',
+          fontWeight: 700,
+          fontSize: isLandscape ? 32 : 34,
+          letterSpacing: 4,
+          textShadow: '0 3px 12px rgba(0,0,0,.9)',
+        }}
+      >
+        {eyebrow}
+      </div>
+
+      <div
+        style={{
+          position: 'absolute',
+          top: layout.headlineTop,
+          left: layout.left,
+          width: isLandscape ? '52%' : `calc(100% - ${layout.left * 2}px)`,
+          fontFamily: 'Microsoft YaHei, Noto Sans CJK SC, sans-serif',
+        }}
+      >
+        <div
+          style={{
+            display: 'inline-block',
+            maxWidth: '100%',
+            padding: isLandscape ? '22px 34px 30px' : '28px 38px 38px',
+            color: '#07131a',
+            background: 'rgba(255,248,233,.92)',
+            borderLeft: '12px solid #c83c30',
+            fontSize: titleFontSize,
+            fontWeight: 900,
+            letterSpacing: titleLength <= 6 ? 10 : 4,
+            lineHeight: 1.05,
+            boxShadow: '16px 18px 0 rgba(7,19,26,.76), 0 24px 52px rgba(0,0,0,.32)',
+          }}
+        >
+          {bookTitle}
+        </div>
+        <div
+          style={{
+            marginTop: isLandscape ? 38 : 48,
+            maxWidth: isLandscape ? 690 : 860,
+            color: '#fff8e9',
+            fontSize: isLandscape ? 42 : 46,
+            fontWeight: 700,
+            lineHeight: 1.42,
+            letterSpacing: 2,
+            textShadow: '0 4px 18px rgba(0,0,0,.92)',
+          }}
+        >
+          {subtitle}
+        </div>
+      </div>
+
+      <div
+        style={{
+          position: 'absolute',
+          left: layout.left,
+          top: layout.badgeTop,
+          padding: '13px 24px 15px',
+          color: '#07131a',
+          background: '#efe2c1',
+          borderRadius: 4,
+          fontFamily: 'Microsoft YaHei, Noto Sans CJK SC, sans-serif',
+          fontSize: isLandscape ? 30 : 32,
+          fontWeight: 800,
+          letterSpacing: 3,
+          boxShadow: '0 10px 24px rgba(0,0,0,.42)',
+        }}
+      >
+        {badge}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+export const BookCover: React.FC<CoverRenderProps> = (props) => {
+  if (props.design === 'book-jacket-v2') return <BookJacketCover {...props} />;
+
+  const {
+  image,
+  eyebrow,
+  headline = ['', '', ''],
+  badge,
+  treatment,
+  variant,
+  layout,
+  } = props;
   const isBright = treatment === 'bright';
   const isLandscape = variant === 'landscape4x3';
   const isPortrait3x4 = variant === 'portrait3x4';

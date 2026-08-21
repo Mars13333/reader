@@ -25,6 +25,7 @@ const totalCharacters = script.segments.reduce(
   0,
 );
 const targetSeconds = Number(script.targetDurationSeconds ?? 600);
+const usesRetentionStandard = Boolean(context.book.editorialStandards?.retentionStandard);
 const markdown = [
   `# ${script.title}`,
   '',
@@ -44,6 +45,9 @@ const markdown = [
   '',
   '- 已逐项核对专名、读音、别名和易错写法。',
   '- 已复核前两段留存，没有独立免责声明消耗开场。',
+  ...(usesRetentionStandard
+    ? ['- 已确认前 2 秒直接落钩、前 20 秒首次兑现，并为每段记录“兑现内容＋下一悬念”。']
+    : []),
   '- 已逐句按口播朗读，清除病句、生造口语、歧义和重复。',
   '- 已核对来源，事实、小说情节与评论判断各归其位。',
   '- 已确认观点来自本书，没有照搬上一册结构或用剧情复述代替评论。',
@@ -61,7 +65,9 @@ const markdown = [
   '## 后续授权',
   '',
   '- Codex 自审通过后只向用户交接：“审核通过，继续下一步就行。”',
-  '- 用户回复“脚本已批准，开始生成分镜、原创插画和三种封面”后，Codex 才运行 `npm run book:approve`。',
+  context.book.editorialStandards?.visualStandard === 'book-jacket-v2'
+    ? '- 用户回复“脚本已批准，开始生成分镜、原创插画和两种发布封面”后，Codex 才运行 `npm run book:approve`。'
+    : '- 用户回复“脚本已批准，开始生成分镜、原创插画和三种封面”后，Codex 才运行 `npm run book:approve`。',
   '- 用户主动提出修改时，回到脚本自审并重新生成本归档。',
 ].join('\n');
 

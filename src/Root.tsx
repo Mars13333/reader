@@ -9,12 +9,16 @@ import type {CoverConfig, PreparedVideo} from './types';
 const video = prepared as PreparedVideo;
 const bookCover = cover as CoverConfig;
 const coverBase = {
+  design: bookCover.design,
   image: bookCover.image,
+  bookTitle: bookCover.bookTitle,
   eyebrow: bookCover.eyebrow,
   headline: bookCover.headline,
+  subtitle: bookCover.subtitle,
   badge: bookCover.badge,
   treatment: bookCover.treatment,
 };
+const verticalLayout = bookCover.layouts.vertical9x16;
 
 export const Root: React.FC = () => {
   return (
@@ -28,19 +32,21 @@ export const Root: React.FC = () => {
         height={video.height}
         defaultProps={video}
       />
-      <Composition
-        id="BookCover"
-        component={BookCover}
-        durationInFrames={1}
-        fps={video.fps}
-        width={1080}
-        height={1920}
-        defaultProps={{
-          ...coverBase,
-          variant: 'vertical9x16',
-          layout: bookCover.layouts.vertical9x16,
-        }}
-      />
+      {verticalLayout ? (
+        <Composition
+          id="BookCover"
+          component={BookCover}
+          durationInFrames={1}
+          fps={video.fps}
+          width={1080}
+          height={1920}
+          defaultProps={{
+            ...coverBase,
+            variant: 'vertical9x16',
+            layout: verticalLayout,
+          }}
+        />
+      ) : null}
       <Composition
         id="BookCover3x4"
         component={BookCover}

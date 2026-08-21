@@ -8,6 +8,7 @@ import {
   getPronunciationOverridesSha256,
   readJson,
 } from './book-context.mjs';
+import {FIXED_TOPIC_TAGS, readPublishMaterials} from './publish-materials.mjs';
 
 const context = getBookContext();
 const {approval} = assertScriptApproved(context);
@@ -27,6 +28,21 @@ const narrationConfig = readJson(path.join(context.contentDir, 'narration-config
 assertFixedNarration(narrationConfig);
 const errors = [];
 const warnings = [];
+const usesBookJacketV2 = context.book.editorialStandards?.visualStandard === 'book-jacket-v2';
+const coverDeliveries = context.book.deliverables?.covers ?? [
+  'output/cover-9x16.png',
+  'output/cover-3x4.png',
+  'output/cover-4x3.png',
+];
+const coverDeliveryRules = new Map([
+  ['output/cover-9x16.png', {layout: 'vertical9x16', composition: 'BookCover', fileName: 'cover-9x16.png'}],
+  ['output/cover-3x4.png', {layout: 'portrait3x4', composition: 'BookCover3x4', fileName: 'cover-3x4.png'}],
+  ['output/cover-4x3.png', {layout: 'landscape4x3', composition: 'BookCover4x3', fileName: 'cover-4x3.png'}],
+]);
+if (context.book.deliverables?.publishCopy) {
+  const {errors: publishErrors} = readPublishMaterials(context);
+  errors.push(...publishErrors);
+}
 
 if (prepared.bookId !== context.bookId) errors.push('Prepared data belongs to another book.');
 if (prepared.scriptSha256 !== approval.scriptSha256) errors.push('Prepared data does not match the approved script.');
@@ -106,18 +122,52 @@ if (!videoSource.includes('videoLayout.header')) errors.push('The persistent vid
 if (videoLayout.header?.top < 270 || videoLayout.header?.top > 330) errors.push(`Video header top ${videoLayout.header?.top}px is outside the search-page safe area.`);
 if (videoLayout.header?.sideMargin < 96 || videoLayout.header?.sideMargin > 160) errors.push(`Video header side margin ${videoLayout.header?.sideMargin}px is outside the centered safe area.`);
 if (!videoSource.includes('left: videoLayout.header.sideMargin') || !videoSource.includes('right: videoLayout.header.sideMargin') || !videoSource.includes("textAlign: 'center'")) errors.push('The persistent video header must remain horizontally centered.');
-if (videoLayout.header?.fontSize < 32 || videoLayout.header?.fontSize > 40) errors.push(`Video header font size ${videoLayout.header?.fontSize}px is not thumbnail-readable.`);
+const headerFontRange = usesBookJacketV2 ? [42, 48] : [32, 40];
+if (videoLayout.header?.fontSize < headerFontRange[0] || videoLayout.header?.fontSize > headerFontRange[1]) errors.push(`Video header font size ${videoLayout.header?.fontSize}px is outside ${headerFontRange[0]}-${headerFontRange[1]}px.`);
 if (videoLayout.keywordCard?.top < 460 || videoLayout.keywordCard?.top > 560) errors.push(`Keyword card top ${videoLayout.keywordCard?.top}px is outside the search-page safe area.`);
-if (!videoSource.includes('top: videoLayout.keywordCard.top')) errors.push('Keyword cards must use the shared lowered safe-area position.');
+if (!videoSource.includes('top: keywordCardLayout.top')) errors.push('Keyword cards must use the shared lowered safe-area position.');
+if (usesBookJacketV2) {
+  if (videoLayout.visualTreatment?.backgroundColor !== '#000000') errors.push('Future books must use a black first-frame canvas background.');
+  if (videoLayout.keywordCard?.minimumVisibleSeconds < 6 || videoLayout.keywordCard?.minimumVisibleSeconds > 9) errors.push('Keyword cards must remain readable for at least 6 seconds.');
+  if (videoLayout.keywordCard?.secondsPerCharacter < 0.3 || videoLayout.keywordCard?.secondsPerCharacter > 0.5) errors.push('Keyword-card reading time must use 0.30-0.50 seconds per character.');
+  if (videoLayout.header?.fontSize >= 70) errors.push('The persistent book title must remain smaller than the chapter keyword text.');
+}
 
 const coverArtPath = path.join(context.publicDir, cover.image ?? '');
 if (!existsSync(coverArtPath) || statSync(coverArtPath).size < 1_000_000) errors.push('Cover artwork is missing or suspiciously small.');
-if (!Array.isArray(cover.headline) || cover.headline.length !== 3) errors.push('Cover headline must contain exactly three lines.');
-const coverLayoutRules = [
-  {name: 'vertical9x16', left: [56, 96], eyebrowTop: [140, 220], headlineTop: [230, 420], badgeTop: [650, 1200]},
-  {name: 'portrait3x4', left: [48, 96], eyebrowTop: [50, 120], headlineTop: [130, 260], badgeTop: [520, 850]},
-  {name: 'landscape4x3', left: [64, 120], eyebrowTop: [48, 120], headlineTop: [130, 280], badgeTop: [600, 900]},
-];
+if (usesBookJacketV2) {
+  const expectedCovers = ['output/cover-3x4.png', 'output/cover-4x3.png'];
+  if (JSON.stringify(coverDeliveries) !== JSON.stringify(expectedCovers)) errors.push('Future books must deliver only 3:4 and 4:3 covers.');
+  if (cover.design !== 'book-jacket-v2') errors.push('Future covers must use the book-jacket-v2 design.');
+  if (cover.bookTitle !== context.book.title) errors.push('Cover bookTitle must exactly match book.json title.');
+  if (!cover.subtitle?.trim() || cover.subtitle.includes('待填写') || Array.from(cover.subtitle.trim()).length < 6 || Array.from(cover.subtitle.trim()).length > 32) errors.push('Book-jacket subtitle must be a finished 6-32 character recommendation line.');
+} else if (!Array.isArray(cover.headline) || cover.headline.length !== 3) {
+  errors.push('Legacy cover headline must contain exactly three lines.');
+}
+const legacyCoverLayoutRules = {
+  vertical9x16: {name: 'vertical9x16', left: [56, 96], eyebrowTop: [140, 220], headlineTop: [230, 420], badgeTop: [650, 1200]},
+  portrait3x4: {name: 'portrait3x4', left: [48, 96], eyebrowTop: [50, 120], headlineTop: [130, 260], badgeTop: [520, 850]},
+  landscape4x3: {name: 'landscape4x3', left: [64, 120], eyebrowTop: [48, 120], headlineTop: [130, 280], badgeTop: [600, 900]},
+};
+const bookJacketLayoutRules = {
+  portrait3x4: {name: 'portrait3x4', left: [56, 110], eyebrowTop: [50, 120], headlineTop: [160, 320], badgeTop: [1100, 1320]},
+  landscape4x3: {name: 'landscape4x3', left: [64, 140], eyebrowTop: [48, 120], headlineTop: [140, 300], badgeTop: [800, 960]},
+};
+const activeLayoutRules = usesBookJacketV2 ? bookJacketLayoutRules : legacyCoverLayoutRules;
+const coverLayoutRules = coverDeliveries.flatMap((deliveryPath) => {
+  const normalized = deliveryPath.replaceAll('\\', '/');
+  const delivery = coverDeliveryRules.get(normalized);
+  if (!delivery) {
+    errors.push(`Unsupported cover delivery: ${deliveryPath}.`);
+    return [];
+  }
+  const rule = activeLayoutRules[delivery.layout];
+  if (!rule) {
+    errors.push(`Cover delivery ${deliveryPath} is not allowed by the active visual standard.`);
+    return [];
+  }
+  return [rule];
+});
 for (const rule of coverLayoutRules) {
   const layout = cover.layouts?.[rule.name];
   if (!layout) {
@@ -131,7 +181,14 @@ for (const rule of coverLayoutRules) {
 }
 
 const rootSource = readFileSync(path.join(context.root, 'src', 'Root.tsx'), 'utf8');
-for (const composition of ['BookVideo', 'BookCover', 'BookCover3x4', 'BookCover4x3']) {
+const requiredCompositions = [
+  'BookVideo',
+  ...coverDeliveries.flatMap((deliveryPath) => {
+    const delivery = coverDeliveryRules.get(deliveryPath.replaceAll('\\', '/'));
+    return delivery ? [delivery.composition] : [];
+  }),
+];
+for (const composition of requiredCompositions) {
   if (!rootSource.includes(`id="${composition}"`)) errors.push(`${composition} composition is missing.`);
 }
 if (!rootSource.includes('../.runtime/')) errors.push('Remotion must load the selected book through .runtime.');
@@ -139,14 +196,28 @@ const runtimePreparedPath = path.join(context.runtimeDir, 'prepared.json');
 if (!existsSync(runtimePreparedPath) || readJson(runtimePreparedPath).bookId !== context.bookId) errors.push('Runtime data does not point to the active book.');
 
 if (requireOutputs) {
-  for (const [fileName, minimumSize] of [
+  const expectedMediaOutputs = [
     ['final.mp4', 10_000_000],
-    ['cover-9x16.png', 500_000],
-    ['cover-3x4.png', 500_000],
-    ['cover-4x3.png', 500_000],
-  ]) {
+    ...coverDeliveries.flatMap((deliveryPath) => {
+      const delivery = coverDeliveryRules.get(deliveryPath.replaceAll('\\', '/'));
+      return delivery ? [[delivery.fileName, 500_000]] : [];
+    }),
+  ];
+  for (const [fileName, minimumSize] of expectedMediaOutputs) {
     const filePath = path.join(context.outputDir, fileName);
     if (!existsSync(filePath) || statSync(filePath).size < minimumSize) errors.push(`Missing or suspicious delivery file: ${filePath}.`);
+  }
+  const publishCopy = context.book.deliverables?.publishCopy;
+  if (publishCopy) {
+    const publishPath = path.resolve(context.bookRoot, publishCopy);
+    const relative = path.relative(context.outputDir, publishPath);
+    if (relative.startsWith('..') || path.isAbsolute(relative)) {
+      errors.push(`Publish copy must stay inside output: ${publishPath}.`);
+    } else if (!existsSync(publishPath) || statSync(publishPath).size < 30) {
+      errors.push(`Missing or suspicious delivery file: ${publishPath}.`);
+    } else if (!readFileSync(publishPath, 'utf8').includes(FIXED_TOPIC_TAGS)) {
+      errors.push(`Publish copy is missing fixed topic tags: ${FIXED_TOPIC_TAGS}.`);
+    }
   }
 }
 
