@@ -1,0 +1,167 @@
+{
+  "bookId": "book-003-太白金星有点烦",
+  "scriptSha256": "4AF5FE7D57127D81A8FB27AA224D014BEEC9293CB7F4D5A6ABEED9FB3B490BB9",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [
+    {
+      "term": "李长庚",
+      "ttsText": "李常耕",
+      "pronunciation": "Lǐ Chánggēng"
+    }
+  ],
+  "pronunciationOverridesSha256": "C8006433D5116C1990D229BBD0337737A84F04737067EB1F16CB739C49F3D25C",
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 586.897625,
+  "segments": [
+    {
+      "id": "01-hook",
+      "section": "开场",
+      "startSeconds": 0.5,
+      "endSeconds": 22.49875,
+      "durationSeconds": 21.99875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "02-project",
+      "section": "故事设定",
+      "startSeconds": 22.918750000000003,
+      "endSeconds": 49.552083333333336,
+      "durationSeconds": 26.633333333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "03-backstage",
+      "section": "叙事视角",
+      "startSeconds": 49.97208333333334,
+      "endSeconds": 81.746125,
+      "durationSeconds": 31.774041666666665,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "04-double-bind",
+      "section": "第一层困局",
+      "startSeconds": 82.16612500000001,
+      "endSeconds": 112.74595833333333,
+      "durationSeconds": 30.579833333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "05-stakeholders",
+      "section": "第二层困局",
+      "startSeconds": 113.16595833333334,
+      "endSeconds": 146.509625,
+      "durationSeconds": 33.343666666666664,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "06-paperwork",
+      "section": "流程语言",
+      "startSeconds": 146.929625,
+      "endSeconds": 179.80295833333332,
+      "durationSeconds": 32.873333333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "07-capable-trap",
+      "section": "能者陷阱",
+      "startSeconds": 180.2229583333333,
+      "endSeconds": 212.8422083333333,
+      "durationSeconds": 32.61925,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "08-translator",
+      "section": "隐形劳动",
+      "startSeconds": 213.2622083333333,
+      "endSeconds": 245.5285833333333,
+      "durationSeconds": 32.266375,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "09-annoyance",
+      "section": "情绪真相",
+      "startSeconds": 245.9485833333333,
+      "endSeconds": 278.7482916666666,
+      "durationSeconds": 32.799708333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "10-human-cost",
+      "section": "第三层困局",
+      "startSeconds": 279.1682916666666,
+      "endSeconds": 313.3197916666666,
+      "durationSeconds": 34.1515,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "11-empathy",
+      "section": "人物转折",
+      "startSeconds": 313.73979166666663,
+      "endSeconds": 346.86929166666664,
+      "durationSeconds": 33.1295,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "12-causality",
+      "section": "神仙悖论",
+      "startSeconds": 347.28929166666666,
+      "endSeconds": 381.97270833333334,
+      "durationSeconds": 34.683416666666666,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "13-promotion",
+      "section": "晋升幻觉",
+      "startSeconds": 382.39270833333336,
+      "endSeconds": 411.52537500000005,
+      "durationSeconds": 29.132666666666665,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "14-redefine",
+      "section": "破局起点",
+      "startSeconds": 411.94537500000007,
+      "endSeconds": 447.21666666666675,
+      "durationSeconds": 35.27129166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "15-authority",
+      "section": "现实方法一",
+      "startSeconds": 447.63666666666677,
+      "endSeconds": 482.9009166666668,
+      "durationSeconds": 35.26425,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "16-evidence",
+      "section": "现实方法二",
+      "startSeconds": 483.3209166666668,
+      "endSeconds": 514.6939583333335,
+      "durationSeconds": 31.373041666666666,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "17-care",
+      "section": "现实方法三",
+      "startSeconds": 515.1139583333335,
+      "endSeconds": 549.7654583333335,
+      "durationSeconds": 34.6515,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "18-close",
+      "section": "最后",
+      "startSeconds": 550.1854583333335,
+      "endSeconds": 585.4976250000002,
+      "durationSeconds": 35.31216666666667,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

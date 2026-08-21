@@ -12,6 +12,7 @@ import {
   setActiveBook,
   writeJson,
 } from './book-context.mjs';
+import {STORYBOARD_STANDARD} from './storyboard-standard.mjs';
 
 const args = process.argv.slice(2);
 const command = args[0] ?? 'status';
@@ -98,6 +99,7 @@ const createBook = async () => {
       allowClosingBrandLine: false,
       retentionStandard: 'hook-payoff-loops-v1',
       visualStandard: 'book-jacket-v2',
+      storyboardStandard: STORYBOARD_STANDARD,
     },
     deliverables: {
       video: 'output/final.mp4',
@@ -162,6 +164,8 @@ const createBook = async () => {
     descriptionLines: [],
   });
   writeJson(path.join(bookRoot, 'content', 'visual-plan.json'), {
+    storyboardStandard: STORYBOARD_STANDARD,
+    canvasAspectRatio: '9:16',
     panelLayout: '2x2',
     panelOrder: ['top-left', 'top-right', 'bottom-left', 'bottom-right'],
     segments: [],

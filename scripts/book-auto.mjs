@@ -15,6 +15,10 @@ import {
   setActiveBook,
   writeJson,
 } from './book-context.mjs';
+import {
+  BookAutoProgress,
+  classifyNetworkEvent,
+} from './book-auto-progress.mjs';
 
 const DEFAULT_SANDBOX = 'workspace-write';
 const VALID_SANDBOXES = new Set([
@@ -42,6 +46,7 @@ const parseAutoArgs = (args = process.argv.slice(2)) => {
     resume: args.includes('--resume'),
     check: args.includes('--check'),
     dryRun: args.includes('--dry-run'),
+    verbose: args.includes('--verbose'),
   };
   if (!VALID_SANDBOXES.has(options.sandbox)) {
     throw new Error(
@@ -164,7 +169,7 @@ Use $ai-media-book-video to ${resume ? 'resume and finish' : 'produce'} the curr
 
 The user invoked \`npm run book:auto\`. That invocation is explicit authorization for this book's project-local research, content edits, script approval, built-in image generation, configured TTS calls, Remotion rendering, and delivery verification. It is not authorization to publish externally, alter another book, replace configured services, or bypass source and quality requirements.
 
-Do not call \`npm run book:auto\` recursively. Follow the repository Skill, \`AGENTS.md\`, \`docs/workflow.md\`, and \`docs/acceptance.md\`. Continue from existing valid artifacts when resuming. Use authoritative public sources first, complete the script/source/publish files and semantic self-review, pass the existing quality and approval gates, create the visual plan and original storyboard/cover images with $imagegen, then call the existing lower-level production commands until every delivery file declared by the current book passes verification.
+Do not call \`npm run book:auto\` recursively. Follow the repository Skill, \`AGENTS.md\`, \`docs/workflow.md\`, and \`docs/acceptance.md\`. Continue from existing valid artifacts when resuming. Use authoritative public sources first, complete the script/source/publish files and semantic self-review, pass the existing quality and approval gates, create the visual plan and original storyboard/cover images with $imagegen, then call the existing lower-level production commands until every delivery file declared by the current book passes verification. For books configured with \`portrait-2x2-9x16-v1\`, every storyboard sheet must be a portrait 9:16 PNG containing a 2x2 grid of four portrait 9:16 panels; run \`npm run book:storyboards-check\` after saving the images and before TTS or rendering.
 
 If reliable sources are insufficient, a required tool/auth/quota is unavailable, or a quality failure remains after three focused repair passes, stop without fabricating or weakening a gate. Leave all valid artifacts in place and report the exact resumable blocker. End the final message with exactly one marker: \`BOOK_AUTO_RESULT: completed\` or \`BOOK_AUTO_RESULT: blocked\`.
 `.trim();
@@ -195,6 +200,8 @@ const statePaths = (context) => {
     directory,
     state: path.join(directory, `${context.bookId}.json`),
     log: path.join(directory, `${context.bookId}.jsonl`),
+    stderr: path.join(directory, `${context.bookId}-stderr.log`),
+    verification: path.join(directory, `${context.bookId}-verification.log`),
     lastMessage: path.join(directory, `${context.bookId}-last-message.txt`),
   };
 };
@@ -210,6 +217,9 @@ const extractSessionId = (event) =>
 
 const summarizeEvent = (event) => {
   if (event.type === 'error') return `Codex error: ${event.message ?? 'unknown error'}`;
+  if (event.type === 'turn.failed') {
+    return `Codex turn failed: ${event.message ?? event.error?.message ?? 'unknown error'}`;
+  }
   if (event.type !== 'item.completed') return '';
   const item = event.item ?? {};
   if (item.type === 'agent_message') return item.text ?? '';
@@ -219,10 +229,11 @@ const summarizeEvent = (event) => {
   if (item.type === 'mcp_tool_call') {
     return item.tool ? `Codex tool: ${item.tool}` : '';
   }
+  if (item.type === 'error') return item.message ? `Codex error: ${item.message}` : '';
   return '';
 };
 
-const runCodex = async ({environment, context, options, previousState}) => {
+const runCodex = async ({environment, context, options, previousState, reporter}) => {
   const paths = statePaths(context);
   mkdirSync(paths.directory, {recursive: true});
   const startedAt =
@@ -236,9 +247,26 @@ const runCodex = async ({environment, context, options, previousState}) => {
     startedAt,
     updatedAt: new Date().toISOString(),
     logPath: paths.log,
+    stderrPath: paths.stderr,
+    verificationLogPath: paths.verification,
     lastMessagePath: paths.lastMessage,
   };
   writeJson(paths.state, state);
+  reporter.onSnapshot = (snapshot) => {
+    state.progress = {
+      phaseIndex: snapshot.phaseIndex,
+      phaseTotal: snapshot.phaseTotal,
+      phaseName: snapshot.phaseName,
+      detail: snapshot.detail,
+      networkStatus: snapshot.networkStatus,
+      networkDetail: snapshot.networkDetail,
+      assets: snapshot.assets,
+      lastActivityAt: snapshot.lastActivityAt,
+      heartbeatAt: snapshot.heartbeatAt,
+    };
+    state.updatedAt = snapshot.heartbeatAt;
+    writeJson(paths.state, state);
+  };
 
   const args = buildCodexArgs({
     bookId: context.bookId,
@@ -247,6 +275,9 @@ const runCodex = async ({environment, context, options, previousState}) => {
     sessionId: options.resume ? state.sessionId : '',
   });
   const log = createWriteStream(paths.log, {flags: options.resume ? 'a' : 'w'});
+  const stderrLog = createWriteStream(paths.stderr, {
+    flags: options.resume ? 'a' : 'w',
+  });
   const child = spawn(
     environment.codexInvocation.executable,
     [...environment.codexInvocation.prefixArgs, ...args],
@@ -258,27 +289,51 @@ const runCodex = async ({environment, context, options, previousState}) => {
     },
   );
   let buffer = '';
+  let stderrBuffer = '';
   let lastMessage = '';
+  let lastError = '';
 
   const handleLine = (line) => {
     if (!line.trim()) return;
     log.write(`${line}\n`);
     try {
       const event = JSON.parse(line);
+      reporter.handleEvent(event);
       const sessionId = extractSessionId(event);
       if (sessionId && !state.sessionId) {
         state.sessionId = sessionId;
         state.updatedAt = new Date().toISOString();
         writeJson(paths.state, state);
       }
+      if (
+        !classifyNetworkEvent(event) &&
+        (event.type === 'error' || event.type === 'turn.failed')
+      ) {
+        lastError =
+          event.message ?? event.error?.message ?? String(event.error ?? 'Codex 运行失败');
+      }
       const summary = summarizeEvent(event);
       if (summary) {
         if (event.item?.type === 'agent_message') lastMessage = summary;
-        console.log(summary);
+        if (options.verbose) console.log(summary);
       }
     } catch {
-      console.log(line);
+      if (options.verbose) console.log(line);
     }
+  };
+
+  const handleStderrLine = (line) => {
+    if (!line.trim()) return;
+    const isNetworkStatus = reporter.handleStderrLine(line);
+    const isPromptNoise = /starship::print|dumb terminal/iu.test(line);
+    if (
+      !isNetworkStatus &&
+      !isPromptNoise &&
+      /(?:error|failed|fatal|exception)/iu.test(line)
+    ) {
+      lastError = line.trim();
+    }
+    if (options.verbose) process.stderr.write(`${line}\n`);
   };
 
   child.stdout.setEncoding('utf8');
@@ -288,28 +343,49 @@ const runCodex = async ({environment, context, options, previousState}) => {
     buffer = lines.pop() ?? '';
     for (const line of lines) handleLine(line);
   });
-  child.stderr.pipe(process.stderr);
+  child.stderr.setEncoding('utf8');
+  child.stderr.on('data', (chunk) => {
+    stderrLog.write(chunk);
+    stderrBuffer += chunk;
+    const lines = stderrBuffer.split(/\r?\n/u);
+    stderrBuffer = lines.pop() ?? '';
+    for (const line of lines) handleStderrLine(line);
+  });
 
   const exitCode = await new Promise((resolve, reject) => {
     child.on('error', reject);
     child.on('close', (code) => resolve(code ?? 1));
   });
   if (buffer) handleLine(buffer);
-  await new Promise((resolve) => log.end(resolve));
+  if (stderrBuffer) handleStderrLine(stderrBuffer);
+  await Promise.all([
+    new Promise((resolve) => log.end(resolve)),
+    new Promise((resolve) => stderrLog.end(resolve)),
+  ]);
   writeFileSync(paths.lastMessage, `${lastMessage}\n`, 'utf8');
-  return {exitCode, state, paths, lastMessage};
+  return {exitCode, state, paths, lastMessage, lastError};
 };
 
-const verifyDelivery = (context) => {
+const verifyDelivery = (context, verbose = false, outputPath = '') => {
   const result = spawnSync(process.execPath, ['scripts/check.mjs', '--outputs'], {
     cwd: root,
     env: {...process.env, AI_MEDIA_BOOK_ID: context.bookId},
     encoding: 'utf8',
     windowsHide: true,
   });
-  if (result.stdout) process.stdout.write(result.stdout);
-  if (result.stderr) process.stderr.write(result.stderr);
-  return result.status === 0;
+  if (verbose && result.stdout) process.stdout.write(result.stdout);
+  if (verbose && result.stderr) process.stderr.write(result.stderr);
+  const capturedOutput = [result.stdout, result.stderr].filter(Boolean).join('\n');
+  if (outputPath) writeFileSync(outputPath, capturedOutput, 'utf8');
+  const lines = `${result.stderr ?? ''}\n${result.stdout ?? ''}`
+    .split(/\r?\n/u)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const detail =
+    [...lines].reverse().find((line) => /^(?:ERROR|FAIL|WARN):?/iu.test(line)) ??
+    lines.at(-1) ??
+    '';
+  return {ok: result.status === 0, detail};
 };
 
 const printEnvironment = (environment) => {
@@ -320,10 +396,22 @@ const printEnvironment = (environment) => {
   console.log(`图片生成 Skill：${environment.imagegenSkill}`);
 };
 
+const extractKeyMessage = (message) =>
+  String(message ?? '')
+    .split(/\r?\n/u)
+    .map((line) => line.trim())
+    .find(
+      (line) =>
+        line &&
+        !line.startsWith('#') &&
+        !line.startsWith('-') &&
+        !/^BOOK_AUTO_RESULT:/u.test(line),
+    ) ?? '';
+
 const main = async () => {
   const options = parseAutoArgs();
   const environment = checkAutomationEnvironment();
-  printEnvironment(environment);
+  if (options.check || options.verbose) printEnvironment(environment);
   if (options.check) return;
 
   if (options.dryRun) {
@@ -354,10 +442,35 @@ const main = async () => {
     );
   }
 
-  console.log(`${options.resume ? '继续' : '开始'}自动制作：${context.bookId}`);
-  const result = await runCodex({environment, context, options, previousState});
+  const reporter = new BookAutoProgress({
+    context,
+    verbose: options.verbose,
+  });
+  reporter.start();
+  reporter.setPhase(
+    2,
+    options.resume ? '正在检查已有产物并从中断处继续' : '正在启动公开资料研究',
+  );
+  let result;
+  try {
+    result = await runCodex({
+      environment,
+      context,
+      options,
+      previousState,
+      reporter,
+    });
+  } catch (error) {
+    reporter.finish(false, 'Codex 自动会话异常退出');
+    throw error;
+  }
   const agentCompleted = /BOOK_AUTO_RESULT:\s*completed/u.test(result.lastMessage);
-  const delivered = result.exitCode === 0 && agentCompleted && verifyDelivery(context);
+  reporter.setPhase(8, '正在执行最终交付验收');
+  const verification =
+    result.exitCode === 0 && agentCompleted
+      ? verifyDelivery(context, options.verbose, result.paths.verification)
+      : {ok: false, detail: ''};
+  const delivered = result.exitCode === 0 && agentCompleted && verification.ok;
   result.state.status = delivered ? 'completed' : result.exitCode === 0 ? 'blocked' : 'failed';
   result.state.updatedAt = new Date().toISOString();
   result.state.exitCode = result.exitCode;
@@ -365,13 +478,22 @@ const main = async () => {
   writeJson(result.paths.state, result.state);
 
   if (!delivered) {
-    console.error(`自动制作未完成。日志：${result.paths.log}`);
+    const reason =
+      verification.detail ||
+      result.lastError ||
+      extractKeyMessage(result.lastMessage) ||
+      '自动制作未完成，请查看详细日志。';
+    reporter.finish(false, reason);
+    console.error(`详细日志：${result.paths.log}`);
+    console.error(`错误日志：${result.paths.stderr}`);
     if (result.state.sessionId) {
       console.error(`修复阻塞后继续：npm run book:auto -- --resume --book "${context.bookId}"`);
     }
     process.exit(result.exitCode || 1);
   }
-  console.log(`自动制作完成：${context.outputDir}`);
+  reporter.finish(true, '全部交付文件已通过验收');
+  console.log(`交付目录：${context.outputDir}`);
+  console.log(`详细日志：${result.paths.log}`);
 };
 
 const isMain =

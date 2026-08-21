@@ -1,0 +1,208 @@
+{
+  "panelLayout": "2x2",
+  "panelOrder": ["top-left", "top-right", "bottom-left", "bottom-right"],
+  "visualDirection": {
+    "style": "明亮通透的中国神话编辑插画，工笔线描结合现代平涂水粉与轻微宣纸肌理，构图清楚，人物表情克制而有戏",
+    "characterAnchor": "李长庚为五十岁上下的东方神仙文官，银白发髻、短银须、象牙白与淡金官袍、青玉腰带，常携朱红公文袋或卷轴；不参考任何演员",
+    "palette": ["暖象牙白", "晴空青", "青瓷绿", "日光金", "朱砂红", "少量墨蓝"],
+    "lighting": "明亮白昼天光或通透的云宫室内光，暗部保留衣纹、表情和环境细节",
+    "avoid": ["大面积纯黑", "低调夜景", "浑浊棕灰", "重度暗角", "影视演员相貌", "原书封面", "书页截图", "文字", "字母", "数字", "标志", "水印"]
+  },
+  "segments": [
+    {
+      "id": "01-hook",
+      "image": "assets/storyboards/01-hook.png",
+      "promptFocus": "权责错位的天庭项目困局",
+      "shots": [
+        {"panel": 0, "label": "李长庚站在两道相反指令的卷轴之间"},
+        {"panel": 1, "label": "一边是危险妖云一边是被保护的取经路线"},
+        {"panel": 3, "label": "李长庚抱着卷轴在明亮云宫里独自发愁"}
+      ]
+    },
+    {
+      "id": "02-project",
+      "image": "assets/storyboards/02-project.png",
+      "promptFocus": "取经英雄与幕后运维的反差",
+      "shots": [
+        {"panel": 0, "label": "天庭与西天代表围绕取经路线召开联合会议"},
+        {"panel": 1, "label": "远处唐僧师徒化为原创剪影沿山路前行"},
+        {"panel": 3, "label": "明亮云层背后许多小神仙忙着修补项目"}
+      ]
+    },
+    {
+      "id": "03-backstage",
+      "image": "assets/storyboards/03-backstage.png",
+      "promptFocus": "宏大愿景落到具体干活的人",
+      "shots": [
+        {"panel": 0, "label": "高阶神仙从云台宣布宏大目标"},
+        {"panel": 1, "label": "李长庚把一卷命令拆成许多任务竹签"},
+        {"panel": 2, "label": "基层小神仙核对路线物资和人员"},
+        {"panel": 3, "label": "一句轻盈愿景化作堆满案头的具体工作"}
+      ]
+    },
+    {
+      "id": "04-double-bind",
+      "image": "assets/storyboards/04-double-bind.png",
+      "promptFocus": "既要危险真实又要绝对安全的双重约束",
+      "shots": [
+        {"panel": 0, "label": "险峻山谷中的取经考验气势十足"},
+        {"panel": 1, "label": "云后隐藏的护卫神仙紧张保护队伍"},
+        {"panel": 2, "label": "危险与安全两只巨大天平同时压向李长庚"},
+        {"panel": 3, "label": "时间成本质量三只沙漏围住计划桌"}
+      ]
+    },
+    {
+      "id": "05-stakeholders",
+      "image": "assets/storyboards/05-stakeholders.png",
+      "promptFocus": "多方诉求把执行者夹在中间",
+      "shots": [
+        {"panel": 0, "label": "多位神仙从不同方向指向同一张路线图"},
+        {"panel": 1, "label": "有人递来人事名册有人递来私下请求"},
+        {"panel": 2, "label": "多枚不同印玺覆盖同一个项目节点"},
+        {"panel": 3, "label": "李长庚被交错卷轴包围仍保持克制"}
+      ]
+    },
+    {
+      "id": "06-paperwork",
+      "image": "assets/storyboards/06-paperwork.png",
+      "promptFocus": "报表整齐与现场混乱的黑色幽默",
+      "shots": [
+        {"panel": 0, "label": "整齐成列的空白公文卷轴和印章"},
+        {"panel": 1, "label": "窗外现场忙乱而案上报告完美整洁"},
+        {"panel": 2, "label": "一个风险包裹被从这张桌推到下一张桌"},
+        {"panel": 3, "label": "李长庚在高高文书堆后疲惫抬眼"}
+      ]
+    },
+    {
+      "id": "07-capable-trap",
+      "image": "assets/storyboards/07-capable-trap.png",
+      "promptFocus": "能者多劳逐渐变成无限责任",
+      "shots": [
+        {"panel": 0, "label": "李长庚迅速补好云桥上的第一个破洞"},
+        {"panel": 1, "label": "更多破洞和卷轴随即被送到他面前"},
+        {"panel": 2, "label": "决定权的金色印玺高悬在远处够不到"},
+        {"panel": 3, "label": "他背负越来越大的任务卷轴继续前行"}
+      ]
+    },
+    {
+      "id": "08-translator",
+      "image": "assets/storyboards/08-translator.png",
+      "promptFocus": "替系统翻译并消化矛盾的隐形劳动",
+      "shots": [
+        {"panel": 0, "label": "模糊的上级云图经过李长庚变成清晰路线"},
+        {"panel": 1, "label": "各方私下请求经过他变成体面安排"},
+        {"panel": 2, "label": "现场损失被重新包进整齐的汇报卷轴"},
+        {"panel": 3, "label": "项目巨轮继续转动而李长庚被留在齿轮中央"}
+      ]
+    },
+    {
+      "id": "09-annoyance",
+      "image": "assets/storyboards/09-annoyance.png",
+      "promptFocus": "长期自我压缩而非一次崩溃",
+      "shots": [
+        {"panel": 0, "label": "李长庚微笑接过又一份任务卷轴"},
+        {"panel": 1, "label": "一圈圈卷轴把他的个人空间压得更小"},
+        {"panel": 2, "label": "日升日落的光影里同样任务不断重复"},
+        {"panel": 3, "label": "他终于在计划桌前停笔怀疑是否做对"}
+      ]
+    },
+    {
+      "id": "10-human-cost",
+      "image": "assets/storyboards/10-human-cost.png",
+      "promptFocus": "流程节点落地后由具体的人承担代价",
+      "shots": [
+        {"panel": 0, "label": "桌上精致路线图把一难画成小小节点"},
+        {"panel": 1, "label": "同一节点落到地面却让普通人惊慌躲避"},
+        {"panel": 2, "label": "一个无辜家庭因计划调整失去安稳住处"},
+        {"panel": 3, "label": "李长庚隔着云层第一次看清人的代价"}
+      ]
+    },
+    {
+      "id": "11-empathy",
+      "image": "assets/storyboards/11-empathy.png",
+      "promptFocus": "共情作为项目决策的现实校验",
+      "shots": [
+        {"panel": 0, "label": "李长庚俯身倾听普通人的困境"},
+        {"panel": 1, "label": "他在路线图上加入代表人的温暖光点"},
+        {"panel": 2, "label": "高速运转的计划机关因新信息放慢"},
+        {"panel": 3, "label": "效率天平另一端出现具体人物和生活"}
+      ]
+    },
+    {
+      "id": "12-causality",
+      "image": "assets/storyboards/12-causality.png",
+      "promptFocus": "嘴上超脱而系统实际依靠关系运转",
+      "shots": [
+        {"panel": 0, "label": "高台神仙展示超脱尘世的空灵姿态"},
+        {"panel": 1, "label": "台下却有人悄悄交换请求和印信"},
+        {"panel": 2, "label": "关系红线在云宫各处交织成网"},
+        {"panel": 3, "label": "李长庚站在网中望向看似更高的台阶"}
+      ]
+    },
+    {
+      "id": "13-promotion",
+      "image": "assets/storyboards/13-promotion.png",
+      "promptFocus": "晋升不能自动终止兜底循环",
+      "shots": [
+        {"panel": 0, "label": "一条金色晋升阶梯穿过明亮云层"},
+        {"panel": 1, "label": "李长庚每上一阶卷轴负担反而更大"},
+        {"panel": 2, "label": "高处是规模更大的破洞和项目巨轮"}
+      ]
+    },
+    {
+      "id": "14-redefine",
+      "image": "assets/storyboards/14-redefine.png",
+      "promptFocus": "重新定义成功而不是只优化执行",
+      "shots": [
+        {"panel": 0, "label": "李长庚展开旧路线图看见被忽略的人"},
+        {"panel": 1, "label": "他重新绘制一条兼顾安全与生活的路线"},
+        {"panel": 2, "label": "高速项目巨轮被稳稳制动而非砸毁"},
+        {"panel": 3, "label": "新的计划让责任和人的代价同时可见"}
+      ]
+    },
+    {
+      "id": "15-authority",
+      "image": "assets/storyboards/15-authority.png",
+      "promptFocus": "责任权限资源三项必须匹配",
+      "shots": [
+        {"panel": 0, "label": "责任卷轴被正式交到李长庚手中"},
+        {"panel": 1, "label": "他抬头确认远处掌握决定权的印玺"},
+        {"panel": 2, "label": "他检查人手物资和时间沙漏是否齐备"},
+        {"panel": 3, "label": "三项条件平衡后项目桌才稳定下来"}
+      ]
+    },
+    {
+      "id": "16-evidence",
+      "image": "assets/storyboards/16-evidence.png",
+      "promptFocus": "用变更痕迹和风险确认替代无痕兜底",
+      "shots": [
+        {"panel": 0, "label": "目标变化以不同颜色丝带留在卷轴上"},
+        {"panel": 1, "label": "资源缺口被清楚摆在明亮桌面中央"},
+        {"panel": 2, "label": "两条风险路线被交回有印玺的决策者"},
+        {"panel": 3, "label": "完整痕迹连成透明可追溯的项目路径"}
+      ]
+    },
+    {
+      "id": "17-care",
+      "image": "assets/storyboards/17-care.png",
+      "promptFocus": "边界保护精力并让人仍能在意具体他人",
+      "shots": [
+        {"panel": 0, "label": "李长庚放下一部分不属于自己的卷轴"},
+        {"panel": 1, "label": "腾出的时间让他认真倾听身边普通人"},
+        {"panel": 2, "label": "冰冷项目机关被温暖人群阻止继续碾压"},
+        {"panel": 3, "label": "结果与承担者在同一幅明亮画面中平衡"}
+      ]
+    },
+    {
+      "id": "18-close",
+      "image": "assets/storyboards/18-close.png",
+      "promptFocus": "停止替矛盾规则无限兜底的最终收束",
+      "shots": [
+        {"panel": 0, "label": "取经路线在日光云海中继续向远方延伸"},
+        {"panel": 1, "label": "李长庚不再背负全部卷轴而从容站立"},
+        {"panel": 2, "label": "决定责任与代价化为三件清晰象征物"},
+        {"panel": 3, "label": "他望向观众留下关于兜底边界的追问"}
+      ]
+    }
+  ]
+}

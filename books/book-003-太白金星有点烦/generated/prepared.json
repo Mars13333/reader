@@ -1,0 +1,1234 @@
+{
+  "bookId": "book-003-太白金星有点烦",
+  "scriptSha256": "4AF5FE7D57127D81A8FB27AA224D014BEEC9293CB7F4D5A6ABEED9FB3B490BB9",
+  "title": "《太白金星有点烦》：最难的职场项目，是负责却不能决定",
+  "author": "马伯庸",
+  "angle": "从项目目标、权责错位、能者多劳与人的牵挂四个层次，解读李长庚为何越能干越焦虑，以及普通人如何停止为一套矛盾规则无限兜底",
+  "deliveryMode": "audio-master",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 17607,
+  "totalDurationSeconds": 586.9,
+  "audioFile": "assets/audio/narration.wav",
+  "voice": {
+    "engine": "火山引擎豆包语音合成2.0",
+    "name": "刘飞男声",
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  },
+  "segments": [
+    {
+      "id": "01-hook",
+      "section": "开场",
+      "kicker": "负责，却不能决定",
+      "narration": "最难完成的项目，不是目标太高，而是所有人都要你负责，却没人允许你决定。马伯庸把这个困局交给太白金星李长庚：他要策划九九八十一难，还得保证取经团队安全抵达。真正让他烦的，究竟真是妖怪，还是这套项目规则在作怪？",
+      "sourceRefs": [
+        {
+          "label": "图书馆内容简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作品现实意识评论",
+          "lines": "WEB-04"
+        }
+      ],
+      "narrationDurationSeconds": 21.99875,
+      "narrationStartFrame": 15,
+      "narrationEndFrame": 675,
+      "startFrame": 0,
+      "durationInFrames": 688
+    },
+    {
+      "id": "02-project",
+      "section": "故事设定",
+      "kicker": "英雄在赶路，后台在救火",
+      "narration": "小说把人人熟悉的西天取经，翻成了一个天庭和西天共同推进的重大项目。唐僧师徒在地面降妖除魔，李长庚却要在幕后安排劫难、协调人手、处理费用、写工作汇报，还要应付随时出现的意外。读者知道取经一定成功，于是悬念不再是结局，而是为了让这个结局发生，究竟要有多少人暗中补洞。",
+      "sourceRefs": [
+        {
+          "label": "图书馆内容简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "文艺报作品评论",
+          "lines": "WEB-04"
+        }
+      ],
+      "narrationDurationSeconds": 26.633333333333333,
+      "narrationStartFrame": 688,
+      "narrationEndFrame": 1487,
+      "startFrame": 688,
+      "durationInFrames": 811
+    },
+    {
+      "id": "03-backstage",
+      "section": "叙事视角",
+      "kicker": "把镜头转向具体干活的人",
+      "narration": "马伯庸在公开分享中说，他想写唐僧师徒背后那些默默为取经做事的人。这个视角一换，神话突然变得特别现实。上级看到的是愿景、功德和圆满，执行者看到的却是名单、路线、预算和突发状况。宏大目标往往只有一句话，真正把它做成，需要把一句话拆成无数件会出错的小事。可第一件小事，就已经藏着矛盾。",
+      "sourceRefs": [
+        {
+          "label": "作者谈小人物与幕后执行者",
+          "lines": "WEB-05"
+        },
+        {
+          "label": "作者谈具体做事的难度",
+          "lines": "WEB-03"
+        }
+      ],
+      "narrationDurationSeconds": 31.774041666666665,
+      "narrationStartFrame": 1499,
+      "narrationEndFrame": 2452,
+      "startFrame": 1499,
+      "durationInFrames": 966
+    },
+    {
+      "id": "04-double-bind",
+      "section": "第一层困局",
+      "kicker": "既要真受难，又要零风险",
+      "narration": "九九八十一难必须像真的，否则无法体现取经的考验；可唐僧又必须安全抵达，否则整个项目失去意义。危险不能太假，也不能失控；妖怪要有威胁，又不能真把人吃掉。李长庚面对的不是一道难题，而是两个互相冲突的正确答案。很多职场焦虑也从这里开始：质量要最高，时间要最短，成本还不能增加。那谁来解释这些不可能同时满足的要求？",
+      "sourceRefs": [
+        {
+          "label": "取经项目与八十一难设定",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作者职场经验访谈",
+          "lines": "WEB-03"
+        }
+      ],
+      "narrationDurationSeconds": 30.579833333333333,
+      "narrationStartFrame": 2465,
+      "narrationEndFrame": 3382,
+      "startFrame": 2465,
+      "durationInFrames": 930
+    },
+    {
+      "id": "05-stakeholders",
+      "section": "第二层困局",
+      "kicker": "一条路，多套考核标准",
+      "narration": "更麻烦的是，这不是李长庚一个人的项目。天庭、西天、各路神仙和沿途势力，都有自己的立场。有人关心结果，有人关心面子，有人要安插人手，有人希望自己的麻烦顺便被解决。公开简介把这些难题概括成上级诉求、人事安排和突发状况。每一方单独看都能讲出道理，合在一起，却把执行者夹在中间。接下来，连说清楚发生了什么都变得困难。",
+      "sourceRefs": [
+        {
+          "label": "图书项目难题简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作品中的人情博弈评论",
+          "lines": "WEB-04"
+        }
+      ],
+      "narrationDurationSeconds": 33.343666666666664,
+      "narrationStartFrame": 3395,
+      "narrationEndFrame": 4395,
+      "startFrame": 3395,
+      "durationInFrames": 1013
+    },
+    {
+      "id": "06-paperwork",
+      "section": "流程语言",
+      "kicker": "报表正确，事情未必正确",
+      "narration": "费用怎么报，汇报怎么写，突发状况该归谁，这些细节构成了小说的黑色幽默。流程当然有价值，它让多人协作留下依据；可当每个人只保护自己的流程位置，语言也会变成遮挡现实的帘子。问题被改写成一个合规的名目，风险被挪进下一张表格，最后所有文件都正确，现场却仍然一团乱。为什么总有人能收拾残局？因为组织很快会发现谁最能干。",
+      "sourceRefs": [
+        {
+          "label": "费用、汇报与突发状况简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "黑色幽默式职场生态评论",
+          "lines": "WEB-04"
+        }
+      ],
+      "narrationDurationSeconds": 32.873333333333335,
+      "narrationStartFrame": 4408,
+      "narrationEndFrame": 5394,
+      "startFrame": 4408,
+      "durationInFrames": 999
+    },
+    {
+      "id": "07-capable-trap",
+      "section": "能者陷阱",
+      "kicker": "解决一次，就多负责一次",
+      "narration": "李长庚有经验、会协调、懂分寸，所以每次混乱都有人来找他。能力本来应该扩大选择，到了权责失衡的体系里，却可能扩大责任。你解决一个例外，别人就把例外记成你的日常工作；你替项目补一次洞，下一次那个洞便默认归你维护。所谓能者多劳，最危险的地方不是忙，而是责任不断增加，决定权和资源却没有一起增加。那组织为什么舍不得改变？",
+      "sourceRefs": [
+        {
+          "label": "李长庚的项目焦虑简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作者谈中层与一线执行",
+          "lines": "WEB-03"
+        }
+      ],
+      "narrationDurationSeconds": 32.61925,
+      "narrationStartFrame": 5407,
+      "narrationEndFrame": 6385,
+      "startFrame": 5407,
+      "durationInFrames": 991
+    },
+    {
+      "id": "08-translator",
+      "section": "隐形劳动",
+      "kicker": "他替系统消化所有矛盾",
+      "narration": "因为李长庚不只在做任务，他还在做一份看不见的翻译工作：把上级模糊的愿景翻成可执行步骤，把各方不能明说的利益翻成体面安排，再把现场的损失翻成能够上报的结果。只要他还能完成翻译，系统就不必面对目标之间的冲突。于是他的优秀反而掩盖了规则的问题。久而久之，他既不能公开失败，也很难真正成功，只能维持一切继续运转。这就是书名那个“烦”字的重量。",
+      "sourceRefs": [
+        {
+          "label": "作者谈宏观命令与具体执行",
+          "lines": "WEB-03"
+        },
+        {
+          "label": "李长庚如履薄冰的现实解读",
+          "lines": "WEB-04"
+        }
+      ],
+      "narrationDurationSeconds": 32.266375,
+      "narrationStartFrame": 6398,
+      "narrationEndFrame": 7366,
+      "startFrame": 6398,
+      "durationInFrames": 980
+    },
+    {
+      "id": "09-annoyance",
+      "section": "情绪真相",
+      "kicker": "不是崩溃，是长期自我压缩",
+      "narration": "“烦”听起来没有“苦”那么严重，却更像很多成年人的真实状态。你还能工作，还能礼貌回应，还能把下一个问题处理掉，所以谁也不觉得你需要停下。可每一次忍耐，都要把自己的判断、情绪和边界再往里压一点。真正消耗人的，未必是一场灾难，而是每天都要证明自己可以继续承受。直到流程里出现具体的人，李长庚才不得不问：顺利完成，是否等于事情做对了？",
+      "sourceRefs": [
+        {
+          "label": "神仙职场焦虑简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作者谈古今共同的职场困惑",
+          "lines": "WEB-03"
+        }
+      ],
+      "narrationDurationSeconds": 32.799708333333335,
+      "narrationStartFrame": 7378,
+      "narrationEndFrame": 8362,
+      "startFrame": 7378,
+      "durationInFrames": 997
+    },
+    {
+      "id": "10-human-cost",
+      "section": "第三层困局",
+      "kicker": "流程没有痛觉，人有",
+      "narration": "站在项目表上，一难只是一个节点，一个妖怪只是一个资源，一次调整只是改动日期。可落到地面，每个节点都有人害怕，每次协调都有人失去选择。公开书介提醒读者，人的执念也许难以被高高在上的神仙理解，但痛苦不会因此消失。小说最有力量的地方，不是嘲笑流程笨，而是让李长庚逐渐看见：所谓完美方案，常常只是把代价藏到了看不见的人身上。",
+      "sourceRefs": [
+        {
+          "label": "图书馆主题简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作者的人性与情感访谈",
+          "lines": "WEB-02"
+        }
+      ],
+      "narrationDurationSeconds": 34.1515,
+      "narrationStartFrame": 8375,
+      "narrationEndFrame": 9400,
+      "startFrame": 8375,
+      "durationInFrames": 1037
+    },
+    {
+      "id": "11-empathy",
+      "section": "人物转折",
+      "kicker": "共情不是软弱，是现实校验",
+      "narration": "很多组织把不动感情当成专业，仿佛只要足够理性，就能把所有人塞进同一张计划表。但李长庚的变化说明，共情并不是放弃判断，而是给判断增加一项关键数据：这个决定由谁承受，承受到什么程度，他有没有说不的机会。没有这一项，效率越高，伤害可能越快。可问题也来了，神仙追求的正是超脱因果，为什么到了天庭，关系和牵挂反而一件不少？",
+      "sourceRefs": [
+        {
+          "label": "人的牵挂与痛苦主题",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作者谈人性与情感的恒常",
+          "lines": "WEB-02"
+        }
+      ],
+      "narrationDurationSeconds": 33.1295,
+      "narrationStartFrame": 9412,
+      "narrationEndFrame": 10406,
+      "startFrame": 9412,
+      "durationInFrames": 1007
+    },
+    {
+      "id": "12-causality",
+      "section": "神仙悖论",
+      "kicker": "嘴上超脱，系统靠关系运转",
+      "narration": "这正是小说最尖锐的反差：神仙在理念上追求超脱，取经项目在现实中却离不开人情、身份和彼此的因果。组织一边靠关系推动事情，一边要求执行者不要有私人感受；一边默认你照顾各方体面，一边又把所有后果算成你的责任。李长庚越懂规则，越发现规则并不通向自由。于是他把希望放到下一层身份上：再努力一点，再往上走一步，也许就能离开这些麻烦。真的会吗？",
+      "sourceRefs": [
+        {
+          "label": "神仙牵挂与得道主题",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "神仙职场的人情博弈评论",
+          "lines": "WEB-04"
+        }
+      ],
+      "narrationDurationSeconds": 34.683416666666666,
+      "narrationStartFrame": 10419,
+      "narrationEndFrame": 11459,
+      "startFrame": 10419,
+      "durationInFrames": 1053
+    },
+    {
+      "id": "13-promotion",
+      "section": "晋升幻觉",
+      "kicker": "下一层身份，不会自动带来自由",
+      "narration": "把解脱寄托在下一层身份上，是一种常见的自我安慰：等升职就有决定权，等项目结束就能休息，等所有人满意就可以做自己。可如果晋升依赖的正是你不断替矛盾规则兜底，那么位置越高，可能只是要兜更大的底。李长庚的处境让人看见，真正的转折不是再想一个更聪明的补洞办法，而是重新问：什么才算成功？",
+      "sourceRefs": [
+        {
+          "label": "图书公开内容简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作品的当代职场指向",
+          "lines": "WEB-02"
+        }
+      ],
+      "narrationDurationSeconds": 29.132666666666665,
+      "narrationStartFrame": 11472,
+      "narrationEndFrame": 12346,
+      "startFrame": 11472,
+      "durationInFrames": 886
+    },
+    {
+      "id": "14-redefine",
+      "section": "破局起点",
+      "kicker": "先改成功定义，再优化执行",
+      "narration": "如果成功只等于按时完成八十一难，那么每个具体的人都可以被压缩成进度；如果成功还包括不让无辜者替安排付出过量代价，项目的设计就必须改变。这不是鼓励遇事躺平，而是拒绝把执行效率当成唯一答案。马伯庸说，他关心的是具体做事的人，以及人在困境中用什么态度面对麻烦。对现实中的我们，第一步不是学会李长庚的圆滑，而是看清责任、权限和资源是否真的匹配。",
+      "sourceRefs": [
+        {
+          "label": "作者谈具体做事的人",
+          "lines": "WEB-03"
+        },
+        {
+          "label": "作者谈幕后取经工作者",
+          "lines": "WEB-05"
+        }
+      ],
+      "narrationDurationSeconds": 35.27129166666667,
+      "narrationStartFrame": 12358,
+      "narrationEndFrame": 13417,
+      "startFrame": 12358,
+      "durationInFrames": 1071
+    },
+    {
+      "id": "15-authority",
+      "section": "现实方法一",
+      "kicker": "接任务前，先核对三件事",
+      "narration": "现实里再遇到“既要、又要、还要”，可以先问三件事。第一，结果由我负责，那关键选择是否由我决定？第二，期限已经确定，那人手、预算和优先级是否同步调整？第三，多方意见冲突时，谁拥有最后裁决权？把问题问清，不是推卸责任，而是让责任回到能够做决定的位置。一个人最容易被困住的时刻，往往不是任务太难，而是默认自己必须悄悄解决所有前提矛盾。",
+      "sourceRefs": [
+        {
+          "label": "作者的公司执行经验",
+          "lines": "WEB-03"
+        },
+        {
+          "label": "项目中的多方诉求简介",
+          "lines": "WEB-01"
+        }
+      ],
+      "narrationDurationSeconds": 35.26425,
+      "narrationStartFrame": 13429,
+      "narrationEndFrame": 14487,
+      "startFrame": 13429,
+      "durationInFrames": 1071
+    },
+    {
+      "id": "16-evidence",
+      "section": "现实方法二",
+      "kicker": "不能拒绝，也别无痕兜底",
+      "narration": "如果暂时无法拒绝任务，至少不要让补洞变成没有记录的义务。把目标变化写下来，把资源缺口说清楚，把不同方案的风险交还给有权决定的人。这样做不是为了甩锅，而是避免系统误以为一切本来就能轻松完成。李长庚式的聪明，最值得借鉴的不是如何让所有人满意，而是如何看见每个要求背后的代价。可如果只剩下边界和证据，人会不会变得冷漠？",
+      "sourceRefs": [
+        {
+          "label": "费用、汇报与工作协调设定",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作者谈执行细节的重量",
+          "lines": "WEB-03"
+        }
+      ],
+      "narrationDurationSeconds": 31.373041666666666,
+      "narrationStartFrame": 14500,
+      "narrationEndFrame": 15441,
+      "startFrame": 14500,
+      "durationInFrames": 953
+    },
+    {
+      "id": "17-care",
+      "section": "现实方法三",
+      "kicker": "保留在意，才不会只剩流程",
+      "narration": "恰恰相反，边界保护的是有限的精力，让人在真正重要的地方仍能在意别人。书里那些牵挂、因果和苦乐得失，提醒李长庚不能只把世界看成一张项目表。关心具体的人，会让决策变慢，也会让某些漂亮方案不再成立，但它能阻止我们把伤害叫成优化，把沉默叫成同意。专业不是没有感情，而是既看见结果，也看见谁在为结果付费。最后，李长庚的烦恼也就不只属于神仙。",
+      "sourceRefs": [
+        {
+          "label": "人的牵挂与苦乐主题",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "人性与情感的创作母题",
+          "lines": "WEB-02"
+        }
+      ],
+      "narrationDurationSeconds": 34.6515,
+      "narrationStartFrame": 15453,
+      "narrationEndFrame": 16493,
+      "startFrame": 15453,
+      "durationInFrames": 1053
+    },
+    {
+      "id": "18-close",
+      "section": "最后",
+      "kicker": "别替矛盾规则无限兜底",
+      "narration": "《太白金星有点烦》借一个人人知道结局的西游故事，追问结局背后那些没人统计的成本。它好笑，是因为天庭的流程像极了现实；它让人回味，是因为李长庚最终面对的不是怎样把工作做得更漂亮，而是怎样不让工作拿走自己判断痛苦的能力。下次再有人把矛盾目标一起交给你，先别急着证明自己能扛。问清谁决定、谁负责、谁承担。你现在最想停止兜底的，是哪一件事？",
+      "sourceRefs": [
+        {
+          "label": "作品主题与内容简介",
+          "lines": "WEB-01"
+        },
+        {
+          "label": "作者的小人物创作原则",
+          "lines": "WEB-05"
+        },
+        {
+          "label": "作品现实意识评论",
+          "lines": "WEB-04"
+        }
+      ],
+      "narrationDurationSeconds": 35.31216666666667,
+      "narrationStartFrame": 16506,
+      "narrationEndFrame": 17565,
+      "startFrame": 16506,
+      "durationInFrames": 1101
+    }
+  ],
+  "shots": [
+    {
+      "id": "01-hook-01",
+      "segmentId": "01-hook",
+      "section": "开场",
+      "kicker": "负责，却不能决定",
+      "image": "assets/storyboards/01-hook.png",
+      "panel": 0,
+      "label": "李长庚站在两道相反指令的卷轴之间",
+      "isSegmentStart": true,
+      "startFrame": 0,
+      "durationInFrames": 229
+    },
+    {
+      "id": "01-hook-02",
+      "segmentId": "01-hook",
+      "section": "开场",
+      "kicker": "负责，却不能决定",
+      "image": "assets/storyboards/01-hook.png",
+      "panel": 1,
+      "label": "一边是危险妖云一边是被保护的取经路线",
+      "isSegmentStart": false,
+      "startFrame": 229,
+      "durationInFrames": 229
+    },
+    {
+      "id": "01-hook-03",
+      "segmentId": "01-hook",
+      "section": "开场",
+      "kicker": "负责，却不能决定",
+      "image": "assets/storyboards/01-hook.png",
+      "panel": 3,
+      "label": "李长庚抱着卷轴在明亮云宫里独自发愁",
+      "isSegmentStart": false,
+      "startFrame": 458,
+      "durationInFrames": 230
+    },
+    {
+      "id": "02-project-01",
+      "segmentId": "02-project",
+      "section": "故事设定",
+      "kicker": "英雄在赶路，后台在救火",
+      "image": "assets/storyboards/02-project.png",
+      "panel": 0,
+      "label": "天庭与西天代表围绕取经路线召开联合会议",
+      "isSegmentStart": true,
+      "startFrame": 688,
+      "durationInFrames": 270
+    },
+    {
+      "id": "02-project-02",
+      "segmentId": "02-project",
+      "section": "故事设定",
+      "kicker": "英雄在赶路，后台在救火",
+      "image": "assets/storyboards/02-project.png",
+      "panel": 1,
+      "label": "远处唐僧师徒化为原创剪影沿山路前行",
+      "isSegmentStart": false,
+      "startFrame": 958,
+      "durationInFrames": 270
+    },
+    {
+      "id": "02-project-03",
+      "segmentId": "02-project",
+      "section": "故事设定",
+      "kicker": "英雄在赶路，后台在救火",
+      "image": "assets/storyboards/02-project.png",
+      "panel": 3,
+      "label": "明亮云层背后许多小神仙忙着修补项目",
+      "isSegmentStart": false,
+      "startFrame": 1228,
+      "durationInFrames": 271
+    },
+    {
+      "id": "03-backstage-01",
+      "segmentId": "03-backstage",
+      "section": "叙事视角",
+      "kicker": "把镜头转向具体干活的人",
+      "image": "assets/storyboards/03-backstage.png",
+      "panel": 0,
+      "label": "高阶神仙从云台宣布宏大目标",
+      "isSegmentStart": true,
+      "startFrame": 1499,
+      "durationInFrames": 241
+    },
+    {
+      "id": "03-backstage-02",
+      "segmentId": "03-backstage",
+      "section": "叙事视角",
+      "kicker": "把镜头转向具体干活的人",
+      "image": "assets/storyboards/03-backstage.png",
+      "panel": 1,
+      "label": "李长庚把一卷命令拆成许多任务竹签",
+      "isSegmentStart": false,
+      "startFrame": 1740,
+      "durationInFrames": 241
+    },
+    {
+      "id": "03-backstage-03",
+      "segmentId": "03-backstage",
+      "section": "叙事视角",
+      "kicker": "把镜头转向具体干活的人",
+      "image": "assets/storyboards/03-backstage.png",
+      "panel": 2,
+      "label": "基层小神仙核对路线物资和人员",
+      "isSegmentStart": false,
+      "startFrame": 1981,
+      "durationInFrames": 241
+    },
+    {
+      "id": "03-backstage-04",
+      "segmentId": "03-backstage",
+      "section": "叙事视角",
+      "kicker": "把镜头转向具体干活的人",
+      "image": "assets/storyboards/03-backstage.png",
+      "panel": 3,
+      "label": "一句轻盈愿景化作堆满案头的具体工作",
+      "isSegmentStart": false,
+      "startFrame": 2222,
+      "durationInFrames": 243
+    },
+    {
+      "id": "04-double-bind-01",
+      "segmentId": "04-double-bind",
+      "section": "第一层困局",
+      "kicker": "既要真受难，又要零风险",
+      "image": "assets/storyboards/04-double-bind.png",
+      "panel": 0,
+      "label": "险峻山谷中的取经考验气势十足",
+      "isSegmentStart": true,
+      "startFrame": 2465,
+      "durationInFrames": 232
+    },
+    {
+      "id": "04-double-bind-02",
+      "segmentId": "04-double-bind",
+      "section": "第一层困局",
+      "kicker": "既要真受难，又要零风险",
+      "image": "assets/storyboards/04-double-bind.png",
+      "panel": 1,
+      "label": "云后隐藏的护卫神仙紧张保护队伍",
+      "isSegmentStart": false,
+      "startFrame": 2697,
+      "durationInFrames": 232
+    },
+    {
+      "id": "04-double-bind-03",
+      "segmentId": "04-double-bind",
+      "section": "第一层困局",
+      "kicker": "既要真受难，又要零风险",
+      "image": "assets/storyboards/04-double-bind.png",
+      "panel": 2,
+      "label": "危险与安全两只巨大天平同时压向李长庚",
+      "isSegmentStart": false,
+      "startFrame": 2929,
+      "durationInFrames": 232
+    },
+    {
+      "id": "04-double-bind-04",
+      "segmentId": "04-double-bind",
+      "section": "第一层困局",
+      "kicker": "既要真受难，又要零风险",
+      "image": "assets/storyboards/04-double-bind.png",
+      "panel": 3,
+      "label": "时间成本质量三只沙漏围住计划桌",
+      "isSegmentStart": false,
+      "startFrame": 3161,
+      "durationInFrames": 234
+    },
+    {
+      "id": "05-stakeholders-01",
+      "segmentId": "05-stakeholders",
+      "section": "第二层困局",
+      "kicker": "一条路，多套考核标准",
+      "image": "assets/storyboards/05-stakeholders.png",
+      "panel": 0,
+      "label": "多位神仙从不同方向指向同一张路线图",
+      "isSegmentStart": true,
+      "startFrame": 3395,
+      "durationInFrames": 253
+    },
+    {
+      "id": "05-stakeholders-02",
+      "segmentId": "05-stakeholders",
+      "section": "第二层困局",
+      "kicker": "一条路，多套考核标准",
+      "image": "assets/storyboards/05-stakeholders.png",
+      "panel": 1,
+      "label": "有人递来人事名册有人递来私下请求",
+      "isSegmentStart": false,
+      "startFrame": 3648,
+      "durationInFrames": 253
+    },
+    {
+      "id": "05-stakeholders-03",
+      "segmentId": "05-stakeholders",
+      "section": "第二层困局",
+      "kicker": "一条路，多套考核标准",
+      "image": "assets/storyboards/05-stakeholders.png",
+      "panel": 2,
+      "label": "多枚不同印玺覆盖同一个项目节点",
+      "isSegmentStart": false,
+      "startFrame": 3901,
+      "durationInFrames": 253
+    },
+    {
+      "id": "05-stakeholders-04",
+      "segmentId": "05-stakeholders",
+      "section": "第二层困局",
+      "kicker": "一条路，多套考核标准",
+      "image": "assets/storyboards/05-stakeholders.png",
+      "panel": 3,
+      "label": "李长庚被交错卷轴包围仍保持克制",
+      "isSegmentStart": false,
+      "startFrame": 4154,
+      "durationInFrames": 254
+    },
+    {
+      "id": "06-paperwork-01",
+      "segmentId": "06-paperwork",
+      "section": "流程语言",
+      "kicker": "报表正确，事情未必正确",
+      "image": "assets/storyboards/06-paperwork.png",
+      "panel": 0,
+      "label": "整齐成列的空白公文卷轴和印章",
+      "isSegmentStart": true,
+      "startFrame": 4408,
+      "durationInFrames": 249
+    },
+    {
+      "id": "06-paperwork-02",
+      "segmentId": "06-paperwork",
+      "section": "流程语言",
+      "kicker": "报表正确，事情未必正确",
+      "image": "assets/storyboards/06-paperwork.png",
+      "panel": 1,
+      "label": "窗外现场忙乱而案上报告完美整洁",
+      "isSegmentStart": false,
+      "startFrame": 4657,
+      "durationInFrames": 249
+    },
+    {
+      "id": "06-paperwork-03",
+      "segmentId": "06-paperwork",
+      "section": "流程语言",
+      "kicker": "报表正确，事情未必正确",
+      "image": "assets/storyboards/06-paperwork.png",
+      "panel": 2,
+      "label": "一个风险包裹被从这张桌推到下一张桌",
+      "isSegmentStart": false,
+      "startFrame": 4906,
+      "durationInFrames": 249
+    },
+    {
+      "id": "06-paperwork-04",
+      "segmentId": "06-paperwork",
+      "section": "流程语言",
+      "kicker": "报表正确，事情未必正确",
+      "image": "assets/storyboards/06-paperwork.png",
+      "panel": 3,
+      "label": "李长庚在高高文书堆后疲惫抬眼",
+      "isSegmentStart": false,
+      "startFrame": 5155,
+      "durationInFrames": 252
+    },
+    {
+      "id": "07-capable-trap-01",
+      "segmentId": "07-capable-trap",
+      "section": "能者陷阱",
+      "kicker": "解决一次，就多负责一次",
+      "image": "assets/storyboards/07-capable-trap.png",
+      "panel": 0,
+      "label": "李长庚迅速补好云桥上的第一个破洞",
+      "isSegmentStart": true,
+      "startFrame": 5407,
+      "durationInFrames": 247
+    },
+    {
+      "id": "07-capable-trap-02",
+      "segmentId": "07-capable-trap",
+      "section": "能者陷阱",
+      "kicker": "解决一次，就多负责一次",
+      "image": "assets/storyboards/07-capable-trap.png",
+      "panel": 1,
+      "label": "更多破洞和卷轴随即被送到他面前",
+      "isSegmentStart": false,
+      "startFrame": 5654,
+      "durationInFrames": 247
+    },
+    {
+      "id": "07-capable-trap-03",
+      "segmentId": "07-capable-trap",
+      "section": "能者陷阱",
+      "kicker": "解决一次，就多负责一次",
+      "image": "assets/storyboards/07-capable-trap.png",
+      "panel": 2,
+      "label": "决定权的金色印玺高悬在远处够不到",
+      "isSegmentStart": false,
+      "startFrame": 5901,
+      "durationInFrames": 247
+    },
+    {
+      "id": "07-capable-trap-04",
+      "segmentId": "07-capable-trap",
+      "section": "能者陷阱",
+      "kicker": "解决一次，就多负责一次",
+      "image": "assets/storyboards/07-capable-trap.png",
+      "panel": 3,
+      "label": "他背负越来越大的任务卷轴继续前行",
+      "isSegmentStart": false,
+      "startFrame": 6148,
+      "durationInFrames": 250
+    },
+    {
+      "id": "08-translator-01",
+      "segmentId": "08-translator",
+      "section": "隐形劳动",
+      "kicker": "他替系统消化所有矛盾",
+      "image": "assets/storyboards/08-translator.png",
+      "panel": 0,
+      "label": "模糊的上级云图经过李长庚变成清晰路线",
+      "isSegmentStart": true,
+      "startFrame": 6398,
+      "durationInFrames": 245
+    },
+    {
+      "id": "08-translator-02",
+      "segmentId": "08-translator",
+      "section": "隐形劳动",
+      "kicker": "他替系统消化所有矛盾",
+      "image": "assets/storyboards/08-translator.png",
+      "panel": 1,
+      "label": "各方私下请求经过他变成体面安排",
+      "isSegmentStart": false,
+      "startFrame": 6643,
+      "durationInFrames": 245
+    },
+    {
+      "id": "08-translator-03",
+      "segmentId": "08-translator",
+      "section": "隐形劳动",
+      "kicker": "他替系统消化所有矛盾",
+      "image": "assets/storyboards/08-translator.png",
+      "panel": 2,
+      "label": "现场损失被重新包进整齐的汇报卷轴",
+      "isSegmentStart": false,
+      "startFrame": 6888,
+      "durationInFrames": 245
+    },
+    {
+      "id": "08-translator-04",
+      "segmentId": "08-translator",
+      "section": "隐形劳动",
+      "kicker": "他替系统消化所有矛盾",
+      "image": "assets/storyboards/08-translator.png",
+      "panel": 3,
+      "label": "项目巨轮继续转动而李长庚被留在齿轮中央",
+      "isSegmentStart": false,
+      "startFrame": 7133,
+      "durationInFrames": 245
+    },
+    {
+      "id": "09-annoyance-01",
+      "segmentId": "09-annoyance",
+      "section": "情绪真相",
+      "kicker": "不是崩溃，是长期自我压缩",
+      "image": "assets/storyboards/09-annoyance.png",
+      "panel": 0,
+      "label": "李长庚微笑接过又一份任务卷轴",
+      "isSegmentStart": true,
+      "startFrame": 7378,
+      "durationInFrames": 249
+    },
+    {
+      "id": "09-annoyance-02",
+      "segmentId": "09-annoyance",
+      "section": "情绪真相",
+      "kicker": "不是崩溃，是长期自我压缩",
+      "image": "assets/storyboards/09-annoyance.png",
+      "panel": 1,
+      "label": "一圈圈卷轴把他的个人空间压得更小",
+      "isSegmentStart": false,
+      "startFrame": 7627,
+      "durationInFrames": 249
+    },
+    {
+      "id": "09-annoyance-03",
+      "segmentId": "09-annoyance",
+      "section": "情绪真相",
+      "kicker": "不是崩溃，是长期自我压缩",
+      "image": "assets/storyboards/09-annoyance.png",
+      "panel": 2,
+      "label": "日升日落的光影里同样任务不断重复",
+      "isSegmentStart": false,
+      "startFrame": 7876,
+      "durationInFrames": 249
+    },
+    {
+      "id": "09-annoyance-04",
+      "segmentId": "09-annoyance",
+      "section": "情绪真相",
+      "kicker": "不是崩溃，是长期自我压缩",
+      "image": "assets/storyboards/09-annoyance.png",
+      "panel": 3,
+      "label": "他终于在计划桌前停笔怀疑是否做对",
+      "isSegmentStart": false,
+      "startFrame": 8125,
+      "durationInFrames": 250
+    },
+    {
+      "id": "10-human-cost-01",
+      "segmentId": "10-human-cost",
+      "section": "第三层困局",
+      "kicker": "流程没有痛觉，人有",
+      "image": "assets/storyboards/10-human-cost.png",
+      "panel": 0,
+      "label": "桌上精致路线图把一难画成小小节点",
+      "isSegmentStart": true,
+      "startFrame": 8375,
+      "durationInFrames": 259
+    },
+    {
+      "id": "10-human-cost-02",
+      "segmentId": "10-human-cost",
+      "section": "第三层困局",
+      "kicker": "流程没有痛觉，人有",
+      "image": "assets/storyboards/10-human-cost.png",
+      "panel": 1,
+      "label": "同一节点落到地面却让普通人惊慌躲避",
+      "isSegmentStart": false,
+      "startFrame": 8634,
+      "durationInFrames": 259
+    },
+    {
+      "id": "10-human-cost-03",
+      "segmentId": "10-human-cost",
+      "section": "第三层困局",
+      "kicker": "流程没有痛觉，人有",
+      "image": "assets/storyboards/10-human-cost.png",
+      "panel": 2,
+      "label": "一个无辜家庭因计划调整失去安稳住处",
+      "isSegmentStart": false,
+      "startFrame": 8893,
+      "durationInFrames": 259
+    },
+    {
+      "id": "10-human-cost-04",
+      "segmentId": "10-human-cost",
+      "section": "第三层困局",
+      "kicker": "流程没有痛觉，人有",
+      "image": "assets/storyboards/10-human-cost.png",
+      "panel": 3,
+      "label": "李长庚隔着云层第一次看清人的代价",
+      "isSegmentStart": false,
+      "startFrame": 9152,
+      "durationInFrames": 260
+    },
+    {
+      "id": "11-empathy-01",
+      "segmentId": "11-empathy",
+      "section": "人物转折",
+      "kicker": "共情不是软弱，是现实校验",
+      "image": "assets/storyboards/11-empathy.png",
+      "panel": 0,
+      "label": "李长庚俯身倾听普通人的困境",
+      "isSegmentStart": true,
+      "startFrame": 9412,
+      "durationInFrames": 251
+    },
+    {
+      "id": "11-empathy-02",
+      "segmentId": "11-empathy",
+      "section": "人物转折",
+      "kicker": "共情不是软弱，是现实校验",
+      "image": "assets/storyboards/11-empathy.png",
+      "panel": 1,
+      "label": "他在路线图上加入代表人的温暖光点",
+      "isSegmentStart": false,
+      "startFrame": 9663,
+      "durationInFrames": 251
+    },
+    {
+      "id": "11-empathy-03",
+      "segmentId": "11-empathy",
+      "section": "人物转折",
+      "kicker": "共情不是软弱，是现实校验",
+      "image": "assets/storyboards/11-empathy.png",
+      "panel": 2,
+      "label": "高速运转的计划机关因新信息放慢",
+      "isSegmentStart": false,
+      "startFrame": 9914,
+      "durationInFrames": 251
+    },
+    {
+      "id": "11-empathy-04",
+      "segmentId": "11-empathy",
+      "section": "人物转折",
+      "kicker": "共情不是软弱，是现实校验",
+      "image": "assets/storyboards/11-empathy.png",
+      "panel": 3,
+      "label": "效率天平另一端出现具体人物和生活",
+      "isSegmentStart": false,
+      "startFrame": 10165,
+      "durationInFrames": 254
+    },
+    {
+      "id": "12-causality-01",
+      "segmentId": "12-causality",
+      "section": "神仙悖论",
+      "kicker": "嘴上超脱，系统靠关系运转",
+      "image": "assets/storyboards/12-causality.png",
+      "panel": 0,
+      "label": "高台神仙展示超脱尘世的空灵姿态",
+      "isSegmentStart": true,
+      "startFrame": 10419,
+      "durationInFrames": 263
+    },
+    {
+      "id": "12-causality-02",
+      "segmentId": "12-causality",
+      "section": "神仙悖论",
+      "kicker": "嘴上超脱，系统靠关系运转",
+      "image": "assets/storyboards/12-causality.png",
+      "panel": 1,
+      "label": "台下却有人悄悄交换请求和印信",
+      "isSegmentStart": false,
+      "startFrame": 10682,
+      "durationInFrames": 263
+    },
+    {
+      "id": "12-causality-03",
+      "segmentId": "12-causality",
+      "section": "神仙悖论",
+      "kicker": "嘴上超脱，系统靠关系运转",
+      "image": "assets/storyboards/12-causality.png",
+      "panel": 2,
+      "label": "关系红线在云宫各处交织成网",
+      "isSegmentStart": false,
+      "startFrame": 10945,
+      "durationInFrames": 263
+    },
+    {
+      "id": "12-causality-04",
+      "segmentId": "12-causality",
+      "section": "神仙悖论",
+      "kicker": "嘴上超脱，系统靠关系运转",
+      "image": "assets/storyboards/12-causality.png",
+      "panel": 3,
+      "label": "李长庚站在网中望向看似更高的台阶",
+      "isSegmentStart": false,
+      "startFrame": 11208,
+      "durationInFrames": 264
+    },
+    {
+      "id": "13-promotion-01",
+      "segmentId": "13-promotion",
+      "section": "晋升幻觉",
+      "kicker": "下一层身份，不会自动带来自由",
+      "image": "assets/storyboards/13-promotion.png",
+      "panel": 0,
+      "label": "一条金色晋升阶梯穿过明亮云层",
+      "isSegmentStart": true,
+      "startFrame": 11472,
+      "durationInFrames": 295
+    },
+    {
+      "id": "13-promotion-02",
+      "segmentId": "13-promotion",
+      "section": "晋升幻觉",
+      "kicker": "下一层身份，不会自动带来自由",
+      "image": "assets/storyboards/13-promotion.png",
+      "panel": 1,
+      "label": "李长庚每上一阶卷轴负担反而更大",
+      "isSegmentStart": false,
+      "startFrame": 11767,
+      "durationInFrames": 295
+    },
+    {
+      "id": "13-promotion-03",
+      "segmentId": "13-promotion",
+      "section": "晋升幻觉",
+      "kicker": "下一层身份，不会自动带来自由",
+      "image": "assets/storyboards/13-promotion.png",
+      "panel": 2,
+      "label": "高处是规模更大的破洞和项目巨轮",
+      "isSegmentStart": false,
+      "startFrame": 12062,
+      "durationInFrames": 296
+    },
+    {
+      "id": "14-redefine-01",
+      "segmentId": "14-redefine",
+      "section": "破局起点",
+      "kicker": "先改成功定义，再优化执行",
+      "image": "assets/storyboards/14-redefine.png",
+      "panel": 0,
+      "label": "李长庚展开旧路线图看见被忽略的人",
+      "isSegmentStart": true,
+      "startFrame": 12358,
+      "durationInFrames": 267
+    },
+    {
+      "id": "14-redefine-02",
+      "segmentId": "14-redefine",
+      "section": "破局起点",
+      "kicker": "先改成功定义，再优化执行",
+      "image": "assets/storyboards/14-redefine.png",
+      "panel": 1,
+      "label": "他重新绘制一条兼顾安全与生活的路线",
+      "isSegmentStart": false,
+      "startFrame": 12625,
+      "durationInFrames": 267
+    },
+    {
+      "id": "14-redefine-03",
+      "segmentId": "14-redefine",
+      "section": "破局起点",
+      "kicker": "先改成功定义，再优化执行",
+      "image": "assets/storyboards/14-redefine.png",
+      "panel": 2,
+      "label": "高速项目巨轮被稳稳制动而非砸毁",
+      "isSegmentStart": false,
+      "startFrame": 12892,
+      "durationInFrames": 267
+    },
+    {
+      "id": "14-redefine-04",
+      "segmentId": "14-redefine",
+      "section": "破局起点",
+      "kicker": "先改成功定义，再优化执行",
+      "image": "assets/storyboards/14-redefine.png",
+      "panel": 3,
+      "label": "新的计划让责任和人的代价同时可见",
+      "isSegmentStart": false,
+      "startFrame": 13159,
+      "durationInFrames": 270
+    },
+    {
+      "id": "15-authority-01",
+      "segmentId": "15-authority",
+      "section": "现实方法一",
+      "kicker": "接任务前，先核对三件事",
+      "image": "assets/storyboards/15-authority.png",
+      "panel": 0,
+      "label": "责任卷轴被正式交到李长庚手中",
+      "isSegmentStart": true,
+      "startFrame": 13429,
+      "durationInFrames": 267
+    },
+    {
+      "id": "15-authority-02",
+      "segmentId": "15-authority",
+      "section": "现实方法一",
+      "kicker": "接任务前，先核对三件事",
+      "image": "assets/storyboards/15-authority.png",
+      "panel": 1,
+      "label": "他抬头确认远处掌握决定权的印玺",
+      "isSegmentStart": false,
+      "startFrame": 13696,
+      "durationInFrames": 267
+    },
+    {
+      "id": "15-authority-03",
+      "segmentId": "15-authority",
+      "section": "现实方法一",
+      "kicker": "接任务前，先核对三件事",
+      "image": "assets/storyboards/15-authority.png",
+      "panel": 2,
+      "label": "他检查人手物资和时间沙漏是否齐备",
+      "isSegmentStart": false,
+      "startFrame": 13963,
+      "durationInFrames": 267
+    },
+    {
+      "id": "15-authority-04",
+      "segmentId": "15-authority",
+      "section": "现实方法一",
+      "kicker": "接任务前，先核对三件事",
+      "image": "assets/storyboards/15-authority.png",
+      "panel": 3,
+      "label": "三项条件平衡后项目桌才稳定下来",
+      "isSegmentStart": false,
+      "startFrame": 14230,
+      "durationInFrames": 270
+    },
+    {
+      "id": "16-evidence-01",
+      "segmentId": "16-evidence",
+      "section": "现实方法二",
+      "kicker": "不能拒绝，也别无痕兜底",
+      "image": "assets/storyboards/16-evidence.png",
+      "panel": 0,
+      "label": "目标变化以不同颜色丝带留在卷轴上",
+      "isSegmentStart": true,
+      "startFrame": 14500,
+      "durationInFrames": 238
+    },
+    {
+      "id": "16-evidence-02",
+      "segmentId": "16-evidence",
+      "section": "现实方法二",
+      "kicker": "不能拒绝，也别无痕兜底",
+      "image": "assets/storyboards/16-evidence.png",
+      "panel": 1,
+      "label": "资源缺口被清楚摆在明亮桌面中央",
+      "isSegmentStart": false,
+      "startFrame": 14738,
+      "durationInFrames": 238
+    },
+    {
+      "id": "16-evidence-03",
+      "segmentId": "16-evidence",
+      "section": "现实方法二",
+      "kicker": "不能拒绝，也别无痕兜底",
+      "image": "assets/storyboards/16-evidence.png",
+      "panel": 2,
+      "label": "两条风险路线被交回有印玺的决策者",
+      "isSegmentStart": false,
+      "startFrame": 14976,
+      "durationInFrames": 238
+    },
+    {
+      "id": "16-evidence-04",
+      "segmentId": "16-evidence",
+      "section": "现实方法二",
+      "kicker": "不能拒绝，也别无痕兜底",
+      "image": "assets/storyboards/16-evidence.png",
+      "panel": 3,
+      "label": "完整痕迹连成透明可追溯的项目路径",
+      "isSegmentStart": false,
+      "startFrame": 15214,
+      "durationInFrames": 239
+    },
+    {
+      "id": "17-care-01",
+      "segmentId": "17-care",
+      "section": "现实方法三",
+      "kicker": "保留在意，才不会只剩流程",
+      "image": "assets/storyboards/17-care.png",
+      "panel": 0,
+      "label": "李长庚放下一部分不属于自己的卷轴",
+      "isSegmentStart": true,
+      "startFrame": 15453,
+      "durationInFrames": 263
+    },
+    {
+      "id": "17-care-02",
+      "segmentId": "17-care",
+      "section": "现实方法三",
+      "kicker": "保留在意，才不会只剩流程",
+      "image": "assets/storyboards/17-care.png",
+      "panel": 1,
+      "label": "腾出的时间让他认真倾听身边普通人",
+      "isSegmentStart": false,
+      "startFrame": 15716,
+      "durationInFrames": 263
+    },
+    {
+      "id": "17-care-03",
+      "segmentId": "17-care",
+      "section": "现实方法三",
+      "kicker": "保留在意，才不会只剩流程",
+      "image": "assets/storyboards/17-care.png",
+      "panel": 2,
+      "label": "冰冷项目机关被温暖人群阻止继续碾压",
+      "isSegmentStart": false,
+      "startFrame": 15979,
+      "durationInFrames": 263
+    },
+    {
+      "id": "17-care-04",
+      "segmentId": "17-care",
+      "section": "现实方法三",
+      "kicker": "保留在意，才不会只剩流程",
+      "image": "assets/storyboards/17-care.png",
+      "panel": 3,
+      "label": "结果与承担者在同一幅明亮画面中平衡",
+      "isSegmentStart": false,
+      "startFrame": 16242,
+      "durationInFrames": 264
+    },
+    {
+      "id": "18-close-01",
+      "segmentId": "18-close",
+      "section": "最后",
+      "kicker": "别替矛盾规则无限兜底",
+      "image": "assets/storyboards/18-close.png",
+      "panel": 0,
+      "label": "取经路线在日光云海中继续向远方延伸",
+      "isSegmentStart": true,
+      "startFrame": 16506,
+      "durationInFrames": 275
+    },
+    {
+      "id": "18-close-02",
+      "segmentId": "18-close",
+      "section": "最后",
+      "kicker": "别替矛盾规则无限兜底",
+      "image": "assets/storyboards/18-close.png",
+      "panel": 1,
+      "label": "李长庚不再背负全部卷轴而从容站立",
+      "isSegmentStart": false,
+      "startFrame": 16781,
+      "durationInFrames": 275
+    },
+    {
+      "id": "18-close-03",
+      "segmentId": "18-close",
+      "section": "最后",
+      "kicker": "别替矛盾规则无限兜底",
+      "image": "assets/storyboards/18-close.png",
+      "panel": 2,
+      "label": "决定责任与代价化为三件清晰象征物",
+      "isSegmentStart": false,
+      "startFrame": 17056,
+      "durationInFrames": 275
+    },
+    {
+      "id": "18-close-04",
+      "segmentId": "18-close",
+      "section": "最后",
+      "kicker": "别替矛盾规则无限兜底",
+      "image": "assets/storyboards/18-close.png",
+      "panel": 3,
+      "label": "他望向观众留下关于兜底边界的追问",
+      "isSegmentStart": false,
+      "startFrame": 17331,
+      "durationInFrames": 276
+    }
+  ]
+}

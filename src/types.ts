@@ -61,6 +61,7 @@ export type CoverLayout = {
   headlineTop: number;
   badgeTop: number;
   artObjectPosition: string;
+  titleFontSize?: number;
 };
 
 export type CoverConfig = {

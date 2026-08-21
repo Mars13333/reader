@@ -1,0 +1,156 @@
+{
+  "book": "太白金星有点烦",
+  "author": "马伯庸",
+  "sourceMode": "web-research",
+  "sourcePath": "",
+  "sourceSha256": "",
+  "sourceEncoding": "",
+  "accessedAt": "2026-08-21",
+  "chapterLines": {},
+  "webSources": [
+    {
+      "id": "WEB-01",
+      "title": "图书馆五月推荐图书（一）：《太白金星有点烦》",
+      "publisher": "湖北江汉艺术职业学院图书馆",
+      "url": "https://www.hbjhart.cn/__local/3/A5/A2/BB40C02D4A6C6848961E75E2F9C_1BF8018C_32B9C.pdf",
+      "publishedAt": "2025-05",
+      "supports": [
+        "天庭与西天联合推出取经项目的基本设定",
+        "李长庚策划九九八十一难并确保项目成功的任务",
+        "费用报销、工作汇报、上级诉求、人事安排与突发状况",
+        "人的牵挂、痛苦与得道主题"
+      ]
+    },
+    {
+      "id": "WEB-02",
+      "title": "马伯庸：人性与情感，是永恒的母题",
+      "publisher": "新周刊／澎湃新闻",
+      "url": "https://www.thepaper.cn/newsDetail_forward_27020020",
+      "publishedAt": "2024-04-12",
+      "supports": [
+        "作品对西游神话的戏仿、解构与现实延伸",
+        "李长庚处理关系、平衡诉求和设置名目的职场处境",
+        "作者以古今共同的人性与情感连接当代读者",
+        "作品的现代意识来自古今共同的社会逻辑"
+      ]
+    },
+    {
+      "id": "WEB-03",
+      "title": "马伯庸：作家是一种状态，当你停笔不写，就不再是作家",
+      "publisher": "中国作家网／澎湃新闻",
+      "url": "https://www.chinawriter.com.cn/n1/2024/0703/c405057-40270040.html",
+      "publishedAt": "2024-07-04",
+      "supports": [
+        "作者十年公司工作经验与宏观命令落地到一线执行的观察",
+        "作者关注具体做事的人、事务细节与小人物困境",
+        "古今职场困惑及面对困境的态度",
+        "细节体现生活的质感和重量"
+      ]
+    },
+    {
+      "id": "WEB-04",
+      "title": "新时代文学的潮汐与广阔现实的回声",
+      "publisher": "文艺报／中国作家网",
+      "url": "https://wyb.chinawriter.com.cn/content/202401/24/content73305.html",
+      "publishedAt": "2024-01-24",
+      "supports": [
+        "取经被改写为李长庚负责的工程项目",
+        "降妖除魔被转译为人情博弈和利益协调的黑色幽默",
+        "李长庚如履薄冰的执行者处境",
+        "作品轻盈外表下的现实意识"
+      ]
+    },
+    {
+      "id": "WEB-05",
+      "title": "马伯庸现身中山书展，趣谈历史小说创作中的小人物",
+      "publisher": "中山日报",
+      "url": "https://zsrbapp.zsnews.cn/home/content/newsContent/1/620800",
+      "publishedAt": "2023-08-21",
+      "supports": [
+        "作者长期关注小人物的创作原则",
+        "选择太白金星是为了书写唐僧师徒背后具体做事的人",
+        "以好奇心挖掘被忽视的细节"
+      ]
+    },
+    {
+      "id": "WEB-06",
+      "title": "马伯庸《太白金星有点烦》实体书上市",
+      "publisher": "中国作家网",
+      "url": "https://www.chinawriter.com.cn/n1/2023/0609/c404023-40009698.html",
+      "publishedAt": "2023-06-09",
+      "supports": [
+        "博集天卷与湖南文艺出版社联合出版信息",
+        "作品以现代视角演绎西游故事",
+        "作品的历史类短篇定位"
+      ]
+    }
+  ],
+  "terminology": [
+    {
+      "canonical": "太白金星",
+      "pronunciation": "Tàibái Jīnxīng",
+      "aliases": ["李长庚"],
+      "avoid": ["太白金仙"],
+      "note": "小说主角的神仙称号，正文保持标准写法。",
+      "sourceRefs": ["WEB-01", "WEB-05"]
+    },
+    {
+      "canonical": "李长庚",
+      "pronunciation": "Lǐ Chánggēng",
+      "aliases": ["太白金星"],
+      "avoid": ["李长耕", "李长更"],
+      "note": "小说主角名；长读 cháng，庚读 gēng。",
+      "sourceRefs": ["WEB-01", "WEB-04"]
+    },
+    {
+      "canonical": "九九八十一难",
+      "pronunciation": "jiǔ jiǔ bā shí yī nàn",
+      "aliases": ["八十一难"],
+      "avoid": ["九九八十一劫"],
+      "note": "取经项目的核心流程设定；难在此读 nàn。",
+      "sourceRefs": ["WEB-01"]
+    },
+    {
+      "canonical": "西天取经",
+      "pronunciation": "xī tiān qǔ jīng",
+      "aliases": ["取经项目", "取经"],
+      "avoid": [],
+      "note": "小说借用《西游记》框架改写的项目主线。",
+      "sourceRefs": ["WEB-01", "WEB-04"]
+    },
+    {
+      "canonical": "唐僧",
+      "pronunciation": "Táng Sēng",
+      "aliases": ["唐僧师徒"],
+      "avoid": ["唐生"],
+      "note": "取经团队核心人物，正文仅作必要背景指代。",
+      "sourceRefs": ["WEB-01", "WEB-05"]
+    }
+  ],
+  "selfReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-21T19:02:11.5056993+08:00",
+    "scriptSha256": "4AF5FE7D57127D81A8FB27AA224D014BEEC9293CB7F4D5A6ABEED9FB3B490BB9",
+    "checks": {
+      "terminologyVerified": true,
+      "openingRetentionReviewed": true,
+      "retentionStructureReviewed": true,
+      "sentenceFluencyReviewed": true,
+      "sourceConsistencyReviewed": true,
+      "originalityAndCommentaryReviewed": true
+    }
+  },
+  "limitations": [
+    "本稿仅使用正规公开简介、作者访谈和文学评论，未读取完整原文，不声称逐章覆盖或还原全部情节。",
+    "脚本只使用公开可核验的取经项目基本设定，不复述具体关卡、反转或结局细节。",
+    "权责错位、能者多劳、隐形翻译劳动和现实方法属于原创评论判断，不冒充作者原意或小说原句。",
+    "《西游记》框架与马伯庸小说的再创作必须区分；视频只讨论本书公开设定及其现实意义。"
+  ],
+  "editorialRules": [
+    "成片是原创评论，不是有声书或逐章复述。",
+    "不展示原书封面、书页、连续长段文字、影视剧照或演员形象。",
+    "不把评论者提出的职场方法冒充为小说情节或作者结论。",
+    "只概括正规公开材料支持的基本设定，不补写无法核验的具体情节。",
+    "结尾不使用固定栏目口号‘这里是十分钟读懂一本书’。"
+  ]
+}

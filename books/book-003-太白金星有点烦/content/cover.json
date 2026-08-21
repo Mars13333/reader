@@ -1,0 +1,27 @@
+{
+  "design": "book-jacket-v2",
+  "image": "assets/cover/cover-art.png",
+  "bookTitle": "太白金星有点烦",
+  "eyebrow": "马伯庸 著",
+  "subtitle": "看懂能者多劳背后的无解困局",
+  "badge": "10分钟读书",
+  "treatment": "bright",
+  "layouts": {
+    "portrait3x4": {
+      "left": 72,
+      "eyebrowTop": 78,
+      "headlineTop": 220,
+      "badgeTop": 1220,
+      "titleFontSize": 116,
+      "artObjectPosition": "center 50%"
+    },
+    "landscape4x3": {
+      "left": 88,
+      "eyebrowTop": 70,
+      "headlineTop": 180,
+      "badgeTop": 870,
+      "titleFontSize": 90,
+      "artObjectPosition": "center 40%"
+    }
+  }
+}

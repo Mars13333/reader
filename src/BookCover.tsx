@@ -17,7 +17,7 @@ const BookJacketCover: React.FC<CoverRenderProps> = ({
   const isBright = treatment === 'bright';
   const isLandscape = variant === 'landscape4x3';
   const titleLength = Array.from(bookTitle).length;
-  const titleFontSize = isLandscape
+  const defaultTitleFontSize = isLandscape
     ? titleLength <= 6
       ? 138
       : titleLength <= 10
@@ -28,6 +28,7 @@ const BookJacketCover: React.FC<CoverRenderProps> = ({
       : titleLength <= 10
         ? 124
         : 96;
+  const titleFontSize = layout.titleFontSize ?? defaultTitleFontSize;
 
   return (
     <AbsoluteFill style={{backgroundColor: '#07131a', overflow: 'hidden'}}>

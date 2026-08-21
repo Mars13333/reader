@@ -1,0 +1,12 @@
+{
+  "bookId": "book-003-太白金星有点烦",
+  "status": "approved",
+  "version": 2,
+  "scriptSha256": "4AF5FE7D57127D81A8FB27AA224D014BEEC9293CB7F4D5A6ABEED9FB3B490BB9",
+  "approvedAt": "2026-08-21T11:02:52.154Z",
+  "segments": 18,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

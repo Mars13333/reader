@@ -8,6 +8,7 @@ import {
   readJson,
 } from './book-context.mjs';
 import {readPublishMaterials} from './publish-materials.mjs';
+import {inspectStoryboardStandard} from './storyboard-standard.mjs';
 
 const context = getBookContext();
 const {scriptState} = assertScriptApproved(context);
@@ -19,6 +20,13 @@ const layout = readJson(path.join(context.contentDir, 'video-layout.json'));
 assertFixedNarration(narration);
 
 const errors = [];
+errors.push(
+  ...inspectStoryboardStandard({
+    book: context.book,
+    visualPlan,
+    publicDir: context.publicDir,
+  }).errors,
+);
 const usesBookJacketV2 = context.book.editorialStandards?.visualStandard === 'book-jacket-v2';
 if (context.book.deliverables?.publishCopy) {
   const {errors: publishErrors} = readPublishMaterials(context);
