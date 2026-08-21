@@ -4,7 +4,7 @@ import readline from 'node:readline';
 
 const AUTO_PHASES = [
   '环境检查与项目初始化',
-  '公开资料研究与脚本',
+  '本地原文读取与脚本',
   '质量检查与脚本审批',
   '分镜与封面规划',
   '原创插画生成',
@@ -94,10 +94,6 @@ const inferProgressUpdate = (event) => {
   const itemType = item.type ?? '';
   const text = normalizeText(item.text ?? item.message);
 
-  if (itemType === 'web_search') {
-    return {phaseIndex: 2, detail: '正在检索正规公开资料'};
-  }
-
   if (itemType === 'file_change') {
     const paths = getFileChangePaths(item);
     if (
@@ -123,6 +119,9 @@ const inferProgressUpdate = (event) => {
     const command = normalizeText(item.command).toLowerCase();
     const completed = event.type === 'item.completed';
     const succeeded = completed && item.exit_code === 0;
+    if (/source[\\/].+\.(?:txt|md)\b/iu.test(command)) {
+      return {phaseIndex: 2, detail: '正在读取并核对本地原文'};
+    }
     if (
       /book:check\b[^\n]*--outputs|ffprobe|ffmpeg[^\n]*-frames:v\s+1|get-filehash/iu.test(
         command,
@@ -176,8 +175,8 @@ const inferProgressUpdate = (event) => {
     if (/approval-check passed|approval hash|script is now archived|sha-256 approved/iu.test(text)) {
       return {phaseIndex: 3, detail: '脚本已通过质量检查，正在锁定审批哈希'};
     }
-    if (/public evidence is sufficient|source-backed script|正在.*脚本|drafting/iu.test(text)) {
-      return {phaseIndex: 2, detail: '正在整理证据并撰写脚本'};
+    if (/bound (?:local )?source|source-backed script|正在.*脚本|drafting/iu.test(text)) {
+      return {phaseIndex: 2, detail: '正在根据原文撰写并复审脚本'};
     }
   }
 
@@ -192,11 +191,15 @@ const getAssetProgress = (context) => {
     const cover = JSON.parse(
       readFileSync(path.join(context.contentDir, 'cover.json'), 'utf8'),
     );
-    const relativePaths = new Set(
-      (visualPlan.segments ?? [])
-        .map((segment) => normalizeText(segment.image))
-        .filter(Boolean),
-    );
+    const relativePaths = new Set();
+    for (const segment of visualPlan.segments ?? []) {
+      const segmentImage = normalizeText(segment.image);
+      if (segmentImage) relativePaths.add(segmentImage);
+      for (const shot of segment.shots ?? []) {
+        const shotImage = normalizeText(shot.image);
+        if (shotImage) relativePaths.add(shotImage);
+      }
+    }
     if (normalizeText(cover.image)) relativePaths.add(cover.image);
     const paths = [...relativePaths];
     return {

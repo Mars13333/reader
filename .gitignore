@@ -6,3 +6,5 @@ books/*/output/preview.mp4
 .env
 .env.*
 !.env.example
+source/*
+!source/README.md

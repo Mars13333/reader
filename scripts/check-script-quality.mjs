@@ -1,12 +1,22 @@
 import {existsSync} from 'node:fs';
 import path from 'node:path';
 import {
+  CONTENT_FLOW_STANDARD,
+  SOURCE_LED_CHANNEL_STANDARD,
+  SOURCE_LED_CONTENT_STANDARD,
+  SOURCE_LED_DURATION_RANGE_SECONDS,
   assertEditorialStandards,
   getBookContext,
   getScriptState,
   readJson,
 } from './book-context.mjs';
+import {CONTENT_FLOW_PHASES} from './semantic-visual-plan.mjs';
 import {readPublishMaterials} from './publish-materials.mjs';
+import {
+  SOURCE_MODE,
+  SOURCE_STANDARD,
+  readBoundBookSource,
+} from './source-file.mjs';
 
 const context = getBookContext();
 const {script, hash} = getScriptState(context);
@@ -38,12 +48,27 @@ const scriptText = [
 
 const addError = (message) => errors.push(message);
 const addWarning = (message) => warnings.push(message);
+const channelStandard = context.book.editorialStandards?.channelStandard;
+const usesSourceLedStandard = channelStandard === SOURCE_LED_CHANNEL_STANDARD;
+const contentStandard = context.book.editorialStandards?.contentStandard;
+const sourceLedContent =
+  contentStandard === 'story-first-source-only-v1' ||
+  contentStandard === SOURCE_LED_CONTENT_STANDARD;
 
 if (!script.title?.trim() || script.title.includes('待确定')) {
   addError('script.title 尚未完成。');
 }
 if (!script.angle?.trim()) addError('script.angle 不能为空。');
 if (segments.length === 0) addError('script.segments 不能为空。');
+if (usesSourceLedStandard && /(?:10\s*分钟|十分钟)读书/u.test(scriptText)) {
+  addError('新频道标准已取消“10分钟读书”全局标签，脚本标题、章节和口播均不得再使用。');
+}
+if (
+  usesSourceLedStandard &&
+  /不(?:复述|展开|讲述|剧透).{0,12}(?:具体)?(?:关卡|情节|剧情|反转|结局)/u.test(scriptText)
+) {
+  addError('新书默认服务没读过原著的观众，不得用“不复述具体剧情、反转或结局”回避核心原著内容。');
+}
 
 const segmentIds = new Set();
 for (const [index, segment] of segments.entries()) {
@@ -64,6 +89,16 @@ const narrationCharacters = segments.reduce(
   0,
 );
 const targetSeconds = Number(script.targetDurationSeconds ?? 600);
+if (
+  usesSourceLedStandard &&
+  (!Number.isFinite(targetSeconds) ||
+    targetSeconds < SOURCE_LED_DURATION_RANGE_SECONDS.minimum ||
+    targetSeconds > SOURCE_LED_DURATION_RANGE_SECONDS.maximum)
+) {
+  addError(
+    `新书 targetDurationSeconds 必须按内容量在 ${SOURCE_LED_DURATION_RANGE_SECONDS.minimum}～${SOURCE_LED_DURATION_RANGE_SECONDS.maximum} 秒之间选择，不再固定为 10 分钟。`,
+  );
+}
 const recommendedMinimum = Math.round(targetSeconds * 4.1);
 const recommendedMaximum = Math.round(targetSeconds * 5.2);
 if (narrationCharacters < recommendedMinimum || narrationCharacters > recommendedMaximum) {
@@ -92,6 +127,7 @@ if (retentionStandard) {
     const hookDeadlineSeconds = Number(retentionPlan.hookDeadlineSeconds);
     const firstPayoffDeadlineSeconds = Number(retentionPlan.firstPayoffDeadlineSeconds);
     const loopCadenceSeconds = Number(retentionPlan.loopCadenceSeconds);
+    const storyFirst = sourceLedContent;
     if (!Number.isFinite(hookDeadlineSeconds) || hookDeadlineSeconds <= 0 || hookDeadlineSeconds > 2) {
       addError('开场钩子必须在前 2 秒内出现：hookDeadlineSeconds 应大于 0 且不超过 2。');
     }
@@ -104,6 +140,45 @@ if (retentionStandard) {
     }
     if (!Number.isFinite(loopCadenceSeconds) || loopCadenceSeconds < 20 || loopCadenceSeconds > 40) {
       addError('后续小悬念的计划间隔必须为 20～40 秒。');
+    }
+    if (storyFirst) {
+      if (Number(retentionPlan.sourceAnchorRatioMinimum) !== 0.6) {
+        addError('story-first 新书的 sourceAnchorRatioMinimum 必须为 0.6。');
+      }
+      if (Number(retentionPlan.maxConsecutiveAbstractSegments) !== 2) {
+        addError('story-first 新书的 maxConsecutiveAbstractSegments 必须为 2。');
+      }
+    }
+    if (usesSourceLedStandard) {
+      const introductionTargetSeconds = Number(retentionPlan.introductionTargetSeconds);
+      const firstConcreteSceneDeadlineSeconds = Number(
+        retentionPlan.firstConcreteSceneDeadlineSeconds,
+      );
+      if (
+        !Number.isFinite(introductionTargetSeconds) ||
+        introductionTargetSeconds < 30 ||
+        introductionTargetSeconds > 45
+      ) {
+        addError('引言目标时长必须控制在 30～45 秒。');
+      }
+      if (
+        !Number.isFinite(firstConcreteSceneDeadlineSeconds) ||
+        firstConcreteSceneDeadlineSeconds < 30 ||
+        firstConcreteSceneDeadlineSeconds > 45
+      ) {
+        addError('第一个具体场景必须在前 30～45 秒内开始。');
+      }
+      const introductionSegmentIds = retentionPlan.introductionSegmentIds;
+      if (!Array.isArray(introductionSegmentIds) || introductionSegmentIds.length === 0) {
+        addError('retentionPlan.introductionSegmentIds 必须标出 30～45 秒引言包含的连续段落。');
+      } else {
+        const expectedIds = segments
+          .slice(0, introductionSegmentIds.length)
+          .map((segment) => segment.id);
+        if (JSON.stringify(introductionSegmentIds) !== JSON.stringify(expectedIds)) {
+          addError('introductionSegmentIds 必须从第一段开始连续排列，不能把中段包装成引言。');
+        }
+      }
     }
 
     const firstNarration = String(segments[0]?.narration ?? '');
@@ -133,6 +208,7 @@ if (retentionStandard) {
     if (!Array.isArray(segmentBeats) || segmentBeats.length !== segments.length) {
       addError('retentionPlan.segmentBeats 必须与口播段落一一对应，记录每段兑现内容和下一悬念。');
     } else {
+      const anchoredSegments = [];
       for (const [index, segment] of segments.entries()) {
         const beat = segmentBeats[index];
         const label = `segmentBeats[${index}]`;
@@ -148,6 +224,101 @@ if (retentionStandard) {
         ) {
           addError(`${label}.nextHook 不能为空；每段兑现后必须自然引出下一问题。`);
         }
+        if (storyFirst) {
+          if (typeof beat?.sourceAnchor !== 'string') {
+            addError(`${label}.sourceAnchor 必须是字符串；具体新场景写人物、行动和后果，纯分析段明确留空。`);
+            anchoredSegments.push(false);
+          } else {
+            anchoredSegments.push(Boolean(beat.sourceAnchor.trim()));
+          }
+        }
+        if (usesSourceLedStandard) {
+          const layers = Array.isArray(beat?.contentLayers) ? beat.contentLayers : [];
+          const allowedLayers = new Set(['source', 'analogy', 'commentary', 'bridge']);
+          if (layers.length === 0 || layers.some((layer) => !allowedLayers.has(layer))) {
+            addError(
+              `${label}.contentLayers 必须从 source、analogy、commentary、bridge 中选择至少一项。`,
+            );
+          }
+          if (layers.includes('source') && !String(beat?.sourceAnchor ?? '').trim()) {
+            addError(`${label} 标记为 source 时必须填写具体 sourceAnchor。`);
+          }
+        }
+      }
+      if (storyFirst && anchoredSegments.length === segments.length) {
+        const anchoredCount = anchoredSegments.filter(Boolean).length;
+        const minimumAnchored = Math.ceil(segments.length * 0.6);
+        if (anchoredCount < minimumAnchored) {
+          addError(
+            `具体原文场景仅覆盖 ${anchoredCount}/${segments.length} 段；story-first 新书至少需要 ${minimumAnchored} 段。`,
+          );
+        }
+        let consecutiveAbstract = 0;
+        for (const anchored of anchoredSegments) {
+          consecutiveAbstract = anchored ? 0 : consecutiveAbstract + 1;
+          if (consecutiveAbstract > 2) {
+            addError('不得连续超过两个段落没有新的具体原文场景。');
+            break;
+          }
+        }
+      }
+      if (usesSourceLedStandard && Array.isArray(segmentBeats)) {
+        const usedLayers = new Set(segmentBeats.flatMap((beat) => beat?.contentLayers ?? []));
+        for (const requiredLayer of ['source', 'analogy', 'commentary']) {
+          if (!usedLayers.has(requiredLayer)) {
+            addError(`整条脚本必须包含 ${requiredLayer} 内容层，并用自然过渡帮助观众区分。`);
+          }
+        }
+      }
+    }
+  }
+}
+
+if (usesSourceLedStandard) {
+  const contentFlow = script.contentFlow;
+  if (!contentFlow || contentFlow.standard !== CONTENT_FLOW_STANDARD) {
+    addError(`script.contentFlow.standard 必须为 ${CONTENT_FLOW_STANDARD}。`);
+  } else if (!Array.isArray(contentFlow.loops) || contentFlow.loops.length === 0) {
+    addError('script.contentFlow.loops 不能为空；不限题材都必须落实现实问题到局限反思的完整链条。');
+  } else {
+    const segmentIndex = new Map(segments.map((segment, index) => [segment.id, index]));
+    const loopIds = new Set();
+    for (const [loopIndex, loop] of contentFlow.loops.entries()) {
+      const label = `contentFlow.loops[${loopIndex}]`;
+      if (!loop?.id?.trim()) addError(`${label}.id 不能为空。`);
+      else if (loopIds.has(loop.id)) addError(`contentFlow loop id 重复：${loop.id}`);
+      else loopIds.add(loop.id);
+      let previousIndex = -1;
+      for (const [phase, phaseLabel] of CONTENT_FLOW_PHASES) {
+        const value = loop?.[phase];
+        if (!value?.summary?.trim()) addError(`${label}.${phase}.summary 不能为空（${phaseLabel}）。`);
+        const ids = Array.isArray(value?.segmentIds) ? value.segmentIds : [];
+        if (ids.length === 0) {
+          addError(`${label}.${phase}.segmentIds 不能为空（${phaseLabel}）。`);
+          continue;
+        }
+        const indexes = ids.map((id) => segmentIndex.get(id));
+        for (const [idIndex, index] of indexes.entries()) {
+          if (index === undefined) addError(`${label}.${phase} 引用了不存在的段落：${ids[idIndex]}`);
+        }
+        const validIndexes = indexes.filter((index) => index !== undefined);
+        if (validIndexes.length > 0) {
+          const firstIndex = Math.min(...validIndexes);
+          if (firstIndex < previousIndex) {
+            addError(`${label} 的“${phaseLabel}”顺序早于上一环节；相邻环节可自然混在同一段，但不能倒序。`);
+          }
+          previousIndex = Math.max(previousIndex, firstIndex);
+        }
+      }
+      const realityStart = segmentIndex.get(loop.realityQuestion?.segmentIds?.[0]);
+      if (loopIndex === 0 && realityStart !== 0) {
+        addError('第一条内容链必须从第一段的现实问题开始。');
+      }
+      const firstSceneIndexes = (loop.concreteScene?.segmentIds ?? [])
+        .map((id) => segmentIndex.get(id))
+        .filter((index) => index !== undefined);
+      if (loopIndex === 0 && Math.min(...firstSceneIndexes) > 1) {
+        addError('第一个具体场景必须最迟在第二段开始，不能让抽象引言继续拖长。');
       }
     }
   }
@@ -182,7 +353,28 @@ const webSourceIds = new Set(
     ? sourceMap.webSources.map((source) => source.id).filter(Boolean)
     : [],
 );
-if (sourceMap.sourceMode === 'web-research') {
+const sourceStandard = context.book.editorialStandards?.sourceStandard;
+if (sourceStandard === SOURCE_STANDARD) {
+  if (sourceMap.sourceMode !== SOURCE_MODE) {
+    addError(`新作品必须使用 ${SOURCE_MODE}，不得使用联网资料模式。`);
+  } else {
+    try {
+      readBoundBookSource(context, sourceMap);
+    } catch (error) {
+      addError(error instanceof Error ? error.message : String(error));
+    }
+  }
+  if (Array.isArray(sourceMap.webSources) && sourceMap.webSources.length > 0) {
+    addError('本地原文模式不得填写 webSources。');
+  }
+  for (const [index, segment] of segments.entries()) {
+    for (const reference of segment.sourceRefs ?? []) {
+      if (!reference.label?.trim() || !String(reference.lines ?? '').trim()) {
+        addError(`第 ${index + 1} 段的原文引用必须填写 label 和 lines。`);
+      }
+    }
+  }
+} else if (sourceMap.sourceMode === 'web-research') {
   if (webSourceIds.size === 0) addError('联网研究模式必须填写 webSources。');
   if (!sourceMap.accessedAt?.trim() || Number.isNaN(Date.parse(sourceMap.accessedAt))) {
     addError('联网研究模式必须填写有效的 accessedAt。');
@@ -256,6 +448,18 @@ const requiredReviewChecks = [
   ...(retentionStandard ? ['retentionStructureReviewed'] : []),
   'sentenceFluencyReviewed',
   'sourceConsistencyReviewed',
+  ...(context.book.editorialStandards?.contentStandard === 'story-first-source-only-v1'
+    ? ['storyCoverageReviewed']
+    : []),
+  ...(usesSourceLedStandard
+    ? [
+        'storyCoverageReviewed',
+        'contentFlowReviewed',
+        'contentLayerDistinctionReviewed',
+        'semanticVisualMomentsReviewed',
+        'closingBrandLineReviewed',
+      ]
+    : []),
   'originalityAndCommentaryReviewed',
 ];
 if (!selfReview) {

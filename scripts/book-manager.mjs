@@ -3,7 +3,14 @@ import path from 'node:path';
 import {createInterface} from 'node:readline/promises';
 import {stdin as input, stdout as output} from 'node:process';
 import {
+  BOOK_PICKER_INTRO_STANDARD,
+  CONTENT_FLOW_STANDARD,
   FIXED_VOICE,
+  REQUIRED_CLOSING_BRAND_LINE,
+  SEMANTIC_VISUAL_STANDARD,
+  SOURCE_LED_CHANNEL_STANDARD,
+  SOURCE_LED_CONTENT_STANDARD,
+  SOURCE_LED_DURATION_RANGE_SECONDS,
   booksRoot,
   getBookContext,
   getCliOption,
@@ -12,6 +19,11 @@ import {
   setActiveBook,
   writeJson,
 } from './book-context.mjs';
+import {
+  SOURCE_MODE,
+  SOURCE_STANDARD,
+  resolveProjectSource,
+} from './source-file.mjs';
 import {STORYBOARD_STANDARD} from './storyboard-standard.mjs';
 
 const args = process.argv.slice(2);
@@ -40,24 +52,33 @@ const getNewBookAnswers = async () => {
   let title = getCliOption('--title', args);
   let author = getCliOption('--author', args);
   let audience = getCliOption('--audience', args);
-  if ((!title || !author) && !process.stdin.isTTY) {
-    throw new Error('非交互模式必须传入 --title 和 --author。');
+  let sourceReference = getCliOption('--source', args);
+  if ((!title || !author || !sourceReference) && !process.stdin.isTTY) {
+    throw new Error('非交互模式必须传入 --title、--author 和 --source。');
   }
-  if (!title || !author || !audience) {
+  if (!title || !author || !audience || !sourceReference) {
     const prompt = createInterface({input, output});
     try {
       title ||= (await prompt.question('书名：')).trim();
       author ||= (await prompt.question('作者：')).trim();
       audience ||= (await prompt.question('目标观众（可回车使用默认值）：')).trim();
+      sourceReference ||=
+        (await prompt.question(`原文文件（source 目录内，可回车使用 ${title}.txt）：`)).trim() ||
+        `${title}.txt`;
     } finally {
       prompt.close();
     }
   }
   if (!title?.trim() || !author?.trim()) throw new Error('书名和作者不能为空。');
+  const source = resolveProjectSource({
+    sourceReference,
+    title,
+  });
   return {
     title: title.trim(),
     author: author.trim(),
     audience: audience?.trim() || '25～40岁泛读书用户',
+    source,
   };
 };
 
@@ -97,9 +118,16 @@ const createBook = async () => {
     },
     editorialStandards: {
       allowClosingBrandLine: false,
+      requiredClosingBrandLine: REQUIRED_CLOSING_BRAND_LINE,
+      channelStandard: SOURCE_LED_CHANNEL_STANDARD,
       retentionStandard: 'hook-payoff-loops-v1',
       visualStandard: 'book-jacket-v2',
       storyboardStandard: STORYBOARD_STANDARD,
+      sourceStandard: SOURCE_STANDARD,
+      contentStandard: SOURCE_LED_CONTENT_STANDARD,
+      visualCoverageStandard: SEMANTIC_VISUAL_STANDARD,
+      introStandard: BOOK_PICKER_INTRO_STANDARD,
+      durationRangeSeconds: SOURCE_LED_DURATION_RANGE_SECONDS,
     },
     deliverables: {
       video: 'output/final.mp4',
@@ -116,7 +144,7 @@ const createBook = async () => {
     title: `《${answers.title}》：待确定的视频标题`,
     author: answers.author,
     angle: '',
-    targetDurationSeconds: 600,
+    targetDurationSeconds: SOURCE_LED_DURATION_RANGE_SECONDS.default,
     fps: 30,
     width: 1080,
     height: 1920,
@@ -125,21 +153,29 @@ const createBook = async () => {
       hookDeadlineSeconds: 2,
       firstPayoffDeadlineSeconds: 20,
       loopCadenceSeconds: 30,
+      sourceAnchorRatioMinimum: 0.6,
+      maxConsecutiveAbstractSegments: 2,
+      introductionTargetSeconds: 40,
+      firstConcreteSceneDeadlineSeconds: 45,
+      introductionSegmentIds: [],
       openingHook: '',
       firstPayoff: '',
       segmentBeats: [],
+    },
+    contentFlow: {
+      standard: CONTENT_FLOW_STANDARD,
+      loops: [],
     },
     segments: [],
   });
   writeJson(path.join(bookRoot, 'content', 'source-map.json'), {
     book: answers.title,
     author: answers.author,
-    sourceMode: '',
-    sourcePath: '',
-    sourceSha256: '',
-    sourceEncoding: '',
+    sourceMode: SOURCE_MODE,
+    sourcePath: answers.source.sourcePath,
+    sourceSha256: answers.source.sourceSha256,
+    sourceEncoding: answers.source.sourceEncoding,
     chapterLines: {},
-    webSources: [],
     terminology: [],
     selfReview: {
       status: 'pending',
@@ -151,11 +187,21 @@ const createBook = async () => {
         retentionStructureReviewed: false,
         sentenceFluencyReviewed: false,
         sourceConsistencyReviewed: false,
+        storyCoverageReviewed: false,
+        contentFlowReviewed: false,
+        contentLayerDistinctionReviewed: false,
+        semanticVisualMomentsReviewed: false,
+        closingBrandLineReviewed: false,
         originalityAndCommentaryReviewed: false,
       },
     },
     editorialRules: [
       '成片是原创评论，不是有声书或逐章复述。',
+      '人物、情节、反转、结局和作品判断只以绑定原文为内容事实来源。',
+      '不限题材，默认服务没读过原著的观众；先让观众进入具体场景，再进行分析。',
+      '核心内容链为：现实问题→具体场景→原著核心案例或剧情→解释原理→回到现实→补充局限。',
+      '自然提示原著内容、现代类比和作者判断的边界，但不要切成生硬的标签段。',
+      `整条口播最后一句固定为“${REQUIRED_CLOSING_BRAND_LINE}”。`,
       '不展示原书内页、连续长段文字、影视剧照或演员形象。',
     ],
   });
@@ -164,10 +210,20 @@ const createBook = async () => {
     descriptionLines: [],
   });
   writeJson(path.join(bookRoot, 'content', 'visual-plan.json'), {
+    standard: SEMANTIC_VISUAL_STANDARD,
+    durationPolicy: 'semantic-weighted-v1',
+    visibleTextLanguage: 'zh-CN',
+    generatedTextPolicy: 'no-text-in-generated-images',
     storyboardStandard: STORYBOARD_STANDARD,
     canvasAspectRatio: '9:16',
     panelLayout: '2x2',
     panelOrder: ['top-left', 'top-right', 'bottom-left', 'bottom-right'],
+    keyMoments: [],
+    assetReview: {
+      status: 'pending',
+      semanticCoverageReviewed: false,
+      noEnglishVisible: false,
+    },
     segments: [],
   });
   writeJson(path.join(bookRoot, 'content', 'narration-config.json'), {
@@ -182,7 +238,7 @@ const createBook = async () => {
   writeJson(path.join(bookRoot, 'content', 'video-layout.json'), {
     showProgressBar: false,
     header: {
-      text: `《${answers.title}》· 10分钟读书`,
+      text: `《${answers.title}》`,
       top: 290,
       sideMargin: 120,
       fontSize: 44,
@@ -191,6 +247,14 @@ const createBook = async () => {
       top: 500,
       minimumVisibleSeconds: 6,
       secondsPerCharacter: 0.35,
+    },
+    bookPickerIntro: {
+      enabled: true,
+      standard: BOOK_PICKER_INTRO_STANDARD,
+      durationSeconds: 3.8,
+      seed: bookId,
+      candidateLabels: ['红楼梦', '史记', '乡土中国', '活着', '围城'],
+      selectedLabel: '本期阅读',
     },
     visualTreatment: {
       brightness: 1.08,
@@ -207,7 +271,7 @@ const createBook = async () => {
     bookTitle: answers.title,
     eyebrow: `${answers.author} 著`,
     subtitle: '待填写：一句与本书核心观点一致的推荐语',
-    badge: '10分钟读书',
+    badge: '陈拾叁读书',
     treatment: 'bright',
     layouts: {
       portrait3x4: {left: 72, eyebrowTop: 78, headlineTop: 220, badgeTop: 1220, artObjectPosition: 'center 50%'},
@@ -217,6 +281,7 @@ const createBook = async () => {
   setActiveBook(bookId);
   console.log(`已创建并选中：${bookId}`);
   console.log(`目录：${bookRoot}`);
+  console.log(`原文：${answers.source.sourcePath}`);
   console.log('下一步：让 Codex 完成 script、source-map 与 publish 内容，并完成自审和质量门。');
 };
 
@@ -250,6 +315,11 @@ const showStatus = () => {
   console.log(`作者：${context.book.author}`);
   console.log(`状态：${context.book.status}`);
   console.log(`目录：${context.bookRoot}`);
+  const sourceMapPath = path.join(context.contentDir, 'source-map.json');
+  if (existsSync(sourceMapPath)) {
+    const sourceMap = readJson(sourceMapPath);
+    if (sourceMap.sourcePath) console.log(`原文：${sourceMap.sourcePath}`);
+  }
   console.log(`固定配音：${FIXED_VOICE.voiceName} / ${FIXED_VOICE.speaker} / 语速 ${FIXED_VOICE.speechRate}`);
 };
 

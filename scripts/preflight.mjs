@@ -1,6 +1,8 @@
 import {existsSync, statSync} from 'node:fs';
 import path from 'node:path';
 import {
+  BOOK_PICKER_INTRO_STANDARD,
+  SOURCE_LED_CHANNEL_STANDARD,
   assertEditorialStandards,
   assertFixedNarration,
   assertScriptApproved,
@@ -9,6 +11,7 @@ import {
 } from './book-context.mjs';
 import {readPublishMaterials} from './publish-materials.mjs';
 import {inspectStoryboardStandard} from './storyboard-standard.mjs';
+import {inspectSemanticVisualPlan} from './semantic-visual-plan.mjs';
 
 const context = getBookContext();
 const {scriptState} = assertScriptApproved(context);
@@ -27,7 +30,16 @@ errors.push(
     publicDir: context.publicDir,
   }).errors,
 );
+errors.push(
+  ...inspectSemanticVisualPlan({
+    book: context.book,
+    script: scriptState.script,
+    visualPlan,
+  }).errors,
+);
 const usesBookJacketV2 = context.book.editorialStandards?.visualStandard === 'book-jacket-v2';
+const usesSourceLedStandard =
+  context.book.editorialStandards?.channelStandard === SOURCE_LED_CHANNEL_STANDARD;
 if (context.book.deliverables?.publishCopy) {
   const {errors: publishErrors} = readPublishMaterials(context);
   errors.push(...publishErrors);
@@ -39,12 +51,18 @@ for (const segment of scriptState.script.segments ?? []) {
     errors.push(`缺少分镜配置：${segment.id}`);
     continue;
   }
-  if (!Array.isArray(visual.shots) || visual.shots.length < 3) {
-    errors.push(`${segment.id} 至少需要 3 个镜头。`);
+  if (!Array.isArray(visual.shots) || visual.shots.length < 1) {
+    errors.push(`${segment.id} 至少需要 1 个按语义选择的镜头。`);
   }
-  const imagePath = path.join(context.publicDir, visual.image ?? '');
-  if (!existsSync(imagePath) || statSync(imagePath).size < 100_000) {
-    errors.push(`缺少或无效的分镜插画：${imagePath}`);
+  const images = [
+    visual.image,
+    ...(visual.shots ?? []).map((shot) => shot.image),
+  ].filter((image, index, values) => image && values.indexOf(image) === index);
+  for (const image of images) {
+    const imagePath = path.join(context.publicDir, image);
+    if (!existsSync(imagePath) || statSync(imagePath).size < 100_000) {
+      errors.push(`缺少或无效的分镜插画：${imagePath}`);
+    }
   }
 }
 if (visualById.size !== scriptState.script.segments.length) {
@@ -76,6 +94,30 @@ if (layout.header?.sideMargin < 96 || layout.header?.sideMargin > 160) {
 }
 if (layout.keywordCard?.top < 460 || layout.keywordCard?.top > 560) {
   errors.push('章节重点大字必须下移到搜索框安全区以下（460～560px）。');
+}
+if (usesSourceLedStandard) {
+  if (layout.header?.text !== `《${context.book.title}》`) {
+    errors.push('新书常驻标题只能显示居中的书名，不得再附加“10分钟读书”等栏目标签。');
+  }
+  if (/(?:10\s*分钟|十分钟)读书/u.test(`${layout.header?.text ?? ''}${cover.badge ?? ''}`)) {
+    errors.push('新书画面与封面不得出现“10分钟读书”。');
+  }
+  if (
+    layout.bookPickerIntro?.enabled !== true ||
+    layout.bookPickerIntro?.standard !== BOOK_PICKER_INTRO_STANDARD
+  ) {
+    errors.push(`新书必须启用 ${BOOK_PICKER_INTRO_STANDARD} 开场选书动画。`);
+  }
+  const pickerDuration = Number(layout.bookPickerIntro?.durationSeconds ?? 0);
+  if (pickerDuration < 2.8 || pickerDuration > 4.8) {
+    errors.push('开场选书动画必须为 2.8～4.8 秒，并与第一句口播同时开始。');
+  }
+  const candidateLabels = layout.bookPickerIntro?.candidateLabels ?? [];
+  if (!Array.isArray(candidateLabels) || candidateLabels.length < 3) {
+    errors.push('开场选书动画至少需要 3 个中文候选书名。');
+  } else if (candidateLabels.some((label) => /[A-Za-z]/u.test(String(label)))) {
+    errors.push('开场选书动画的候选书名不得出现英文。');
+  }
 }
 
 if (errors.length) {

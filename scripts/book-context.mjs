@@ -22,6 +22,17 @@ const FIXED_VOICE = Object.freeze({
   sampleRate: 24000,
 });
 const CLOSING_BRAND_LINE = '这里是十分钟读懂一本书';
+const REQUIRED_CLOSING_BRAND_LINE = '这里是陈拾叁，陪你一起读书破万卷。';
+const SOURCE_LED_CHANNEL_STANDARD = 'source-led-unbounded-v2';
+const SOURCE_LED_CONTENT_STANDARD = 'source-analogy-commentary-v2';
+const SEMANTIC_VISUAL_STANDARD = 'semantic-key-moments-v1';
+const BOOK_PICKER_INTRO_STANDARD = 'book-picker-v1';
+const CONTENT_FLOW_STANDARD = 'reality-scene-source-explanation-reality-limits-v1';
+const SOURCE_LED_DURATION_RANGE_SECONDS = Object.freeze({
+  minimum: 480,
+  maximum: 1140,
+  default: 720,
+});
 
 const readJson = (filePath) => JSON.parse(readFileSync(filePath, 'utf8'));
 
@@ -159,14 +170,36 @@ const assertFixedNarration = (config) => {
 };
 
 const assertEditorialStandards = (context, script) => {
-  const narration = (script.segments ?? [])
+  const narrations = (script.segments ?? [])
     .map((segment) => segment.narration ?? '')
-    .join('\n');
+  const narration = narrations.join('\n');
   if (
     context.book.editorialStandards?.allowClosingBrandLine !== true &&
     narration.includes(CLOSING_BRAND_LINE)
   ) {
     throw new Error(`结尾口播不得使用“${CLOSING_BRAND_LINE}”。请删除后重新审阅。`);
+  }
+  if (
+    context.book.editorialStandards?.channelStandard ===
+    SOURCE_LED_CHANNEL_STANDARD
+  ) {
+    const configuredLine =
+      context.book.editorialStandards?.requiredClosingBrandLine;
+    if (configuredLine !== REQUIRED_CLOSING_BRAND_LINE) {
+      throw new Error(
+        `新书 requiredClosingBrandLine 必须固定为“${REQUIRED_CLOSING_BRAND_LINE}”。`,
+      );
+    }
+    const lastNarration = String(narrations.at(-1) ?? '').trim();
+    if (!lastNarration.endsWith(REQUIRED_CLOSING_BRAND_LINE)) {
+      throw new Error(
+        `新书最后一句口播必须是“${REQUIRED_CLOSING_BRAND_LINE}”。`,
+      );
+    }
+    const occurrences = narration.split(REQUIRED_CLOSING_BRAND_LINE).length - 1;
+    if (occurrences !== 1) {
+      throw new Error('固定频道收尾句必须且只能在整条口播末尾出现一次。');
+    }
   }
 };
 
@@ -185,6 +218,13 @@ const assertScriptApproved = (context) => {
 export {
   FIXED_VOICE,
   CLOSING_BRAND_LINE,
+  REQUIRED_CLOSING_BRAND_LINE,
+  SOURCE_LED_CHANNEL_STANDARD,
+  SOURCE_LED_CONTENT_STANDARD,
+  SEMANTIC_VISUAL_STANDARD,
+  BOOK_PICKER_INTRO_STANDARD,
+  CONTENT_FLOW_STANDARD,
+  SOURCE_LED_DURATION_RANGE_SECONDS,
   activeBookPath,
   assertFixedNarration,
   assertEditorialStandards,

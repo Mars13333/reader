@@ -68,8 +68,8 @@ for (let segmentIndex = 0; segmentIndex < script.segments.length; segmentIndex +
   const audio = audioBySegment.get(segment.id);
   if (!visual) throw new Error(`Missing visual plan for ${segment.id}.`);
   if (!audio) throw new Error(`Missing narration timing for ${segment.id}.`);
-  if (!Array.isArray(visual.shots) || visual.shots.length < 3) {
-    throw new Error(`${segment.id} needs at least three planned shots.`);
+  if (!Array.isArray(visual.shots) || visual.shots.length < 1) {
+    throw new Error(`${segment.id} needs at least one semantically planned shot.`);
   }
   const timelineSegment = timeline.segments[segmentIndex];
   if (timelineSegment.id !== segment.id) {
@@ -95,20 +95,35 @@ for (let segmentIndex = 0; segmentIndex < script.segments.length; segmentIndex +
   });
 
   let allocatedFrames = 0;
+  const weights = visual.shots.map((shot) => Number(shot.weight ?? 1));
+  if (weights.some((weight) => !Number.isFinite(weight) || weight <= 0)) {
+    throw new Error(`${segment.id} has an invalid semantic shot weight.`);
+  }
+  const totalWeight = weights.reduce((total, weight) => total + weight, 0);
+  let allocatedWeight = 0;
   for (let shotIndex = 0; shotIndex < visual.shots.length; shotIndex += 1) {
     const plannedShot = visual.shots[shotIndex];
     const isLastShot = shotIndex === visual.shots.length - 1;
+    allocatedWeight += weights[shotIndex];
+    const weightedEndFrame = Math.round(
+      (durationInFrames * allocatedWeight) / totalWeight,
+    );
     const shotFrames = isLastShot
       ? durationInFrames - allocatedFrames
-      : Math.floor(durationInFrames / visual.shots.length);
+      : weightedEndFrame - allocatedFrames;
+    if (shotFrames < 1) {
+      throw new Error(`${segment.id} has too many weighted shots for its narration duration.`);
+    }
     preparedShots.push({
       id: `${segment.id}-${String(shotIndex + 1).padStart(2, '0')}`,
       segmentId: segment.id,
       section: segment.section,
       kicker: segment.kicker,
-      image: visual.image,
+      image: plannedShot.image ?? visual.image,
       panel: plannedShot.panel,
       label: plannedShot.label,
+      purpose: plannedShot.purpose,
+      weight: weights[shotIndex],
       isSegmentStart: shotIndex === 0,
       startFrame: visualStartFrame + allocatedFrames,
       durationInFrames: shotFrames,
@@ -167,7 +182,7 @@ writeFileSync(markdownPath, `${markdown}\n`, 'utf8');
 const storyboard = [
   `# ${script.title}｜镜头表`,
   '',
-  `共 ${preparedShots.length} 个镜头；画面最长停留 ${(Math.max(...preparedShots.map((shot) => shot.durationInFrames)) / fps).toFixed(2)} 秒。`,
+  `共 ${preparedShots.length} 个按关键剧情与关键概念规划的镜头；画面最长停留 ${(Math.max(...preparedShots.map((shot) => shot.durationInFrames)) / fps).toFixed(2)} 秒。`,
   '',
   '| 时间 | 时长 | 章节 | 画面 |',
   '| --- | ---: | --- | --- |',

@@ -1,6 +1,9 @@
 import {existsSync, readFileSync, readdirSync, statSync} from 'node:fs';
 import path from 'node:path';
 import {
+  BOOK_PICKER_INTRO_STANDARD,
+  SOURCE_LED_CHANNEL_STANDARD,
+  SOURCE_LED_DURATION_RANGE_SECONDS,
   assertEditorialStandards,
   assertFixedNarration,
   assertScriptApproved,
@@ -10,6 +13,7 @@ import {
 } from './book-context.mjs';
 import {FIXED_TOPIC_TAGS, readPublishMaterials} from './publish-materials.mjs';
 import {inspectStoryboardStandard} from './storyboard-standard.mjs';
+import {inspectSemanticVisualPlan} from './semantic-visual-plan.mjs';
 
 const context = getBookContext();
 const {approval} = assertScriptApproved(context);
@@ -36,8 +40,16 @@ errors.push(
     publicDir: context.publicDir,
   }).errors,
 );
+const semanticVisualResult = inspectSemanticVisualPlan({
+  book: context.book,
+  script: approvedScript,
+  visualPlan,
+});
+errors.push(...semanticVisualResult.errors);
 const warnings = [];
 const usesBookJacketV2 = context.book.editorialStandards?.visualStandard === 'book-jacket-v2';
+const usesSourceLedStandard =
+  context.book.editorialStandards?.channelStandard === SOURCE_LED_CHANNEL_STANDARD;
 const coverDeliveries = context.book.deliverables?.covers ?? [
   'output/cover-9x16.png',
   'output/cover-3x4.png',
@@ -60,12 +72,26 @@ if (timeline.scriptSha256 !== approval.scriptSha256) errors.push('Narration time
 if (timeline.pronunciationOverridesSha256 !== getPronunciationOverridesSha256(narrationConfig)) errors.push('Narration timeline does not match the current pronunciation overrides.');
 if (prepared.width !== 1080 || prepared.height !== 1920) errors.push(`Expected 1080x1920, got ${prepared.width}x${prepared.height}.`);
 if (prepared.fps !== 30) errors.push(`Expected 30 FPS, got ${prepared.fps}.`);
-if (prepared.totalDurationSeconds < 570 || prepared.totalDurationSeconds > 630) errors.push(`Runtime ${(prepared.totalDurationSeconds / 60).toFixed(2)} minutes is outside 9:30-10:30.`);
+const runtimeRange = usesSourceLedStandard
+  ? SOURCE_LED_DURATION_RANGE_SECONDS
+  : {minimum: 570, maximum: 630};
+if (
+  prepared.totalDurationSeconds < runtimeRange.minimum ||
+  prepared.totalDurationSeconds > runtimeRange.maximum
+) {
+  errors.push(
+    `Runtime ${(prepared.totalDurationSeconds / 60).toFixed(2)} minutes is outside ${runtimeRange.minimum}-${runtimeRange.maximum} seconds.`,
+  );
+}
 if (prepared.deliveryMode !== 'audio-master') errors.push(`Unexpected delivery mode: ${prepared.deliveryMode}.`);
 if (prepared.voice?.speaker !== 'zh_male_liufei_uranus_bigtts' || prepared.voice?.speechRate !== -10) errors.push('Prepared video must use Liu Fei voice at fixed speech rate -10.');
 if (timeline.speaker !== 'zh_male_liufei_uranus_bigtts' || timeline.speechRate !== -10) errors.push('Narration timeline must use Liu Fei voice at fixed speech rate -10.');
 if (prepared.segments.length < 10) warnings.push('Fewer than 10 editorial segments.');
-if (!Array.isArray(prepared.shots) || prepared.shots.length < 45) errors.push(`Expected at least 45 visual shots, got ${prepared.shots?.length ?? 0}.`);
+if (!Array.isArray(prepared.shots) || prepared.shots.length < 1) {
+  errors.push('Prepared video must contain at least one visual shot.');
+} else if (!usesSourceLedStandard && prepared.shots.length < 45) {
+  errors.push(`Expected at least 45 visual shots, got ${prepared.shots.length}.`);
+}
 
 for (const segment of prepared.segments) {
   if (!segment.sourceRefs?.length) errors.push(`Missing source reference for ${segment.id}.`);
@@ -79,7 +105,15 @@ for (const shot of prepared.shots ?? []) {
   const imagePath = path.join(context.publicDir, shot.image);
   const seconds = shot.durationInFrames / prepared.fps;
   if (!existsSync(imagePath) || statSync(imagePath).size < 100_000) errors.push(`Missing or suspicious storyboard for ${shot.id}.`);
-  if (seconds < 7.5 || seconds > 15) errors.push(`Shot ${shot.id} lasts ${seconds.toFixed(2)}s; expected about 8-15s.`);
+  if (usesSourceLedStandard) {
+    if (seconds < 4 || seconds > 45) {
+      errors.push(`Shot ${shot.id} lasts ${seconds.toFixed(2)}s; semantic shots must stay within the 4-45s safety bounds.`);
+    } else if (seconds > 30) {
+      warnings.push(`Shot ${shot.id} lasts ${seconds.toFixed(2)}s; confirm the key scene or concept justifies the long hold.`);
+    }
+  } else if (seconds < 7.5 || seconds > 15) {
+    errors.push(`Shot ${shot.id} lasts ${seconds.toFixed(2)}s; expected about 8-15s.`);
+  }
   if (shot.startFrame !== expectedShotStart) errors.push(`Shot timeline gap or overlap before ${shot.id}.`);
   expectedShotStart = shot.startFrame + shot.durationInFrames;
   if (!Number.isInteger(shot.panel) || shot.panel < 0 || shot.panel > 3) errors.push(`Invalid storyboard panel for ${shot.id}.`);
@@ -140,6 +174,33 @@ if (usesBookJacketV2) {
   if (videoLayout.keywordCard?.minimumVisibleSeconds < 6 || videoLayout.keywordCard?.minimumVisibleSeconds > 9) errors.push('Keyword cards must remain readable for at least 6 seconds.');
   if (videoLayout.keywordCard?.secondsPerCharacter < 0.3 || videoLayout.keywordCard?.secondsPerCharacter > 0.5) errors.push('Keyword-card reading time must use 0.30-0.50 seconds per character.');
   if (videoLayout.header?.fontSize >= 70) errors.push('The persistent book title must remain smaller than the chapter keyword text.');
+}
+if (usesSourceLedStandard) {
+  if (videoLayout.header?.text !== `《${context.book.title}》`) {
+    errors.push('The persistent header must contain only the centered exact book title.');
+  }
+  if (/(?:10\s*分钟|十分钟)读书/u.test(`${videoLayout.header?.text ?? ''}${cover.badge ?? ''}`)) {
+    errors.push('The new channel standard must not display the 10-minute-reading label.');
+  }
+  const picker = videoLayout.bookPickerIntro;
+  if (picker?.enabled !== true || picker?.standard !== BOOK_PICKER_INTRO_STANDARD) {
+    errors.push(`New books must enable ${BOOK_PICKER_INTRO_STANDARD}.`);
+  }
+  if (picker?.durationSeconds < 2.8 || picker?.durationSeconds > 4.8) {
+    errors.push('Book-picker intro must last 2.8-4.8 seconds and run under the spoken hook.');
+  }
+  if (!Array.isArray(picker?.candidateLabels) || picker.candidateLabels.length < 3) {
+    errors.push('Book-picker intro needs at least three Chinese candidate labels.');
+  } else if (picker.candidateLabels.some((label) => /[A-Za-z]/u.test(label))) {
+    errors.push('Book-picker candidate labels must not contain English.');
+  }
+  const firstLoop = approvedScript.contentFlow?.loops?.[0];
+  const firstSceneIds = new Set(firstLoop?.concreteScene?.segmentIds ?? []);
+  const firstScene = prepared.segments.find((segment) => firstSceneIds.has(segment.id));
+  const deadline = Number(approvedScript.retentionPlan?.firstConcreteSceneDeadlineSeconds ?? 45);
+  if (!firstScene || firstScene.startFrame / prepared.fps > deadline) {
+    errors.push(`The first concrete scene must start within ${deadline} seconds.`);
+  }
 }
 
 const coverArtPath = path.join(context.publicDir, cover.image ?? '');

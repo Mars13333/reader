@@ -1,5 +1,14 @@
 export type SourceReference = {
   label: string;
+  purpose?:
+    | 'source-scene'
+    | 'core-concept'
+    | 'modern-analogy'
+    | 'author-commentary'
+    | 'limitation'
+    | 'transition'
+    | 'closing';
+  weight?: number;
   lines: string;
 };
 

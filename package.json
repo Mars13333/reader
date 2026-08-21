@@ -38,7 +38,7 @@
     "compositions": "npm run book:prepare && node scripts/render-book.mjs compositions",
     "lint": "tsc --noEmit",
     "test": "node scripts/check.mjs",
-    "test:book-auto": "node --test scripts/book-auto.test.mjs scripts/book-manager.test.mjs scripts/storyboard-standard.test.mjs"
+    "test:book-auto": "node --test scripts/book-auto.test.mjs scripts/book-manager.test.mjs scripts/source-file.test.mjs scripts/storyboard-standard.test.mjs scripts/semantic-visual-plan.test.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.513",

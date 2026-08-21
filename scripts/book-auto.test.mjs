@@ -12,6 +12,12 @@ import {
   inferProgressUpdate,
 } from './book-auto-progress.mjs';
 
+const source = {
+  sourcePath: 'source/活着.txt',
+  sourceSha256: 'A'.repeat(64),
+  sourceEncoding: 'UTF-8',
+};
+
 test('parses a new-book auto command', () => {
   const options = parseAutoArgs([
     '--title',
@@ -19,6 +25,8 @@ test('parses a new-book auto command', () => {
     '--author',
     '余华',
     '--audience=泛读书用户',
+    '--source',
+    '活着.txt',
     '--model',
     'gpt-test',
     '--verbose',
@@ -26,6 +34,7 @@ test('parses a new-book auto command', () => {
   assert.equal(options.title, '活着');
   assert.equal(options.author, '余华');
   assert.equal(options.audience, '泛读书用户');
+  assert.equal(options.source, '活着.txt');
   assert.equal(options.model, 'gpt-test');
   assert.equal(options.sandbox, 'workspace-write');
   assert.equal(options.verbose, true);
@@ -41,13 +50,33 @@ test('rejects partial or conflicting book selectors', () => {
     () => parseAutoArgs(['--resume', '--title', '活着', '--author', '余华']),
     /--resume/u,
   );
+  assert.throws(
+    () => parseAutoArgs(['--title', '活着', '--author', '余华']),
+    /--source/u,
+  );
+  assert.throws(
+    () => parseAutoArgs(['--book', 'book-003-test', '--source', '活着.txt']),
+    /不能与 --source/u,
+  );
 });
 
 test('auto prompt grants only the scoped end-to-end authorization', () => {
-  const prompt = buildAutoPrompt({bookId: 'book-003-test'});
+  const prompt = buildAutoPrompt({bookId: 'book-003-test', source});
   assert.match(prompt, /\$ai-media-book-video/u);
   assert.match(prompt, /explicit authorization/u);
   assert.match(prompt, /not authorization to publish externally/u);
+  assert.match(prompt, /sole book-content source/u);
+  assert.match(prompt, /source\/活着\.txt/u);
+  assert.match(prompt, /Do not use web search/u);
+  assert.match(prompt, /serves viewers who have not read the original/u);
+  assert.match(prompt, /Never use a disclaimer such as/u);
+  assert.match(prompt, /reality question.*concrete scene.*source-backed core case or plot.*limitations/su);
+  assert.match(prompt, /30–45 seconds/u);
+  assert.match(prompt, /这里是陈拾叁，陪你一起读书破万卷/u);
+  assert.match(prompt, /semantic need rather than a fixed time interval or fixed image count/u);
+  assert.match(prompt, /No generated image may contain English/u);
+  assert.match(prompt, /no original-edition cover screenshot is required or allowed/u);
+  assert.match(prompt, /persistent title contains only the exact centered book title/u);
   assert.match(prompt, /Do not call `npm run book:auto` recursively/u);
   assert.match(prompt, /every delivery file declared by the current book/u);
   assert.match(prompt, /portrait-2x2-9x16-v1/u);
@@ -58,12 +87,12 @@ test('auto prompt grants only the scoped end-to-end authorization', () => {
 test('builds a resumable non-interactive Codex command', () => {
   const args = buildCodexArgs({
     bookId: 'book-003-test',
+    source,
     model: 'gpt-test',
     sandbox: 'workspace-write',
     sessionId: '00000000-0000-0000-0000-000000000001',
   });
-  assert.deepEqual(args.slice(0, 7), [
-    '--search',
+  assert.deepEqual(args.slice(0, 6), [
     '--ask-for-approval',
     'never',
     '--sandbox',
@@ -74,6 +103,7 @@ test('builds a resumable non-interactive Codex command', () => {
   assert.ok(args.includes('resume'));
   assert.ok(args.includes('--json'));
   assert.ok(args.includes('gpt-test'));
+  assert.ok(!args.includes('--search'));
 });
 
 test('classifies Codex reconnect, network wait, and transport fallback events', () => {
@@ -118,8 +148,11 @@ test('classifies Codex reconnect, network wait, and transport fallback events', 
 
 test('maps JSONL activity to stable production phases', () => {
   assert.deepEqual(
-    inferProgressUpdate({type: 'item.started', item: {type: 'web_search'}}),
-    {phaseIndex: 2, detail: '正在检索正规公开资料'},
+    inferProgressUpdate({
+      type: 'item.started',
+      item: {type: 'command_execution', command: 'Get-Content source/活着.txt'},
+    }),
+    {phaseIndex: 2, detail: '正在读取并核对本地原文'},
   );
   assert.deepEqual(
     inferProgressUpdate({

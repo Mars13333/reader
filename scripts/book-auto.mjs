@@ -19,6 +19,10 @@ import {
   BookAutoProgress,
   classifyNetworkEvent,
 } from './book-auto-progress.mjs';
+import {
+  readBoundBookSource,
+  resolveProjectSource,
+} from './source-file.mjs';
 
 const DEFAULT_SANDBOX = 'workspace-write';
 const VALID_SANDBOXES = new Set([
@@ -40,6 +44,7 @@ const parseAutoArgs = (args = process.argv.slice(2)) => {
     title: getOption('--title', args),
     author: getOption('--author', args),
     audience: getOption('--audience', args),
+    source: getOption('--source', args),
     bookId: getOption('--book', args),
     model: getOption('--model', args) ?? process.env.AI_MEDIA_CODEX_MODEL ?? '',
     sandbox: getOption('--sandbox', args) ?? DEFAULT_SANDBOX,
@@ -53,14 +58,20 @@ const parseAutoArgs = (args = process.argv.slice(2)) => {
       `--sandbox 仅支持：${[...VALID_SANDBOXES].join(', ')}`,
     );
   }
-  if (options.resume && (options.title || options.author || options.audience)) {
-    throw new Error('--resume 不能与 --title、--author 或 --audience 同时使用。');
+  if (options.resume && (options.title || options.author || options.audience || options.source)) {
+    throw new Error('--resume 不能与 --title、--author、--audience 或 --source 同时使用。');
   }
   if (Boolean(options.title) !== Boolean(options.author)) {
     throw new Error('--title 和 --author 必须同时提供。');
   }
   if (options.bookId && options.title) {
     throw new Error('--book 不能与 --title 或 --author 同时使用。');
+  }
+  if (options.bookId && options.source) {
+    throw new Error('--book 不能与 --source 同时使用；已有书籍会复核已绑定的原文。');
+  }
+  if (options.title && !options.source) {
+    throw new Error('新建书籍必须使用 --source 指定项目 source 目录下的原文文件。');
   }
   return options;
 };
@@ -155,6 +166,7 @@ const createBook = (options) => {
   if (options.title) args.push('--title', options.title);
   if (options.author) args.push('--author', options.author);
   if (options.audience) args.push('--audience', options.audience);
+  if (options.source) args.push('--source', options.source);
   runInherited(process.execPath, args);
   return getBookContext(readActiveBookId());
 };
@@ -164,21 +176,28 @@ const resolveBook = (options) => {
   return getBookContext(options.bookId);
 };
 
-const buildAutoPrompt = ({bookId, resume = false}) => `
+const buildAutoPrompt = ({bookId, source, resume = false}) => `
 Use $ai-media-book-video to ${resume ? 'resume and finish' : 'produce'} the current book project \`${bookId}\` in end-to-end auto mode.
 
-The user invoked \`npm run book:auto\`. That invocation is explicit authorization for this book's project-local research, content edits, script approval, built-in image generation, configured TTS calls, Remotion rendering, and delivery verification. It is not authorization to publish externally, alter another book, replace configured services, or bypass source and quality requirements.
+The user invoked \`npm run book:auto\`. That invocation is explicit authorization for this book's project-local source reading, content edits, script approval, built-in image generation, configured TTS calls, Remotion rendering, and delivery verification. It is not authorization to publish externally, alter another book, replace configured services, search the web, or bypass source and quality requirements.
 
-Do not call \`npm run book:auto\` recursively. Follow the repository Skill, \`AGENTS.md\`, \`docs/workflow.md\`, and \`docs/acceptance.md\`. Continue from existing valid artifacts when resuming. Use authoritative public sources first, complete the script/source/publish files and semantic self-review, pass the existing quality and approval gates, create the visual plan and original storyboard/cover images with $imagegen, then call the existing lower-level production commands until every delivery file declared by the current book passes verification. For books configured with \`portrait-2x2-9x16-v1\`, every storyboard sheet must be a portrait 9:16 PNG containing a 2x2 grid of four portrait 9:16 panels; run \`npm run book:storyboards-check\` after saving the images and before TTS or rendering.
+The sole book-content source is \`${source.sourcePath}\` (SHA-256 \`${source.sourceSha256}\`, ${source.sourceEncoding}). Read that complete local file before drafting. Do not use web search, book reviews, public plot summaries, interviews, model memory, or another book as evidence for this book's characters, plot, reversals, ending, quotations, or themes. If the bound file is incomplete, unreadable, or not the named book, stop and report the exact source problem.
 
-If reliable sources are insufficient, a required tool/auth/quota is unavailable, or a quality failure remains after three focused repair passes, stop without fabricating or weakening a gate. Leave all valid artifacts in place and report the exact resumable blocker. End the final message with exactly one marker: \`BOOK_AUTO_RESULT: completed\` or \`BOOK_AUTO_RESULT: blocked\`.
+Do not call \`npm run book:auto\` recursively. Follow the repository Skill, \`AGENTS.md\`, \`docs/workflow.md\`, and \`docs/acceptance.md\`. Continue from existing valid artifacts when resuming. The channel is vertical 9:16 and topic-agnostic. It serves viewers who have not read the original. Do not display the global label “10分钟读书” anywhere; the persistent title contains only the exact centered book title.
+
+For every genre, build at least one complete \`contentFlow\` loop in this order: reality question → concrete scene → source-backed core case or plot → explanation → return to present-day reality → limitations. Adjacent phases may share a segment so the transitions feel natural. In \`retentionPlan.segmentBeats\`, set \`sourceAnchor\` to the new source-backed scene/case and classify \`contentLayers\` as source, analogy, commentary, or bridge. At least 60% of segments must be anchored, with no more than two unanchored segments in a row. Make the narration naturally signal what comes from the original, what is a modern analogy, and what is the channel's judgment without turning those layers into rigid blocks. Never use a disclaimer such as “不复述具体剧情、反转或结局” to avoid telling the original's essential content. Keep the introduction to 30–45 seconds, let the spoken hook start immediately under the brief book-picker animation, and enter the first concrete scene no later than 45 seconds. End the final narration segment with exactly: “这里是陈拾叁，陪你一起读书破万卷。”
+
+After approval, choose images by semantic need rather than a fixed time interval or fixed image count. Map every key source scene/plot, core concept, modern analogy, and limitation in \`visual-plan.json.keyMoments\`; give each segment 1–4 shots and use shot \`weight\` to allocate time by importance. Generate only original, unlettered portrait 9:16 storyboard sheets and cover art with $imagegen. No generated image may contain English, letters, numbers, logos, watermarks, or pseudo-text; all necessary Chinese text is typeset by Remotion. The opening book picker uses the original generated cover art and code-typeset exact title, so no original-edition cover screenshot is required or allowed. Visually inspect every selected panel, then mark \`assetReview.semanticCoverageReviewed\` and \`assetReview.noEnglishVisible\` true only when the actual assets pass. For books configured with \`portrait-2x2-9x16-v1\`, every storyboard sheet must be a portrait 9:16 PNG containing a 2x2 grid of four portrait 9:16 panels; run \`npm run book:storyboards-check\` after saving the images and before TTS or rendering.
+
+Complete the script/source/publish files and all semantic self-review checks, pass the existing quality and approval gates, create the visual plan and original storyboard/cover images, then call the existing lower-level production commands until every delivery file declared by the current book passes verification.
+
+If the bound source is insufficient for a reliable story-first script, a required tool/auth/quota is unavailable, or a quality failure remains after three focused repair passes, stop without fabricating or weakening a gate. Leave all valid artifacts in place and report the exact resumable blocker. End the final message with exactly one marker: \`BOOK_AUTO_RESULT: completed\` or \`BOOK_AUTO_RESULT: blocked\`.
 `.trim();
 
-const buildCodexArgs = ({bookId, model, sandbox, sessionId = ''}) => {
+const buildCodexArgs = ({bookId, source, model, sandbox, sessionId = ''}) => {
   const resume = Boolean(sessionId);
-  const prompt = buildAutoPrompt({bookId, resume});
+  const prompt = buildAutoPrompt({bookId, source, resume});
   const args = [
-    '--search',
     '--ask-for-approval',
     'never',
     '--sandbox',
@@ -233,7 +252,7 @@ const summarizeEvent = (event) => {
   return '';
 };
 
-const runCodex = async ({environment, context, options, previousState, reporter}) => {
+const runCodex = async ({environment, context, source, options, previousState, reporter}) => {
   const paths = statePaths(context);
   mkdirSync(paths.directory, {recursive: true});
   const startedAt =
@@ -244,6 +263,8 @@ const runCodex = async ({environment, context, options, previousState, reporter}
     sessionId: options.resume ? previousState?.sessionId ?? '' : '',
     model: options.model || 'codex-default',
     sandbox: options.sandbox,
+    sourcePath: source.sourcePath,
+    sourceSha256: source.sourceSha256,
     startedAt,
     updatedAt: new Date().toISOString(),
     logPath: paths.log,
@@ -270,6 +291,7 @@ const runCodex = async ({environment, context, options, previousState, reporter}
 
   const args = buildCodexArgs({
     bookId: context.bookId,
+    source,
     model: options.model,
     sandbox: options.sandbox,
     sessionId: options.resume ? state.sessionId : '',
@@ -416,12 +438,20 @@ const main = async () => {
 
   if (options.dryRun) {
     const bookId = options.bookId || '<book-created-by-book:new>';
+    const source = options.source
+      ? resolveProjectSource({sourceReference: options.source, title: options.title})
+      : {
+          sourcePath: '<source-file-required>',
+          sourceSha256: '<source-sha256>',
+          sourceEncoding: 'UTF-8',
+        };
     console.log(`DRY RUN：不会创建书籍，也不会启动 Codex。`);
-    console.log(buildAutoPrompt({bookId, resume: options.resume}));
+    console.log(buildAutoPrompt({bookId, source, resume: options.resume}));
     console.log(
       JSON.stringify(
         buildCodexArgs({
           bookId,
+          source,
           model: options.model,
           sandbox: options.sandbox,
           sessionId: options.resume ? '<saved-session-id>' : '',
@@ -434,6 +464,7 @@ const main = async () => {
   }
 
   const context = options.resume || options.bookId ? resolveBook(options) : createBook(options);
+  const source = readBoundBookSource(context);
   const paths = statePaths(context);
   const previousState = await readState(paths.state);
   if (options.resume && !previousState?.sessionId) {
@@ -449,13 +480,14 @@ const main = async () => {
   reporter.start();
   reporter.setPhase(
     2,
-    options.resume ? '正在检查已有产物并从中断处继续' : '正在启动公开资料研究',
+    options.resume ? '正在检查原文与已有产物并从中断处继续' : '正在读取本地原文',
   );
   let result;
   try {
     result = await runCodex({
       environment,
       context,
+      source,
       options,
       previousState,
       reporter,

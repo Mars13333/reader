@@ -65,7 +65,10 @@ const inspectStoryboardStandard = ({book, visualPlan, publicDir}) => {
   const imageReferences = [
     ...new Set(
       (visualPlan.segments ?? [])
-        .map((segment) => segment.image)
+        .flatMap((segment) => [
+          segment.image,
+          ...(segment.shots ?? []).map((shot) => shot.image),
+        ])
         .filter((image) => typeof image === 'string' && image.trim()),
     ),
   ];
