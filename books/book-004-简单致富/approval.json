@@ -1,0 +1,12 @@
+{
+  "bookId": "book-004-简单致富",
+  "status": "approved",
+  "version": 2,
+  "scriptSha256": "43C4E2D5AA506C5112C70C57E6D9A7F87F19811C8BE51F44A57323DE5C019D1F",
+  "approvedAt": "2026-08-21T16:05:54.200Z",
+  "segments": 14,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

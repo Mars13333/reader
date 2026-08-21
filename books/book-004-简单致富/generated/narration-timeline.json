@@ -1,0 +1,129 @@
+{
+  "bookId": "book-004-简单致富",
+  "scriptSha256": "43C4E2D5AA506C5112C70C57E6D9A7F87F19811C8BE51F44A57323DE5C019D1F",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [],
+  "pronunciationOverridesSha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 775.9505416666667,
+  "segments": [
+    {
+      "id": "s01",
+      "section": "真正要买的东西",
+      "startSeconds": 0.5,
+      "endSeconds": 19.164,
+      "durationSeconds": 18.664,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s02",
+      "section": "工资停下的那一年",
+      "startSeconds": 19.584000000000003,
+      "endSeconds": 41.559125,
+      "durationSeconds": 21.975125,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s03",
+      "section": "钱怎样变成自由",
+      "startSeconds": 41.979125,
+      "endSeconds": 83.163625,
+      "durationSeconds": 41.1845,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s04",
+      "section": "简单不是因为没摔过",
+      "startSeconds": 83.583625,
+      "endSeconds": 133.136125,
+      "durationSeconds": 49.5525,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s05",
+      "section": "第一道关不是选基金",
+      "startSeconds": 133.55612499999998,
+      "endSeconds": 191.33204166666664,
+      "durationSeconds": 57.77591666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s06",
+      "section": "储蓄率决定自由速度",
+      "startSeconds": 191.75204166666663,
+      "endSeconds": 254.18791666666664,
+      "durationSeconds": 62.435875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s07",
+      "section": "为什么一只宽基可以很强",
+      "startSeconds": 254.60791666666663,
+      "endSeconds": 314.5749583333333,
+      "durationSeconds": 59.96704166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s08",
+      "section": "长期回报的真实票价",
+      "startSeconds": 314.99495833333333,
+      "endSeconds": 376.5965,
+      "durationSeconds": 61.60154166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s09",
+      "section": "配置跟着人生阶段走",
+      "startSeconds": 377.0165,
+      "endSeconds": 440.582375,
+      "durationSeconds": 63.565875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s10",
+      "section": "定投不是择时魔法",
+      "startSeconds": 441.00237500000003,
+      "endSeconds": 506.478625,
+      "durationSeconds": 65.47625,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s11",
+      "section": "复杂世界里的捕食者",
+      "startSeconds": 506.89862500000004,
+      "endSeconds": 571.6065833333333,
+      "durationSeconds": 64.70795833333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s12",
+      "section": "二十五倍不是退休保证书",
+      "startSeconds": 572.0265833333333,
+      "endSeconds": 639.0266666666666,
+      "durationSeconds": 67.00008333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s13",
+      "section": "最重要的是别照抄",
+      "startSeconds": 639.4466666666666,
+      "endSeconds": 708.5445833333333,
+      "durationSeconds": 69.09791666666666,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s14",
+      "section": "从今天开始买回人生",
+      "startSeconds": 708.9645833333333,
+      "endSeconds": 774.5505416666666,
+      "durationSeconds": 65.58595833333334,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

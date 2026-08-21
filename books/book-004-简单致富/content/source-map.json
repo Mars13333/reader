@@ -1,0 +1,90 @@
+{
+  "book": "简单致富",
+  "author": "J. L. 柯林斯",
+  "sourceMode": "local-source",
+  "sourcePath": "source/简单致富：实现财务自由与富足人生的路线图.txt",
+  "sourceSha256": "264E0D6F6F966342D9025297FD41FB2D09452F72E8FD679159FC5055D00F764C",
+  "sourceEncoding": "UTF-8",
+  "chapterLines": {
+    "开篇第一个故事": "217-278",
+    "开篇第三个故事": "305-382",
+    "第1章 债务": "485-668",
+    "第2章 独立自由保证金": "674-715",
+    "第4章 如何看待钱": "794-897",
+    "第5章 牛市和熊市": "903-1018",
+    "第7章 股票市场": "1169-1278",
+    "第8章 投资者亏损与泡沫": "1284-1363",
+    "第9章 大坏事": "1369-1432",
+    "第10至14章 投资工具与配置": "1438-1946",
+    "第23章 投资顾问": "2869-2962",
+    "第26章 定投": "3120-3177",
+    "第28章 骗局": "3230-3333",
+    "第29至30章 退休取现": "3361-3641",
+    "尾声三个忠告": "3893-4156"
+  },
+  "terminology": [
+    {
+      "canonical": "J. L. 柯林斯",
+      "pronunciation": "J L kē lín sī",
+      "requiredInScript": false,
+      "avoid": ["J.L.柯林斯", "吉姆柯林斯"],
+      "sourceRefs": ["11-15"]
+    },
+    {
+      "canonical": "独立自由保证金",
+      "pronunciation": "dú lì zì yóu bǎo zhèng jīn",
+      "requiredInScript": true,
+      "avoid": ["独立自由保障金"],
+      "sourceRefs": ["318-324", "674-715"]
+    },
+    {
+      "canonical": "约翰·博格",
+      "pronunciation": "yuē hàn bó gé",
+      "requiredInScript": true,
+      "avoid": ["约翰博格", "约翰·伯格"],
+      "sourceRefs": ["368-370", "1545-1555"]
+    },
+    {
+      "canonical": "马利亚国际",
+      "pronunciation": "mǎ lì yà guó jì",
+      "requiredInScript": true,
+      "avoid": ["玛利亚国际"],
+      "sourceRefs": ["372"]
+    },
+    {
+      "canonical": "塔希提岛",
+      "pronunciation": "tǎ xī tí dǎo",
+      "requiredInScript": true,
+      "avoid": ["大溪地岛"],
+      "sourceRefs": ["3998-4089"]
+    }
+  ],
+  "selfReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-22T00:18:00+08:00",
+    "scriptSha256": "43C4E2D5AA506C5112C70C57E6D9A7F87F19811C8BE51F44A57323DE5C019D1F",
+    "checks": {
+      "terminologyVerified": true,
+      "openingRetentionReviewed": true,
+      "retentionStructureReviewed": true,
+      "sentenceFluencyReviewed": true,
+      "sourceConsistencyReviewed": true,
+      "storyCoverageReviewed": true,
+      "contentFlowReviewed": true,
+      "contentLayerDistinctionReviewed": true,
+      "semanticVisualMomentsReviewed": true,
+      "closingBrandLineReviewed": true,
+      "originalityAndCommentaryReviewed": true
+    }
+  },
+  "editorialRules": [
+    "成片是原创评论，不是有声书或逐章复述。",
+    "人物、情节、反转、结局和作品判断只以绑定原文为内容事实来源。",
+    "不限题材，默认服务没读过原著的观众；先让观众进入具体场景，再进行分析。",
+    "核心内容链为：现实问题→具体场景→原著核心案例或剧情→解释原理→回到现实→补充局限。",
+    "自然提示原著内容、现代类比和频道判断的边界，但不要切成生硬的标签段。",
+    "历史收益、美国基金与税收账户仅作为原著内容，不作为当前中国投资建议。",
+    "整条口播最后一句固定为“这里是陈拾叁，陪你一起读书破万卷。”。",
+    "不展示原书内页、连续长段文字、影视剧照或演员形象。"
+  ]
+}

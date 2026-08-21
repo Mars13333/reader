@@ -1,0 +1,170 @@
+{
+  "standard": "semantic-key-moments-v1",
+  "durationPolicy": "semantic-weighted-v1",
+  "visibleTextLanguage": "zh-CN",
+  "generatedTextPolicy": "no-text-in-generated-images",
+  "storyboardStandard": "portrait-2x2-9x16-v1",
+  "canvasAspectRatio": "9:16",
+  "panelLayout": "2x2",
+  "panelOrder": ["top-left", "top-right", "bottom-left", "bottom-right"],
+  "visualDirection": {
+    "style": "明亮通透的当代编辑插画，写实人物比例结合简洁象征隐喻，细腻纸张肌理，构图清楚，生活气息克制真实",
+    "characterAnchor": "作者形象为五十至六十岁的普通欧美男性，灰白短发、朴素衬衫，不参考名人照片；女儿从儿童到青年保持深棕发与亲和表情；所有人物均为原创面貌",
+    "palette": ["日光米白", "清澈天蓝", "柔和松绿", "暖金", "珊瑚橙", "少量深海蓝"],
+    "lighting": "以明亮白昼、通透窗光和温暖家庭光为主，风险场景也保留人物、环境与物件细节",
+    "avoid": ["英文", "字母", "数字", "任何可见文字", "伪文字", "标志", "水印", "货币符号", "原书封面", "书页截图", "名人肖像", "大面积纯黑", "沉闷棕灰", "重度暗角"]
+  },
+  "keyMoments": [
+    {"id": "km01", "segmentId": "s01", "kind": "author-commentary", "anchor": "高收入仍可能没有拒绝权的现实追问", "shotRef": "s01-01"},
+    {"id": "km02", "segmentId": "s01", "kind": "core-concept", "anchor": "财富首先意味着人生选择权", "shotRef": "s01-02"},
+    {"id": "km03", "segmentId": "s02", "kind": "source-scene", "anchor": "九一一后电视里出现食物救济队伍", "shotRef": "s02-01"},
+    {"id": "km04", "segmentId": "s02", "kind": "source-scene", "anchor": "作者告诉女儿失业也不必立刻失去生活", "shotRef": "s02-02"},
+    {"id": "km05", "segmentId": "s03", "kind": "source-scene", "anchor": "二十五岁的作者向老板争取无薪假", "shotRef": "s03-01"},
+    {"id": "km06", "segmentId": "s03", "kind": "source-scene", "anchor": "作者骑车穿越爱尔兰和威尔士", "shotRef": "s03-02"},
+    {"id": "km07", "segmentId": "s03", "kind": "source-scene", "anchor": "作者和妻子轮流停工陪伴年幼女儿", "shotRef": "s03-03"},
+    {"id": "km08", "segmentId": "s04", "kind": "source-scene", "anchor": "马利亚国际金矿投资归零", "shotRef": "s04-01"},
+    {"id": "km09", "segmentId": "s04", "kind": "source-scene", "anchor": "一九八七年暴跌时恐慌卖出", "shotRef": "s04-02"},
+    {"id": "km10", "segmentId": "s04", "kind": "core-concept", "anchor": "复杂和恐慌都会把投资人推出长期道路", "shotRef": "s04-03"},
+    {"id": "km11", "segmentId": "s05", "kind": "source-scene", "anchor": "三百元信用卡账单与最低还款陷阱", "shotRef": "s05-01"},
+    {"id": "km12", "segmentId": "s05", "kind": "modern-analogy", "anchor": "消费债像锁链持续占用未来劳动", "shotRef": "s05-02"},
+    {"id": "km13", "segmentId": "s06", "kind": "core-concept", "anchor": "每一笔钱都有消费或继续生长的机会成本", "shotRef": "s06-01"},
+    {"id": "km14", "segmentId": "s06", "kind": "source-scene", "anchor": "重量级拳王高收入仍陷入破产", "shotRef": "s06-02"},
+    {"id": "km15", "segmentId": "s06", "kind": "modern-analogy", "anchor": "把购买折算为未来选择权", "shotRef": "s06-03"},
+    {"id": "km16", "segmentId": "s07", "kind": "core-concept", "anchor": "啤酒与泡沫解释企业价值和短期价格", "shotRef": "s07-01"},
+    {"id": "km17", "segmentId": "s07", "kind": "core-concept", "anchor": "指数自动淘汰衰败企业并吸纳新公司", "shotRef": "s07-02"},
+    {"id": "km18", "segmentId": "s07", "kind": "core-concept", "anchor": "用一只宽篮子持有整个商业世界", "shotRef": "s07-03"},
+    {"id": "km19", "segmentId": "s08", "kind": "source-scene", "anchor": "一九二九年后市场最大跌幅接近九成", "shotRef": "s08-01"},
+    {"id": "km20", "segmentId": "s08", "kind": "modern-analogy", "anchor": "在风暴来临前准备应急金和可承受仓位", "shotRef": "s08-02"},
+    {"id": "km21", "segmentId": "s09", "kind": "core-concept", "anchor": "财富积累阶段以长期增长为主", "shotRef": "s09-01"},
+    {"id": "km22", "segmentId": "s09", "kind": "core-concept", "anchor": "财富保有阶段在增长和稳定之间配置", "shotRef": "s09-02"},
+    {"id": "km23", "segmentId": "s10", "kind": "core-concept", "anchor": "定期收入适合持续投入", "shotRef": "s10-01"},
+    {"id": "km24", "segmentId": "s10", "kind": "modern-analogy", "anchor": "大额现金一次投入与分批投入的取舍", "shotRef": "s10-02"},
+    {"id": "km25", "segmentId": "s11", "kind": "source-scene", "anchor": "六封连锁信骗局最终流向少数受益者", "shotRef": "s11-01"},
+    {"id": "km26", "segmentId": "s11", "kind": "modern-analogy", "anchor": "顾问费用从长期复利中持续抽水", "shotRef": "s11-02"},
+    {"id": "km27", "segmentId": "s12", "kind": "core-concept", "anchor": "百分之四规则是研究起点而非保证", "shotRef": "s12-01"},
+    {"id": "km28", "segmentId": "s12", "kind": "limitation", "anchor": "早期暴跌、高费用和长寿都会改变提取结果", "shotRef": "s12-02"},
+    {"id": "km29", "segmentId": "s13", "kind": "limitation", "anchor": "书中的美国账户和税法不能直接照搬", "shotRef": "s13-01"},
+    {"id": "km30", "segmentId": "s13", "kind": "modern-analogy", "anchor": "中国家庭需按本地制度重新核对产品和税费", "shotRef": "s13-02"},
+    {"id": "km31", "segmentId": "s14", "kind": "modern-analogy", "anchor": "用三张纸盘点债务、开支和自由资金", "shotRef": "s14-01"},
+    {"id": "km32", "segmentId": "s14", "kind": "source-scene", "anchor": "三个年轻人在塔希提岛接下小旅馆", "shotRef": "s14-02"}
+  ],
+  "assetReview": {"status": "passed", "semanticCoverageReviewed": true, "noEnglishVisible": true},
+  "segments": [
+    {
+      "id": "s01",
+      "promptFocus": "从忙碌高薪却无法停下的现实困局切入人生选择权",
+      "shots": [
+        {"image": "assets/storyboards/sheet-01.png", "panel": 0, "label": "通勤站台上疲惫的人望见工作与家庭的两种生活", "purpose": "author-commentary", "weight": 2},
+        {"image": "assets/storyboards/sheet-01.png", "panel": 1, "label": "一扇敞开的门外出现多条明亮人生道路", "purpose": "core-concept", "weight": 3}
+      ]
+    },
+    {
+      "id": "s02",
+      "promptFocus": "九一一之后父亲向女儿解释失业和自由资金",
+      "shots": [
+        {"image": "assets/storyboards/sheet-01.png", "panel": 2, "label": "父女在客厅看见电视中的食物救济队伍", "purpose": "source-scene", "weight": 4},
+        {"image": "assets/storyboards/sheet-01.png", "panel": 3, "label": "父亲蹲下安慰女儿身旁有象征储备的玻璃罐与树苗", "purpose": "source-scene", "weight": 4}
+      ]
+    },
+    {
+      "id": "s03",
+      "promptFocus": "年轻时争取无薪假以及成家后的主动停工",
+      "shots": [
+        {"image": "assets/storyboards/sheet-02.png", "panel": 0, "label": "年轻作者在办公室向老板争取无薪假", "purpose": "source-scene", "weight": 3},
+        {"image": "assets/storyboards/sheet-02.png", "panel": 1, "label": "年轻作者骑车穿越爱尔兰与威尔士的绿色乡野", "purpose": "source-scene", "weight": 3},
+        {"image": "assets/storyboards/sheet-02.png", "panel": 2, "label": "父母轮流在家陪幼小女儿搭积木", "purpose": "source-scene", "weight": 3}
+      ]
+    },
+    {
+      "id": "s04",
+      "promptFocus": "金矿归零与暴跌卖出的两次真实错误",
+      "shots": [
+        {"image": "assets/storyboards/sheet-02.png", "panel": 3, "label": "明亮荒地上的废弃金矿与投资人空空的双手", "purpose": "source-scene", "weight": 3},
+        {"image": "assets/storyboards/sheet-03.png", "panel": 0, "label": "市场暴跌时作者在电话与飞散纸张中恐慌卖出", "purpose": "source-scene", "weight": 4},
+        {"image": "assets/storyboards/sheet-03.png", "panel": 1, "label": "冷静后的投资人重新走回简洁而漫长的道路", "purpose": "core-concept", "weight": 2}
+      ]
+    },
+    {
+      "id": "s05",
+      "promptFocus": "信用卡最低还款如何把未来劳动锁住",
+      "shots": [
+        {"image": "assets/storyboards/sheet-03.png", "panel": 2, "label": "妹妹在餐桌边指着无字账单解释最低还款", "purpose": "source-scene", "weight": 3},
+        {"image": "assets/storyboards/sheet-03.png", "panel": 3, "label": "消费袋化成锁链把上班族拴向远处办公室", "purpose": "modern-analogy", "weight": 3}
+      ]
+    },
+    {
+      "id": "s06",
+      "promptFocus": "机会成本让每笔花费都对应一段未来选择权",
+      "shots": [
+        {"image": "assets/storyboards/sheet-04.png", "panel": 0, "label": "一枚无标记圆片在消费与成长的四条道路间分流", "purpose": "core-concept", "weight": 3},
+        {"image": "assets/storyboards/sheet-04.png", "panel": 1, "label": "一位非特定拳王坐在奢华房间却面对空柜", "purpose": "source-scene", "weight": 2},
+        {"image": "assets/storyboards/sheet-04.png", "panel": 2, "label": "普通人在家庭野餐与堆满闲置物品之间做选择", "purpose": "modern-analogy", "weight": 3}
+      ]
+    },
+    {
+      "id": "s07",
+      "promptFocus": "用啤酒泡沫和生态更新解释宽基指数",
+      "shots": [
+        {"image": "assets/storyboards/sheet-04.png", "panel": 3, "label": "透明杯中稳定啤酒与不断变化泡沫形成对照", "purpose": "core-concept", "weight": 3},
+        {"image": "assets/storyboards/sheet-05.png", "panel": 0, "label": "森林里老树倒下同时新树进入明亮冠层", "purpose": "core-concept", "weight": 3},
+        {"image": "assets/storyboards/sheet-05.png", "panel": 1, "label": "城市工厂农场与商店被编织进同一只宽篮子", "purpose": "core-concept", "weight": 4}
+      ]
+    },
+    {
+      "id": "s08",
+      "promptFocus": "历史大跌与普通家庭的风险承受边界",
+      "shots": [
+        {"image": "assets/storyboards/sheet-05.png", "panel": 2, "label": "经济崩塌时城市街头人群面对飞落的空白纸带", "purpose": "source-scene", "weight": 4},
+        {"image": "assets/storyboards/sheet-05.png", "panel": 3, "label": "家庭在风暴前备好应急储物并守在稳固桥边", "purpose": "modern-analogy", "weight": 4}
+      ]
+    },
+    {
+      "id": "s09",
+      "promptFocus": "积累阶段和保有阶段需要不同资产组合",
+      "shots": [
+        {"image": "assets/storyboards/sheet-06.png", "panel": 0, "label": "年轻劳动者持续播种形成延伸到远方的果园", "purpose": "core-concept", "weight": 3},
+        {"image": "assets/storyboards/sheet-06.png", "panel": 1, "label": "退休夫妻在成长树苗与稳定石基之间平衡两只篮子", "purpose": "core-concept", "weight": 3}
+      ]
+    },
+    {
+      "id": "s10",
+      "promptFocus": "定投与一次投入不是同一现金流问题",
+      "shots": [
+        {"image": "assets/storyboards/sheet-06.png", "panel": 2, "label": "规律水滴持续灌溉逐渐长大的花园", "purpose": "core-concept", "weight": 3},
+        {"image": "assets/storyboards/sheet-06.png", "panel": 3, "label": "一座蓄水池同时展示立即灌溉与分段渠道", "purpose": "modern-analogy", "weight": 3}
+      ]
+    },
+    {
+      "id": "s11",
+      "promptFocus": "六封信骗局与长期费用的隐蔽损耗",
+      "shots": [
+        {"image": "assets/storyboards/sheet-07.png", "panel": 0, "label": "许多空白信封层层分叉最终汇入少数人的豪华餐桌", "purpose": "source-scene", "weight": 4},
+        {"image": "assets/storyboards/sheet-07.png", "panel": 1, "label": "光鲜顾问桌下细管从客户储蓄罐持续抽走水流", "purpose": "modern-analogy", "weight": 3}
+      ]
+    },
+    {
+      "id": "s12",
+      "promptFocus": "退休提取研究的起点与顺序风险",
+      "shots": [
+        {"image": "assets/storyboards/sheet-07.png", "panel": 2, "label": "退休夫妻按季节从蓄水池灵活取用一股水流", "purpose": "core-concept", "weight": 3},
+        {"image": "assets/storyboards/sheet-07.png", "panel": 3, "label": "早期风暴高成本和漫长道路同时压向退休计划", "purpose": "limitation", "weight": 4}
+      ]
+    },
+    {
+      "id": "s13",
+      "promptFocus": "美国制度和历史数据不能原样移植到中国家庭",
+      "shots": [
+        {"image": "assets/storyboards/sheet-08.png", "panel": 0, "label": "陈旧海外档案柜与现代中国家庭之间隔着制度鸿沟", "purpose": "limitation", "weight": 4},
+        {"image": "assets/storyboards/sheet-08.png", "panel": 1, "label": "中国家庭用量尺天平和无字色块重新核对自己的方案", "purpose": "modern-analogy", "weight": 3}
+      ]
+    },
+    {
+      "id": "s14",
+      "promptFocus": "把原则变成三张纸的行动并回到塔希提的选择",
+      "shots": [
+        {"image": "assets/storyboards/sheet-08.png", "panel": 2, "label": "桌上三只托盘分别放着断链家庭篮子与成长树苗", "purpose": "modern-analogy", "weight": 4},
+        {"image": "assets/storyboards/sheet-08.png", "panel": 3, "label": "三个年轻人站在塔希提海边的半建成小旅馆前", "purpose": "source-scene", "weight": 4}
+      ]
+    }
+  ]
+}

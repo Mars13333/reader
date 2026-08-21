@@ -1,0 +1,782 @@
+{
+  "bookId": "book-004-简单致富",
+  "scriptSha256": "43C4E2D5AA506C5112C70C57E6D9A7F87F19811C8BE51F44A57323DE5C019D1F",
+  "title": "《简单致富》：先买回选择权，再谈收益",
+  "author": "J. L. 柯林斯",
+  "angle": "从柯林斯失业、辞职和投资犯错的真实经历出发，讲清低负债、高储蓄、低成本宽基指数与长期持有如何共同买回人生选择权，同时明确历史收益、美国制度和高股票仓位都不能照搬。",
+  "deliveryMode": "audio-master",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 23279,
+  "totalDurationSeconds": 775.9666666666667,
+  "audioFile": "assets/audio/narration.wav",
+  "voice": {
+    "engine": "火山引擎豆包语音合成2.0",
+    "name": "刘飞男声",
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "section": "真正要买的东西",
+      "kicker": "先买回选择权",
+      "narration": "如果明天工资停了，你能撑多久？真正的富有，不是消费升级，而是买回选择权。柯林斯写这本书，是因为女儿不想把生命浪费在想钱上；他的回答，是把钱管得足够简单，让人生不再被钱牵着走。",
+      "sourceRefs": [
+        {
+          "label": "女儿提出不想浪费生命考虑金钱，作者由此明确写作目的",
+          "lines": "217-276"
+        }
+      ],
+      "narrationDurationSeconds": 18.664,
+      "narrationStartFrame": 15,
+      "narrationEndFrame": 575,
+      "startFrame": 0,
+      "durationInFrames": 588
+    },
+    {
+      "id": "s02",
+      "section": "工资停下的那一年",
+      "kicker": "沙发上的问题",
+      "narration": "九一一事件后，他被公司解雇。过了一年，八岁的女儿和他坐在沙发上，看见失业者排队领食物，忽然问：我们也是穷人吗？他回答，不是，我们有一笔钱，每天替我们工作。这就是独立自由保证金第一次在孩子面前变成安全感。",
+      "sourceRefs": [
+        {
+          "label": "失业后女儿询问家庭是否贫穷，作者解释独立自由保证金",
+          "lines": "674-715"
+        }
+      ],
+      "narrationDurationSeconds": 21.975125,
+      "narrationStartFrame": 588,
+      "narrationEndFrame": 1247,
+      "startFrame": 588,
+      "durationInFrames": 671
+    },
+    {
+      "id": "s03",
+      "section": "钱怎样变成自由",
+      "kicker": "账户余额也是谈判筹码",
+      "narration": "书中还有更具体的一幕。二十五岁的柯林斯攒下五千美元，想去欧洲旅行四个月，公司拒绝无薪假。他准备辞职，主管反而回来谈判，最后给了六周假。后来夫妻两人一度同时离开职场三年，陪女儿长大，家庭财富没有减少，投资还在工作。换到今天，这笔钱像人生的备用电源：它不保证永远不上班，却让你面对烂工作、照护家人或转换方向时，不必在当天低头。我的理解是，财务自由首先不是退休，而是拥有退出和协商的余地。",
+      "sourceRefs": [
+        {
+          "label": "五千美元积蓄换来无薪旅行与谈判空间",
+          "lines": "326-338"
+        },
+        {
+          "label": "夫妻停工陪伴女儿三年，投资支撑家庭并继续增长",
+          "lines": "340-356"
+        }
+      ],
+      "narrationDurationSeconds": 41.1845,
+      "narrationStartFrame": 1259,
+      "narrationEndFrame": 2495,
+      "startFrame": 1259,
+      "durationInFrames": 1249
+    },
+    {
+      "id": "s04",
+      "section": "简单不是因为没摔过",
+      "kicker": "两张昂贵的学费单",
+      "narration": "但别把柯林斯想成一路稳赢的人。他年轻时想靠一只金矿股翻身，把五万美元投进马利亚国际，最后本金归零。更扎心的是一九八七年黑色星期一，市场单日暴跌，他先坚持，几个月后还是被恐惧击垮，卖出股票；等他一年后重新入场，市场已经越过旧高点。他在低处锁定亏损，又花更高价格买回来。正是这两次失败，让他承认自己不会选中必胜股票，也无法预测拐点。真正救下家庭财富的，是三件不刺激的事：长期高储蓄、避免债务，最后接受约翰·博格的低成本指数理念。简单不是秘诀，而是把自己最容易犯的错，从系统里拿掉。",
+      "sourceRefs": [
+        {
+          "label": "金矿股投资五万美元最终全部亏损",
+          "lines": "362-372"
+        },
+        {
+          "label": "黑色星期一后恐慌卖出并在更高位置重新买入",
+          "lines": "1174-1208"
+        }
+      ],
+      "narrationDurationSeconds": 49.5525,
+      "narrationStartFrame": 2508,
+      "narrationEndFrame": 3994,
+      "startFrame": 2508,
+      "durationInFrames": 1499
+    },
+    {
+      "id": "s05",
+      "section": "第一道关不是选基金",
+      "kicker": "最低还款最不轻松",
+      "narration": "所以这条路的第一道关，不是买什么，而是先看你欠什么。柯林斯第一次用信用卡，账单大约三百美元，银行只要求最低还十美元，他几乎以为捡到了便宜。坐在旁边的姐姐指向小字：剩下的钱，要付百分之十八的年利率。那十美元像一扇轻巧的小门，门后却是未来收入被提前占用。书中把高息债务称为工作的锁链，因为房租之外，你还必须替昨天的消费还本付息。放到现实里，不必机械照搬书中按利率分档的旧数字，但原则很清楚：先列出全部债务和真实成本，优先处理会快速复利增长的高息债，再谈长期投资。否则你一边期待市场回报，一边确定地支付高利息，方向从一开始就是反的。",
+      "sourceRefs": [
+        {
+          "label": "三百美元信用卡账单、十美元最低还款与百分之十八利率",
+          "lines": "485-500"
+        },
+        {
+          "label": "债务限制生活与工作选择并形成压力循环",
+          "lines": "522-600"
+        }
+      ],
+      "narrationDurationSeconds": 57.77591666666667,
+      "narrationStartFrame": 4007,
+      "narrationEndFrame": 5740,
+      "startFrame": 4007,
+      "durationInFrames": 1746
+    },
+    {
+      "id": "s06",
+      "section": "储蓄率决定自由速度",
+      "kicker": "消费还有第二张价签",
+      "narration": "债务降下来，第二个变量才出现：你能留下多少。书里把一张百元钞票摆在桌上，给出四种结局：立刻花掉，只留下消费；保留本金、花掉收益；只花一小部分收益；或者让本金和收益一起复利。它还写到拳王泰森赚过近三亿美元，却因每月高额开销走向破产。收入高，不等于自由近。换到今天，每次消费都有两张价签：一张是收银台上的价格，另一张是这笔本金和未来复利不再属于你的机会成本。但这不是要把生活变成苦行。频道的判断是，先为真正重视的体验花钱，再把无意识的攀比、自动续费和生活方式膨胀挪给未来的自己。储蓄率越高，自由来得越快；储蓄率也必须在住房、照护、健康和家庭责任之间真实可持续。",
+      "sourceRefs": [
+        {
+          "label": "财务独立由收入与支出的关系决定，泰森因高消费破产",
+          "lines": "721-788,794-823"
+        },
+        {
+          "label": "汽车消费的机会成本与复利解释",
+          "lines": "829-847"
+        }
+      ],
+      "narrationDurationSeconds": 62.435875,
+      "narrationStartFrame": 5753,
+      "narrationEndFrame": 7626,
+      "startFrame": 5753,
+      "durationInFrames": 1885
+    },
+    {
+      "id": "s07",
+      "section": "为什么一只宽基可以很强",
+      "kicker": "喝啤酒，别追泡沫",
+      "narration": "有了长期盈余，柯林斯才把核心工具端上来：低成本的全市场股票指数基金。书里有个好懂的比喻，股市像一个不透明的啤酒杯。下面的啤酒，是企业持续经营产生的盈利；上面的泡沫，是短期情绪把价格吹高又压低。财经节目最爱拍泡沫，因为刺激；长期投资者真正想分享的，是杯子下面的企业增长。宽基指数还有一层自我更新：衰落公司退出，新公司进入，失败者最多归零，成功者的上升空间却不封顶。再加上少交易、低费用，它不需要你猜下一家明星是谁。这里最重要的不是某个美国基金代码，而是三个筛选词：覆盖够广、规则透明、长期成本低。指数也不是不跌的存款，它只是用承认自己不会预测，换取不必每次都押对。",
+      "sourceRefs": [
+        {
+          "label": "股票指数的自我净化机制与企业股权本质",
+          "lines": "1234-1278"
+        },
+        {
+          "label": "啤酒与泡沫比喻区分企业盈利和短期情绪",
+          "lines": "1341-1363"
+        },
+        {
+          "label": "低成本指数相对主动管理的长期优势",
+          "lines": "1534-1609"
+        }
+      ],
+      "narrationDurationSeconds": 59.96704166666667,
+      "narrationStartFrame": 7638,
+      "narrationEndFrame": 9437,
+      "startFrame": 7638,
+      "durationInFrames": 1812
+    },
+    {
+      "id": "s08",
+      "section": "长期回报的真实票价",
+      "kicker": "你能看着账户腰斩吗",
+      "narration": "可真正困难的，从来不是理解指数，而是承受它。柯林斯直说：未来几十年，你很可能不止一次看见股票账户迅速少掉一半。如果不能接受，就不该把自己推入高股票仓位。书中回看一九二九年，道琼斯指数两年最大跌幅约九成；如果加杠杆，跌到一半就可能被强制平仓，连等待复苏的资格都没有。它也提醒，预测高点和低点必须连续猜对两次：先卖对，再买对，长期几乎没人做到。我的判断是，这部分比收益故事更重要。所谓长期，不是把波动从屏幕上藏起来，而是用不用急花的钱投资，保留现金缓冲，不加自己承受不了的杠杆，并预先接受最坏年份可能很难熬。任何让你睡不着、下跌就一定会卖出的仓位，都不是你的正确仓位。",
+      "sourceRefs": [
+        {
+          "label": "无法预测买卖时点，进入股市前要接受账户可能腰斩",
+          "lines": "932-1016"
+        },
+        {
+          "label": "一九二九年大跌、杠杆风险与不同人生阶段面对危机的差异",
+          "lines": "1382-1430"
+        }
+      ],
+      "narrationDurationSeconds": 61.60154166666667,
+      "narrationStartFrame": 9450,
+      "narrationEndFrame": 11298,
+      "startFrame": 9450,
+      "durationInFrames": 1860
+    },
+    {
+      "id": "s09",
+      "section": "配置跟着人生阶段走",
+      "kicker": "人生变，压舱石也变",
+      "narration": "因此，书中没有把所有人塞进同一个比例。它先问三件事：你在积累财富还是保住财富，能承受多大风险，钱要多久才会用。柯林斯给刚毕业的女儿设计过高股票仓位，也展示过夫妻临近退休后的示例：股票、债券和现金共同出现，用较低增长换取较平稳的旅程。他甚至反对只用年龄公式，因为人会辞职、创业、重返工作，财富阶段会来回切换。换到今天，股票像发动机，债券与现金更像压舱石和备用粮；放多少，不由一句口号决定，而由收入是否稳定、未来几年有没有大额支出、市场下跌时能否削减开销，以及你会不会恐慌卖出共同决定。书里具体的美股比例是作者家庭的答案，不是每个中国家庭的标准答案。先保证生活不会因市场下跌被迫停摆，再谈提高长期增长。",
+      "sourceRefs": [
+        {
+          "label": "财富阶段、风险容忍度、投资期限与三种投资工具",
+          "lines": "1438-1528"
+        },
+        {
+          "label": "女儿积累组合、夫妻保住财富组合及按个人条件调整",
+          "lines": "1746-1831"
+        },
+        {
+          "label": "资产配置应按人生阶段、支出弹性与风险能力调整",
+          "lines": "1837-1944"
+        }
+      ],
+      "narrationDurationSeconds": 63.565875,
+      "narrationStartFrame": 11310,
+      "narrationEndFrame": 13217,
+      "startFrame": 11310,
+      "durationInFrames": 1920
+    },
+    {
+      "id": "s10",
+      "section": "定投不是择时魔法",
+      "kicker": "工资分批和现金分批不同",
+      "narration": "这里还有一个常被混在一起的问题：定投。第二十六章其实区分了两件事。第一种，是工资每月才到账，扣掉生活费后立刻投资；钱本来就分批来到你手里，这是一条长期纪律。第二种，是一大笔现金已经到手，却故意拆成十二个月等待入场。柯林斯不喜欢第二种，因为市场历史上上涨年份更多，拖延也可能错过上涨。但他同时承认，如果一次投入会让你彻夜难眠、下跌后立刻卖出，那就分批，健康和能坚持比理论最优更重要。放到我们的现实中，重点不是争论一次买还是分批买，而是先固定资产范围和长期比例，再让新增现金按规则进入。分批可以是管理情绪的护栏，不能被包装成预测低点的雷达。只要规则一变就追热点，那不叫定投，只是把择时切成了很多小次。",
+      "sourceRefs": [
+        {
+          "label": "大额现金分批投入的利弊与市场上涨概率",
+          "lines": "3120-3165"
+        },
+        {
+          "label": "工资现金流定期投入、一次性资金与心理承受的区别",
+          "lines": "3167-3177"
+        }
+      ],
+      "narrationDurationSeconds": 65.47625,
+      "narrationStartFrame": 13230,
+      "narrationEndFrame": 15194,
+      "startFrame": 13230,
+      "durationInFrames": 1977
+    },
+    {
+      "id": "s11",
+      "section": "复杂世界里的捕食者",
+      "kicker": "连续六次神预测的秘密",
+      "narration": "简单方法最容易被复杂产品围攻。书里拆过一个漂亮骗局：骗子先给一千个人写信，一半预测涨，一半预测跌；只给收到正确预测的人寄第二封，再把他们分成两半。循环六次，最后只剩十几个人，他们眼里，这位顾问连续六次神准，于是被邀请到五星级酒店，听一场限额私募推介。没有神预测，只有幸存者筛选。书中还批评佣金、资产管理费和高频交易，因为顾问的收入可能和你的费用同时上升。这里不能把所有专业服务都判成坏人；税务、法律、家庭信托和复杂保障确实可能需要专业意见。但检查顺序要反过来：先看资金是否独立托管，再看总费用和收费方式，再问建议者是否因推荐某个产品多赚钱，最后才看他讲得多专业。越是好得不像真的，越要慢下来。",
+      "sourceRefs": [
+        {
+          "label": "投资顾问佣金、资产管理费与客户利益冲突",
+          "lines": "2869-2962"
+        },
+        {
+          "label": "连续预测信、五星级酒店晚宴与幸存者筛选骗局",
+          "lines": "3230-3333"
+        }
+      ],
+      "narrationDurationSeconds": 64.70795833333334,
+      "narrationStartFrame": 15207,
+      "narrationEndFrame": 17148,
+      "startFrame": 15207,
+      "durationInFrames": 1954
+    },
+    {
+      "id": "s12",
+      "section": "二十五倍不是退休保证书",
+      "kicker": "百分之四只是起点",
+      "narration": "当资产真的积累起来，问题会从怎么买，变成每年能花多少。书中介绍的百分之四原则，来自对不同退休起点和股债组合的历史检验：一个常被引用的方案，在三十年周期里成功率约百分之九十六，但一九六五和一九六六两个起点失败了。柯林斯自己的做法也不是每年机械取走百分之四；市场好时可以多一点，市场差时减少旅行等弹性支出，必要时回到百分之四以下。于是，年支出的二十五倍，可以用来估算财务独立目标，却不是保险合同。退休初期先遇到大跌、通胀高、费用高、寿命更长，结果都会改变。对今天的我们，更稳妥的问法不是我到某个数字能不能永远躺平，而是：基本支出和可选支出各是多少，现金缓冲能撑多久，坏年份能否少花或增加收入。自由不是再也不调整，而是有空间调整。",
+      "sourceRefs": [
+        {
+          "label": "三一研究、百分之四取现率及不同起点的失败风险",
+          "lines": "3361-3474"
+        },
+        {
+          "label": "作者按市场和支出弹性在百分之三至七之间调整",
+          "lines": "3476-3494"
+        },
+        {
+          "label": "取现时持续复评市场与支出，而非设定后不管",
+          "lines": "3627-3641"
+        }
+      ],
+      "narrationDurationSeconds": 67.00008333333334,
+      "narrationStartFrame": 17161,
+      "narrationEndFrame": 19171,
+      "startFrame": 17161,
+      "durationInFrames": 2022
+    },
+    {
+      "id": "s13",
+      "section": "最重要的是别照抄",
+      "kicker": "原则能迁移，参数会过期",
+      "narration": "现在必须把边界说清。进入正文前，柯林斯专门写了两条声明：书中的法律、税级、费率会变化；历史收益和情景计算不是未来预测。他讲美国养老账户时，也请美国之外的读者按本国制度重新判断。书里反复出现的先锋基金、退休账户、社保年龄和旧费率，都属于美国特定时期的工具；把它们原样搬到中国，等于只抄答案，不看题目。高股票仓位也建立在很长投资期限、持续现金流和能承受大跌的前提上。我们真正能带走的，是更耐久的检查表：避免昂贵债务，扩大收入与支出的安全垫，用盈余投资，选择透明、分散、成本可控的工具，少预测、少折腾，再按家庭责任和风险承受力配置。至于产品、税务、收益假设和取现率，都要用当下规则和个人数据重新计算。本书给的是路线图，不是收益承诺。",
+      "sourceRefs": [
+        {
+          "label": "作者声明个人经验未必适合他人且不提供保证",
+          "lines": "135-147"
+        },
+        {
+          "label": "法律数据会过期，历史收益和情景计算不是未来预测",
+          "lines": "388-457"
+        },
+        {
+          "label": "美国养老账户内容不能直接适用于其他国家",
+          "lines": "2275-2285"
+        },
+        {
+          "label": "作者再次提醒税法数据会变动",
+          "lines": "2512-2516"
+        }
+      ],
+      "narrationDurationSeconds": 69.09791666666666,
+      "narrationStartFrame": 19183,
+      "narrationEndFrame": 21256,
+      "startFrame": 19183,
+      "durationInFrames": 2086
+    },
+    {
+      "id": "s14",
+      "section": "从今天开始买回人生",
+      "kicker": "三张纸就够了",
+      "narration": "最后，先别急着找下一只基金，拿三张纸。第一张，写下所有债务、利率和还款顺序；第二张，写下过去三个月真实的必要支出与可选支出，算出能长期维持的储蓄率；第三张，写下你的投资期限、最大可承受回撤，以及只使用哪些低成本、分散工具的固定规则。每年复查，不因一条新闻改方向。书的尾声回到塔希提岛：三个不懂种菠萝的年轻人买下失败农场，后来接手烂尾酒店，靠行动建起想要的生活。这个故事不是鼓励盲目冒险，而是提醒我们，钱最终服务的不是账户排名，而是你有没有能力对不想要的人生说不，对真正重视的事说是。市场不会保证回报，计划也不能消灭风险；但减少债务、提高余量、降低费用、长期执行，会让选择权一点点回到你手里。这里是陈拾叁，陪你一起读书破万卷。",
+      "sourceRefs": [
+        {
+          "label": "尾声给女儿的避债、储蓄、长期投资与生活选择建议",
+          "lines": "3913-3992"
+        },
+        {
+          "label": "塔希提岛菠萝农场、烂尾酒店与勇敢活出自我的故事",
+          "lines": "3998-4089"
+        },
+        {
+          "label": "风险无法消除，行动前要比较需求、目标与承受力",
+          "lines": "4095-4156"
+        }
+      ],
+      "narrationDurationSeconds": 65.58595833333334,
+      "narrationStartFrame": 21269,
+      "narrationEndFrame": 23237,
+      "startFrame": 21269,
+      "durationInFrames": 2010
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01-01",
+      "segmentId": "s01",
+      "section": "真正要买的东西",
+      "kicker": "先买回选择权",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 0,
+      "label": "通勤站台上疲惫的人望见工作与家庭的两种生活",
+      "purpose": "author-commentary",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 0,
+      "durationInFrames": 235
+    },
+    {
+      "id": "s01-02",
+      "segmentId": "s01",
+      "section": "真正要买的东西",
+      "kicker": "先买回选择权",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 1,
+      "label": "一扇敞开的门外出现多条明亮人生道路",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 235,
+      "durationInFrames": 353
+    },
+    {
+      "id": "s02-01",
+      "segmentId": "s02",
+      "section": "工资停下的那一年",
+      "kicker": "沙发上的问题",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 2,
+      "label": "父女在客厅看见电视中的食物救济队伍",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 588,
+      "durationInFrames": 336
+    },
+    {
+      "id": "s02-02",
+      "segmentId": "s02",
+      "section": "工资停下的那一年",
+      "kicker": "沙发上的问题",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 3,
+      "label": "父亲蹲下安慰女儿身旁有象征储备的玻璃罐与树苗",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 924,
+      "durationInFrames": 335
+    },
+    {
+      "id": "s03-01",
+      "segmentId": "s03",
+      "section": "钱怎样变成自由",
+      "kicker": "账户余额也是谈判筹码",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 0,
+      "label": "年轻作者在办公室向老板争取无薪假",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 1259,
+      "durationInFrames": 416
+    },
+    {
+      "id": "s03-02",
+      "segmentId": "s03",
+      "section": "钱怎样变成自由",
+      "kicker": "账户余额也是谈判筹码",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 1,
+      "label": "年轻作者骑车穿越爱尔兰与威尔士的绿色乡野",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 1675,
+      "durationInFrames": 417
+    },
+    {
+      "id": "s03-03",
+      "segmentId": "s03",
+      "section": "钱怎样变成自由",
+      "kicker": "账户余额也是谈判筹码",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 2,
+      "label": "父母轮流在家陪幼小女儿搭积木",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 2092,
+      "durationInFrames": 416
+    },
+    {
+      "id": "s04-01",
+      "segmentId": "s04",
+      "section": "简单不是因为没摔过",
+      "kicker": "两张昂贵的学费单",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 3,
+      "label": "明亮荒地上的废弃金矿与投资人空空的双手",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 2508,
+      "durationInFrames": 500
+    },
+    {
+      "id": "s04-02",
+      "segmentId": "s04",
+      "section": "简单不是因为没摔过",
+      "kicker": "两张昂贵的学费单",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 0,
+      "label": "市场暴跌时作者在电话与飞散纸张中恐慌卖出",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 3008,
+      "durationInFrames": 666
+    },
+    {
+      "id": "s04-03",
+      "segmentId": "s04",
+      "section": "简单不是因为没摔过",
+      "kicker": "两张昂贵的学费单",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 1,
+      "label": "冷静后的投资人重新走回简洁而漫长的道路",
+      "purpose": "core-concept",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 3674,
+      "durationInFrames": 333
+    },
+    {
+      "id": "s05-01",
+      "segmentId": "s05",
+      "section": "第一道关不是选基金",
+      "kicker": "最低还款最不轻松",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 2,
+      "label": "妹妹在餐桌边指着无字账单解释最低还款",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 4007,
+      "durationInFrames": 873
+    },
+    {
+      "id": "s05-02",
+      "segmentId": "s05",
+      "section": "第一道关不是选基金",
+      "kicker": "最低还款最不轻松",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 3,
+      "label": "消费袋化成锁链把上班族拴向远处办公室",
+      "purpose": "modern-analogy",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 4880,
+      "durationInFrames": 873
+    },
+    {
+      "id": "s06-01",
+      "segmentId": "s06",
+      "section": "储蓄率决定自由速度",
+      "kicker": "消费还有第二张价签",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 0,
+      "label": "一枚无标记圆片在消费与成长的四条道路间分流",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 5753,
+      "durationInFrames": 707
+    },
+    {
+      "id": "s06-02",
+      "segmentId": "s06",
+      "section": "储蓄率决定自由速度",
+      "kicker": "消费还有第二张价签",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 1,
+      "label": "一位非特定拳王坐在奢华房间却面对空柜",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 6460,
+      "durationInFrames": 471
+    },
+    {
+      "id": "s06-03",
+      "segmentId": "s06",
+      "section": "储蓄率决定自由速度",
+      "kicker": "消费还有第二张价签",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 2,
+      "label": "普通人在家庭野餐与堆满闲置物品之间做选择",
+      "purpose": "modern-analogy",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 6931,
+      "durationInFrames": 707
+    },
+    {
+      "id": "s07-01",
+      "segmentId": "s07",
+      "section": "为什么一只宽基可以很强",
+      "kicker": "喝啤酒，别追泡沫",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 3,
+      "label": "透明杯中稳定啤酒与不断变化泡沫形成对照",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 7638,
+      "durationInFrames": 544
+    },
+    {
+      "id": "s07-02",
+      "segmentId": "s07",
+      "section": "为什么一只宽基可以很强",
+      "kicker": "喝啤酒，别追泡沫",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 0,
+      "label": "森林里老树倒下同时新树进入明亮冠层",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 8182,
+      "durationInFrames": 543
+    },
+    {
+      "id": "s07-03",
+      "segmentId": "s07",
+      "section": "为什么一只宽基可以很强",
+      "kicker": "喝啤酒，别追泡沫",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 1,
+      "label": "城市工厂农场与商店被编织进同一只宽篮子",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 8725,
+      "durationInFrames": 725
+    },
+    {
+      "id": "s08-01",
+      "segmentId": "s08",
+      "section": "长期回报的真实票价",
+      "kicker": "你能看着账户腰斩吗",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 2,
+      "label": "经济崩塌时城市街头人群面对飞落的空白纸带",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 9450,
+      "durationInFrames": 930
+    },
+    {
+      "id": "s08-02",
+      "segmentId": "s08",
+      "section": "长期回报的真实票价",
+      "kicker": "你能看着账户腰斩吗",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 3,
+      "label": "家庭在风暴前备好应急储物并守在稳固桥边",
+      "purpose": "modern-analogy",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 10380,
+      "durationInFrames": 930
+    },
+    {
+      "id": "s09-01",
+      "segmentId": "s09",
+      "section": "配置跟着人生阶段走",
+      "kicker": "人生变，压舱石也变",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 0,
+      "label": "年轻劳动者持续播种形成延伸到远方的果园",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 11310,
+      "durationInFrames": 960
+    },
+    {
+      "id": "s09-02",
+      "segmentId": "s09",
+      "section": "配置跟着人生阶段走",
+      "kicker": "人生变，压舱石也变",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 1,
+      "label": "退休夫妻在成长树苗与稳定石基之间平衡两只篮子",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 12270,
+      "durationInFrames": 960
+    },
+    {
+      "id": "s10-01",
+      "segmentId": "s10",
+      "section": "定投不是择时魔法",
+      "kicker": "工资分批和现金分批不同",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 2,
+      "label": "规律水滴持续灌溉逐渐长大的花园",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 13230,
+      "durationInFrames": 989
+    },
+    {
+      "id": "s10-02",
+      "segmentId": "s10",
+      "section": "定投不是择时魔法",
+      "kicker": "工资分批和现金分批不同",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 3,
+      "label": "一座蓄水池同时展示立即灌溉与分段渠道",
+      "purpose": "modern-analogy",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 14219,
+      "durationInFrames": 988
+    },
+    {
+      "id": "s11-01",
+      "segmentId": "s11",
+      "section": "复杂世界里的捕食者",
+      "kicker": "连续六次神预测的秘密",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 0,
+      "label": "许多空白信封层层分叉最终汇入少数人的豪华餐桌",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 15207,
+      "durationInFrames": 1117
+    },
+    {
+      "id": "s11-02",
+      "segmentId": "s11",
+      "section": "复杂世界里的捕食者",
+      "kicker": "连续六次神预测的秘密",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 1,
+      "label": "光鲜顾问桌下细管从客户储蓄罐持续抽走水流",
+      "purpose": "modern-analogy",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 16324,
+      "durationInFrames": 837
+    },
+    {
+      "id": "s12-01",
+      "segmentId": "s12",
+      "section": "二十五倍不是退休保证书",
+      "kicker": "百分之四只是起点",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 2,
+      "label": "退休夫妻按季节从蓄水池灵活取用一股水流",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 17161,
+      "durationInFrames": 867
+    },
+    {
+      "id": "s12-02",
+      "segmentId": "s12",
+      "section": "二十五倍不是退休保证书",
+      "kicker": "百分之四只是起点",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 3,
+      "label": "早期风暴高成本和漫长道路同时压向退休计划",
+      "purpose": "limitation",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 18028,
+      "durationInFrames": 1155
+    },
+    {
+      "id": "s13-01",
+      "segmentId": "s13",
+      "section": "最重要的是别照抄",
+      "kicker": "原则能迁移，参数会过期",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 0,
+      "label": "陈旧海外档案柜与现代中国家庭之间隔着制度鸿沟",
+      "purpose": "limitation",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 19183,
+      "durationInFrames": 1192
+    },
+    {
+      "id": "s13-02",
+      "segmentId": "s13",
+      "section": "最重要的是别照抄",
+      "kicker": "原则能迁移，参数会过期",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 1,
+      "label": "中国家庭用量尺天平和无字色块重新核对自己的方案",
+      "purpose": "modern-analogy",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 20375,
+      "durationInFrames": 894
+    },
+    {
+      "id": "s14-01",
+      "segmentId": "s14",
+      "section": "从今天开始买回人生",
+      "kicker": "三张纸就够了",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 2,
+      "label": "桌上三只托盘分别放着断链家庭篮子与成长树苗",
+      "purpose": "modern-analogy",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 21269,
+      "durationInFrames": 1005
+    },
+    {
+      "id": "s14-02",
+      "segmentId": "s14",
+      "section": "从今天开始买回人生",
+      "kicker": "三张纸就够了",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 3,
+      "label": "三个年轻人站在塔希提海边的半建成小旅馆前",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 22274,
+      "durationInFrames": 1005
+    }
+  ]
+}
