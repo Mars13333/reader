@@ -1,0 +1,67 @@
+{
+  "book": "纳瓦尔宝典",
+  "author": "埃里克·乔根森",
+  "sourceMode": "local-source",
+  "sourcePath": "source/纳瓦尔宝典.txt",
+  "sourceSha256": "F64252529F11A14A1A6D05962104B95C65E5845A527E02EEDA68887910860BF4",
+  "sourceEncoding": "UTF-8",
+  "chapterLines": {
+    "关于本书的重要说明": "153-239",
+    "纳瓦尔亲述": "438-472",
+    "第一章·积累财富": "484-1381",
+    "第二章·增强判断力": "1382-1868",
+    "第三章·学习幸福": "1882-2365",
+    "第四章·自我救赎": "2366-2880",
+    "第五章·哲学": "2881-3020"
+  },
+  "terminology": [
+    {
+      "canonical": "纳瓦尔·拉维坎特",
+      "pronunciation": "nà wǎ ěr · lā wéi kǎn tè",
+      "requiredInScript": true,
+      "avoid": ["纳瓦尔·拉维肯特", "纳瓦尔·拉维康特"],
+      "sourceRefs": ["纳瓦尔亲述·438-472"]
+    },
+    {
+      "canonical": "杠杆效应",
+      "pronunciation": "gàng gǎn xiào yìng",
+      "requiredInScript": true,
+      "avoid": ["杠杆效率"],
+      "sourceRefs": ["第一章·900-1077"]
+    },
+    {
+      "canonical": "埃拉德·吉尔",
+      "pronunciation": "āi lā dé · jí ěr",
+      "requiredInScript": true,
+      "avoid": ["埃拉德·基尔"],
+      "sourceRefs": ["第一章·793-835"]
+    }
+  ],
+  "selfReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-22T17:00:00+08:00",
+    "scriptSha256": "99180A338C56529EABBB6BA6576A13070C4E8E2630E8E4C15DB7B4EED333267A",
+    "checks": {
+      "terminologyVerified": true,
+      "openingRetentionReviewed": true,
+      "retentionStructureReviewed": true,
+      "sentenceFluencyReviewed": true,
+      "sourceConsistencyReviewed": true,
+      "storyCoverageReviewed": true,
+      "contentFlowReviewed": true,
+      "contentLayerDistinctionReviewed": true,
+      "semanticVisualMomentsReviewed": true,
+      "closingBrandLineReviewed": true,
+      "originalityAndCommentaryReviewed": true
+    }
+  },
+  "editorialRules": [
+    "成片是原创评论，不是有声书或逐章复述。",
+    "人物、情节、反转、结局和作品判断只以绑定原文为内容事实来源。",
+    "不限题材，默认服务没读过原著的观众；先让观众进入具体场景，再进行分析。",
+    "核心内容链为：现实问题→具体场景→原著核心案例或剧情→解释原理→回到现实→补充局限。",
+    "自然提示原著内容、现代类比和作者判断的边界，但不要切成生硬的标签段。",
+    "整条口播最后一句固定为“这里是陈拾叁，陪你一起读书破万卷。”。",
+    "不展示原书内页、连续长段文字、影视剧照或演员形象。"
+  ]
+}

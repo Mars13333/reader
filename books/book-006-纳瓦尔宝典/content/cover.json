@@ -1,0 +1,25 @@
+{
+  "design": "book-jacket-v2",
+  "image": "assets/cover/cover-art.png",
+  "bookTitle": "纳瓦尔宝典",
+  "eyebrow": "埃里克·乔根森 著",
+  "subtitle": "把时间变成选择，把欲望还给当下",
+  "badge": "陈拾叁读书",
+  "treatment": "bright",
+  "layouts": {
+    "portrait3x4": {
+      "left": 72,
+      "eyebrowTop": 78,
+      "headlineTop": 220,
+      "badgeTop": 1220,
+      "artObjectPosition": "center 50%"
+    },
+    "landscape4x3": {
+      "left": 88,
+      "eyebrowTop": 70,
+      "headlineTop": 180,
+      "badgeTop": 870,
+      "artObjectPosition": "center 40%"
+    }
+  }
+}

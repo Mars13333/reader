@@ -1,0 +1,12 @@
+{
+  "bookId": "book-006-纳瓦尔宝典",
+  "status": "approved",
+  "version": 1,
+  "scriptSha256": "99180A338C56529EABBB6BA6576A13070C4E8E2630E8E4C15DB7B4EED333267A",
+  "approvedAt": "2026-08-22T08:28:11.382Z",
+  "segments": 15,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

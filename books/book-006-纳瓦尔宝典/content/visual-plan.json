@@ -1,0 +1,164 @@
+{
+  "standard": "semantic-key-moments-v1",
+  "durationPolicy": "semantic-weighted-v1",
+  "visibleTextLanguage": "zh-CN",
+  "generatedTextPolicy": "no-text-in-generated-images",
+  "storyboardStandard": "portrait-2x2-9x16-v1",
+  "canvasAspectRatio": "9:16",
+  "panelLayout": "2x2",
+  "panelOrder": ["top-left", "top-right", "bottom-left", "bottom-right"],
+  "visualDirection": {
+    "useCase": "illustration-story",
+    "style": "原创现代编辑插画，轻写实人物，柔和纸张肌理，构图清晰，适合竖屏长视频",
+    "lighting": "明亮通透的日光与充足天光，暗部保留人物和环境细节",
+    "palette": "清透青绿、天蓝、暖金与少量珊瑚橙，避免浑浊棕灰",
+    "characterContinuity": "童年纳瓦尔为九岁印度男孩、深色短发和朴素衣着；成年纳瓦尔为印度裔成年男性、短深色头发、简洁深蓝上衣，保持普通人物特征，不模仿真人肖像",
+    "avoid": [
+      "禁止英文",
+      "禁止任何字母",
+      "禁止数字",
+      "禁止中文与其他生成式文字",
+      "禁止标志、商标、水印、伪文字和乱码",
+      "禁止原书封面、书页截图、社交平台界面截图和真人名人肖像",
+      "禁止纯黑背景、重度暗角、压死阴影和浑浊棕灰"
+    ]
+  },
+  "generationSheets": [
+    {
+      "id": "sheet-01",
+      "image": "assets/storyboards/sheet-01.png",
+      "prompt": "Use case: illustration-story. Asset type: vertical book-video storyboard mother sheet. Create one portrait 9:16 PNG containing a precise 2x2 grid; all four equal cells are themselves portrait 9:16 panels, ordered top-left, top-right, bottom-left, bottom-right. Thin clean gutters, no outer labels. Unified bright modern editorial illustration, light realism, subtle paper texture, clear daylight, cyan-blue and warm gold accents. Panel 1: an exhausted office worker at a desk physically surrounded by clocks and timesheets, suggesting income chained to hours. Panel 2: a calm symbolic asset machine continuing to produce small glowing seeds while its owner sleeps in the background, no money symbols. Panel 3: a nine-year-old Indian immigrant boy with a house key on a cord walking through a modest Queens street after school. Panel 4: the same boy absorbed in books at a large public-library table near closing time, warm late-afternoon sunlight. Every panel must be a complete independent vertical composition with subjects inside safe margins. No English, no letters, no numbers, no Chinese, no text, no pseudo-text, no logos, no watermarks, no readable book spines or screens."
+    },
+    {
+      "id": "sheet-02",
+      "image": "assets/storyboards/sheet-02.png",
+      "prompt": "Use case: illustration-story. Asset type: vertical book-video storyboard mother sheet. Create one portrait 9:16 PNG containing a precise 2x2 grid; all four equal cells are portrait 9:16 panels. Unified bright modern editorial illustration, light realism, subtle paper texture, airy daylight, cyan-blue and warm gold accents. Panel 1: an adult Indian-American entrepreneur watching a market chart collapse into scattered blank paper fragments, conveying the loss of his first savings without visible symbols or digits. Panel 2: the same man at an empty partnership table after a broken handshake, one chair pulled away, then turning toward a new sunlit path to show recovery after betrayal. Panel 3: a teenage Indian boy looking through a small telescope toward the sky while his mother observes knowingly from a bright kitchen doorway. Panel 4: the adult man at a worktable where books, abstract data blocks, a small circuit board, conversation silhouettes and a simple product prototype converge into one unique skill constellation. No English, no letters, no numbers, no Chinese, no text, no pseudo-text, no logos, no watermarks, no readable documents or screens."
+    },
+    {
+      "id": "sheet-03",
+      "image": "assets/storyboards/sheet-03.png",
+      "prompt": "Use case: illustration-story. Asset type: vertical book-video storyboard mother sheet. Create one portrait 9:16 PNG containing an exact 2x2 grid; all four equal cells are portrait 9:16 panels. Unified bright modern editorial illustration, light realism, subtle paper texture, clean daylight, clear silhouettes. Panel 1: a doctor repeatedly consulting one patient at a time while a wall clock advances, showing time-bound income without any clock digits. Panel 2: a modern independent software maker releasing one small glowing tool that many diverse users can access at once, screens shown only as blank abstract shapes. Panel 3: a property ladder scene moving from a hands-on repair worker to a contractor coordinating a small team, clear progression without arrows or labels. Panel 4: a bright layered platform combining a building, pooled capital, people and branching code-like light paths, showing leverage multiplying output without equations. Palette of cyan, sky blue, warm gold, coral accents. No English, no letters, no numbers, no Chinese, no text, no pseudo-text, no logos, no watermarks, no readable documents or interfaces."
+    },
+    {
+      "id": "sheet-04",
+      "image": "assets/storyboards/sheet-04.png",
+      "prompt": "Use case: illustration-story. Asset type: vertical book-video storyboard mother sheet. Create one portrait 9:16 PNG containing an exact 2x2 grid; all four equal cells are portrait 9:16 panels. Unified bright modern editorial illustration, light realism, subtle paper texture, generous daylight. Panel 1: a thoughtful decision-maker alone at a forked path, carefully studying long shadows and distant consequences before moving. Panel 2: a modern worker ignores a storm of trivial task cards and instead chooses one large high-leverage decision stone; all cards blank. Panel 3: two long-term business partners at a clean table each voluntarily sliding an extra share of value toward the other, warm trust and equal posture. Panel 4: a skilled deep-sea diver is approached by explorers who found a submerged treasure chest, illustrating reputation attracting opportunity, with no coins marked by symbols. Cyan-blue water, warm gold highlights, bright readable detail. No English, no letters, no numbers, no Chinese, no text, no pseudo-text, no logos, no watermarks."
+    },
+    {
+      "id": "sheet-05",
+      "image": "assets/storyboards/sheet-05.png",
+      "prompt": "Use case: illustration-story. Asset type: vertical book-video storyboard mother sheet. Create one portrait 9:16 PNG containing an exact 2x2 grid; all four equal cells are portrait 9:16 panels. Unified bright modern editorial illustration, light realism, subtle paper texture, clean daylight. Panel 1: an ordinary developer at home completes a tiny prototype and places it in the hands of one real user, both studying the result, devices blank and unlettered. Panel 2: the same person balances a stable job, family responsibilities and a small owned product on a calm workbench, choosing gradual risk rather than a dramatic leap. Panel 3: a materially successful man alone in a beautiful bright apartment at night, surrounded by possessions yet visibly anxious, with detailed face and no darkness swallowing the room. Panel 4: a limitation image contrasting an overflowing treasure chest with an untouched calm mind, healthy body and loving home represented by three warm distant scenes; no symbols or labels. Airy cyan, blue and gold palette, no murky gray. No English, no letters, no numbers, no Chinese, no text, no pseudo-text, no logos, no watermarks."
+    },
+    {
+      "id": "sheet-06",
+      "image": "assets/storyboards/sheet-06.png",
+      "prompt": "Use case: illustration-story. Asset type: vertical book-video storyboard mother sheet. Create one portrait 9:16 PNG containing an exact 2x2 grid; all four equal cells are portrait 9:16 panels. Unified bright modern editorial illustration, light realism, subtle paper texture and open daylight. Panel 1: an adult Indian-American man waits for delivery of a new car, repeatedly checking a blank glowing forum-like screen at night while the unopened garage remains empty. Panel 2: the desired car appears inside a transparent bubble tied by a cord to the man's attention, while the present moment around him fades, no brand and no dashboard markings. Panel 3: a late traveler pauses on a sunlit path and notices birds and clouds instead of staring anxiously at a blank watch face. Panel 4: one person calmly chooses among three distinct physical paths—repair a bridge, accept a shaded resting place, or leave through an open gate—without signs, arrows or words. Bright cyan sky, warm gold light, coral accents. No English, no letters, no numbers, no Chinese, no text, no pseudo-text, no logos, no watermarks."
+    },
+    {
+      "id": "sheet-07",
+      "image": "assets/storyboards/sheet-07.png",
+      "prompt": "Use case: illustration-story. Asset type: vertical book-video storyboard mother sheet. Create one portrait 9:16 PNG containing an exact 2x2 grid; all four equal cells are portrait 9:16 panels. Unified bright modern editorial illustration, light realism, subtle paper texture, fresh morning daylight. Panel 1: an adult Indian-American man starts a simple morning workout in a sunlit room before opening his laptop, body healthy but not exaggerated. Panel 2: a diverse group of five calm optimistic friends walk outdoors together in sunlight, naturally influencing one another through posture and mood. Panel 3: a person sits quietly while many sealed blank envelopes rise from an open mental inbox and dissolve into light, a clear metaphor for unresolved memories. Panel 4: the same person brushing teeth at a mirror notices a cloud of imagined future conversation, then returns attention to the physical toothbrush and breath; mirror contains no writing. Clean cyan, sky blue, warm gold and coral accents. No English, no letters, no numbers, no Chinese, no text, no pseudo-text, no logos, no watermarks."
+    },
+    {
+      "id": "sheet-08",
+      "image": "assets/storyboards/sheet-08.png",
+      "prompt": "Use case: illustration-story. Asset type: vertical book-video storyboard mother sheet. Create one portrait 9:16 PNG containing an exact 2x2 grid; all four equal cells are portrait 9:16 panels. Unified bright modern editorial illustration, light realism, subtle paper texture, luminous daylight and generous negative space. Panel 1: two parallel life games shown visually—an external workshop building an owned asset on one side and an internal calm garden on the other—balanced without scales, text or symbols. Panel 2: a person carries a small toolkit containing abstract representations of skill, ownership, leverage, judgment and trust while walking toward an open horizon. Panel 3: a limitation scene of many edited audio fragments, speech bubbles and blank note cards converging into one book-shaped object, with visible seams to show context can be lost; absolutely no readable marks. Panel 4: an open unlettered notebook beside a compass, a small growing tree and a calm sunrise path, suggesting a personal experiment and continued practice. Bright cyan, blue, warm gold and coral accents, clear details. No English, no letters, no numbers, no Chinese, no text, no pseudo-text, no logos, no watermarks."
+    }
+  ],
+  "keyMoments": [
+    {"id": "km01-time-trap", "segmentId": "s01", "kind": "author-commentary", "anchor": "收入完全绑定个人工时的现实困境", "shotRef": "s01-01"},
+    {"id": "km02-sleeping-asset", "segmentId": "s01", "kind": "core-concept", "anchor": "睡觉时仍能持续产出的资产定义", "shotRef": "s01-02"},
+    {"id": "km03-immigrant-key", "segmentId": "s02", "kind": "source-scene", "anchor": "九岁移民少年把钥匙挂在脖子上独自回家", "shotRef": "s02-01"},
+    {"id": "km04-library", "segmentId": "s02", "kind": "source-scene", "anchor": "放学后在纽约图书馆一直阅读到闭馆", "shotRef": "s02-02"},
+    {"id": "km05-losses", "segmentId": "s03", "kind": "source-scene", "anchor": "第一桶金赔光、第二桶金被骗后继续行动", "shotRef": "s03-01"},
+    {"id": "km06-compounding-path", "segmentId": "s03", "kind": "core-concept", "anchor": "失败不是终局，选择和经验继续复利", "shotRef": "s03-02"},
+    {"id": "km07-mother-foresight", "segmentId": "s04", "kind": "source-scene", "anchor": "少年想当天体物理学家，母亲判断他会经商", "shotRef": "s04-01"},
+    {"id": "km08-skill-stack", "segmentId": "s04", "kind": "core-concept", "anchor": "阅读、科技、数据、销售形成独特专长组合", "shotRef": "s04-02"},
+    {"id": "km09-doctor-equity", "segmentId": "s05", "kind": "source-scene", "anchor": "医生从按次看诊走向拥有诊所、品牌和流程权益", "shotRef": "s05-01"},
+    {"id": "km10-owned-tool", "segmentId": "s05", "kind": "modern-analogy", "anchor": "现代开发者把重复服务做成自己拥有的小产品", "shotRef": "s05-02"},
+    {"id": "km11-property-ladder", "segmentId": "s06", "kind": "source-scene", "anchor": "维修工、承包商、开发商逐层承担责任并获得杠杆", "shotRef": "s06-01"},
+    {"id": "km12-permissionless-leverage", "segmentId": "s06", "kind": "core-concept", "anchor": "代码和媒体以接近零的复制成本放大一次劳动", "shotRef": "s06-02"},
+    {"id": "km13-judgment", "segmentId": "s07", "kind": "core-concept", "anchor": "杠杆时代关键决策的价值呈非线性放大", "shotRef": "s07-01"},
+    {"id": "km14-long-trust", "segmentId": "s08", "kind": "source-scene", "anchor": "长期合作双方主动让利，互信持续复利", "shotRef": "s08-01"},
+    {"id": "km15-luck-finds-skill", "segmentId": "s08", "kind": "modern-analogy", "anchor": "深海潜水专长让偶然发现的宝藏主动找上门", "shotRef": "s08-02"},
+    {"id": "km16-small-loop", "segmentId": "s09", "kind": "modern-analogy", "anchor": "不裸辞，先用小产品和真实用户完成付费闭环", "shotRef": "s09-01"},
+    {"id": "km17-wealth-limit", "segmentId": "s10", "kind": "limitation", "anchor": "财富能移除外部障碍却买不到平和、健康和爱", "shotRef": "s10-02"},
+    {"id": "km18-car-desire", "segmentId": "s11", "kind": "source-scene", "anchor": "等待新车时反复查看论坛，欲望提前占据心智", "shotRef": "s11-01"},
+    {"id": "km19-desire-contract", "segmentId": "s11", "kind": "core-concept", "anchor": "把当下幸福抵押给尚未得到的目标", "shotRef": "s11-02"},
+    {"id": "km20-three-choices", "segmentId": "s12", "kind": "core-concept", "anchor": "改变、接受或离开，拒绝长期停在纠结中", "shotRef": "s12-02"},
+    {"id": "km21-habit-environment", "segmentId": "s13", "kind": "modern-analogy", "anchor": "运动、关系和信息环境共同塑造幸福基线", "shotRef": "s13-02"},
+    {"id": "km22-empty-inbox", "segmentId": "s14", "kind": "source-scene", "anchor": "冥想时观察长期未处理的心理邮件逐一浮现", "shotRef": "s14-01"},
+    {"id": "km23-debug-attention", "segmentId": "s14", "kind": "modern-analogy", "anchor": "刷牙时进入调试模式，把注意力带回当下", "shotRef": "s14-02"},
+    {"id": "km24-two-games", "segmentId": "s15", "kind": "author-commentary", "anchor": "外部选择权与内部自由是两套需要同时练习的游戏", "shotRef": "s15-01"},
+    {"id": "km25-source-limit", "segmentId": "s15", "kind": "limitation", "anchor": "多年份推文、谈话和转录汇编存在语境与一手性限制", "shotRef": "s15-03"}
+  ],
+  "assetReview": {
+    "status": "passed",
+    "semanticCoverageReviewed": true,
+    "noEnglishVisible": true
+  },
+  "segments": [
+    {"id": "s01", "shots": [
+      {"image": "assets/storyboards/sheet-01.png", "panel": 0, "label": "工时牢笼", "purpose": "author-commentary", "weight": 1.2},
+      {"image": "assets/storyboards/sheet-01.png", "panel": 1, "label": "睡眠中的资产", "purpose": "core-concept", "weight": 1.0}
+    ]},
+    {"id": "s02", "shots": [
+      {"image": "assets/storyboards/sheet-01.png", "panel": 2, "label": "钥匙少年", "purpose": "source-scene", "weight": 1.2},
+      {"image": "assets/storyboards/sheet-01.png", "panel": 3, "label": "图书馆到闭馆", "purpose": "source-scene", "weight": 1.5}
+    ]},
+    {"id": "s03", "shots": [
+      {"image": "assets/storyboards/sheet-02.png", "panel": 0, "label": "第一桶金赔光", "purpose": "source-scene", "weight": 1.2},
+      {"image": "assets/storyboards/sheet-02.png", "panel": 1, "label": "被骗后重新出发", "purpose": "core-concept", "weight": 1.1}
+    ]},
+    {"id": "s04", "shots": [
+      {"image": "assets/storyboards/sheet-02.png", "panel": 2, "label": "天体物理梦想", "purpose": "source-scene", "weight": 1.0},
+      {"image": "assets/storyboards/sheet-02.png", "panel": 3, "label": "独特专长组合", "purpose": "core-concept", "weight": 1.3}
+    ]},
+    {"id": "s05", "shots": [
+      {"image": "assets/storyboards/sheet-03.png", "panel": 0, "label": "医生按次看诊", "purpose": "source-scene", "weight": 1.0},
+      {"image": "assets/storyboards/sheet-03.png", "panel": 1, "label": "开发者拥有小产品", "purpose": "modern-analogy", "weight": 1.3}
+    ]},
+    {"id": "s06", "shots": [
+      {"image": "assets/storyboards/sheet-03.png", "panel": 2, "label": "房地产责任阶梯", "purpose": "source-scene", "weight": 1.4},
+      {"image": "assets/storyboards/sheet-03.png", "panel": 3, "label": "零复制成本杠杆", "purpose": "core-concept", "weight": 1.4}
+    ]},
+    {"id": "s07", "shots": [
+      {"image": "assets/storyboards/sheet-04.png", "panel": 0, "label": "关键岔路的判断", "purpose": "core-concept", "weight": 1.4},
+      {"image": "assets/storyboards/sheet-04.png", "panel": 1, "label": "忙碌不等于进展", "purpose": "modern-analogy", "weight": 1.0}
+    ]},
+    {"id": "s08", "shots": [
+      {"image": "assets/storyboards/sheet-04.png", "panel": 2, "label": "主动让利的互信", "purpose": "source-scene", "weight": 1.3},
+      {"image": "assets/storyboards/sheet-04.png", "panel": 3, "label": "专长吸引运气", "purpose": "modern-analogy", "weight": 1.2}
+    ]},
+    {"id": "s09", "shots": [
+      {"image": "assets/storyboards/sheet-05.png", "panel": 0, "label": "小产品真实反馈", "purpose": "modern-analogy", "weight": 1.4},
+      {"image": "assets/storyboards/sheet-05.png", "panel": 1, "label": "稳定与风险平衡", "purpose": "author-commentary", "weight": 1.1}
+    ]},
+    {"id": "s10", "shots": [
+      {"image": "assets/storyboards/sheet-05.png", "panel": 2, "label": "富有却焦虑", "purpose": "source-scene", "weight": 1.2},
+      {"image": "assets/storyboards/sheet-05.png", "panel": 3, "label": "金钱买不到的三样东西", "purpose": "limitation", "weight": 1.5}
+    ]},
+    {"id": "s11", "shots": [
+      {"image": "assets/storyboards/sheet-06.png", "panel": 0, "label": "等待新车的论坛", "purpose": "source-scene", "weight": 1.4},
+      {"image": "assets/storyboards/sheet-06.png", "panel": 1, "label": "欲望抵押当下", "purpose": "core-concept", "weight": 1.3}
+    ]},
+    {"id": "s12", "shots": [
+      {"image": "assets/storyboards/sheet-06.png", "panel": 2, "label": "迟到时看鸟观云", "purpose": "source-scene", "weight": 1.1},
+      {"image": "assets/storyboards/sheet-06.png", "panel": 3, "label": "改变接受离开", "purpose": "core-concept", "weight": 1.5}
+    ]},
+    {"id": "s13", "shots": [
+      {"image": "assets/storyboards/sheet-07.png", "panel": 0, "label": "晨练优先", "purpose": "source-scene", "weight": 1.2},
+      {"image": "assets/storyboards/sheet-07.png", "panel": 1, "label": "五人环境", "purpose": "modern-analogy", "weight": 1.1}
+    ]},
+    {"id": "s14", "shots": [
+      {"image": "assets/storyboards/sheet-07.png", "panel": 2, "label": "心理收件箱", "purpose": "source-scene", "weight": 1.4},
+      {"image": "assets/storyboards/sheet-07.png", "panel": 3, "label": "刷牙时调试大脑", "purpose": "modern-analogy", "weight": 1.3}
+    ]},
+    {"id": "s15", "shots": [
+      {"image": "assets/storyboards/sheet-08.png", "panel": 0, "label": "外部与内部两场游戏", "purpose": "author-commentary", "weight": 1.5},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 1, "label": "财富与幸福工具箱", "purpose": "core-concept", "weight": 1.2},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 2, "label": "汇编语境限制", "purpose": "limitation", "weight": 1.4},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 3, "label": "亲自验证继续前行", "purpose": "closing", "weight": 1.2}
+    ]}
+  ]
+}

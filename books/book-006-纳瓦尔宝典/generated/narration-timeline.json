@@ -1,0 +1,146 @@
+{
+  "bookId": "book-006-纳瓦尔宝典",
+  "scriptSha256": "99180A338C56529EABBB6BA6576A13070C4E8E2630E8E4C15DB7B4EED333267A",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [],
+  "pronunciationOverridesSha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+  "bookPickerIntroSha256": "05489060211CA7358F06DFE0689FD924D1C8563AF5F25845128BDC9A82BB6D98",
+  "intro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《纳瓦尔宝典》。",
+    "spokenStartSeconds": 3.332,
+    "spokenEndSeconds": 6.65,
+    "contentStartsSeconds": 7.2,
+    "requestedDurationSeconds": 7.2
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 590.8965416666666,
+  "segments": [
+    {
+      "id": "s01",
+      "section": "时间为什么换不来自由",
+      "startSeconds": 7.2,
+      "endSeconds": 26.717916666666667,
+      "durationSeconds": 19.517916666666668,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s02",
+      "section": "图书馆里的移民少年",
+      "startSeconds": 27.13791666666667,
+      "endSeconds": 55.075583333333334,
+      "durationSeconds": 27.937666666666665,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s03",
+      "section": "财富不是一次翻身",
+      "startSeconds": 55.495583333333336,
+      "endSeconds": 91.309,
+      "durationSeconds": 35.81341666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s04",
+      "section": "专长不是热门证书",
+      "startSeconds": 91.729,
+      "endSeconds": 131.69770833333334,
+      "durationSeconds": 39.96870833333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s05",
+      "section": "从收入走向所有权",
+      "startSeconds": 132.11770833333333,
+      "endSeconds": 172.73745833333334,
+      "durationSeconds": 40.61975,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s06",
+      "section": "杠杆把一次劳动放大",
+      "startSeconds": 173.15745833333332,
+      "endSeconds": 219.34791666666666,
+      "durationSeconds": 46.19045833333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s07",
+      "section": "杠杆时代更怕方向错误",
+      "startSeconds": 219.76791666666665,
+      "endSeconds": 256.1108333333333,
+      "durationSeconds": 36.34291666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s08",
+      "section": "信誉让运气变得可重复",
+      "startSeconds": 256.5308333333333,
+      "endSeconds": 296.208375,
+      "durationSeconds": 39.67754166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s09",
+      "section": "普通人的可执行版本",
+      "startSeconds": 296.628375,
+      "endSeconds": 334.20641666666666,
+      "durationSeconds": 37.578041666666664,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s10",
+      "section": "财富之后还有第二道题",
+      "startSeconds": 334.62641666666667,
+      "endSeconds": 372.62625,
+      "durationSeconds": 37.999833333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s11",
+      "section": "一辆还没到手的新车",
+      "startSeconds": 373.04625000000004,
+      "endSeconds": 410.5657916666667,
+      "durationSeconds": 37.51954166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s12",
+      "section": "改变、接受或者离开",
+      "startSeconds": 410.9857916666667,
+      "endSeconds": 452.1204583333334,
+      "durationSeconds": 41.13466666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s13",
+      "section": "幸福要落到习惯上",
+      "startSeconds": 452.5404583333334,
+      "endSeconds": 494.7432916666667,
+      "durationSeconds": 42.20283333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s14",
+      "section": "给大脑留一个空收件箱",
+      "startSeconds": 495.16329166666674,
+      "endSeconds": 535.7070000000001,
+      "durationSeconds": 40.543708333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s15",
+      "section": "把宝典当作实验清单",
+      "startSeconds": 536.1270000000001,
+      "endSeconds": 589.4965416666668,
+      "durationSeconds": 53.36954166666667,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}
