@@ -1,6 +1,8 @@
 import {existsSync} from 'node:fs';
 import path from 'node:path';
 import {
+  BOOK_PICKER_INTRO_STANDARD,
+  BOOK_PICKER_SPOKEN_LEAD_PREFIX,
   CONTENT_FLOW_STANDARD,
   SOURCE_LED_CHANNEL_STANDARD,
   SOURCE_LED_CONTENT_STANDARD,
@@ -183,6 +185,12 @@ if (retentionStandard) {
 
     const firstNarration = String(segments[0]?.narration ?? '');
     const normalizedFirstNarration = firstNarration.replace(/\s/gu, '');
+    if (
+      context.book.editorialStandards?.introStandard === BOOK_PICKER_INTRO_STANDARD &&
+      normalizedFirstNarration.includes(BOOK_PICKER_SPOKEN_LEAD_PREFIX)
+    ) {
+      addError('book-picker-v2 的固定开场由生产引擎生成，script.json 不得重复“大家好，今天我们讲”。');
+    }
     const openingHook = String(retentionPlan.openingHook ?? '').replace(/\s/gu, '');
     const firstPayoff = String(retentionPlan.firstPayoff ?? '').replace(/\s/gu, '');
     if (!openingHook) {

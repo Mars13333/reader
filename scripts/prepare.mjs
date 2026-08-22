@@ -52,6 +52,15 @@ if (timeline.segments.length !== script.segments.length) {
 
 const fps = script.fps;
 const totalFrames = Math.ceil(timeline.totalDurationSeconds * fps);
+const openingIntro = timeline.intro
+  ? {
+      standard: timeline.intro.standard,
+      text: timeline.intro.text,
+      durationInFrames: Math.round(timeline.intro.contentStartsSeconds * fps),
+      spokenStartFrame: Math.round(timeline.intro.spokenStartSeconds * fps),
+      spokenEndFrame: Math.round(timeline.intro.spokenEndSeconds * fps),
+    }
+  : undefined;
 const preparedSegments = [];
 const preparedShots = [];
 
@@ -82,6 +91,13 @@ for (let segmentIndex = 0; segmentIndex < script.segments.length; segmentIndex +
       ? totalFrames
       : Math.round(timeline.segments[segmentIndex + 1].startSeconds * fps);
   const durationInFrames = visualEndFrame - visualStartFrame;
+  const introOffsetFrames = segmentIndex === 0
+    ? openingIntro?.durationInFrames ?? 0
+    : 0;
+  const contentDurationInFrames = durationInFrames - introOffsetFrames;
+  if (contentDurationInFrames < 1) {
+    throw new Error(`${segment.id} has no visual time after the opening intro.`);
+  }
   const narrationStartFrame = Math.round(audio.startSeconds * fps);
   const narrationEndFrame = Math.round(audio.endSeconds * fps);
 
@@ -94,7 +110,7 @@ for (let segmentIndex = 0; segmentIndex < script.segments.length; segmentIndex +
     durationInFrames,
   });
 
-  let allocatedFrames = 0;
+  let allocatedContentFrames = 0;
   const weights = visual.shots.map((shot) => Number(shot.weight ?? 1));
   if (weights.some((weight) => !Number.isFinite(weight) || weight <= 0)) {
     throw new Error(`${segment.id} has an invalid semantic shot weight.`);
@@ -106,11 +122,11 @@ for (let segmentIndex = 0; segmentIndex < script.segments.length; segmentIndex +
     const isLastShot = shotIndex === visual.shots.length - 1;
     allocatedWeight += weights[shotIndex];
     const weightedEndFrame = Math.round(
-      (durationInFrames * allocatedWeight) / totalWeight,
+      (contentDurationInFrames * allocatedWeight) / totalWeight,
     );
     const shotFrames = isLastShot
-      ? durationInFrames - allocatedFrames
-      : weightedEndFrame - allocatedFrames;
+      ? contentDurationInFrames - allocatedContentFrames
+      : weightedEndFrame - allocatedContentFrames;
     if (shotFrames < 1) {
       throw new Error(`${segment.id} has too many weighted shots for its narration duration.`);
     }
@@ -125,10 +141,15 @@ for (let segmentIndex = 0; segmentIndex < script.segments.length; segmentIndex +
       purpose: plannedShot.purpose,
       weight: weights[shotIndex],
       isSegmentStart: shotIndex === 0,
-      startFrame: visualStartFrame + allocatedFrames,
-      durationInFrames: shotFrames,
+      startFrame:
+        visualStartFrame +
+        (shotIndex === 0 ? 0 : introOffsetFrames + allocatedContentFrames),
+      durationInFrames: shotFrames + (shotIndex === 0 ? introOffsetFrames : 0),
+      ...(shotIndex === 0 && introOffsetFrames > 0
+        ? {contentOffsetFrames: introOffsetFrames}
+        : {}),
     });
-    allocatedFrames += shotFrames;
+    allocatedContentFrames += shotFrames;
   }
 }
 
@@ -144,6 +165,7 @@ const prepared = {
   height: script.height,
   totalFrames,
   totalDurationSeconds: totalFrames / fps,
+  ...(openingIntro ? {openingIntro} : {}),
   audioFile: timeline.audioFile,
   voice: {
     engine: timeline.engine,
@@ -182,13 +204,13 @@ writeFileSync(markdownPath, `${markdown}\n`, 'utf8');
 const storyboard = [
   `# ${script.title}｜镜头表`,
   '',
-  `共 ${preparedShots.length} 个按关键剧情与关键概念规划的镜头；画面最长停留 ${(Math.max(...preparedShots.map((shot) => shot.durationInFrames)) / fps).toFixed(2)} 秒。`,
+  `共 ${preparedShots.length} 个按关键剧情与关键概念规划的镜头；${openingIntro ? '正文画面' : '画面'}最长停留 ${(Math.max(...preparedShots.map((shot) => shot.durationInFrames - (shot.contentOffsetFrames ?? 0))) / fps).toFixed(2)} 秒。`,
   '',
   '| 时间 | 时长 | 章节 | 画面 |',
   '| --- | ---: | --- | --- |',
   ...preparedShots.map(
     (shot) =>
-      `| ${formatClock(shot.startFrame)} | ${(shot.durationInFrames / fps).toFixed(2)}s | ${shot.section} | ${shot.label} |`,
+      `| ${formatClock(shot.startFrame + (shot.contentOffsetFrames ?? 0))} | ${((shot.durationInFrames - (shot.contentOffsetFrames ?? 0)) / fps).toFixed(2)}s | ${shot.section} | ${shot.label} |`,
   ),
 ].join('\n');
 writeFileSync(storyboardPath, `${storyboard}\n`, 'utf8');

@@ -26,7 +26,15 @@ const REQUIRED_CLOSING_BRAND_LINE = '这里是陈拾叁，陪你一起读书破�
 const SOURCE_LED_CHANNEL_STANDARD = 'source-led-unbounded-v2';
 const SOURCE_LED_CONTENT_STANDARD = 'source-analogy-commentary-v2';
 const SEMANTIC_VISUAL_STANDARD = 'semantic-key-moments-v1';
-const BOOK_PICKER_INTRO_STANDARD = 'book-picker-v1';
+const LEGACY_BOOK_PICKER_INTRO_STANDARD = 'book-picker-v1';
+const BOOK_PICKER_INTRO_STANDARD = 'book-picker-v2';
+const BOOK_PICKER_INTRO_DEFAULT_SECONDS = 7.2;
+const BOOK_PICKER_INTRO_DURATION_RANGES = Object.freeze({
+  [LEGACY_BOOK_PICKER_INTRO_STANDARD]: Object.freeze({minimum: 2.8, maximum: 4.8}),
+  [BOOK_PICKER_INTRO_STANDARD]: Object.freeze({minimum: 6.8, maximum: 8.8}),
+});
+const BOOK_PICKER_CONTENT_GAP_MS = 550;
+const BOOK_PICKER_SPOKEN_LEAD_PREFIX = '大家好，今天我们讲';
 const CONTENT_FLOW_STANDARD = 'reality-scene-source-explanation-reality-limits-v1';
 const SOURCE_LED_DURATION_RANGE_SECONDS = Object.freeze({
   minimum: 480,
@@ -111,6 +119,58 @@ const setActiveBook = (bookId) => {
 
 const hashText = (value) =>
   createHash('sha256').update(value, 'utf8').digest('hex').toUpperCase();
+
+const getBookPickerSpokenLead = (title) =>
+  `${BOOK_PICKER_SPOKEN_LEAD_PREFIX}《${String(title ?? '').trim()}》。`;
+
+const planBookPickerIntroTiming = ({
+  requestedDurationSeconds,
+  spokenDurationSeconds,
+  minimumLeadInSeconds,
+  contentGapSeconds,
+}) => {
+  const spokenStartSeconds = Math.max(
+    minimumLeadInSeconds,
+    requestedDurationSeconds - contentGapSeconds - spokenDurationSeconds,
+  );
+  return {
+    spokenStartSeconds,
+    contentStartsSeconds: Math.max(
+      requestedDurationSeconds,
+      spokenStartSeconds + spokenDurationSeconds + contentGapSeconds,
+    ),
+  };
+};
+
+const inspectBookPickerIntro = ({book, layout}) => {
+  const errors = [];
+  const picker = layout?.bookPickerIntro;
+  const expectedStandard = book?.editorialStandards?.introStandard;
+  if (picker?.enabled !== true || picker?.standard !== expectedStandard) {
+    errors.push(`新书必须启用 ${expectedStandard || BOOK_PICKER_INTRO_STANDARD} 开场选书动画。`);
+    return {errors, standard: expectedStandard, picker};
+  }
+  const durationRange = BOOK_PICKER_INTRO_DURATION_RANGES[expectedStandard];
+  const durationSeconds = Number(picker.durationSeconds);
+  if (!durationRange) {
+    errors.push(`不支持的开场选书标准：${expectedStandard}。`);
+  } else if (
+    !Number.isFinite(durationSeconds) ||
+    durationSeconds < durationRange.minimum ||
+    durationSeconds > durationRange.maximum
+  ) {
+    errors.push(
+      `${expectedStandard} 开场选书动画必须为 ${durationRange.minimum}～${durationRange.maximum} 秒。`,
+    );
+  }
+  const candidateLabels = picker.candidateLabels ?? [];
+  if (!Array.isArray(candidateLabels) || candidateLabels.length < 3) {
+    errors.push('开场选书动画至少需要 3 个中文候选书名。');
+  } else if (candidateLabels.some((label) => /[A-Za-z]/u.test(String(label)))) {
+    errors.push('开场选书动画的候选书名不得出现英文。');
+  }
+  return {errors, standard: expectedStandard, picker};
+};
 
 const getPronunciationOverrides = (config) => {
   const overrides = config.pronunciationOverrides ?? [];
@@ -222,7 +282,12 @@ export {
   SOURCE_LED_CHANNEL_STANDARD,
   SOURCE_LED_CONTENT_STANDARD,
   SEMANTIC_VISUAL_STANDARD,
+  LEGACY_BOOK_PICKER_INTRO_STANDARD,
   BOOK_PICKER_INTRO_STANDARD,
+  BOOK_PICKER_INTRO_DEFAULT_SECONDS,
+  BOOK_PICKER_INTRO_DURATION_RANGES,
+  BOOK_PICKER_CONTENT_GAP_MS,
+  BOOK_PICKER_SPOKEN_LEAD_PREFIX,
   CONTENT_FLOW_STANDARD,
   SOURCE_LED_DURATION_RANGE_SECONDS,
   activeBookPath,
@@ -231,11 +296,14 @@ export {
   assertScriptApproved,
   booksRoot,
   getBookContext,
+  getBookPickerSpokenLead,
   getCliOption,
   getPronunciationOverrides,
   getPronunciationOverridesSha256,
   getScriptState,
   hashText,
+  inspectBookPickerIntro,
+  planBookPickerIntroTiming,
   readActiveBookId,
   readJson,
   root,

@@ -1,12 +1,12 @@
 import {existsSync, statSync} from 'node:fs';
 import path from 'node:path';
 import {
-  BOOK_PICKER_INTRO_STANDARD,
   SOURCE_LED_CHANNEL_STANDARD,
   assertEditorialStandards,
   assertFixedNarration,
   assertScriptApproved,
   getBookContext,
+  inspectBookPickerIntro,
   readJson,
 } from './book-context.mjs';
 import {readPublishMaterials} from './publish-materials.mjs';
@@ -102,22 +102,7 @@ if (usesSourceLedStandard) {
   if (/(?:10\s*分钟|十分钟)读书/u.test(`${layout.header?.text ?? ''}${cover.badge ?? ''}`)) {
     errors.push('新书画面与封面不得出现“10分钟读书”。');
   }
-  if (
-    layout.bookPickerIntro?.enabled !== true ||
-    layout.bookPickerIntro?.standard !== BOOK_PICKER_INTRO_STANDARD
-  ) {
-    errors.push(`新书必须启用 ${BOOK_PICKER_INTRO_STANDARD} 开场选书动画。`);
-  }
-  const pickerDuration = Number(layout.bookPickerIntro?.durationSeconds ?? 0);
-  if (pickerDuration < 2.8 || pickerDuration > 4.8) {
-    errors.push('开场选书动画必须为 2.8～4.8 秒，并与第一句口播同时开始。');
-  }
-  const candidateLabels = layout.bookPickerIntro?.candidateLabels ?? [];
-  if (!Array.isArray(candidateLabels) || candidateLabels.length < 3) {
-    errors.push('开场选书动画至少需要 3 个中文候选书名。');
-  } else if (candidateLabels.some((label) => /[A-Za-z]/u.test(String(label)))) {
-    errors.push('开场选书动画的候选书名不得出现英文。');
-  }
+  errors.push(...inspectBookPickerIntro({book: context.book, layout}).errors);
 }
 
 if (errors.length) {

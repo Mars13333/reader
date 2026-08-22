@@ -4,6 +4,7 @@ import {createInterface} from 'node:readline/promises';
 import {stdin as input, stdout as output} from 'node:process';
 import {
   BOOK_PICKER_INTRO_STANDARD,
+  BOOK_PICKER_INTRO_DEFAULT_SECONDS,
   CONTENT_FLOW_STANDARD,
   FIXED_VOICE,
   REQUIRED_CLOSING_BRAND_LINE,
@@ -251,10 +252,10 @@ const createBook = async () => {
     bookPickerIntro: {
       enabled: true,
       standard: BOOK_PICKER_INTRO_STANDARD,
-      durationSeconds: 3.8,
+      durationSeconds: BOOK_PICKER_INTRO_DEFAULT_SECONDS,
       seed: bookId,
       candidateLabels: ['红楼梦', '史记', '乡土中国', '活着', '围城'],
-      selectedLabel: '本期阅读',
+      selectedLabel: '今天读这本',
     },
     visualTreatment: {
       brightness: 1.08,

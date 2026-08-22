@@ -1,0 +1,12 @@
+{
+  "bookId": "book-005-穷查理宝典",
+  "status": "approved",
+  "version": 1,
+  "scriptSha256": "8BFE3F207FC011DB28FF58E1F1CB8233785613A51494E5AEA477E4B16EBF3EC4",
+  "approvedAt": "2026-08-22T06:06:12.881Z",
+  "segments": 16,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

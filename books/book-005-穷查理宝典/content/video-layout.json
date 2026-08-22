@@ -1,0 +1,36 @@
+{
+  "showProgressBar": false,
+  "header": {
+    "text": "《穷查理宝典》",
+    "top": 290,
+    "sideMargin": 120,
+    "fontSize": 44
+  },
+  "keywordCard": {
+    "top": 500,
+    "minimumVisibleSeconds": 6,
+    "secondsPerCharacter": 0.35
+  },
+  "bookPickerIntro": {
+    "enabled": true,
+    "standard": "book-picker-v2",
+    "durationSeconds": 7.2,
+    "seed": "book-005-穷查理宝典",
+    "candidateLabels": [
+      "红楼梦",
+      "史记",
+      "乡土中国",
+      "活着",
+      "围城"
+    ],
+    "selectedLabel": "今天读这本"
+  },
+  "visualTreatment": {
+    "brightness": 1.08,
+    "saturation": 1.02,
+    "contrast": 0.98,
+    "topShade": 0.16,
+    "bottomShade": 0.28,
+    "backgroundColor": "#000000"
+  }
+}

@@ -39,6 +39,7 @@ export type PreparedShot = {
   isSegmentStart: boolean;
   startFrame: number;
   durationInFrames: number;
+  contentOffsetFrames?: number;
 };
 
 export type PreparedVideo = {
@@ -53,6 +54,13 @@ export type PreparedVideo = {
   height: number;
   totalFrames: number;
   totalDurationSeconds: number;
+  openingIntro?: {
+    standard: string;
+    text: string;
+    durationInFrames: number;
+    spokenStartFrame: number;
+    spokenEndFrame: number;
+  };
   audioFile: string;
   voice: {
     engine: string;

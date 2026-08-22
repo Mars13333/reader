@@ -73,7 +73,7 @@ const seedNumber = (value: string) =>
     2166136261,
   );
 
-const BookPickerIntro: React.FC = () => {
+const BookPickerIntroV1: React.FC = () => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   if (!bookPickerIntro?.enabled) return null;
@@ -251,27 +251,344 @@ const BookPickerIntro: React.FC = () => {
   );
 };
 
+const clamp = (value: number, minimum = 0, maximum = 1) =>
+  Math.min(maximum, Math.max(minimum, value));
+
+const singleLineTitleSize = (
+  title: string,
+  availableWidth: number,
+  maximum: number,
+  minimum: number,
+) => {
+  const glyphs = Math.max(1, Array.from(title).length);
+  return Math.max(minimum, Math.min(maximum, availableWidth / (glyphs * 1.04)));
+};
+
+const BookPickerIntroV2: React.FC<{
+  durationFrames: number;
+  spokenStartFrame: number;
+  spokenText: string;
+}> = ({durationFrames, spokenStartFrame, spokenText}) => {
+  const frame = useCurrentFrame();
+  const currentTitle = String(cover.bookTitle ?? '');
+  const labels = (bookPickerIntro?.candidateLabels ?? []).filter(
+    (label) => label && label !== currentTitle,
+  );
+  const rotation = labels.length
+    ? seedNumber(bookPickerIntro?.seed ?? currentTitle) % labels.length
+    : 0;
+  const rotated = [...labels.slice(rotation), ...labels.slice(0, rotation)];
+  const candidates = [...rotated, ...rotated, currentTitle];
+  const selectedIndex = candidates.length - 1;
+  const startIndex = Math.max(0, selectedIndex - Math.min(7, selectedIndex));
+  const settleFrame = Math.max(
+    48,
+    Math.min(durationFrames - 48, spokenStartFrame - 8),
+  );
+  const rollProgress = clamp((frame - 8) / Math.max(1, settleFrame - 8));
+  const easedRoll = 1 - (1 - rollProgress) ** 4;
+  const currentIndex = startIndex + (selectedIndex - startIndex) * easedRoll;
+  const selectedProgress = clamp(
+    (frame - settleFrame) / Math.max(1, durationFrames - settleFrame - 12),
+  );
+  const reveal = interpolate(frame, [0, 14], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const exit = interpolate(
+    frame,
+    [Math.max(0, durationFrames - 12), durationFrames],
+    [1, 0],
+    {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
+  );
+  const sweepX = interpolate(
+    frame % Math.max(1, Math.round(durationFrames * 0.62)),
+    [0, Math.max(1, Math.round(durationFrames * 0.62))],
+    [-420, 1320],
+  );
+  const selectedLabel = bookPickerIntro?.selectedLabel ?? '今天读这本';
+
+  return (
+    <AbsoluteFill
+      style={{
+        zIndex: 20,
+        opacity: reveal * exit,
+        overflow: 'hidden',
+        background:
+          'radial-gradient(circle at 50% 53%, rgba(44,116,145,.23), transparent 31%), radial-gradient(circle at 50% 52%, rgba(199,168,103,.18), transparent 52%), linear-gradient(180deg, #020507 0%, #07131a 54%, #020405 100%)',
+      }}
+    >
+      <AbsoluteFill
+        style={{
+          opacity: 0.34,
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px)',
+          backgroundSize: '54px 54px',
+          maskImage: 'linear-gradient(180deg, transparent, #000 24%, #000 78%, transparent)',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          top: 320,
+          left: sweepX,
+          width: 260,
+          height: 1220,
+          opacity: 0.22,
+          background:
+            'linear-gradient(90deg, transparent, rgba(239,226,193,.55), transparent)',
+          filter: 'blur(18px)',
+          transform: 'skewX(-16deg)',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          top: 238,
+          left: 120,
+          right: 120,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 24,
+          color: 'rgba(255,248,233,.82)',
+          fontFamily: 'Microsoft YaHei, sans-serif',
+          fontSize: 30,
+          letterSpacing: 8,
+          fontWeight: 700,
+          zIndex: 60,
+        }}
+      >
+        <span style={{height: 2, flex: 1, background: 'rgba(199,168,103,.45)'}} />
+        <span>{selectedProgress > 0.28 ? selectedLabel : '正在从书架选书'}</span>
+        <span style={{height: 2, flex: 1, background: 'rgba(199,168,103,.45)'}} />
+      </div>
+      <div
+        style={{
+          position: 'absolute',
+          left: 540 - 430,
+          top: 1040 - 430,
+          width: 860,
+          height: 860,
+          borderRadius: '50%',
+          opacity: selectedProgress * 0.58,
+          border: '1px solid rgba(199,168,103,.32)',
+          boxShadow: 'inset 0 0 80px rgba(111,166,201,.08)',
+          transform: `rotate(${frame * 0.18}deg) scale(${0.82 + selectedProgress * 0.18})`,
+        }}
+      >
+        {[0, 90, 180, 270].map((angle) => (
+          <span
+            key={angle}
+            style={{
+              position: 'absolute',
+              left: '50%',
+              top: -5,
+              width: 10,
+              height: 10,
+              borderRadius: '50%',
+              background: COLORS.gold,
+              boxShadow: '0 0 22px rgba(199,168,103,.9)',
+              transformOrigin: `0 ${435}px`,
+              transform: `rotate(${angle}deg)`,
+            }}
+          />
+        ))}
+      </div>
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          perspective: 1200,
+          transformStyle: 'preserve-3d',
+        }}
+      >
+        {candidates.map((title, index) => {
+          const selected = index === selectedIndex;
+          const distance = index - currentIndex;
+          const distanceStrength = Math.abs(distance);
+          const expansion = selected ? selectedProgress : 0;
+          const spineWidth = 760;
+          const width = spineWidth + (700 - spineWidth) * expansion;
+          const height = 176 + (930 - 176) * expansion;
+          const baseCenterY = 870 + distance * 212;
+          const centerY = baseCenterY + (1040 - baseCenterY) * expansion;
+          const [dark, light] = BOOK_PICKER_PALETTE[
+            seedNumber(`${bookPickerIntro?.seed}-${title}-${index}`) %
+              BOOK_PICKER_PALETTE.length
+          ];
+          const opacity = selected && expansion > 0
+            ? 1
+            : clamp(1.08 - distanceStrength * 0.34) *
+              clamp(1 - selectedProgress * 2.4);
+          const scale = selected
+            ? 1 + 0.035 * Math.sin(selectedProgress * Math.PI)
+            : 1 - Math.min(0.12, distanceStrength * 0.035);
+          const displayTitle = selected ? `《${title}》` : title;
+          const titleSize = singleLineTitleSize(
+            displayTitle,
+            selected ? 570 : 610,
+            selected ? 78 : 52,
+            selected ? 18 : 18,
+          );
+          return (
+            <div
+              key={`${title}-${index}`}
+              style={{
+                position: 'absolute',
+                left: 540 - width / 2,
+                top: centerY - height / 2,
+                width,
+                height,
+                opacity,
+                zIndex: selected ? 30 : Math.max(1, 20 - Math.round(distanceStrength)),
+                overflow: 'hidden',
+                borderRadius: 24 + expansion * 12,
+                border: selected
+                  ? `3px solid rgba(239,226,193,${0.32 + expansion * 0.66})`
+                  : '2px solid rgba(255,255,255,.14)',
+                background: `linear-gradient(120deg, ${light}, ${dark})`,
+                boxShadow: selected
+                  ? `0 0 ${24 + expansion * 76}px rgba(199,168,103,${0.18 + expansion * 0.48}), 0 38px 100px rgba(0,0,0,.72)`
+                  : '0 18px 55px rgba(0,0,0,.5)',
+                transform: `rotateX(${clamp(distance * -5, -18, 18)}deg) scale(${scale})`,
+              }}
+            >
+              {selected ? (
+                <Img
+                  src={staticFile(String(cover.image ?? ''))}
+                  style={{
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: expansion,
+                    filter: `brightness(${0.72 + expansion * 0.14}) saturate(1.06)`,
+                    transform: `scale(${1.08 - expansion * 0.04})`,
+                  }}
+                />
+              ) : null}
+              <AbsoluteFill
+                style={{
+                  background: selected
+                    ? `linear-gradient(180deg, rgba(2,5,7,${0.18 + expansion * 0.05}), rgba(2,5,7,${0.38 + expansion * 0.3}))`
+                    : 'linear-gradient(100deg, rgba(255,255,255,.14), transparent 42%, rgba(0,0,0,.34))',
+                }}
+              />
+              <div
+                style={{
+                  position: 'absolute',
+                  left: 40,
+                  right: 40,
+                  top: 32 + expansion * 78,
+                  height: 3 + expansion * 2,
+                  background: selected ? COLORS.gold : 'rgba(255,255,255,.52)',
+                  boxShadow: selected ? '0 0 20px rgba(199,168,103,.75)' : undefined,
+                }}
+              />
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '0 54px',
+                  color: '#fff8e9',
+                  fontFamily: 'Microsoft YaHei, sans-serif',
+                  fontWeight: 900,
+                  fontSize: titleSize,
+                  letterSpacing: selected ? 2 : 4,
+                  whiteSpace: 'nowrap',
+                  textAlign: 'center',
+                  textShadow: '0 6px 24px rgba(0,0,0,.82)',
+                }}
+              >
+                {displayTitle}
+              </div>
+              {selected ? (
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: 0,
+                    right: 0,
+                    bottom: 58,
+                    opacity: expansion,
+                    color: 'rgba(255,248,233,.84)',
+                    fontFamily: 'Microsoft YaHei, sans-serif',
+                    fontSize: 25,
+                    letterSpacing: 8,
+                    textAlign: 'center',
+                  }}
+                >
+                  陪你进入原著
+                </div>
+              ) : null}
+            </div>
+          );
+        })}
+      </div>
+      <div
+        style={{
+          position: 'absolute',
+          top: 1608,
+          left: 80,
+          right: 80,
+          opacity: clamp((frame - spokenStartFrame + 6) / 16),
+          color: 'rgba(255,248,233,.9)',
+          fontFamily: 'Microsoft YaHei, sans-serif',
+          fontSize: singleLineTitleSize(spokenText, 820, 36, 18),
+          letterSpacing: 1,
+          fontWeight: 600,
+          textAlign: 'center',
+          whiteSpace: 'nowrap',
+          textShadow: '0 4px 18px rgba(0,0,0,.8)',
+          zIndex: 60,
+        }}
+      >
+        {spokenText}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const BookPickerIntro: React.FC<{
+  standard: string;
+  durationFrames: number;
+  spokenStartFrame: number;
+  spokenText: string;
+}> = ({standard, ...props}) =>
+  standard === 'book-picker-v2' ? (
+    <BookPickerIntroV2 {...props} />
+  ) : (
+    <BookPickerIntroV1 />
+  );
+
 const StoryboardPanel: React.FC<{
   shot: PreparedShot;
   index: number;
 }> = ({shot, index}) => {
-  const frame = useCurrentFrame();
+  const frame = Math.max(
+    0,
+    useCurrentFrame() - (shot.contentOffsetFrames ?? 0),
+  );
   const row = Math.floor(shot.panel / 2);
   const column = shot.panel % 2;
   const drift = index % 2 === 0 ? 1 : -1;
-  const scale = interpolate(frame, [0, shot.durationInFrames], [1.035, 1.105], {
+  const contentDurationInFrames =
+    shot.durationInFrames - (shot.contentOffsetFrames ?? 0);
+  const scale = interpolate(frame, [0, contentDurationInFrames], [1.035, 1.105], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
   const translateX = interpolate(
     frame,
-    [0, shot.durationInFrames],
+    [0, contentDurationInFrames],
     [-8 * drift, 10 * drift],
     {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
   );
   const translateY = interpolate(
     frame,
-    [0, shot.durationInFrames],
+    [0, contentDurationInFrames],
     [5, -5],
     {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
   );
@@ -322,10 +639,13 @@ const StoryboardPanel: React.FC<{
 };
 
 const KeywordCard: React.FC<{shot: PreparedShot}> = ({shot}) => {
-  const frame = useCurrentFrame();
+  const rawFrame = useCurrentFrame();
+  const frame = rawFrame - (shot.contentOffsetFrames ?? 0);
   const {fps} = useVideoConfig();
-  if (!shot.isSegmentStart) return null;
+  if (!shot.isSegmentStart || frame < 0) return null;
   const legacyTiming = keywordCardLayout.minimumVisibleSeconds === undefined;
+  const contentDurationInFrames =
+    shot.durationInFrames - (shot.contentOffsetFrames ?? 0);
   const requestedReadableFrames = Math.round(
     Math.max(
       keywordCardLayout.minimumVisibleSeconds ?? 3.6,
@@ -336,11 +656,11 @@ const KeywordCard: React.FC<{shot: PreparedShot}> = ({shot}) => {
     ? 88
     : Math.max(
         18,
-        Math.min(shot.durationInFrames - 22, 18 + requestedReadableFrames),
+        Math.min(contentDurationInFrames - 22, 18 + requestedReadableFrames),
       );
   const fadeOutEnd = legacyTiming
     ? 108
-    : Math.min(shot.durationInFrames - 4, fadeOutStart + 18);
+    : Math.min(contentDurationInFrames - 4, fadeOutStart + 18);
   const opacity = interpolate(frame, [4, 18, fadeOutStart, fadeOutEnd], [0, 1, 1, 0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
@@ -400,6 +720,11 @@ const ShotScene: React.FC<{shot: PreparedShot; index: number}> = ({
 
 export const BookVideo: React.FC<PreparedVideo> = (props) => {
   const transitionFrames = 12;
+  const pickerDurationFrames = props.openingIntro?.durationInFrames ?? Math.round(
+    (bookPickerIntro?.durationSeconds ?? 3.8) * props.fps,
+  );
+  const pickerSpokenStartFrame = props.openingIntro?.spokenStartFrame ?? 0;
+  const pickerSpokenText = props.openingIntro?.text ?? '';
 
   return (
     <AbsoluteFill style={{backgroundColor: sceneBackground}}>
@@ -438,11 +763,14 @@ export const BookVideo: React.FC<PreparedVideo> = (props) => {
       {bookPickerIntro?.enabled ? (
         <Sequence
           from={0}
-          durationInFrames={Math.round(
-            (bookPickerIntro.durationSeconds ?? 3.8) * props.fps,
-          )}
+          durationInFrames={pickerDurationFrames}
         >
-          <BookPickerIntro />
+          <BookPickerIntro
+            standard={props.openingIntro?.standard ?? bookPickerIntro.standard ?? ''}
+            durationFrames={pickerDurationFrames}
+            spokenStartFrame={pickerSpokenStartFrame}
+            spokenText={pickerSpokenText}
+          />
         </Sequence>
       ) : null}
     </AbsoluteFill>

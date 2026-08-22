@@ -1,0 +1,116 @@
+{
+  "standard": "semantic-key-moments-v1",
+  "durationPolicy": "semantic-weighted-v1",
+  "visibleTextLanguage": "zh-CN",
+  "generatedTextPolicy": "no-text-in-generated-images",
+  "storyboardStandard": "portrait-2x2-9x16-v1",
+  "canvasAspectRatio": "9:16",
+  "panelLayout": "2x2",
+  "panelOrder": ["top-left", "top-right", "bottom-left", "bottom-right"],
+  "visualDirection": {
+    "style": "明亮通透的当代编辑插画，写实人物比例结合克制的象征隐喻，细腻纸张与电影光影质感，人物动作清楚，适合竖屏叙事",
+    "characterAnchor": "核心人物保持原创面貌：年长思考者为七十岁左右欧美男性，银白短发、圆框眼镜、深色西装；李录为四十岁左右华人男性，短发、朴素商务装；巴菲特为年长欧美男性但不复刻名人照片；跨故事人物遵循各自时代服装与场景",
+    "palette": ["日光米白", "清澈天蓝", "温暖琥珀", "柔和松绿", "珊瑚橙", "少量深海蓝"],
+    "lighting": "明亮自然窗光和通透电影光为主，风险与事故场景保持细节清晰，不使用大面积纯黑压暗画面",
+    "avoid": ["英文", "字母", "数字", "文字", "中文", "伪文字", "标志", "水印", "货币符号", "原书封面", "书页截图", "名人照片复刻", "大面积纯黑", "沉闷棕灰", "重度暗角"]
+  },
+  "keyMoments": [
+    {"id": "km01", "segmentId": "s01", "kind": "author-commentary", "anchor": "聪明人只拿一把锤子解释所有问题", "shotRef": "s01-01"},
+    {"id": "km02", "segmentId": "s02", "kind": "source-scene", "anchor": "感恩节李录向芒格倾诉基金的大幅波动", "shotRef": "s02-01"},
+    {"id": "km03", "segmentId": "s02", "kind": "core-concept", "anchor": "反过来想和毁掉心爱观点成为新的判断习惯", "shotRef": "s02-02"},
+    {"id": "km04", "segmentId": "s03", "kind": "source-scene", "anchor": "芒格误机后安静读书并改签经济舱", "shotRef": "s03-01"},
+    {"id": "km05", "segmentId": "s04", "kind": "core-concept", "anchor": "多学科模型连接成可以互相校正的格栅", "shotRef": "s04-01"},
+    {"id": "km06", "segmentId": "s04", "kind": "core-concept", "anchor": "概率心理学和工程学共同拆解同一问题", "shotRef": "s04-02"},
+    {"id": "km07", "segmentId": "s05", "kind": "core-concept", "anchor": "手中只有锤子便把一切看成钉子", "shotRef": "s05-01"},
+    {"id": "km08", "segmentId": "s05", "kind": "core-concept", "anchor": "理性利益与潜意识偏见组成双轨分析", "shotRef": "s05-02"},
+    {"id": "km09", "segmentId": "s06", "kind": "source-scene", "anchor": "飞行员在模拟驾驶舱反复演练失效情境", "shotRef": "s06-01"},
+    {"id": "km10", "segmentId": "s06", "kind": "modern-analogy", "anchor": "现代项目团队像飞行员一样检查最坏情况", "shotRef": "s06-02"},
+    {"id": "km11", "segmentId": "s07", "kind": "source-scene", "anchor": "联邦快递夜班在错误激励下拖延转运", "shotRef": "s07-01"},
+    {"id": "km12", "segmentId": "s07", "kind": "core-concept", "anchor": "改为按班次付薪后包裹迅速完成装运", "shotRef": "s07-02"},
+    {"id": "km13", "segmentId": "s08", "kind": "source-scene", "anchor": "外科医生把正常胆囊送入病理实验室", "shotRef": "s08-01"},
+    {"id": "km14", "segmentId": "s08", "kind": "core-concept", "anchor": "利益与真诚信念叠加形成激励偏见", "shotRef": "s08-02"},
+    {"id": "km15", "segmentId": "s09", "kind": "source-scene", "anchor": "米尔格拉姆实验中参与者在权威下按下按钮", "shotRef": "s09-01"},
+    {"id": "km16", "segmentId": "s09", "kind": "core-concept", "anchor": "权威从众压力等多股力量汇成罗拉帕卢萨效应", "shotRef": "s09-02"},
+    {"id": "km17", "segmentId": "s10", "kind": "source-scene", "anchor": "麦道撤离测试第一次重伤多人后仍在当天重测", "shotRef": "s10-01"},
+    {"id": "km18", "segmentId": "s10", "kind": "core-concept", "anchor": "奖励权威从众沉没成本和翻本心理共同推高风险", "shotRef": "s10-02"},
+    {"id": "km19", "segmentId": "s11", "kind": "source-scene", "anchor": "库克船长先让军官食用酸泡菜", "shotRef": "s11-01"},
+    {"id": "km20", "segmentId": "s11", "kind": "limitation", "anchor": "同一种心理工具既能保护健康也能操纵信任", "shotRef": "s11-02"},
+    {"id": "km21", "segmentId": "s12", "kind": "source-scene", "anchor": "巴菲特和芒格因很小价格差点放弃喜诗糖果", "shotRef": "s12-01"},
+    {"id": "km22", "segmentId": "s12", "kind": "core-concept", "anchor": "优秀企业的品牌与定价能力推动旧模型转弯", "shotRef": "s12-02"},
+    {"id": "km23", "segmentId": "s13", "kind": "core-concept", "anchor": "机会被放入可以拒绝和太难三个篮子", "shotRef": "s13-01"},
+    {"id": "km24", "segmentId": "s13", "kind": "source-scene", "anchor": "击球手只等待最佳区域而投资人无需被催促挥棒", "shotRef": "s13-02"},
+    {"id": "km25", "segmentId": "s14", "kind": "source-scene", "anchor": "美国航空投资错误被保留下来作为教材", "shotRef": "s14-01"},
+    {"id": "km26", "segmentId": "s15", "kind": "modern-analogy", "anchor": "现代团队围桌核对事实激励反证后果和退出条件", "shotRef": "s15-01"},
+    {"id": "km27", "segmentId": "s15", "kind": "modern-analogy", "anchor": "决策清单让兴奋压力和从众中的团队多一次停顿", "shotRef": "s15-02"},
+    {"id": "km28", "segmentId": "s16", "kind": "limitation", "anchor": "知识格栅存在缺口，模型无法装下完整现实", "shotRef": "s16-01"},
+    {"id": "km29", "segmentId": "s16", "kind": "limitation", "anchor": "同一种心理工具既能帮助人也能操纵人", "shotRef": "s16-02"},
+    {"id": "km30", "segmentId": "s16", "kind": "limitation", "anchor": "整齐的检查清单仍可能漏掉清单外的现实", "shotRef": "s16-03"},
+    {"id": "km31", "segmentId": "s16", "kind": "core-concept", "anchor": "新证据出现时愿意改变道路并持续纠错", "shotRef": "s16-04"}
+  ],
+  "assetReview": {"status": "passed", "semanticCoverageReviewed": true, "noEnglishVisible": true},
+  "segments": [
+    {"id": "s01", "promptFocus": "从聪明人的单一工具陷阱切入", "shots": [
+      {"image": "assets/storyboards/sheet-01.png", "panel": 0, "label": "西装上班族挥舞一把巨大锤子面对形状各异的问题", "purpose": "author-commentary", "weight": 3}
+    ]},
+    {"id": "s02", "promptFocus": "感恩节谈话与判断方式的转变", "shots": [
+      {"image": "assets/storyboards/sheet-01.png", "panel": 1, "label": "冬日餐桌旁李录向年长思考者倾诉基金波动", "purpose": "source-scene", "weight": 4},
+      {"image": "assets/storyboards/sheet-01.png", "panel": 2, "label": "李录把混乱曲线翻转并撕下自己最心爱的方案", "purpose": "core-concept", "weight": 3}
+    ]},
+    {"id": "s03", "promptFocus": "误机后的阅读和重新出发", "shots": [
+      {"image": "assets/storyboards/sheet-01.png", "panel": 3, "label": "年长思考者在机场落地窗边安静读无字书等待改签", "purpose": "source-scene", "weight": 4}
+    ]},
+    {"id": "s04", "promptFocus": "多元思维格栅让学科彼此校正", "shots": [
+      {"image": "assets/storyboards/sheet-02.png", "panel": 0, "label": "多个学科象征物连接成覆盖大脑的明亮立体格栅", "purpose": "core-concept", "weight": 4},
+      {"image": "assets/storyboards/sheet-02.png", "panel": 1, "label": "概率骰子心理镜面与工程桥梁共同照向同一难题", "purpose": "core-concept", "weight": 3}
+    ]},
+    {"id": "s05", "promptFocus": "铁锤人倾向与双轨分析", "shots": [
+      {"image": "assets/storyboards/sheet-02.png", "panel": 2, "label": "专家拿着锤子把圆球齿轮和绳结都当成钉子", "purpose": "core-concept", "weight": 4},
+      {"image": "assets/storyboards/sheet-02.png", "panel": 3, "label": "同一决定沿理性利益与潜意识情绪两条轨道并行", "purpose": "core-concept", "weight": 4}
+    ]},
+    {"id": "s06", "promptFocus": "飞行员训练与现代项目演练", "shots": [
+      {"image": "assets/storyboards/sheet-03.png", "panel": 0, "label": "飞行员在明亮模拟驾驶舱反复处理仪表失效", "purpose": "source-scene", "weight": 4},
+      {"image": "assets/storyboards/sheet-03.png", "panel": 1, "label": "现代项目团队围着无字模型演练断电和供应中断", "purpose": "modern-analogy", "weight": 3}
+    ]},
+    {"id": "s07", "promptFocus": "联邦快递夜班的激励改变", "shots": [
+      {"image": "assets/storyboards/sheet-03.png", "panel": 2, "label": "夜间转运仓里工人缓慢搬运大量无标记包裹", "purpose": "source-scene", "weight": 4},
+      {"image": "assets/storyboards/sheet-03.png", "panel": 3, "label": "激励改变后工人迅速完成装运并迎着晨光回家", "purpose": "core-concept", "weight": 4}
+    ]},
+    {"id": "s08", "promptFocus": "外科医生的激励偏见", "shots": [
+      {"image": "assets/storyboards/sheet-04.png", "panel": 0, "label": "外科医生在明亮病理室凝视一排装有正常胆囊的无字玻璃容器", "purpose": "source-scene", "weight": 4},
+      {"image": "assets/storyboards/sheet-04.png", "panel": 1, "label": "金币般光点与白色医袍在镜中叠成真诚信念的盲区", "purpose": "core-concept", "weight": 3}
+    ]},
+    {"id": "s09", "promptFocus": "米尔格拉姆实验与多因素叠加", "shots": [
+      {"image": "assets/storyboards/sheet-04.png", "panel": 2, "label": "实验参与者在教授注视下犹豫地按向无字控制台", "purpose": "source-scene", "weight": 4},
+      {"image": "assets/storyboards/sheet-04.png", "panel": 3, "label": "权威人群压力沉没成本化作多股彩色力量推向同一按钮", "purpose": "core-concept", "weight": 4}
+    ]},
+    {"id": "s10", "promptFocus": "麦道撤离重测与组织性失控", "shots": [
+      {"image": "assets/storyboards/sheet-05.png", "panel": 0, "label": "昏亮机库中老人从高机舱滑梯撤离而工作人员仍催促重测", "purpose": "source-scene", "weight": 5},
+      {"image": "assets/storyboards/sheet-05.png", "panel": 1, "label": "奖励权威从众投入和翻本欲化成五只手共同推动危险杠杆", "purpose": "core-concept", "weight": 4}
+    ]},
+    {"id": "s11", "promptFocus": "库克船长用心理力量防治坏血病并补充伦理边界", "shots": [
+      {"image": "assets/storyboards/sheet-05.png", "panel": 2, "label": "十八世纪帆船甲板上军官先吃酸泡菜而水手好奇围观", "purpose": "source-scene", "weight": 4},
+      {"image": "assets/storyboards/sheet-05.png", "panel": 3, "label": "同一只引导之手一边托起健康水手一边投下操纵阴影", "purpose": "limitation", "weight": 3}
+    ]},
+    {"id": "s12", "promptFocus": "喜诗糖果让投资模型发生转弯", "shots": [
+      {"image": "assets/storyboards/sheet-06.png", "panel": 0, "label": "两位年长投资者在小糖果店柜台前因微小价格差犹豫", "purpose": "source-scene", "weight": 4},
+      {"image": "assets/storyboards/sheet-06.png", "panel": 1, "label": "顾客反复回到温暖糖果店而旧烟蒂模型在旁边裂开", "purpose": "core-concept", "weight": 4}
+    ]},
+    {"id": "s13", "promptFocus": "三个篮子与等待最佳击球区", "shots": [
+      {"image": "assets/storyboards/sheet-06.png", "panel": 2, "label": "思考者把机会分别放入三只无字篮子并放下过难的一只", "purpose": "core-concept", "weight": 4},
+      {"image": "assets/storyboards/sheet-06.png", "panel": 3, "label": "棒球手沉着等待最佳来球而旁边投资者耐心观察", "purpose": "source-scene", "weight": 4}
+    ]},
+    {"id": "s14", "promptFocus": "航空投资错误与停止为过去辩护", "shots": [
+      {"image": "assets/storyboards/sheet-07.png", "panel": 0, "label": "年长投资者在机场跑道前放下破损的飞机模型并转身离开", "purpose": "source-scene", "weight": 4}
+    ]},
+    {"id": "s15", "promptFocus": "把原书方法整理为现代五问清单", "shots": [
+      {"image": "assets/storyboards/sheet-07.png", "panel": 1, "label": "现代团队围桌用五枚无字图标核对重大决定", "purpose": "modern-analogy", "weight": 4},
+      {"image": "assets/storyboards/sheet-07.png", "panel": 2, "label": "兴奋人群冲向前方时一名成员举手让团队暂停复核", "purpose": "modern-analogy", "weight": 4}
+    ]},
+    {"id": "s16", "promptFocus": "模型会错且工具可能被滥用的最终边界", "shots": [
+      {"image": "assets/storyboards/sheet-08.png", "panel": 0, "label": "年长思考者站在有缺口的知识格栅前面对复杂世界", "purpose": "limitation", "weight": 4},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 1, "label": "同一心理工具一边帮助迷路者一边被阴影用来诱导信任", "purpose": "limitation", "weight": 3},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 2, "label": "团队检查整齐的无字清单时有人发现托盘外生长的现实", "purpose": "limitation", "weight": 3},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 3, "label": "年长思考者看见新证据后平静转向新的明亮道路", "purpose": "core-concept", "weight": 4}
+    ]}
+  ]
+}

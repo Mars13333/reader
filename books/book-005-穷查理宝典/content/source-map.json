@@ -1,0 +1,81 @@
+{
+  "book": "穷查理宝典",
+  "author": "彼得·考夫曼",
+  "sourceMode": "local-source",
+  "sourcePath": "source/穷查理宝典.txt",
+  "sourceSha256": "4195339EC4151CB8DFC21ED3B96A4555CB9269CEBCB80F52F3FD43A47D1D3305",
+  "sourceEncoding": "UTF-8",
+  "chapterLines": {
+    "中文版序言": "144-322",
+    "第一章 查理·芒格传略": "432-1245",
+    "第二章 生活、学习和决策方法": "1246-1943",
+    "第三章 芒格主义": "1944-3304",
+    "第四章 查理十一讲": "3305-8923",
+    "第五章 文章、报道与评论": "8924-9710",
+    "推荐书目与年谱": "9711-10083"
+  },
+  "terminology": [
+    {
+      "canonical": "查理·芒格",
+      "pronunciation": "chá lǐ máng gé",
+      "requiredInScript": true,
+      "avoid": ["查理芒格"],
+      "sourceRefs": ["432-443"]
+    },
+    {
+      "canonical": "李录",
+      "pronunciation": "lǐ lù",
+      "requiredInScript": true,
+      "avoid": [],
+      "sourceRefs": ["144-219"]
+    },
+    {
+      "canonical": "喜诗糖果",
+      "pronunciation": "xǐ shī táng guǒ",
+      "requiredInScript": true,
+      "avoid": ["喜事糖果"],
+      "sourceRefs": ["2420-2444"]
+    },
+    {
+      "canonical": "罗拉帕卢萨效应",
+      "pronunciation": "luó lā pà lú sà xiào yìng",
+      "requiredInScript": true,
+      "avoid": [],
+      "sourceRefs": ["8814-8827"]
+    },
+    {
+      "canonical": "麦道",
+      "pronunciation": "mài dào",
+      "requiredInScript": true,
+      "avoid": [],
+      "sourceRefs": ["8838-8840"]
+    }
+  ],
+  "selfReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-22T06:04:41.614Z",
+    "scriptSha256": "8BFE3F207FC011DB28FF58E1F1CB8233785613A51494E5AEA477E4B16EBF3EC4",
+    "checks": {
+      "terminologyVerified": true,
+      "openingRetentionReviewed": true,
+      "retentionStructureReviewed": true,
+      "sentenceFluencyReviewed": true,
+      "sourceConsistencyReviewed": true,
+      "storyCoverageReviewed": true,
+      "contentFlowReviewed": true,
+      "contentLayerDistinctionReviewed": true,
+      "semanticVisualMomentsReviewed": true,
+      "closingBrandLineReviewed": true,
+      "originalityAndCommentaryReviewed": true
+    }
+  },
+  "editorialRules": [
+    "成片是原创评论，不是有声书或逐章复述。",
+    "人物、情节、反转、结局和作品判断只以绑定原文为内容事实来源。",
+    "不限题材，默认服务没读过原著的观众；先让观众进入具体场景，再进行分析。",
+    "核心内容链为：现实问题→具体场景→原著核心案例或剧情→解释原理→回到现实→补充局限。",
+    "自然提示原著内容、现代类比和作者判断的边界，但不要切成生硬的标签段。",
+    "整条口播最后一句固定为“这里是陈拾叁，陪你一起读书破万卷。”。",
+    "不展示原书内页、连续长段文字、影视剧照或演员形象。"
+  ]
+}

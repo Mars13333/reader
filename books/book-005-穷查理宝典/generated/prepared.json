@@ -1,0 +1,766 @@
+{
+  "bookId": "book-005-穷查理宝典",
+  "scriptSha256": "8BFE3F207FC011DB28FF58E1F1CB8233785613A51494E5AEA477E4B16EBF3EC4",
+  "title": "《穷查理宝典》：聪明人如何少犯大错",
+  "author": "彼得·考夫曼",
+  "angle": "从李录向查理·芒格求解的现场出发，用原书中的人物、实验与商业案例，讲清多元思维如何帮助普通人在复杂现实中少犯大错。",
+  "deliveryMode": "audio-master",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 18369,
+  "totalDurationSeconds": 612.3,
+  "openingIntro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《穷查理宝典》。",
+    "durationInFrames": 216,
+    "spokenStartFrame": 103,
+    "spokenEndFrame": 200
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "voice": {
+    "engine": "火山引擎豆包语音合成2.0",
+    "name": "刘飞男声",
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "section": "聪明人的陷阱",
+      "kicker": "不是知道太少，而是只会一种解释",
+      "narration": "为什么越聪明的人，越可能把一个错误做得滴水不漏？《穷查理宝典》给出的第一份答案是：问题常常不在智商，而在我们只拿着一把锤子。接下来，我们从一个真实的求解现场进入这本书。",
+      "sourceRefs": [
+        {
+          "label": "第二讲：格栅理论与铁锤人倾向",
+          "lines": "1276-1330"
+        }
+      ],
+      "narrationDurationSeconds": 16.236375,
+      "narrationStartFrame": 216,
+      "narrationEndFrame": 703,
+      "startFrame": 0,
+      "durationInFrames": 716
+    },
+    {
+      "id": "s02",
+      "section": "感恩节的求解",
+      "kicker": "李录带着基金的剧烈波动来见芒格",
+      "narration": "二零零三年感恩节，李录正被基金的大起大落折磨。他向查理·芒格请教。书中写到，这次谈话推动李录重新组织基金，只留下愿意长期同行的投资人。芒格交给他的，不是一只股票代码，而是反过来想、列失败清单、敢于毁掉心爱观点的判断习惯。",
+      "sourceRefs": [
+        {
+          "label": "中文版序言：李录的基金转型",
+          "lines": "192-219"
+        }
+      ],
+      "narrationDurationSeconds": 24.878875,
+      "narrationStartFrame": 716,
+      "narrationEndFrame": 1462,
+      "startFrame": 716,
+      "durationInFrames": 759
+    },
+    {
+      "id": "s03",
+      "section": "误机之后",
+      "kicker": "镇定不是姿态，而是长期习惯的结果",
+      "narration": "同一篇序言还记录了一个很小的现场：芒格在机场安检处耽搁，错过了飞机。旁人以为他会生气，他却安静地坐下读书，随后改签经济舱继续出发。他没有用财富把自己包进隔离层，甚至说坐经济舱更能接触真实生活。这个片段不是神话一个永远正确的人，它让我们看见，持续学习和接受现实已经变成他的日常动作。",
+      "sourceRefs": [
+        {
+          "label": "中文版序言：机场误机与阅读",
+          "lines": "233-249"
+        }
+      ],
+      "narrationDurationSeconds": 28.3265,
+      "narrationStartFrame": 1475,
+      "narrationEndFrame": 2324,
+      "startFrame": 1475,
+      "durationInFrames": 862
+    },
+    {
+      "id": "s04",
+      "section": "给大脑装一张格栅",
+      "kicker": "知识要相互连接，才能在现实里工作",
+      "narration": "芒格把这套方法叫作多元思维模型。重点不是背下一百个漂亮名词，而是把数学、心理学、经济学、工程学、生物学等学科中真正重要的原理，挂在同一张格栅上。遇到问题时，让不同模型互相校正。概率提醒你别把可能当必然，心理学提醒你别把愿望当事实，工程学提醒你给系统留安全边际。一个模型提供答案，另一个模型负责拆台，这才是格栅的价值。",
+      "sourceRefs": [
+        {
+          "label": "第二讲：多元思维模型的格栅",
+          "lines": "1276-1330"
+        }
+      ],
+      "narrationDurationSeconds": 33.76808333333334,
+      "narrationStartFrame": 2337,
+      "narrationEndFrame": 3350,
+      "startFrame": 2337,
+      "durationInFrames": 1026
+    },
+    {
+      "id": "s05",
+      "section": "只有锤子的人",
+      "kicker": "专业能力也可能成为认知盲区",
+      "narration": "书里反复出现一个比喻：手里只有锤子的人，看什么都像钉子。财务人员把一切变成数字，律师把一切变成程序，技术人员把一切变成可优化的参数。可现实问题不会按学科边界排队。芒格因此提出双轨分析：一条轨道看真正决定利益的理性因素，另一条轨道看本能、情绪、权威和贪婪怎样在潜意识里偷偷改写结论。少看一条轨道，聪明就可能只是更高明的自我辩护。",
+      "sourceRefs": [
+        {
+          "label": "第五讲：铁锤人倾向与跨学科技能",
+          "lines": "6047-6068"
+        },
+        {
+          "label": "查理的检查清单：双轨分析",
+          "lines": "6330-6375"
+        }
+      ],
+      "narrationDurationSeconds": 35.693875,
+      "narrationStartFrame": 3363,
+      "narrationEndFrame": 4434,
+      "startFrame": 3363,
+      "durationInFrames": 1083
+    },
+    {
+      "id": "s06",
+      "section": "飞行员为什么要反复模拟",
+      "kicker": "真正重要的知识，必须在压力下也能调用",
+      "narration": "芒格认为，最值得借鉴的教育不是多上一门理论课，而是飞行员训练。书中列出六个要素：知识要覆盖关键风险，要能同时处理交织的危险，要会正向和逆向思考，要把最重要的动作练到最熟，要核对检查清单，还要持续使用模拟器。把这个场景换到今天，一次重大项目评审也像进驾驶舱：不是问谁讲得最自信，而是问最坏情况是什么，哪个仪表可能失真，我们是否演练过失效后的动作。",
+      "sourceRefs": [
+        {
+          "label": "第五讲：飞行员训练的六要素",
+          "lines": "6111-6127"
+        }
+      ],
+      "narrationDurationSeconds": 36.64695833333333,
+      "narrationStartFrame": 4446,
+      "narrationEndFrame": 5546,
+      "startFrame": 4446,
+      "durationInFrames": 1112
+    },
+    {
+      "id": "s07",
+      "section": "联邦快递的夜班",
+      "kicker": "激励不对，道理讲得再多也没用",
+      "narration": "书中最利落的案例发生在联邦快递。夜里，所有包裹必须迅速完成转运，否则第二天的承诺就会落空。公司讲道理、做动员，工人仍然拖到很晚。后来有人发现，他们按小时付薪，等于奖励工作时间更长。改成按班次付薪，完成装运就可以回家，问题很快解决。这里的原著案例很具体：人们并不总按口号行动，他们会沿着奖励的方向行动。制度说奖励什么，组织最后就会长成什么样。",
+      "sourceRefs": [
+        {
+          "label": "第十一讲：联邦快递激励案例",
+          "lines": "8185-8195"
+        }
+      ],
+      "narrationDurationSeconds": 37.17575,
+      "narrationStartFrame": 5558,
+      "narrationEndFrame": 6673,
+      "startFrame": 5558,
+      "durationInFrames": 1128
+    },
+    {
+      "id": "s08",
+      "section": "医生为什么相信自己",
+      "kicker": "最危险的偏见，常常披着专业判断的外衣",
+      "narration": "激励的影响不止于行为，它还会改写认知。芒格讲到内布拉斯加州一名外科医生，多年把正常胆囊送进病理实验室。芒格问，难道他知道自己在伤害病人吗？得到的回答是：那名医生真心相信胆囊是疾病的祸根，越早切除越爱护病人。这个场景可怕之处就在这里：人可以一边从某种做法获利，一边真诚地把它解释成善意。面对任何对建议者本人特别有利的专业意见，书中要求我们补上一轮复核和反证。",
+      "sourceRefs": [
+        {
+          "label": "第十一讲：外科医生与激励偏见",
+          "lines": "8201-8205"
+        }
+      ],
+      "narrationDurationSeconds": 38.19804166666667,
+      "narrationStartFrame": 6686,
+      "narrationEndFrame": 7832,
+      "startFrame": 6686,
+      "durationInFrames": 1159
+    },
+    {
+      "id": "s09",
+      "section": "不是一个按钮的问题",
+      "kicker": "极端结果通常来自多种力量同时推人向前",
+      "narration": "谈到米尔格拉姆实验，芒格不同意只用服从权威来解释。实验里，参与者相信自己正在对无辜者施加电击。教授的身份构成权威，旁观者的沉默提供社会认同，已经按下的按钮又触发不愿否定先前行为的倾向，再加上避免怀疑和压力，几股力量叠在一起，普通人才一步步走到极端。芒格把这种多因素共同放大的结果称为罗拉帕卢萨效应。真正该问的，不是哪个人忽然变坏，而是哪几股力正在同时把他推向同一边。",
+      "sourceRefs": [
+        {
+          "label": "第十一讲：米尔格拉姆实验的多因素解释",
+          "lines": "8771-8774"
+        },
+        {
+          "label": "第十一讲：多因素叠加效应",
+          "lines": "8814-8827"
+        }
+      ],
+      "narrationDurationSeconds": 40.41225,
+      "narrationStartFrame": 7845,
+      "narrationEndFrame": 9057,
+      "startFrame": 7845,
+      "durationInFrames": 1225
+    },
+    {
+      "id": "s10",
+      "section": "麦道为什么当天重测",
+      "kicker": "失败有时不会让人停下，反而让人加码",
+      "narration": "书中最刺眼的企业现场，是麦道公司的飞机乘客撤离测试。昏暗机库里，许多老人要从离水泥地面很高的机舱滑下。早晨的第一次测试超时，二十人重伤。公司没有停下来复盘，当天下午又做第二次，又有二十人重伤，其中一人终身瘫痪。芒格逐项检查：销售新飞机的奖励、政府指示形成的权威、同事沉默带来的从众、已经投入后的不愿改变，以及失败后急于翻本的损失反应，共同把危险计划推了下去。",
+      "sourceRefs": [
+        {
+          "label": "第十一讲问答：麦道撤离测试",
+          "lines": "8838-8840"
+        }
+      ],
+      "narrationDurationSeconds": 41.11716666666667,
+      "narrationStartFrame": 9070,
+      "narrationEndFrame": 10303,
+      "startFrame": 9070,
+      "durationInFrames": 1246
+    },
+    {
+      "id": "s11",
+      "section": "心理学也可以救人",
+      "kicker": "影响他人并非天然邪恶，关键是目的与边界",
+      "narration": "同样的心理力量也可以被用于善意。书中讲库克船长为了防治坏血病，希望水手吃酸泡菜。他没有先命令所有人，而是让军官在显眼处食用，再暂时限制普通水手取得。社会认同和稀缺感发挥作用，水手反而主动要求吃。芒格把这个例子判断为合乎道德，因为目的在于保护健康。但他紧接着提醒，心理知识也能被用来骗取信任。工具本身不替人负责，使用者必须回答：谁受益，谁承担代价，对方有没有真正的选择。",
+      "sourceRefs": [
+        {
+          "label": "第三讲：库克船长与酸泡菜",
+          "lines": "4880-4892"
+        },
+        {
+          "label": "第十一讲问答：心理操纵的道德边界",
+          "lines": "8870-8874"
+        }
+      ],
+      "narrationDurationSeconds": 40.819916666666664,
+      "narrationStartFrame": 10316,
+      "narrationEndFrame": 11540,
+      "startFrame": 10316,
+      "durationInFrames": 1237
+    },
+    {
+      "id": "s12",
+      "section": "差点错过喜诗糖果",
+      "kicker": "最难摧毁的，往往是曾经让你成功的观念",
+      "narration": "巴菲特早年受格雷厄姆影响，偏爱价格极低的普通企业。收购喜诗糖果时，他和芒格甚至因为很小的价格差点放弃。但喜诗拥有顾客愿意反复购买的品牌和定价能力，后来持续产生丰厚现金。书中把这笔交易视为一次思想转弯：与其捡便宜但平庸的烟蒂，不如用合理价格买优秀企业。喜诗真正改变的，不只是一张资产负债表，而是他们评价企业的模型。这也是芒格强调摧毁心爱观点的原因：旧方法越成功，越容易被误当成永恒真理。",
+      "sourceRefs": [
+        {
+          "label": "第三章：喜诗糖果改变投资思路",
+          "lines": "2420-2444"
+        },
+        {
+          "label": "不那么沉默的合伙人：喜诗的复利",
+          "lines": "9428-9434"
+        }
+      ],
+      "narrationDurationSeconds": 43.089,
+      "narrationStartFrame": 11553,
+      "narrationEndFrame": 12845,
+      "startFrame": 11553,
+      "durationInFrames": 1305
+    },
+    {
+      "id": "s13",
+      "section": "等待真正的好球",
+      "kicker": "判断力也包括承认太难和选择不行动",
+      "narration": "有了模型，不代表每天都要给出答案。芒格把机会放进三个篮子：可以，不能，太难理解。只有落在能力圈内、长期特征能看清的少数机会，才值得继续研究。书中又借棒球手泰德·威廉斯说明耐心：击球手若只等最佳区域，成绩会明显提高；投资人不同于站在本垒板前的球员，没有裁判催他挥棒。把它放到日常生活里，成熟不只是快速选择，也包括说我不知道、先保留现金、等证据更清楚。可真正的难题，是下注之后还能不能这样冷静。",
+      "sourceRefs": [
+        {
+          "label": "第二章：三个投资篮子与能力圈",
+          "lines": "1453-1547"
+        },
+        {
+          "label": "第二章：泰德·威廉斯的击球区",
+          "lines": "1669-1681"
+        }
+      ],
+      "narrationDurationSeconds": 43.242333333333335,
+      "narrationStartFrame": 12858,
+      "narrationEndFrame": 14155,
+      "startFrame": 12858,
+      "durationInFrames": 1310
+    },
+    {
+      "id": "s14",
+      "section": "承认美国航空是错误",
+      "kicker": "沉没成本最擅长把昨天的错误带到明天",
+      "narration": "芒格也在书中公开复盘自己的错误。他和巴菲特买过美国航空的优先股，后来承认这是一笔本可以避免的投资。航空业资本密集、竞争激烈，经济结构并不友好。更麻烦的是，一旦投入，人会用心理否认减轻痛苦，再被沉没成本拖着继续走。芒格的态度不是假装模型让他百战百胜，而是把错误留下来当教材。检查清单真正有价值的时刻，往往不是下注之前显得聪明，而是坏消息出现时，允许你说原判断已经失效，然后停止为过去辩护。",
+      "sourceRefs": [
+        {
+          "label": "第三讲问答：美国航空投资错误",
+          "lines": "5052-5072"
+        }
+      ],
+      "narrationDurationSeconds": 41.21033333333333,
+      "narrationStartFrame": 14168,
+      "narrationEndFrame": 15404,
+      "startFrame": 14168,
+      "durationInFrames": 1249
+    },
+    {
+      "id": "s15",
+      "section": "把书带回今天",
+      "kicker": "一张五问清单，比一句保持理性更有用",
+      "narration": "把书中的方法放进今天的工作，我会把重大决定压缩成五个问题。第一，事实是什么，哪些只是愿望？第二，谁因这个方案获利，激励会不会扭曲建议？第三，最强的反对证据是什么，谁来扮演反方？第四，除了眼前结果，二级和三级后果会怎样改变人的行为？第五，如果判断错了，退出条件和安全边际在哪里？这不是原书逐字给出的模板，而是根据双轨分析、逆向思考和检查清单整理出的现代用法。它不会替你做决定，却能让团队在兴奋、压力和从众出现时，多一次停顿。",
+      "sourceRefs": [
+        {
+          "label": "查理的检查清单",
+          "lines": "6330-6375"
+        },
+        {
+          "label": "第十一讲：易得性偏见的对策",
+          "lines": "8701-8714"
+        }
+      ],
+      "narrationDurationSeconds": 45.55,
+      "narrationStartFrame": 15417,
+      "narrationEndFrame": 16783,
+      "startFrame": 15417,
+      "durationInFrames": 1379
+    },
+    {
+      "id": "s16",
+      "section": "模型不是护身符",
+      "kicker": "多元思维的终点，是更诚实地面对不确定",
+      "narration": "最后必须补上这套方法的边界。世界本来就复杂，简单化不能简单过头；心理学工具可以救人，也可以操纵人；检查清单如果变成新的自信来源，同样会让人忽略清单之外的现实。芒格在讲稿末尾承认，他的文章几乎肯定存在事实和思考错误。这个自我保留很重要。《穷查理宝典》并没有许诺一个永不犯错的大脑，它提供的是一套持续纠错的生活方式：跨学科学习，寻找反证，检查激励，预想失败，并在证据改变时愿意改变自己。少犯大错，不等于没有损失；它只是让我们更早看见危险，也更有机会在代价失控之前停下来。这里是陈拾叁，陪你一起读书破万卷。",
+      "sourceRefs": [
+        {
+          "label": "第三讲问答：复杂系统与不确定性",
+          "lines": "5171-5175"
+        },
+        {
+          "label": "第十一讲问答：工具的道德与错误边界",
+          "lines": "8870-8876"
+        }
+      ],
+      "narrationDurationSeconds": 51.014125,
+      "narrationStartFrame": 16796,
+      "narrationEndFrame": 18326,
+      "startFrame": 16796,
+      "durationInFrames": 1573
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01-01",
+      "segmentId": "s01",
+      "section": "聪明人的陷阱",
+      "kicker": "不是知道太少，而是只会一种解释",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 0,
+      "label": "西装上班族挥舞一把巨大锤子面对形状各异的问题",
+      "purpose": "author-commentary",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 0,
+      "durationInFrames": 716,
+      "contentOffsetFrames": 216
+    },
+    {
+      "id": "s02-01",
+      "segmentId": "s02",
+      "section": "感恩节的求解",
+      "kicker": "李录带着基金的剧烈波动来见芒格",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 1,
+      "label": "冬日餐桌旁李录向年长思考者倾诉基金波动",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 716,
+      "durationInFrames": 434
+    },
+    {
+      "id": "s02-02",
+      "segmentId": "s02",
+      "section": "感恩节的求解",
+      "kicker": "李录带着基金的剧烈波动来见芒格",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 2,
+      "label": "李录把混乱曲线翻转并撕下自己最心爱的方案",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 1150,
+      "durationInFrames": 325
+    },
+    {
+      "id": "s03-01",
+      "segmentId": "s03",
+      "section": "误机之后",
+      "kicker": "镇定不是姿态，而是长期习惯的结果",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 3,
+      "label": "年长思考者在机场落地窗边安静读无字书等待改签",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 1475,
+      "durationInFrames": 862
+    },
+    {
+      "id": "s04-01",
+      "segmentId": "s04",
+      "section": "给大脑装一张格栅",
+      "kicker": "知识要相互连接，才能在现实里工作",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 0,
+      "label": "多个学科象征物连接成覆盖大脑的明亮立体格栅",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 2337,
+      "durationInFrames": 586
+    },
+    {
+      "id": "s04-02",
+      "segmentId": "s04",
+      "section": "给大脑装一张格栅",
+      "kicker": "知识要相互连接，才能在现实里工作",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 1,
+      "label": "概率骰子心理镜面与工程桥梁共同照向同一难题",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 2923,
+      "durationInFrames": 440
+    },
+    {
+      "id": "s05-01",
+      "segmentId": "s05",
+      "section": "只有锤子的人",
+      "kicker": "专业能力也可能成为认知盲区",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 2,
+      "label": "专家拿着锤子把圆球齿轮和绳结都当成钉子",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 3363,
+      "durationInFrames": 542
+    },
+    {
+      "id": "s05-02",
+      "segmentId": "s05",
+      "section": "只有锤子的人",
+      "kicker": "专业能力也可能成为认知盲区",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 3,
+      "label": "同一决定沿理性利益与潜意识情绪两条轨道并行",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 3905,
+      "durationInFrames": 541
+    },
+    {
+      "id": "s06-01",
+      "segmentId": "s06",
+      "section": "飞行员为什么要反复模拟",
+      "kicker": "真正重要的知识，必须在压力下也能调用",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 0,
+      "label": "飞行员在明亮模拟驾驶舱反复处理仪表失效",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 4446,
+      "durationInFrames": 635
+    },
+    {
+      "id": "s06-02",
+      "segmentId": "s06",
+      "section": "飞行员为什么要反复模拟",
+      "kicker": "真正重要的知识，必须在压力下也能调用",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 1,
+      "label": "现代项目团队围着无字模型演练断电和供应中断",
+      "purpose": "modern-analogy",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 5081,
+      "durationInFrames": 477
+    },
+    {
+      "id": "s07-01",
+      "segmentId": "s07",
+      "section": "联邦快递的夜班",
+      "kicker": "激励不对，道理讲得再多也没用",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 2,
+      "label": "夜间转运仓里工人缓慢搬运大量无标记包裹",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 5558,
+      "durationInFrames": 564
+    },
+    {
+      "id": "s07-02",
+      "segmentId": "s07",
+      "section": "联邦快递的夜班",
+      "kicker": "激励不对，道理讲得再多也没用",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 3,
+      "label": "激励改变后工人迅速完成装运并迎着晨光回家",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 6122,
+      "durationInFrames": 564
+    },
+    {
+      "id": "s08-01",
+      "segmentId": "s08",
+      "section": "医生为什么相信自己",
+      "kicker": "最危险的偏见，常常披着专业判断的外衣",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 0,
+      "label": "外科医生在明亮病理室凝视一排装有正常胆囊的无字玻璃容器",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 6686,
+      "durationInFrames": 662
+    },
+    {
+      "id": "s08-02",
+      "segmentId": "s08",
+      "section": "医生为什么相信自己",
+      "kicker": "最危险的偏见，常常披着专业判断的外衣",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 1,
+      "label": "金币般光点与白色医袍在镜中叠成真诚信念的盲区",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 7348,
+      "durationInFrames": 497
+    },
+    {
+      "id": "s09-01",
+      "segmentId": "s09",
+      "section": "不是一个按钮的问题",
+      "kicker": "极端结果通常来自多种力量同时推人向前",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 2,
+      "label": "实验参与者在教授注视下犹豫地按向无字控制台",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 7845,
+      "durationInFrames": 613
+    },
+    {
+      "id": "s09-02",
+      "segmentId": "s09",
+      "section": "不是一个按钮的问题",
+      "kicker": "极端结果通常来自多种力量同时推人向前",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 3,
+      "label": "权威人群压力沉没成本化作多股彩色力量推向同一按钮",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 8458,
+      "durationInFrames": 612
+    },
+    {
+      "id": "s10-01",
+      "segmentId": "s10",
+      "section": "麦道为什么当天重测",
+      "kicker": "失败有时不会让人停下，反而让人加码",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 0,
+      "label": "昏亮机库中老人从高机舱滑梯撤离而工作人员仍催促重测",
+      "purpose": "source-scene",
+      "weight": 5,
+      "isSegmentStart": true,
+      "startFrame": 9070,
+      "durationInFrames": 692
+    },
+    {
+      "id": "s10-02",
+      "segmentId": "s10",
+      "section": "麦道为什么当天重测",
+      "kicker": "失败有时不会让人停下，反而让人加码",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 1,
+      "label": "奖励权威从众投入和翻本欲化成五只手共同推动危险杠杆",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 9762,
+      "durationInFrames": 554
+    },
+    {
+      "id": "s11-01",
+      "segmentId": "s11",
+      "section": "心理学也可以救人",
+      "kicker": "影响他人并非天然邪恶，关键是目的与边界",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 2,
+      "label": "十八世纪帆船甲板上军官先吃酸泡菜而水手好奇围观",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 10316,
+      "durationInFrames": 707
+    },
+    {
+      "id": "s11-02",
+      "segmentId": "s11",
+      "section": "心理学也可以救人",
+      "kicker": "影响他人并非天然邪恶，关键是目的与边界",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 3,
+      "label": "同一只引导之手一边托起健康水手一边投下操纵阴影",
+      "purpose": "limitation",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 11023,
+      "durationInFrames": 530
+    },
+    {
+      "id": "s12-01",
+      "segmentId": "s12",
+      "section": "差点错过喜诗糖果",
+      "kicker": "最难摧毁的，往往是曾经让你成功的观念",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 0,
+      "label": "两位年长投资者在小糖果店柜台前因微小价格差犹豫",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 11553,
+      "durationInFrames": 653
+    },
+    {
+      "id": "s12-02",
+      "segmentId": "s12",
+      "section": "差点错过喜诗糖果",
+      "kicker": "最难摧毁的，往往是曾经让你成功的观念",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 1,
+      "label": "顾客反复回到温暖糖果店而旧烟蒂模型在旁边裂开",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 12206,
+      "durationInFrames": 652
+    },
+    {
+      "id": "s13-01",
+      "segmentId": "s13",
+      "section": "等待真正的好球",
+      "kicker": "判断力也包括承认太难和选择不行动",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 2,
+      "label": "思考者把机会分别放入三只无字篮子并放下过难的一只",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 12858,
+      "durationInFrames": 655
+    },
+    {
+      "id": "s13-02",
+      "segmentId": "s13",
+      "section": "等待真正的好球",
+      "kicker": "判断力也包括承认太难和选择不行动",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 3,
+      "label": "棒球手沉着等待最佳来球而旁边投资者耐心观察",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 13513,
+      "durationInFrames": 655
+    },
+    {
+      "id": "s14-01",
+      "segmentId": "s14",
+      "section": "承认美国航空是错误",
+      "kicker": "沉没成本最擅长把昨天的错误带到明天",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 0,
+      "label": "年长投资者在机场跑道前放下破损的飞机模型并转身离开",
+      "purpose": "source-scene",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 14168,
+      "durationInFrames": 1249
+    },
+    {
+      "id": "s15-01",
+      "segmentId": "s15",
+      "section": "把书带回今天",
+      "kicker": "一张五问清单，比一句保持理性更有用",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 1,
+      "label": "现代团队围桌用五枚无字图标核对重大决定",
+      "purpose": "modern-analogy",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 15417,
+      "durationInFrames": 690
+    },
+    {
+      "id": "s15-02",
+      "segmentId": "s15",
+      "section": "把书带回今天",
+      "kicker": "一张五问清单，比一句保持理性更有用",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 2,
+      "label": "兴奋人群冲向前方时一名成员举手让团队暂停复核",
+      "purpose": "modern-analogy",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 16107,
+      "durationInFrames": 689
+    },
+    {
+      "id": "s16-01",
+      "segmentId": "s16",
+      "section": "模型不是护身符",
+      "kicker": "多元思维的终点，是更诚实地面对不确定",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 0,
+      "label": "年长思考者站在有缺口的知识格栅前面对复杂世界",
+      "purpose": "limitation",
+      "weight": 4,
+      "isSegmentStart": true,
+      "startFrame": 16796,
+      "durationInFrames": 449
+    },
+    {
+      "id": "s16-02",
+      "segmentId": "s16",
+      "section": "模型不是护身符",
+      "kicker": "多元思维的终点，是更诚实地面对不确定",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 1,
+      "label": "同一心理工具一边帮助迷路者一边被阴影用来诱导信任",
+      "purpose": "limitation",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 17245,
+      "durationInFrames": 338
+    },
+    {
+      "id": "s16-03",
+      "segmentId": "s16",
+      "section": "模型不是护身符",
+      "kicker": "多元思维的终点，是更诚实地面对不确定",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 2,
+      "label": "团队检查整齐的无字清单时有人发现托盘外生长的现实",
+      "purpose": "limitation",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 17583,
+      "durationInFrames": 337
+    },
+    {
+      "id": "s16-04",
+      "segmentId": "s16",
+      "section": "模型不是护身符",
+      "kicker": "多元思维的终点，是更诚实地面对不确定",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 3,
+      "label": "年长思考者看见新证据后平静转向新的明亮道路",
+      "purpose": "core-concept",
+      "weight": 4,
+      "isSegmentStart": false,
+      "startFrame": 17920,
+      "durationInFrames": 449
+    }
+  ]
+}

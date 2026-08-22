@@ -1,0 +1,26 @@
+{
+  "design": "book-jacket-v2",
+  "image": "assets/cover/cover-art.png",
+  "bookTitle": "穷查理宝典",
+  "eyebrow": "彼得·考夫曼 著",
+  "subtitle": "用多元思维，避开人生中的大错",
+  "badge": "陈拾叁读书",
+  "treatment": "bright",
+  "layouts": {
+    "portrait3x4": {
+      "left": 72,
+      "eyebrowTop": 78,
+      "headlineTop": 220,
+      "badgeTop": 1220,
+      "artObjectPosition": "center 50%"
+    },
+    "landscape4x3": {
+      "left": 88,
+      "eyebrowTop": 70,
+      "headlineTop": 180,
+      "titleFontSize": 120,
+      "badgeTop": 870,
+      "artObjectPosition": "center 40%"
+    }
+  }
+}

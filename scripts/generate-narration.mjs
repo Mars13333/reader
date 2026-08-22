@@ -8,22 +8,50 @@ import {
 import path from 'node:path';
 import {synthesize} from './doubao-tts.mjs';
 import {
+  BOOK_PICKER_CONTENT_GAP_MS,
+  BOOK_PICKER_INTRO_STANDARD,
   assertFixedNarration,
   assertScriptApproved,
   getBookContext,
+  getBookPickerSpokenLead,
   getPronunciationOverrides,
   getPronunciationOverridesSha256,
+  hashText,
+  inspectBookPickerIntro,
+  planBookPickerIntroTiming,
   readJson,
 } from './book-context.mjs';
 
 const context = getBookContext();
 const {approval, scriptState} = assertScriptApproved(context);
 const config = readJson(path.join(context.contentDir, 'narration-config.json'));
+const videoLayout = readJson(path.join(context.contentDir, 'video-layout.json'));
 const script = scriptState.script;
 assertFixedNarration(config);
+if (context.book.editorialStandards?.introStandard) {
+  const pickerInspection = inspectBookPickerIntro({book: context.book, layout: videoLayout});
+  if (pickerInspection.errors.length) {
+    throw new Error(pickerInspection.errors.join('\n'));
+  }
+}
 const pronunciationOverrides = getPronunciationOverrides(config);
 const pronunciationOverridesSha256 =
   getPronunciationOverridesSha256(config);
+const usesSpokenBookPicker =
+  context.book.editorialStandards?.introStandard === BOOK_PICKER_INTRO_STANDARD &&
+  videoLayout.bookPickerIntro?.enabled === true &&
+  videoLayout.bookPickerIntro?.standard === BOOK_PICKER_INTRO_STANDARD;
+const bookPickerIntroSpec = usesSpokenBookPicker
+  ? {
+      standard: BOOK_PICKER_INTRO_STANDARD,
+      text: getBookPickerSpokenLead(context.book.title),
+      requestedDurationSeconds: Number(videoLayout.bookPickerIntro.durationSeconds),
+      contentGapMs: BOOK_PICKER_CONTENT_GAP_MS,
+    }
+  : null;
+const bookPickerIntroSha256 = bookPickerIntroSpec
+  ? hashText(JSON.stringify(bookPickerIntroSpec))
+  : null;
 
 const buildDirectory = path.join(context.generatedDir, '.narration-build');
 const wavPath = path.join(context.publicDir, config.audioFile);
@@ -39,7 +67,8 @@ if (!force && existsSync(wavPath) && existsSync(timelinePath)) {
     cachedTimeline.speechRate === config.speechRate &&
     cachedTimeline.sampleRate === config.sampleRate &&
     cachedTimeline.pronunciationOverridesSha256 ===
-      pronunciationOverridesSha256;
+      pronunciationOverridesSha256 &&
+    (cachedTimeline.bookPickerIntroSha256 ?? null) === bookPickerIntroSha256;
   if (cacheMatches) {
     console.log(`已复用批准脚本对应的口播主音频：${wavPath}`);
     process.exit(0);
@@ -133,9 +162,12 @@ const applyPronunciationOverrides = (text) => {
 };
 
 for (const override of pronunciationOverrides) {
-  const uses = script.segments.reduce(
-    (count, segment) =>
-      count + segment.narration.split(override.term).length - 1,
+  const narrationTexts = [
+    ...(bookPickerIntroSpec ? [bookPickerIntroSpec.text] : []),
+    ...script.segments.map((segment) => segment.narration),
+  ];
+  const uses = narrationTexts.reduce(
+    (count, narration) => count + narration.split(override.term).length - 1,
     0,
   );
   if (uses === 0) {
@@ -152,14 +184,71 @@ rmSync(buildDirectory, {recursive: true, force: true});
 mkdirSync(buildDirectory, {recursive: true});
 mkdirSync(path.dirname(wavPath), {recursive: true});
 
-const leadIn = makeSilence(config.leadInMs);
 const interSegmentPause = makeSilence(config.interSegmentPauseMs);
 const tail = makeSilence(config.tailMs);
-const audioParts = [leadIn];
+const audioParts = [];
 const timelineSegments = [];
-let cursorSeconds = durationSeconds(leadIn);
+let introTimeline = null;
+let cursorSeconds = 0;
 
 try {
+  if (bookPickerIntroSpec) {
+    const rawPath = path.join(buildDirectory, '00-book-picker-intro.pcm');
+    console.log(`TTS 开场：${bookPickerIntroSpec.text}`);
+    const result = await synthesize({
+      text: applyPronunciationOverrides(bookPickerIntroSpec.text),
+      speaker: config.speaker,
+      resourceId: config.resourceId,
+      outputPath: rawPath,
+      audioFormat: 'pcm',
+      speechRate: config.speechRate,
+      pitchRate: config.pitchRate,
+      sampleRate,
+    });
+    const rawAudio = readFileSync(result.outputPath);
+    if (rawAudio.length < sampleRate * bytesPerSample) {
+      throw new Error('Suspiciously short audio for the book-picker spoken lead.');
+    }
+    const introAudio = trimOuterSilence(rawAudio);
+    const introSpeechDuration = durationSeconds(introAudio);
+    const requestedContentStart = bookPickerIntroSpec.requestedDurationSeconds;
+    const minimumSpeechStart = Number(config.leadInMs) / 1000;
+    const contentGapSeconds = bookPickerIntroSpec.contentGapMs / 1000;
+    const plannedTiming = planBookPickerIntroTiming({
+      requestedDurationSeconds: requestedContentStart,
+      spokenDurationSeconds: introSpeechDuration,
+      minimumLeadInSeconds: minimumSpeechStart,
+      contentGapSeconds,
+    });
+    const plannedSpeechStart = plannedTiming.spokenStartSeconds;
+    const introLeadIn = makeSilence(plannedSpeechStart * 1000);
+    audioParts.push(introLeadIn);
+    cursorSeconds += durationSeconds(introLeadIn);
+    const spokenStartSeconds = cursorSeconds;
+    audioParts.push(introAudio);
+    cursorSeconds += introSpeechDuration;
+    const spokenEndSeconds = cursorSeconds;
+    const plannedContentStart = Math.max(
+      plannedTiming.contentStartsSeconds,
+      spokenEndSeconds + contentGapSeconds,
+    );
+    const introTail = makeSilence((plannedContentStart - spokenEndSeconds) * 1000);
+    audioParts.push(introTail);
+    cursorSeconds += durationSeconds(introTail);
+    introTimeline = {
+      standard: bookPickerIntroSpec.standard,
+      text: bookPickerIntroSpec.text,
+      spokenStartSeconds,
+      spokenEndSeconds,
+      contentStartsSeconds: cursorSeconds,
+      requestedDurationSeconds: requestedContentStart,
+    };
+  } else {
+    const leadIn = makeSilence(config.leadInMs);
+    audioParts.push(leadIn);
+    cursorSeconds += durationSeconds(leadIn);
+  }
+
   for (let index = 0; index < script.segments.length; index += 1) {
     const segment = script.segments[index];
     const rawPath = path.join(
@@ -221,6 +310,8 @@ try {
     sampleRate,
     pronunciationOverrides,
     pronunciationOverridesSha256,
+    bookPickerIntroSha256,
+    ...(introTimeline ? {intro: introTimeline} : {}),
     audioFile: config.audioFile,
     totalDurationSeconds: finalPcm.length / bytesPerSecond,
     segments: timelineSegments,
@@ -235,6 +326,7 @@ try {
     `- 语速：${config.speechRate}`,
     `- 实际总时长：${(timeline.totalDurationSeconds / 60).toFixed(2)} 分钟`,
     `- 段间停顿：${config.interSegmentPauseMs}ms`,
+    `- 固定开场：${introTimeline ? `“${introTimeline.text}”（正文从 ${formatClock(introTimeline.contentStartsSeconds)} 开始）` : '沿用旧版，无独立开场口播'}`,
     `- 发音覆盖：${
       pronunciationOverrides.length
         ? pronunciationOverrides

@@ -72,6 +72,8 @@ test('auto prompt grants only the scoped end-to-end authorization', () => {
   assert.match(prompt, /Never use a disclaimer such as/u);
   assert.match(prompt, /reality question.*concrete scene.*source-backed core case or plot.*limitations/su);
   assert.match(prompt, /30–45 seconds/u);
+  assert.match(prompt, /大家好，今天我们讲《书名》/u);
+  assert.match(prompt, /do not duplicate it in `script\.json`/u);
   assert.match(prompt, /这里是陈拾叁，陪你一起读书破万卷/u);
   assert.match(prompt, /semantic need rather than a fixed time interval or fixed image count/u);
   assert.match(prompt, /No generated image may contain English/u);

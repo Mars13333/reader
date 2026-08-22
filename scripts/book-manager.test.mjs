@@ -12,9 +12,14 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import test from 'node:test';
 import {
+  BOOK_PICKER_INTRO_DEFAULT_SECONDS,
+  BOOK_PICKER_INTRO_STANDARD,
   REQUIRED_CLOSING_BRAND_LINE,
   SOURCE_LED_CHANNEL_STANDARD,
   assertEditorialStandards,
+  getBookPickerSpokenLead,
+  inspectBookPickerIntro,
+  planBookPickerIntroTiming,
 } from './book-context.mjs';
 
 const readJson = (filePath) => JSON.parse(readFileSync(filePath, 'utf8'));
@@ -64,7 +69,7 @@ test('new books use the post-book-002 visual and delivery standard', () => {
     assert.equal(book.editorialStandards.channelStandard, 'source-led-unbounded-v2');
     assert.equal(book.editorialStandards.contentStandard, 'source-analogy-commentary-v2');
     assert.equal(book.editorialStandards.visualCoverageStandard, 'semantic-key-moments-v1');
-    assert.equal(book.editorialStandards.introStandard, 'book-picker-v1');
+    assert.equal(book.editorialStandards.introStandard, BOOK_PICKER_INTRO_STANDARD);
     assert.equal(
       book.editorialStandards.requiredClosingBrandLine,
       '这里是陈拾叁，陪你一起读书破万卷。',
@@ -82,7 +87,20 @@ test('new books use the post-book-002 visual and delivery standard', () => {
     assert.equal(videoLayout.header.fontSize, 44);
     assert.equal(videoLayout.header.text, '《测试书》');
     assert.equal(videoLayout.bookPickerIntro.enabled, true);
-    assert.equal(videoLayout.bookPickerIntro.standard, 'book-picker-v1');
+    assert.equal(videoLayout.bookPickerIntro.standard, BOOK_PICKER_INTRO_STANDARD);
+    assert.equal(videoLayout.bookPickerIntro.selectedLabel, '今天读这本');
+    assert.equal(
+      videoLayout.bookPickerIntro.durationSeconds,
+      BOOK_PICKER_INTRO_DEFAULT_SECONDS,
+    );
+    assert.equal(
+      getBookPickerSpokenLead(book.title),
+      '大家好，今天我们讲《测试书》。',
+    );
+    assert.deepEqual(
+      inspectBookPickerIntro({book, layout: videoLayout}).errors,
+      [],
+    );
     assert.ok(videoLayout.bookPickerIntro.candidateLabels.every((label) => !/[A-Za-z]/u.test(label)));
     assert.equal(videoLayout.keywordCard.minimumVisibleSeconds, 6);
     assert.equal(videoLayout.keywordCard.secondsPerCharacter, 0.35);
@@ -153,4 +171,53 @@ test('new books require the exact closing sentence once while legacy books stay 
   assert.doesNotThrow(() =>
     assertEditorialStandards(legacyContext, {segments: [{narration: '旧作品原有结尾。'}]}),
   );
+});
+
+test('book-picker validation preserves v1 projects while enforcing the v2 duration', () => {
+  const legacyBook = {editorialStandards: {introStandard: 'book-picker-v1'}};
+  const legacyLayout = {
+    bookPickerIntro: {
+      enabled: true,
+      standard: 'book-picker-v1',
+      durationSeconds: 3.8,
+      candidateLabels: ['红楼梦', '史记', '活着'],
+    },
+  };
+  assert.deepEqual(
+    inspectBookPickerIntro({book: legacyBook, layout: legacyLayout}).errors,
+    [],
+  );
+
+  const futureBook = {editorialStandards: {introStandard: BOOK_PICKER_INTRO_STANDARD}};
+  const shortV2Layout = {
+    bookPickerIntro: {
+      ...legacyLayout.bookPickerIntro,
+      standard: BOOK_PICKER_INTRO_STANDARD,
+      durationSeconds: 3.8,
+    },
+  };
+  assert.match(
+    inspectBookPickerIntro({book: futureBook, layout: shortV2Layout}).errors.join('\n'),
+    /6\.8～8\.8/u,
+  );
+});
+
+test('book-picker-v2 places the fixed lead before content with a stable gap', () => {
+  const normalLead = planBookPickerIntroTiming({
+    requestedDurationSeconds: 7.2,
+    spokenDurationSeconds: 2.1,
+    minimumLeadInSeconds: 0.5,
+    contentGapSeconds: 0.55,
+  });
+  assert.ok(Math.abs(normalLead.spokenStartSeconds - 4.55) < 1e-9);
+  assert.ok(Math.abs(normalLead.contentStartsSeconds - 7.2) < 1e-9);
+
+  const longLead = planBookPickerIntroTiming({
+    requestedDurationSeconds: 7.2,
+    spokenDurationSeconds: 7,
+    minimumLeadInSeconds: 0.5,
+    contentGapSeconds: 0.55,
+  });
+  assert.ok(Math.abs(longLead.spokenStartSeconds - 0.5) < 1e-9);
+  assert.ok(Math.abs(longLead.contentStartsSeconds - 8.05) < 1e-9);
 });

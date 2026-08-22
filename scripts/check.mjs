@@ -8,7 +8,9 @@ import {
   assertFixedNarration,
   assertScriptApproved,
   getBookContext,
+  getBookPickerSpokenLead,
   getPronunciationOverridesSha256,
+  inspectBookPickerIntro,
   readJson,
 } from './book-context.mjs';
 import {FIXED_TOPIC_TAGS, readPublishMaterials} from './publish-materials.mjs';
@@ -75,12 +77,15 @@ if (prepared.fps !== 30) errors.push(`Expected 30 FPS, got ${prepared.fps}.`);
 const runtimeRange = usesSourceLedStandard
   ? SOURCE_LED_DURATION_RANGE_SECONDS
   : {minimum: 570, maximum: 630};
+const editorialDurationSeconds =
+  prepared.totalDurationSeconds -
+  ((prepared.openingIntro?.durationInFrames ?? 0) / prepared.fps);
 if (
-  prepared.totalDurationSeconds < runtimeRange.minimum ||
-  prepared.totalDurationSeconds > runtimeRange.maximum
+  editorialDurationSeconds < runtimeRange.minimum ||
+  editorialDurationSeconds > runtimeRange.maximum
 ) {
   errors.push(
-    `Runtime ${(prepared.totalDurationSeconds / 60).toFixed(2)} minutes is outside ${runtimeRange.minimum}-${runtimeRange.maximum} seconds.`,
+    `Editorial runtime ${(editorialDurationSeconds / 60).toFixed(2)} minutes is outside ${runtimeRange.minimum}-${runtimeRange.maximum} seconds.`,
   );
 }
 if (prepared.deliveryMode !== 'audio-master') errors.push(`Unexpected delivery mode: ${prepared.deliveryMode}.`);
@@ -103,7 +108,8 @@ let expectedShotStart = 0;
 const visualKeys = new Set();
 for (const shot of prepared.shots ?? []) {
   const imagePath = path.join(context.publicDir, shot.image);
-  const seconds = shot.durationInFrames / prepared.fps;
+  const seconds =
+    (shot.durationInFrames - (shot.contentOffsetFrames ?? 0)) / prepared.fps;
   if (!existsSync(imagePath) || statSync(imagePath).size < 100_000) errors.push(`Missing or suspicious storyboard for ${shot.id}.`);
   if (usesSourceLedStandard) {
     if (seconds < 4 || seconds > 45) {
@@ -182,23 +188,43 @@ if (usesSourceLedStandard) {
   if (/(?:10\s*分钟|十分钟)读书/u.test(`${videoLayout.header?.text ?? ''}${cover.badge ?? ''}`)) {
     errors.push('The new channel standard must not display the 10-minute-reading label.');
   }
-  const picker = videoLayout.bookPickerIntro;
-  if (picker?.enabled !== true || picker?.standard !== BOOK_PICKER_INTRO_STANDARD) {
-    errors.push(`New books must enable ${BOOK_PICKER_INTRO_STANDARD}.`);
-  }
-  if (picker?.durationSeconds < 2.8 || picker?.durationSeconds > 4.8) {
-    errors.push('Book-picker intro must last 2.8-4.8 seconds and run under the spoken hook.');
-  }
-  if (!Array.isArray(picker?.candidateLabels) || picker.candidateLabels.length < 3) {
-    errors.push('Book-picker intro needs at least three Chinese candidate labels.');
-  } else if (picker.candidateLabels.some((label) => /[A-Za-z]/u.test(label))) {
-    errors.push('Book-picker candidate labels must not contain English.');
+  const pickerInspection = inspectBookPickerIntro({
+    book: context.book,
+    layout: videoLayout,
+  });
+  errors.push(...pickerInspection.errors);
+  if (pickerInspection.standard === BOOK_PICKER_INTRO_STANDARD) {
+    const expectedIntroText = getBookPickerSpokenLead(context.book.title);
+    if (timeline.intro?.standard !== BOOK_PICKER_INTRO_STANDARD) {
+      errors.push('book-picker-v2 must include its independently synthesized spoken lead.');
+    }
+    if (timeline.intro?.text !== expectedIntroText) {
+      errors.push(`The fixed spoken lead must be “${expectedIntroText}”`);
+    }
+    if (
+      prepared.openingIntro?.standard !== BOOK_PICKER_INTRO_STANDARD ||
+      prepared.openingIntro?.text !== expectedIntroText
+    ) {
+      errors.push('Prepared video is missing the book-picker-v2 timing metadata.');
+    }
+    if (
+      Math.abs(
+        (prepared.openingIntro?.durationInFrames ?? 0) / prepared.fps -
+          Number(timeline.intro?.contentStartsSeconds ?? 0),
+      ) > 1 / prepared.fps
+    ) {
+      errors.push('Opening animation and spoken-lead timing are out of sync.');
+    }
   }
   const firstLoop = approvedScript.contentFlow?.loops?.[0];
   const firstSceneIds = new Set(firstLoop?.concreteScene?.segmentIds ?? []);
   const firstScene = prepared.segments.find((segment) => firstSceneIds.has(segment.id));
   const deadline = Number(approvedScript.retentionPlan?.firstConcreteSceneDeadlineSeconds ?? 45);
-  if (!firstScene || firstScene.startFrame / prepared.fps > deadline) {
+  const contentStartFrame = prepared.openingIntro?.durationInFrames ?? 0;
+  if (
+    !firstScene ||
+    (firstScene.narrationStartFrame - contentStartFrame) / prepared.fps > deadline
+  ) {
     errors.push(`The first concrete scene must start within ${deadline} seconds.`);
   }
 }
@@ -296,7 +322,10 @@ if (errors.length) {
   for (const error of errors) console.error(`ERROR: ${error}`);
   process.exit(1);
 }
-const shotSeconds = prepared.shots.map((shot) => shot.durationInFrames / prepared.fps);
+const shotSeconds = prepared.shots.map(
+  (shot) =>
+    (shot.durationInFrames - (shot.contentOffsetFrames ?? 0)) / prepared.fps,
+);
 console.log(
   `PASS ${context.bookId}: ${prepared.segments.length} segments, ${prepared.shots.length} unique shots, ` +
     `${Math.min(...shotSeconds).toFixed(2)}-${Math.max(...shotSeconds).toFixed(2)}s per shot, ` +

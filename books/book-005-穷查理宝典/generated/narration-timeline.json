@@ -1,0 +1,154 @@
+{
+  "bookId": "book-005-穷查理宝典",
+  "scriptSha256": "8BFE3F207FC011DB28FF58E1F1CB8233785613A51494E5AEA477E4B16EBF3EC4",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [],
+  "pronunciationOverridesSha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+  "bookPickerIntroSha256": "46E48BBC377FB4AAC91604FBA3C5280E27515DA5F8886882AEA9058A31B09EF8",
+  "intro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《穷查理宝典》。",
+    "spokenStartSeconds": 3.44,
+    "spokenEndSeconds": 6.65,
+    "contentStartsSeconds": 7.2,
+    "requestedDurationSeconds": 7.2
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 612.2795833333333,
+  "segments": [
+    {
+      "id": "s01",
+      "section": "聪明人的陷阱",
+      "startSeconds": 7.2,
+      "endSeconds": 23.436374999999998,
+      "durationSeconds": 16.236375,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s02",
+      "section": "感恩节的求解",
+      "startSeconds": 23.856375,
+      "endSeconds": 48.73525,
+      "durationSeconds": 24.878875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s03",
+      "section": "误机之后",
+      "startSeconds": 49.15525,
+      "endSeconds": 77.48175,
+      "durationSeconds": 28.3265,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s04",
+      "section": "给大脑装一张格栅",
+      "startSeconds": 77.90175,
+      "endSeconds": 111.66983333333334,
+      "durationSeconds": 33.76808333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s05",
+      "section": "只有锤子的人",
+      "startSeconds": 112.08983333333335,
+      "endSeconds": 147.78370833333335,
+      "durationSeconds": 35.693875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s06",
+      "section": "飞行员为什么要反复模拟",
+      "startSeconds": 148.20370833333334,
+      "endSeconds": 184.85066666666665,
+      "durationSeconds": 36.64695833333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s07",
+      "section": "联邦快递的夜班",
+      "startSeconds": 185.27066666666664,
+      "endSeconds": 222.44641666666664,
+      "durationSeconds": 37.17575,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s08",
+      "section": "医生为什么相信自己",
+      "startSeconds": 222.86641666666662,
+      "endSeconds": 261.0644583333333,
+      "durationSeconds": 38.19804166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s09",
+      "section": "不是一个按钮的问题",
+      "startSeconds": 261.4844583333333,
+      "endSeconds": 301.8967083333333,
+      "durationSeconds": 40.41225,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s10",
+      "section": "麦道为什么当天重测",
+      "startSeconds": 302.31670833333334,
+      "endSeconds": 343.433875,
+      "durationSeconds": 41.11716666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s11",
+      "section": "心理学也可以救人",
+      "startSeconds": 343.853875,
+      "endSeconds": 384.67379166666666,
+      "durationSeconds": 40.819916666666664,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s12",
+      "section": "差点错过喜诗糖果",
+      "startSeconds": 385.0937916666667,
+      "endSeconds": 428.1827916666667,
+      "durationSeconds": 43.089,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s13",
+      "section": "等待真正的好球",
+      "startSeconds": 428.6027916666667,
+      "endSeconds": 471.84512500000005,
+      "durationSeconds": 43.242333333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s14",
+      "section": "承认美国航空是错误",
+      "startSeconds": 472.26512500000007,
+      "endSeconds": 513.4754583333334,
+      "durationSeconds": 41.21033333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s15",
+      "section": "把书带回今天",
+      "startSeconds": 513.8954583333334,
+      "endSeconds": 559.4454583333334,
+      "durationSeconds": 45.55,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s16",
+      "section": "模型不是护身符",
+      "startSeconds": 559.8654583333333,
+      "endSeconds": 610.8795833333334,
+      "durationSeconds": 51.014125,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

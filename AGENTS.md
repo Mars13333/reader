@@ -17,12 +17,12 @@ This repository produces original Chinese book-commentary videos. Start by readi
 - Keep visible text in standard spelling; use `pronunciationOverrides` only for TTS input.
 - Preserve the fixed Liu Fei voice and speech rate unless the repository standard is explicitly changed.
 - Keep formal `public` and `output` media; do not delete or overwrite another book's artifacts.
-- Do not modify book-001, book-002, or book-003 while adopting the new channel standard.
+- Do not modify book-001, book-002, book-003, or book-004 while adopting a new channel standard.
 - Do not retrofit the `book-jacket-v2` visual standard into book-001 or book-002. New books use a black first-frame canvas, a larger persistent book title, chapter-keyword reading time of at least six seconds, and only declared 3:4 and 4:3 cover deliveries.
 - For `book-jacket-v2` covers, the exact book title must be the largest visible text. Generate unlettered original artwork and let Remotion typeset the book title, author, and short recommendation line; do not ask image generation to spell Chinese.
 - New books remain vertical 9:16, remove the global “10分钟读书” label from persistent titles and covers, and keep the exact book title centered. End narration with exactly “这里是陈拾叁，陪你一起读书破万卷。”
 - Plan images from key source scenes, plots, concepts, analogies, and limitations, not from a fixed interval or fixed count. Every key moment needs a mapped illustration. Generated images must contain no English, letters, numbers, logos, watermarks, Chinese, or pseudo-text; code typesets required Chinese.
-- Enable the brief `book-picker-v1` intro for new books under the spoken hook. It uses original unlettered cover art and code-typeset titles; do not request an original-edition cover screenshot.
+- Enable the 6.8–8.8 second vertical `book-picker-v2` intro for new books. The engine speaks exactly “大家好，今天我们讲《书名》。” before the scripted hook, using the real title from `book.json`; never duplicate that sentence in `script.json`. The picker uses original unlettered cover art and code-typeset titles; do not request an original-edition cover screenshot. Existing `book-picker-v1` projects remain unchanged.
 
 ## Verification
 
