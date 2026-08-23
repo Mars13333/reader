@@ -1,0 +1,13 @@
+{
+  "design": "book-jacket-v2",
+  "image": "assets/cover/cover-art.png",
+  "bookTitle": "小狗钱钱",
+  "eyebrow": "博多·舍费尔 著",
+  "subtitle": "从愿望清单开始，让钱为你工作",
+  "badge": "陈拾叁读书",
+  "treatment": "bright",
+  "layouts": {
+    "portrait3x4": {"left": 72, "eyebrowTop": 78, "headlineTop": 220, "badgeTop": 1220, "artObjectPosition": "center 50%"},
+    "landscape4x3": {"left": 88, "eyebrowTop": 70, "headlineTop": 180, "badgeTop": 870, "artObjectPosition": "center 40%"}
+  }
+}

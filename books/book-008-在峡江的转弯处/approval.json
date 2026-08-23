@@ -1,0 +1,12 @@
+{
+  "bookId": "book-008-在峡江的转弯处",
+  "status": "approved",
+  "version": 1,
+  "scriptSha256": "5BA942BB87C32F17E8E10A959BC717DCD6CC5E555DC8FCBB57E9C89947ACFDAE",
+  "approvedAt": "2026-08-23T05:41:57.746Z",
+  "segments": 21,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

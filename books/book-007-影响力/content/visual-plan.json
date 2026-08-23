@@ -1,0 +1,152 @@
+{
+  "standard": "semantic-key-moments-v1",
+  "durationPolicy": "semantic-weighted-v1",
+  "visibleTextLanguage": "zh-CN",
+  "generatedTextPolicy": "no-text-in-generated-images",
+  "storyboardStandard": "portrait-2x2-9x16-v1",
+  "canvasAspectRatio": "9:16",
+  "panelLayout": "2x2",
+  "panelOrder": [
+    "top-left",
+    "top-right",
+    "bottom-left",
+    "bottom-right"
+  ],
+  "visualDirection": {
+    "style": "明亮电影感编辑插画，现实主义人物与象征性构图结合，暖琥珀与深钴蓝为主，细节清晰，统一光影",
+    "avoid": [
+      "英文",
+      "字母",
+      "数字",
+      "中文或任何生成式文字",
+      "标志、水印、品牌包装、屏幕伪文字",
+      "真实在世人物的可识别肖像",
+      "原版书封或书页"
+    ]
+  },
+  "keyMoments": [
+    {"id": "km01", "segmentId": "s01", "kind": "author-commentary", "anchor": "深夜被购物界面催促的人还未思考就伸手确认", "shotRef": "s01-01"},
+    {"id": "km02", "segmentId": "s01", "kind": "source-scene", "anchor": "珠宝店里滞销绿宝石误以双倍价格售出", "shotRef": "s01-02"},
+    {"id": "km03", "segmentId": "s01", "kind": "core-concept", "anchor": "价格信号把普通宝石在感知中变得耀眼", "shotRef": "s01-03"},
+    {"id": "km04", "segmentId": "s02", "kind": "source-scene", "anchor": "雌火鸡被发声的天敌模型触发照料反应", "shotRef": "s02-01"},
+    {"id": "km05", "segmentId": "s02", "kind": "source-scene", "anchor": "复印机前一句带理由的请求让排队者让路", "shotRef": "s02-02"},
+    {"id": "km06", "segmentId": "s03", "kind": "core-concept", "anchor": "关系、判断、行动三道路径汇入一个决定", "shotRef": "s03-01"},
+    {"id": "km07", "segmentId": "s04", "kind": "source-scene", "anchor": "实验室里乔主动递给陌生人一瓶可乐", "shotRef": "s04-01"},
+    {"id": "km08", "segmentId": "s04", "kind": "source-scene", "anchor": "受赠者随后面对一叠抽奖券请求", "shotRef": "s04-02"},
+    {"id": "km09", "segmentId": "s05", "kind": "source-scene", "anchor": "童子军先推销昂贵马戏票遭拒", "shotRef": "s05-01"},
+    {"id": "km10", "segmentId": "s05", "kind": "source-scene", "anchor": "童子军退一步递出巧克力，成年人改口购买", "shotRef": "s05-02"},
+    {"id": "km11", "segmentId": "s06", "kind": "source-scene", "anchor": "熟人客厅聚会中宾客围坐挑选家居用品", "shotRef": "s06-01"},
+    {"id": "km12", "segmentId": "s06", "kind": "core-concept", "anchor": "把热情的主办者与桌上的商品在视觉上分开", "shotRef": "s06-02"},
+    {"id": "km13", "segmentId": "s07", "kind": "source-scene", "anchor": "北京餐厅顾客因热门提示集中点同一道菜", "shotRef": "s07-01"},
+    {"id": "km14", "segmentId": "s07", "kind": "modern-analogy", "anchor": "现代门店外人为长队与店内空座形成反差", "shotRef": "s07-02"},
+    {"id": "km15", "segmentId": "s08", "kind": "source-scene", "anchor": "街头突发状况中围观者彼此观察却无人先动", "shotRef": "s08-01"},
+    {"id": "km16", "segmentId": "s08", "kind": "source-scene", "anchor": "求助者明确指向一人，该人立刻拿出电话行动", "shotRef": "s08-02"},
+    {"id": "km17", "segmentId": "s09", "kind": "source-scene", "anchor": "米尔格拉姆实验室里被试在研究者催促下操作设备", "shotRef": "s09-01"},
+    {"id": "km18", "segmentId": "s09", "kind": "source-scene", "anchor": "护士接听自称医生的电话并准备过量药物", "shotRef": "s09-02"},
+    {"id": "km19", "segmentId": "s10", "kind": "core-concept", "anchor": "专长证据与利益动机放在天平两端核对", "shotRef": "s10-01"},
+    {"id": "km20", "segmentId": "s10", "kind": "modern-analogy", "anchor": "褪去制服光环后只剩桌面证据供独立判断", "shotRef": "s10-02"},
+    {"id": "km21", "segmentId": "s11", "kind": "source-scene", "anchor": "手机发售队伍中女子用装现金的手提包交换前排位置", "shotRef": "s11-01"},
+    {"id": "km22", "segmentId": "s11", "kind": "source-scene", "anchor": "实验桌上一只罐子只剩少量饼干，另一只装得充足", "shotRef": "s11-02"},
+    {"id": "km23", "segmentId": "s11", "kind": "modern-analogy", "anchor": "拥挤抢购现场让普通商品显得异常珍贵", "shotRef": "s11-03"},
+    {"id": "km24", "segmentId": "s12", "kind": "author-commentary", "anchor": "消费者从购物设备前退开，闭眼平复情绪", "shotRef": "s12-01"},
+    {"id": "km25", "segmentId": "s12", "kind": "modern-analogy", "anchor": "收藏展示柜与日常使用场景分成两条选择路径", "shotRef": "s12-02"},
+    {"id": "km26", "segmentId": "s13", "kind": "source-scene", "anchor": "海滩上陌生人离开前请邻座照看收音机", "shotRef": "s13-01"},
+    {"id": "km27", "segmentId": "s13", "kind": "source-scene", "anchor": "假小偷拿走收音机，承诺过的旁观者起身拦阻", "shotRef": "s13-02"},
+    {"id": "km28", "segmentId": "s14", "kind": "source-scene", "anchor": "住户轻松接受院前很小的安全提示牌", "shotRef": "s14-01"},
+    {"id": "km29", "segmentId": "s14", "kind": "source-scene", "anchor": "同一住户后来面对遮住房屋的巨大告示板", "shotRef": "s14-02"},
+    {"id": "km30", "segmentId": "s14", "kind": "modern-analogy", "anchor": "现代订阅流程从一个小动作逐级变成沉重负担", "shotRef": "s14-03"},
+    {"id": "km31", "segmentId": "s15", "kind": "source-scene", "anchor": "莎拉站在两段关系的分岔路口作出艰难选择", "shotRef": "s15-01"},
+    {"id": "km32", "segmentId": "s15", "kind": "source-scene", "anchor": "加油站里驾驶者发现招牌与油泵价格不一致后放回油枪", "shotRef": "s15-02"},
+    {"id": "km33", "segmentId": "s16", "kind": "source-scene", "anchor": "两名实验参与者戴耳机同步敲击桌面", "shotRef": "s16-01"},
+    {"id": "km34", "segmentId": "s16", "kind": "source-scene", "anchor": "整齐行进的小组在合作任务中彼此支持", "shotRef": "s16-02"},
+    {"id": "km35", "segmentId": "s16", "kind": "limitation", "anchor": "紧密小圈子用身体遮挡圈内成员的明显违规", "shotRef": "s16-03"},
+    {"id": "km36", "segmentId": "s17", "kind": "core-concept", "anchor": "关系、证据、行动三枚透镜依次检查同一请求", "shotRef": "s17-01"},
+    {"id": "km37", "segmentId": "s17", "kind": "modern-analogy", "anchor": "现代消费者暂停倒计时界面并重新审视选择", "shotRef": "s17-02"},
+    {"id": "km38", "segmentId": "s18", "kind": "source-scene", "anchor": "诚实销售员说明电视确为最后一台，顾客次日回来核实", "shotRef": "s18-01"},
+    {"id": "km39", "segmentId": "s18", "kind": "limitation", "anchor": "仓库里藏着同款商品，店员却在前台伪造最后一件", "shotRef": "s18-02"},
+    {"id": "km40", "segmentId": "s18", "kind": "limitation", "anchor": "可靠捷径像明亮桥梁，虚假信号像剪断桥索的手", "shotRef": "s18-03"}
+  ],
+  "assetReview": {
+    "status": "passed",
+    "semanticCoverageReviewed": true,
+    "noEnglishVisible": true
+  },
+  "segments": [
+    {"id": "s01", "shots": [
+      {"image": "assets/storyboards/sheet-01.png", "panel": 0, "label": "未思考先确认", "purpose": "author-commentary", "weight": 1.2},
+      {"image": "assets/storyboards/sheet-01.png", "panel": 1, "label": "双倍价格售罄", "purpose": "source-scene", "weight": 2.4},
+      {"image": "assets/storyboards/sheet-01.png", "panel": 2, "label": "价格改变感知", "purpose": "core-concept", "weight": 1.4}
+    ]},
+    {"id": "s02", "shots": [
+      {"image": "assets/storyboards/sheet-01.png", "panel": 3, "label": "火鸡自动反应", "purpose": "source-scene", "weight": 2.0},
+      {"image": "assets/storyboards/sheet-02.png", "panel": 0, "label": "复印机因为实验", "purpose": "source-scene", "weight": 2.0}
+    ]},
+    {"id": "s03", "shots": [
+      {"image": "assets/storyboards/sheet-02.png", "panel": 1, "label": "三类决策任务", "purpose": "core-concept", "weight": 3.0}
+    ]},
+    {"id": "s04", "shots": [
+      {"image": "assets/storyboards/sheet-02.png", "panel": 2, "label": "乔递来可乐", "purpose": "source-scene", "weight": 1.8},
+      {"image": "assets/storyboards/sheet-02.png", "panel": 3, "label": "可乐后的抽奖券", "purpose": "source-scene", "weight": 2.2}
+    ]},
+    {"id": "s05", "shots": [
+      {"image": "assets/storyboards/sheet-03.png", "panel": 0, "label": "先推销马戏票", "purpose": "source-scene", "weight": 1.7},
+      {"image": "assets/storyboards/sheet-03.png", "panel": 1, "label": "退到巧克力", "purpose": "source-scene", "weight": 2.3}
+    ]},
+    {"id": "s06", "shots": [
+      {"image": "assets/storyboards/sheet-03.png", "panel": 2, "label": "熟人家庭聚会", "purpose": "source-scene", "weight": 2.2},
+      {"image": "assets/storyboards/sheet-03.png", "panel": 3, "label": "分开人和交易", "purpose": "core-concept", "weight": 1.8}
+    ]},
+    {"id": "s07", "shots": [
+      {"image": "assets/storyboards/sheet-04.png", "panel": 0, "label": "餐厅热门菜", "purpose": "source-scene", "weight": 2.1},
+      {"image": "assets/storyboards/sheet-04.png", "panel": 1, "label": "人为长队", "purpose": "modern-analogy", "weight": 1.9}
+    ]},
+    {"id": "s08", "shots": [
+      {"image": "assets/storyboards/sheet-04.png", "panel": 2, "label": "人群彼此观望", "purpose": "source-scene", "weight": 2.0},
+      {"image": "assets/storyboards/sheet-04.png", "panel": 3, "label": "点名具体求助", "purpose": "source-scene", "weight": 2.0}
+    ]},
+    {"id": "s09", "shots": [
+      {"image": "assets/storyboards/sheet-05.png", "panel": 0, "label": "权威催促电击", "purpose": "source-scene", "weight": 2.3},
+      {"image": "assets/storyboards/sheet-05.png", "panel": 1, "label": "护士接到电话", "purpose": "source-scene", "weight": 1.7}
+    ]},
+    {"id": "s10", "shots": [
+      {"image": "assets/storyboards/sheet-05.png", "panel": 2, "label": "专长与利益核对", "purpose": "core-concept", "weight": 2.2},
+      {"image": "assets/storyboards/sheet-05.png", "panel": 3, "label": "只留下证据", "purpose": "modern-analogy", "weight": 1.8}
+    ]},
+    {"id": "s11", "shots": [
+      {"image": "assets/storyboards/sheet-06.png", "panel": 0, "label": "手提包换位置", "purpose": "source-scene", "weight": 2.4},
+      {"image": "assets/storyboards/sheet-06.png", "panel": 1, "label": "稀缺饼干", "purpose": "source-scene", "weight": 2.0},
+      {"image": "assets/storyboards/sheet-06.png", "panel": 2, "label": "竞争放大价值", "purpose": "modern-analogy", "weight": 1.3}
+    ]},
+    {"id": "s12", "shots": [
+      {"image": "assets/storyboards/sheet-06.png", "panel": 3, "label": "离开界面冷静", "purpose": "author-commentary", "weight": 2.2},
+      {"image": "assets/storyboards/sheet-07.png", "panel": 0, "label": "占有还是使用", "purpose": "modern-analogy", "weight": 1.8}
+    ]},
+    {"id": "s13", "shots": [
+      {"image": "assets/storyboards/sheet-07.png", "panel": 1, "label": "答应照看收音机", "purpose": "source-scene", "weight": 1.8},
+      {"image": "assets/storyboards/sheet-07.png", "panel": 2, "label": "起身阻止偷窃", "purpose": "source-scene", "weight": 2.2}
+    ]},
+    {"id": "s14", "shots": [
+      {"image": "assets/storyboards/sheet-07.png", "panel": 3, "label": "小型院前提示", "purpose": "source-scene", "weight": 1.5},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 0, "label": "巨大草坪告示", "purpose": "source-scene", "weight": 2.3},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 1, "label": "现代承诺升级", "purpose": "modern-analogy", "weight": 1.4}
+    ]},
+    {"id": "s15", "shots": [
+      {"image": "assets/storyboards/sheet-08.png", "panel": 2, "label": "关系分岔选择", "purpose": "source-scene", "weight": 2.0},
+      {"image": "assets/storyboards/sheet-08.png", "panel": 3, "label": "放回油枪", "purpose": "source-scene", "weight": 2.0}
+    ]},
+    {"id": "s16", "shots": [
+      {"image": "assets/storyboards/sheet-09.png", "panel": 0, "label": "同步敲击", "purpose": "source-scene", "weight": 1.7},
+      {"image": "assets/storyboards/sheet-09.png", "panel": 1, "label": "齐步合作", "purpose": "source-scene", "weight": 1.7},
+      {"image": "assets/storyboards/sheet-09.png", "panel": 2, "label": "圈内包庇", "purpose": "limitation", "weight": 1.6}
+    ]},
+    {"id": "s17", "shots": [
+      {"image": "assets/storyboards/sheet-09.png", "panel": 3, "label": "三次检查", "purpose": "core-concept", "weight": 2.2},
+      {"image": "assets/storyboards/sheet-10.png", "panel": 0, "label": "暂停重新判断", "purpose": "modern-analogy", "weight": 1.8}
+    ]},
+    {"id": "s18", "shots": [
+      {"image": "assets/storyboards/sheet-10.png", "panel": 1, "label": "核实最后一台", "purpose": "source-scene", "weight": 2.0},
+      {"image": "assets/storyboards/sheet-10.png", "panel": 2, "label": "伪造稀缺库存", "purpose": "limitation", "weight": 1.8},
+      {"image": "assets/storyboards/sheet-10.png", "panel": 3, "label": "保护可靠捷径", "purpose": "limitation", "weight": 2.2}
+    ]}
+  ]
+}

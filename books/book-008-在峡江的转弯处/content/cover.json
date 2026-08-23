@@ -1,0 +1,25 @@
+{
+  "design": "book-jacket-v2",
+  "image": "assets/cover/cover-art.png",
+  "bookTitle": "在峡江的转弯处",
+  "eyebrow": "陈行甲 著",
+  "subtitle": "方向不变，人生也可以转弯",
+  "badge": "陈拾叁读书",
+  "treatment": "bright",
+  "layouts": {
+    "portrait3x4": {
+      "left": 72,
+      "eyebrowTop": 78,
+      "headlineTop": 220,
+      "badgeTop": 1220,
+      "artObjectPosition": "center 50%"
+    },
+    "landscape4x3": {
+      "left": 88,
+      "eyebrowTop": 70,
+      "headlineTop": 180,
+      "badgeTop": 870,
+      "artObjectPosition": "center 40%"
+    }
+  }
+}

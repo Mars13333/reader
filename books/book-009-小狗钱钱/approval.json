@@ -1,0 +1,12 @@
+{
+  "bookId": "book-009-小狗钱钱",
+  "status": "approved",
+  "version": 1,
+  "scriptSha256": "C14B86276FDD4FCA5D1B85BBD85A2C961DD7DB991FFA3710168BA790FBD895C7",
+  "approvedAt": "2026-08-23T09:21:11.779Z",
+  "segments": 14,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

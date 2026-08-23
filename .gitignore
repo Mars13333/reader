@@ -8,3 +8,4 @@ books/*/output/preview.mp4
 !.env.example
 source/*
 !source/README.md
+books/*/output/*.zip

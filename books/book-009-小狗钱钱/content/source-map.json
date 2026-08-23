@@ -1,0 +1,66 @@
+{
+  "book": "小狗钱钱",
+  "author": "博多·舍费尔",
+  "sourceMode": "local-source",
+  "sourcePath": "source/小狗钱钱.txt",
+  "sourceSha256": "123B6C833CA3D1F94F48D9BE51ADD1BD0E746C351910050F6677305E95887DCB",
+  "sourceEncoding": "UTF-8",
+  "chapterLines": {
+    "前言": "5-149",
+    "第一章 白色的拉布拉多猎狗": "151-291",
+    "第二章 梦想储蓄罐和梦想像册": "293-471",
+    "第三章 达瑞，一个很能挣钱的男孩": "473-653",
+    "第四章 表哥的挣钱之道": "655-848",
+    "第五章 钱钱以前的主人": "850-978",
+    "第六章 债务——爸妈犯下的错误": "980-1106",
+    "第七章 在金先生家": "1108-1278",
+    "第八章 陶穆太太": "1282-1400",
+    "第九章 冒险经历": "1404-1522",
+    "第十章 在旧地下室里": "1524-1638",
+    "第十一章 爸爸妈妈不明白": "1640-1750",
+    "第十二章 陶穆太太归来": "1752-1922",
+    "第十三章 巨大的危机": "1924-2056",
+    "第十四章 投资俱乐部": "2058-2278",
+    "第十五章 演讲": "2280-2368",
+    "第十六章 俱乐部的投资行动": "2370-2552",
+    "第十七章 爷爷奶奶害怕风险": "2556-2721",
+    "第十八章 大冒险的结局": "2723-2803",
+    "成人后记与附录": "2805-2874"
+  },
+  "terminology": [
+    {"canonical": "吉娅", "pronunciation": "jí yà", "requiredInScript": true, "avoid": ["吉亚", "吉雅"], "sourceRefs": ["151-2803"]},
+    {"canonical": "钱钱", "pronunciation": "qián qián", "requiredInScript": true, "avoid": ["饯钱", "钱饯"], "sourceRefs": ["185-2803"]},
+    {"canonical": "金先生", "pronunciation": "jīn xiān sheng", "requiredInScript": true, "avoid": ["金先声"], "sourceRefs": ["850-2803"]},
+    {"canonical": "陶穆太太", "pronunciation": "táo mù tài tai", "requiredInScript": true, "avoid": ["陶穆大太", "朗穆太太"], "sourceRefs": ["1282-2749"]},
+    {"canonical": "汉内坎普", "pronunciation": "hàn nèi kǎn pǔ", "requiredInScript": true, "avoid": ["汉内故普", "汉内坎坎普"], "sourceRefs": ["778-1920"]},
+    {"canonical": "马塞尔", "pronunciation": "mǎ sài ěr", "requiredInScript": true, "avoid": ["马赛尔"], "sourceRefs": ["669-2765"]},
+    {"canonical": "博多·舍费尔", "pronunciation": "bó duō shě fèi ěr", "requiredInScript": false, "avoid": ["博多·令费尔"], "sourceRefs": ["5-149"]}
+  ],
+  "selfReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-23T12:30:00+08:00",
+    "scriptSha256": "C14B86276FDD4FCA5D1B85BBD85A2C961DD7DB991FFA3710168BA790FBD895C7",
+    "checks": {
+      "terminologyVerified": true,
+      "openingRetentionReviewed": true,
+      "retentionStructureReviewed": true,
+      "sentenceFluencyReviewed": true,
+      "sourceConsistencyReviewed": true,
+      "storyCoverageReviewed": true,
+      "contentFlowReviewed": true,
+      "contentLayerDistinctionReviewed": true,
+      "semanticVisualMomentsReviewed": true,
+      "closingBrandLineReviewed": true,
+      "originalityAndCommentaryReviewed": true
+    }
+  },
+  "editorialRules": [
+    "成片是原创评论，不是有声书或逐章复述。",
+    "人物、情节、反转、结局和作品判断只以绑定原文为内容事实来源。",
+    "不限题材，默认服务没读过原著的观众；先让观众进入具体场景，再进行分析。",
+    "核心内容链为：现实问题→具体场景→原著核心案例或剧情→解释原理→回到现实→补充局限。",
+    "自然提示原著内容、现代类比和作者判断的边界，但不要切成生硬的标签段。",
+    "整条口播最后一句固定为“这里是陈拾叁，陪你一起读书破万卷。”。",
+    "不展示原书内页、连续长段文字、影视剧照或演员形象。"
+  ]
+}

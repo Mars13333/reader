@@ -1,0 +1,128 @@
+{
+  "standard": "semantic-key-moments-v1",
+  "durationPolicy": "semantic-weighted-v1",
+  "visibleTextLanguage": "zh-CN",
+  "generatedTextPolicy": "no-text-in-generated-images",
+  "storyboardStandard": "portrait-2x2-9x16-v1",
+  "canvasAspectRatio": "9:16",
+  "panelLayout": "2x2",
+  "panelOrder": ["top-left", "top-right", "bottom-left", "bottom-right"],
+  "visualDirection": {
+    "style": "原创明亮手绘电影感儿童成长寓言插画，欧洲郊区生活质感，人物比例自然，柔和线条与通透日光，跨图保持吉娅与白色拉布拉多犬钱钱的一致外形。",
+    "characterContinuity": "吉娅是十二岁欧洲女孩，栗色齐肩发，朴素蓝绿色日常服装；钱钱是体型匀称、聪明温和的白色拉布拉多犬。",
+    "lighting": "明亮日光或充足室内天光，暗部保留衣纹、肤色和环境细节。",
+    "avoid": [
+      "英文、字母、数字、中文、任何生成式文字、伪文字和乱码",
+      "标志、商标、水印、签名、书页截图和原版封面",
+      "影视演员形象、照片拼贴、黑暗压抑主色、重度暗角和压死阴影"
+    ]
+  },
+  "storyboardSheets": [
+    {
+      "id": "sheet-01",
+      "image": "assets/storyboards/sheet-01.png",
+      "panels": [
+        "现代成年人面对月底空钱包与三个无字收纳容器，停下来重新分配收入",
+        "吉娅在带花园的房子门前发现受伤的白色拉布拉多犬",
+        "吉娅准备拨电话买唱片，白色拉布拉多犬抬爪阻止她",
+        "吉娅在房间制作无字梦想像册和两个无字储蓄罐"
+      ]
+    },
+    {
+      "id": "sheet-02",
+      "image": "assets/storyboards/sheet-02.png",
+      "panels": [
+        "吉娅在晨光中写无字成功日记，钱钱守在脚边",
+        "男孩在冬日清晨替邻居送无字报纸并收集垃圾袋",
+        "吉娅牵着钱钱和拿破仑向汉内坎普夫妇展示训练成果",
+        "金先生在明亮客厅与钱钱重逢，同时温和地让吉娅继续照顾它"
+      ]
+    },
+    {
+      "id": "sheet-03",
+      "image": "assets/storyboards/sheet-03.png",
+      "panels": [
+        "会下金色蛋的白鹅与三个无字容器构成温暖寓言画面",
+        "父母在厨房桌边被空白账单压得焦虑，吉娅和金先生帮助他们重新安排",
+        "吉娅、马塞尔和莫尼卡在地下室发现装有金币金条和首饰的木箱，警察手电光从门口照入",
+        "陶穆太太与三个孩子围坐圆桌，用金币、空白图表和不同颜色石子理解分散投资"
+      ]
+    },
+    {
+      "id": "sheet-04",
+      "image": "assets/storyboards/sheet-04.png",
+      "panels": [
+        "基金下跌时三个孩子看着无字波动曲线忧虑，陶穆太太沉着解释并留出现金盒",
+        "吉娅带着白色拉布拉多犬站在礼堂舞台中央，观众鼓掌",
+        "植物重新覆盖的秘密据点里，吉娅与钱钱安静对望，感受最后一次谈话",
+        "吉娅含泪拥抱钱钱，林间暖光穿过树叶，表达感激而非绝望"
+      ]
+    },
+    {
+      "id": "sheet-05",
+      "image": "assets/storyboards/sheet-05.png",
+      "panels": [
+        "现代成年人把收入放入生活、目标、长期积累三个无字透明容器",
+        "现代投资者面对高低起伏的无字市场曲线与风浪，手边保留应急现金盒",
+        "一双手谨慎比较空白贷款合同、住房钥匙与应急储蓄罐，强调条件不同",
+        "清晨开阔道路上，成年人带着白色拉布拉多犬向前走，留下稳定而克制的希望"
+      ]
+    },
+    {
+      "id": "sheet-06",
+      "image": "assets/storyboards/sheet-06.png",
+      "panels": [
+        "陶穆太太与三个孩子用无字木片和容器理解分散配置与可执行边界",
+        "吉娅与父母、金先生围绕房屋模型、空白合同和应急储备讨论家庭债务条件",
+        "风雨窗前密封的应急储备罐保持不动，孩子们在后景承受市场波动",
+        "吉娅在舞台侧幕拿着无字笔记本准备演讲，钱钱安静陪伴"
+      ]
+    }
+  ],
+  "keyMoments": [
+    {"id": "km-01", "segmentId": "seg-01", "kind": "author-commentary", "anchor": "收入增长前先建立分配规则的现实问题", "shotRef": "seg-01-01"},
+    {"id": "km-02", "segmentId": "seg-02", "kind": "source-scene", "anchor": "吉娅在新家门前救下受伤的钱钱", "shotRef": "seg-02-01"},
+    {"id": "km-03", "segmentId": "seg-02", "kind": "source-scene", "anchor": "钱钱在吉娅花光零用钱买唱片前开口阻止", "shotRef": "seg-02-02"},
+    {"id": "km-04", "segmentId": "seg-03", "kind": "source-scene", "anchor": "吉娅制作梦想像册和梦想储蓄罐", "shotRef": "seg-03-01"},
+    {"id": "km-05", "segmentId": "seg-04", "kind": "source-scene", "anchor": "吉娅开始写成功日记", "shotRef": "seg-04-01"},
+    {"id": "km-06", "segmentId": "seg-04", "kind": "core-concept", "anchor": "达瑞从替邻居取报纸和倒垃圾开始解决问题", "shotRef": "seg-04-02"},
+    {"id": "km-07", "segmentId": "seg-05", "kind": "source-scene", "anchor": "吉娅用遛狗和训练拿破仑获得第一位顾客", "shotRef": "seg-05-01"},
+    {"id": "km-08", "segmentId": "seg-06", "kind": "source-scene", "anchor": "金先生与钱钱重逢后让它继续留在吉娅身边", "shotRef": "seg-06-01"},
+    {"id": "km-09", "segmentId": "seg-07", "kind": "core-concept", "anchor": "会下金蛋的鹅象征本金与收益", "shotRef": "seg-07-01"},
+    {"id": "km-10", "segmentId": "seg-08", "kind": "source-scene", "anchor": "父母房贷危机爆发后接受金先生帮助重做现金流", "shotRef": "seg-08-01"},
+    {"id": "km-11", "segmentId": "seg-09", "kind": "source-scene", "anchor": "孩子们在被盗房屋地下室发现财宝并遇见警察", "shotRef": "seg-09-01"},
+    {"id": "km-12", "segmentId": "seg-10", "kind": "core-concept", "anchor": "金钱魔法师投资俱乐部学习分散投资", "shotRef": "seg-10-01"},
+    {"id": "km-13", "segmentId": "seg-11", "kind": "source-scene", "anchor": "基金下跌约四分之一后孩子们第一次面对真实波动", "shotRef": "seg-11-01"},
+    {"id": "km-14", "segmentId": "seg-12", "kind": "source-scene", "anchor": "吉娅克服恐惧带着钱钱完成公开演讲", "shotRef": "seg-12-01"},
+    {"id": "km-15", "segmentId": "seg-13", "kind": "source-scene", "anchor": "秘密据点里钱钱最后一次开口", "shotRef": "seg-13-01"},
+    {"id": "km-16", "segmentId": "seg-13", "kind": "source-scene", "anchor": "吉娅含泪拥抱钱钱并把失落转为感激", "shotRef": "seg-13-02"},
+    {"id": "km-17", "segmentId": "seg-14", "kind": "modern-analogy", "anchor": "把今天的收入分成生活、目标和长期积累三个容器", "shotRef": "seg-14-01"},
+    {"id": "km-18", "segmentId": "seg-14", "kind": "limitation", "anchor": "市场会长期波动，不能把书中收益数字当成承诺", "shotRef": "seg-14-02"},
+    {"id": "km-19", "segmentId": "seg-14", "kind": "limitation", "anchor": "债务处理必须依据合同、利率和应急能力重新判断", "shotRef": "seg-14-03"},
+    {"id": "km-20", "segmentId": "seg-10", "kind": "core-concept", "anchor": "先定边界和期限，再选择自己能够理解和执行的投资工具", "shotRef": "seg-10-02"},
+    {"id": "km-21", "segmentId": "seg-08", "kind": "limitation", "anchor": "家庭债务安排还要同时考虑住房责任、合同条件和应急储备", "shotRef": "seg-08-02"},
+    {"id": "km-22", "segmentId": "seg-11", "kind": "limitation", "anchor": "承受市场波动的前提之一是保留随时可用的现金储备", "shotRef": "seg-11-02"},
+    {"id": "km-23", "segmentId": "seg-12", "kind": "source-scene", "anchor": "吉娅在正式登台前拿着准备材料克服恐惧，钱钱在旁陪伴", "shotRef": "seg-12-02"}
+  ],
+  "assetReview": {
+    "status": "passed",
+    "semanticCoverageReviewed": true,
+    "noEnglishVisible": true
+  },
+  "segments": [
+    {"id": "seg-01", "shots": [{"image": "assets/storyboards/sheet-01.png", "panel": 0, "label": "月底停下消费，重新分配已有收入", "purpose": "author-commentary", "weight": 1}]},
+    {"id": "seg-02", "shots": [{"image": "assets/storyboards/sheet-01.png", "panel": 1, "label": "吉娅在新家门前救下受伤的钱钱", "purpose": "source-scene", "weight": 3}, {"image": "assets/storyboards/sheet-01.png", "panel": 2, "label": "钱钱在唱片购买前第一次开口", "purpose": "source-scene", "weight": 2}]},
+    {"id": "seg-03", "shots": [{"image": "assets/storyboards/sheet-01.png", "panel": 3, "label": "梦想像册与两个梦想储蓄罐", "purpose": "source-scene", "weight": 2}]},
+    {"id": "seg-04", "shots": [{"image": "assets/storyboards/sheet-02.png", "panel": 0, "label": "吉娅在晨光中写成功日记", "purpose": "source-scene", "weight": 2}, {"image": "assets/storyboards/sheet-02.png", "panel": 1, "label": "达瑞替邻居解决取报纸与倒垃圾的麻烦", "purpose": "core-concept", "weight": 2}]},
+    {"id": "seg-05", "shots": [{"image": "assets/storyboards/sheet-02.png", "panel": 2, "label": "吉娅训练拿破仑并获得第一份工作", "purpose": "source-scene", "weight": 2}]},
+    {"id": "seg-06", "shots": [{"image": "assets/storyboards/sheet-02.png", "panel": 3, "label": "金先生与钱钱重逢并信任吉娅", "purpose": "source-scene", "weight": 2}]},
+    {"id": "seg-07", "shots": [{"image": "assets/storyboards/sheet-03.png", "panel": 0, "label": "会下金蛋的鹅解释本金与收益", "purpose": "core-concept", "weight": 3}]},
+    {"id": "seg-08", "shots": [{"image": "assets/storyboards/sheet-03.png", "panel": 1, "label": "家庭债务危机后重新安排现金流", "purpose": "source-scene", "weight": 3}, {"image": "assets/storyboards/sheet-06.png", "panel": 1, "label": "住房责任、合同条件与应急储备共同约束债务安排", "purpose": "limitation", "weight": 2}]},
+    {"id": "seg-09", "shots": [{"image": "assets/storyboards/sheet-03.png", "panel": 2, "label": "地下室财宝与赶到现场的警察", "purpose": "source-scene", "weight": 2}]},
+    {"id": "seg-10", "shots": [{"image": "assets/storyboards/sheet-03.png", "panel": 3, "label": "金钱魔法师俱乐部学习分散投资", "purpose": "core-concept", "weight": 3}, {"image": "assets/storyboards/sheet-06.png", "panel": 0, "label": "先定投入边界，再选择能够理解和执行的工具", "purpose": "core-concept", "weight": 2}]},
+    {"id": "seg-11", "shots": [{"image": "assets/storyboards/sheet-04.png", "panel": 0, "label": "基金下跌时保留长期视角与现金储备", "purpose": "source-scene", "weight": 3}, {"image": "assets/storyboards/sheet-06.png", "panel": 2, "label": "市场风雨中保留可随时动用的现金储备", "purpose": "limitation", "weight": 2}]},
+    {"id": "seg-12", "shots": [{"image": "assets/storyboards/sheet-06.png", "panel": 3, "label": "吉娅在侧幕克服登台前的恐惧", "purpose": "source-scene", "weight": 2}, {"image": "assets/storyboards/sheet-04.png", "panel": 1, "label": "吉娅带着钱钱站上礼堂讲台", "purpose": "source-scene", "weight": 3}]},
+    {"id": "seg-13", "shots": [{"image": "assets/storyboards/sheet-04.png", "panel": 2, "label": "秘密据点里的最后一次谈话", "purpose": "source-scene", "weight": 3}, {"image": "assets/storyboards/sheet-04.png", "panel": 3, "label": "吉娅含泪拥抱钱钱并心存感激", "purpose": "source-scene", "weight": 2}]},
+    {"id": "seg-14", "shots": [{"image": "assets/storyboards/sheet-05.png", "panel": 0, "label": "现代收入的三个容器", "purpose": "modern-analogy", "weight": 2}, {"image": "assets/storyboards/sheet-05.png", "panel": 1, "label": "收益承诺无法消除市场风浪", "purpose": "limitation", "weight": 2}, {"image": "assets/storyboards/sheet-05.png", "panel": 2, "label": "债务合同与应急储备必须结合现实判断", "purpose": "limitation", "weight": 2}, {"image": "assets/storyboards/sheet-05.png", "panel": 3, "label": "带着责任感继续向前", "purpose": "closing", "weight": 1}]}
+  ]
+}

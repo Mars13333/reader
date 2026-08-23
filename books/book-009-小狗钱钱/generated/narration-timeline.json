@@ -1,0 +1,159 @@
+{
+  "bookId": "book-009-小狗钱钱",
+  "scriptSha256": "C14B86276FDD4FCA5D1B85BBD85A2C961DD7DB991FFA3710168BA790FBD895C7",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [
+    {
+      "term": "吉娅",
+      "ttsText": "吉亚",
+      "pronunciation": "jí yà"
+    },
+    {
+      "term": "陶穆太太",
+      "ttsText": "桃木太太",
+      "pronunciation": "táo mù tài tai"
+    },
+    {
+      "term": "马塞尔",
+      "ttsText": "马赛尔",
+      "pronunciation": "mǎ sài ěr"
+    },
+    {
+      "term": "汉内坎普",
+      "ttsText": "汉内砍普",
+      "pronunciation": "hàn nèi kǎn pǔ"
+    }
+  ],
+  "pronunciationOverridesSha256": "1A9304FD8EAF10CD7E11B14DC3E9724F7715A1B83DE65DF7A54E06B5E32A75F6",
+  "bookPickerIntroSha256": "1252AEBC4CBBB46478CD9B4D9AF8C574A7389C232D702E3DC000178DB659A1FB",
+  "intro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《小狗钱钱》。",
+    "spokenStartSeconds": 3.3728333333333333,
+    "spokenEndSeconds": 6.65,
+    "contentStartsSeconds": 7.2,
+    "requestedDurationSeconds": 7.2
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 573.0150416666667,
+  "segments": [
+    {
+      "id": "seg-01",
+      "section": "钱为什么留不下来",
+      "startSeconds": 7.2,
+      "endSeconds": 26.634208333333333,
+      "durationSeconds": 19.434208333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-02",
+      "section": "一只狗叫住了她",
+      "startSeconds": 27.054208333333335,
+      "endSeconds": 52.19958333333334,
+      "durationSeconds": 25.145375,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-03",
+      "section": "把想要变成看得见的目标",
+      "startSeconds": 52.61958333333334,
+      "endSeconds": 89.21558333333334,
+      "durationSeconds": 36.596,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-04",
+      "section": "成功日记不是鸡汤",
+      "startSeconds": 89.63558333333334,
+      "endSeconds": 128.29070833333333,
+      "durationSeconds": 38.655125,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-05",
+      "section": "第一位顾客在家门口",
+      "startSeconds": 128.71070833333332,
+      "endSeconds": 169.78329166666666,
+      "durationSeconds": 41.072583333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-06",
+      "section": "失主出现，老师也出现",
+      "startSeconds": 170.20329166666664,
+      "endSeconds": 205.56249999999997,
+      "durationSeconds": 35.359208333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-07",
+      "section": "别杀死会下金蛋的鹅",
+      "startSeconds": 205.98249999999996,
+      "endSeconds": 244.98874999999995,
+      "durationSeconds": 39.00625,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-08",
+      "section": "父母的债务终于爆发",
+      "startSeconds": 245.40874999999994,
+      "endSeconds": 289.3855416666666,
+      "durationSeconds": 43.976791666666664,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-09",
+      "section": "钱会放大什么",
+      "startSeconds": 289.8055416666666,
+      "endSeconds": 331.7293333333333,
+      "durationSeconds": 41.923791666666666,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-10",
+      "section": "金钱魔法师开始投资",
+      "startSeconds": 332.1493333333333,
+      "endSeconds": 377.7393333333333,
+      "durationSeconds": 45.59,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-11",
+      "section": "基金真的跌了四分之一",
+      "startSeconds": 378.15933333333334,
+      "endSeconds": 421.97141666666664,
+      "durationSeconds": 43.812083333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-12",
+      "section": "她终于站上讲台",
+      "startSeconds": 422.39141666666666,
+      "endSeconds": 460.35241666666667,
+      "durationSeconds": 37.961,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-13",
+      "section": "钱钱最后一次开口",
+      "startSeconds": 460.7724166666667,
+      "endSeconds": 501.85129166666667,
+      "durationSeconds": 41.078875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "seg-14",
+      "section": "把寓言带回今天",
+      "startSeconds": 502.2712916666667,
+      "endSeconds": 571.6150416666667,
+      "durationSeconds": 69.34375,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

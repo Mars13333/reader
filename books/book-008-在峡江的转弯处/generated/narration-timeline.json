@@ -1,0 +1,200 @@
+{
+  "bookId": "book-008-在峡江的转弯处",
+  "scriptSha256": "5BA942BB87C32F17E8E10A959BC717DCD6CC5E555DC8FCBB57E9C89947ACFDAE",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [
+    {
+      "term": "陈行甲",
+      "ttsText": "陈行贾",
+      "pronunciation": "chén xíng jiǎ"
+    }
+  ],
+  "pronunciationOverridesSha256": "D9AB5BCA03952094A6631C5661F9F5775D1165F757612106F86B0A0DFDFF56ED",
+  "bookPickerIntroSha256": "17AD17E728520C0C495455952F880501B82971DA4A341C6C48A1CBD5DA8D3A96",
+  "intro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《在峡江的转弯处》。",
+    "spokenStartSeconds": 2.884875,
+    "spokenEndSeconds": 6.65,
+    "contentStartsSeconds": 7.2,
+    "requestedDurationSeconds": 7.2
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 679.9852083333334,
+  "segments": [
+    {
+      "id": "s01",
+      "section": "站到高处以后",
+      "startSeconds": 7.2,
+      "endSeconds": 26.763291666666667,
+      "durationSeconds": 19.563291666666668,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s02",
+      "section": "离开巴东的清晨",
+      "startSeconds": 27.18329166666667,
+      "endSeconds": 51.14079166666667,
+      "durationSeconds": 23.9575,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s03",
+      "section": "一把来自童年的尺",
+      "startSeconds": 51.560791666666674,
+      "endSeconds": 80.79779166666667,
+      "durationSeconds": 29.237,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s04",
+      "section": "带妈妈一起上任",
+      "startSeconds": 81.21779166666667,
+      "endSeconds": 109.62879166666667,
+      "durationSeconds": 28.411,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s05",
+      "section": "矿井里的眼睛",
+      "startSeconds": 110.04879166666667,
+      "endSeconds": 140.08054166666668,
+      "durationSeconds": 30.03175,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s06",
+      "section": "阁楼上的书柜",
+      "startSeconds": 140.50054166666666,
+      "endSeconds": 169.17733333333334,
+      "durationSeconds": 28.676791666666666,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s07",
+      "section": "好意并不是万能药",
+      "startSeconds": 169.59733333333332,
+      "endSeconds": 200.15541666666667,
+      "durationSeconds": 30.558083333333332,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s08",
+      "section": "勇敢也需要后援",
+      "startSeconds": 200.57541666666665,
+      "endSeconds": 232.36829166666666,
+      "durationSeconds": 31.792875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s09",
+      "section": "巴东先给了他一堵墙",
+      "startSeconds": 232.78829166666665,
+      "endSeconds": 263.42429166666665,
+      "durationSeconds": 30.636,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s10",
+      "section": "他先被压力击倒",
+      "startSeconds": 263.84429166666666,
+      "endSeconds": 297.61745833333333,
+      "durationSeconds": 33.77316666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s11",
+      "section": "不再责怪刁民",
+      "startSeconds": 298.03745833333335,
+      "endSeconds": 329.1494166666667,
+      "durationSeconds": 31.111958333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s12",
+      "section": "先让干部看见人",
+      "startSeconds": 329.5694166666667,
+      "endSeconds": 363.6944583333334,
+      "durationSeconds": 34.12504166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s13",
+      "section": "再把善意写进规则",
+      "startSeconds": 364.1144583333334,
+      "endSeconds": 400.0160000000001,
+      "durationSeconds": 35.90154166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s14",
+      "section": "规则开始反咬利益",
+      "startSeconds": 400.4360000000001,
+      "endSeconds": 435.86408333333344,
+      "durationSeconds": 35.42808333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s15",
+      "section": "荣誉不是离开的理由",
+      "startSeconds": 436.28408333333346,
+      "endSeconds": 469.8127500000001,
+      "durationSeconds": 33.528666666666666,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s16",
+      "section": "峡江真正的转弯",
+      "startSeconds": 470.2327500000001,
+      "endSeconds": 504.7721666666668,
+      "durationSeconds": 34.53941666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s17",
+      "section": "公益也要做实验",
+      "startSeconds": 505.1921666666668,
+      "endSeconds": 537.3950000000002,
+      "durationSeconds": 32.20283333333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s18",
+      "section": "仍然会有接不住的人",
+      "startSeconds": 537.8150000000002,
+      "endSeconds": 572.7146250000002,
+      "durationSeconds": 34.899625,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s19",
+      "section": "小电驴要给列车让道",
+      "startSeconds": 573.1346250000001,
+      "endSeconds": 607.2624166666668,
+      "durationSeconds": 34.12779166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s20",
+      "section": "把转弯放回自己的人生",
+      "startSeconds": 607.6824166666668,
+      "endSeconds": 640.1477500000001,
+      "durationSeconds": 32.465333333333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s21",
+      "section": "不神化，也不放弃",
+      "startSeconds": 640.56775,
+      "endSeconds": 678.5852083333334,
+      "durationSeconds": 38.01745833333333,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

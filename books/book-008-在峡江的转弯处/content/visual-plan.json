@@ -1,0 +1,404 @@
+{
+  "standard": "semantic-key-moments-v1",
+  "durationPolicy": "semantic-weighted-v1",
+  "visibleTextLanguage": "zh-CN",
+  "generatedTextPolicy": "no-text-in-generated-images",
+  "storyboardStandard": "portrait-2x2-9x16-v1",
+  "canvasAspectRatio": "9:16",
+  "panelLayout": "2x2",
+  "panelOrder": [
+    "top-left",
+    "top-right",
+    "bottom-left",
+    "bottom-right"
+  ],
+  "visualDirection": {
+    "style": "原创电影感中文纪实插画，写实绘画质感，人物均为虚构形象，山川与生活场景具有自然纹理",
+    "lighting": "整体保持明亮、通透和可辨识的自然光，严肃场景也不使用压黑画面",
+    "characterContinuity": "成年男性主人公保持朴素短发、深色夹克与克制神态；妻子保持温和坚韧的气质；母亲保持清贫农村妇女形象",
+    "avoid": [
+      "英文",
+      "字母",
+      "数字",
+      "中文文字",
+      "标志",
+      "水印",
+      "招牌",
+      "屏幕或纸张上的可读内容",
+      "伪文字",
+      "乱码",
+      "真实公众人物肖像",
+      "原版书封或影视剧照"
+    ]
+  },
+  "storyboardSheets": [
+    {
+      "id": "sheet-01",
+      "image": "assets/storyboards/storyboard-01.png",
+      "panels": [
+        "事业高处的男人站在峡江岔流前，凝视责任与选择",
+        "天未亮时男人抱着母亲遗像离开办公楼，远方微亮",
+        "清贫农村母亲把盐递给更困难的邻居，衣服整洁但有补丁",
+        "男人把母亲遗像郑重放在简朴办公室书柜中央"
+      ]
+    },
+    {
+      "id": "sheet-02",
+      "image": "assets/storyboards/storyboard-02.png",
+      "panels": [
+        "狭窄煤矿巷道里，矿工的眼睛与牙齿在矿灯下显现",
+        "农村女孩的阁楼床边摆着整齐课本，她含泪守着读书愿望",
+        "残障妇女艰难在田间劳作，来访干部蹲下与她平视",
+        "夫妻并肩走在山村小路上，彼此扶持"
+      ]
+    },
+    {
+      "id": "sheet-03",
+      "image": "assets/storyboards/storyboard-03.png",
+      "panels": [
+        "政府大门前挤满来访群众，干部走到人群正面倾听",
+        "妻子陪伴疲惫的丈夫穿过医院走廊，稳定而温柔地支撑他",
+        "干部沿崎岖山路走向因疾病和贫困受困的家庭，寻找根因",
+        "简朴的新年家宴里，孩子与来访干部同桌吃饭"
+      ]
+    },
+    {
+      "id": "sheet-04",
+      "image": "assets/storyboards/storyboard-04.png",
+      "panels": [
+        "开放的村院议事会，村民围坐成圈，程序像透明光路贯穿现场",
+        "深夜书桌前干部重写讲话稿，门外和电话投下威胁般的阴影",
+        "获得荣誉的干部独自写下请求留任的信，桌旁奖章无任何文字",
+        "壮阔峡江形成明显大转弯，山巅孤独身影面对新方向"
+      ]
+    },
+    {
+      "id": "sheet-05",
+      "image": "assets/storyboards/storyboard-05.png",
+      "panels": [
+        "医院里的患儿家庭、当地医生和研究人员形成互相托住的协作网络",
+        "成年人和妻子在高处步道陪伴抑郁少年，用温暖动作守在身旁",
+        "灵活的社区志愿者把物资接力交给有序的大型公共运输队伍",
+        "现代普通人与伴侣站在人生岔路，身后有支持网络与透明机制"
+      ]
+    },
+    {
+      "id": "sheet-06",
+      "image": "assets/storyboards/storyboard-06.png",
+      "panels": [
+        "打开的回忆手册与镜面形成选择性记忆隐喻，部分区域仍未被照亮",
+        "峡江转弯处迎来明亮清晨，小小身影继续前行",
+        "偏远房屋被阻隔阴影包围，社区援助在外侧却尚未抵达，克制表现家庭暴力局限",
+        "空荡校园步道、遗落手机与空椅象征抑郁复发和缺席，尊重且不呈现伤害"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "s01",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-01.png",
+          "panel": 0,
+          "label": "高处的转弯",
+          "purpose": "author-commentary",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-01.png",
+          "panel": 1,
+          "label": "带母亲回家",
+          "purpose": "source-scene",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-01.png",
+          "panel": 2,
+          "label": "母亲借盐",
+          "purpose": "source-scene",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-01.png",
+          "panel": 3,
+          "label": "书柜中央",
+          "purpose": "source-scene",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-02.png",
+          "panel": 0,
+          "label": "矿井里的眼睛",
+          "purpose": "source-scene",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-02.png",
+          "panel": 1,
+          "label": "阁楼里的课本",
+          "purpose": "source-scene",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-02.png",
+          "panel": 2,
+          "label": "与向琼平视",
+          "purpose": "source-scene",
+          "weight": 3
+        },
+        {
+          "image": "assets/storyboards/storyboard-06.png",
+          "panel": 2,
+          "label": "一次帮助的边界",
+          "purpose": "limitation",
+          "weight": 1.5
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-02.png",
+          "panel": 3,
+          "label": "夫妻同行",
+          "purpose": "source-scene",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-03.png",
+          "panel": 0,
+          "label": "走到人群面前",
+          "purpose": "source-scene",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-03.png",
+          "panel": 1,
+          "label": "被接住的人",
+          "purpose": "source-scene",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-03.png",
+          "panel": 2,
+          "label": "走向根因",
+          "purpose": "source-scene",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-03.png",
+          "panel": 3,
+          "label": "结穷亲",
+          "purpose": "source-scene",
+          "weight": 2.5
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-04.png",
+          "panel": 0,
+          "label": "让善意进入程序",
+          "purpose": "core-concept",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-04.png",
+          "panel": 1,
+          "label": "威胁中的行动",
+          "purpose": "source-scene",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-04.png",
+          "panel": 2,
+          "label": "荣誉之后留任",
+          "purpose": "source-scene",
+          "weight": 2.5
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-04.png",
+          "panel": 3,
+          "label": "峡江转弯",
+          "purpose": "source-scene",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-05.png",
+          "panel": 0,
+          "label": "联爱系统",
+          "purpose": "core-concept",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-05.png",
+          "panel": 1,
+          "label": "陪伴小乐",
+          "purpose": "source-scene",
+          "weight": 3
+        },
+        {
+          "image": "assets/storyboards/storyboard-06.png",
+          "panel": 3,
+          "label": "心理支持的边界",
+          "purpose": "limitation",
+          "weight": 1.5
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-05.png",
+          "panel": 2,
+          "label": "小摩托与大火车",
+          "purpose": "modern-analogy",
+          "weight": 2.5
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-05.png",
+          "panel": 3,
+          "label": "今天的转弯",
+          "purpose": "modern-analogy",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "shots": [
+        {
+          "image": "assets/storyboards/storyboard-06.png",
+          "panel": 0,
+          "label": "自述的边界",
+          "purpose": "limitation",
+          "weight": 2
+        },
+        {
+          "image": "assets/storyboards/storyboard-06.png",
+          "panel": 1,
+          "label": "方向不变",
+          "purpose": "author-commentary",
+          "weight": 3
+        }
+      ]
+    }
+  ],
+  "keyMoments": [
+    { "id": "km01", "segmentId": "s01", "kind": "author-commentary", "anchor": "现实中的高处转弯问题", "shotRef": "s01-01" },
+    { "id": "km02", "segmentId": "s02", "kind": "source-scene", "anchor": "抱母亲遗像离开办公楼", "shotRef": "s02-01" },
+    { "id": "km03", "segmentId": "s03", "kind": "source-scene", "anchor": "吴治杰借盐给更困难的邻人", "shotRef": "s03-01" },
+    { "id": "km04", "segmentId": "s04", "kind": "source-scene", "anchor": "母亲遗像放在办公室书柜中央", "shotRef": "s04-01" },
+    { "id": "km05", "segmentId": "s05", "kind": "source-scene", "anchor": "煤矿巷道里的矿工眼睛", "shotRef": "s05-01" },
+    { "id": "km06", "segmentId": "s06", "kind": "source-scene", "anchor": "失学女孩阁楼里的整齐课本", "shotRef": "s06-01" },
+    { "id": "km07", "segmentId": "s07", "kind": "source-scene", "anchor": "向琼在田间的生活处境", "shotRef": "s07-01" },
+    { "id": "km08", "segmentId": "s07", "kind": "limitation", "anchor": "一次帮助无法消除家庭暴力和支持缺口", "shotRef": "s07-02" },
+    { "id": "km09", "segmentId": "s08", "kind": "source-scene", "anchor": "夫妻在山村道路上彼此支持", "shotRef": "s08-01" },
+    { "id": "km10", "segmentId": "s09", "kind": "source-scene", "anchor": "巴东信任低谷中的来访人群", "shotRef": "s09-01" },
+    { "id": "km11", "segmentId": "s10", "kind": "source-scene", "anchor": "妻子陪伴作者走过抑郁低谷", "shotRef": "s10-01" },
+    { "id": "km12", "segmentId": "s11", "kind": "source-scene", "anchor": "复盘邓玉娇事件后走入贫困和疾病家庭", "shotRef": "s11-01" },
+    { "id": "km13", "segmentId": "s12", "kind": "source-scene", "anchor": "与小航家庭共同吃年饭", "shotRef": "s12-01" },
+    { "id": "km14", "segmentId": "s13", "kind": "core-concept", "anchor": "用公开程序重建制度信任", "shotRef": "s13-01" },
+    { "id": "km15", "segmentId": "s14", "kind": "source-scene", "anchor": "反腐行动中的威胁和代价", "shotRef": "s14-01" },
+    { "id": "km16", "segmentId": "s15", "kind": "source-scene", "anchor": "获得荣誉后写信请求留任", "shotRef": "s15-01" },
+    { "id": "km17", "segmentId": "s16", "kind": "source-scene", "anchor": "在峡江大转弯处思考辞职", "shotRef": "s16-01" },
+    { "id": "km18", "segmentId": "s17", "kind": "core-concept", "anchor": "联爱工程连接家庭医生与研究", "shotRef": "s17-01" },
+    { "id": "km19", "segmentId": "s18", "kind": "source-scene", "anchor": "陪伴抑郁少年小乐", "shotRef": "s18-01" },
+    { "id": "km20", "segmentId": "s18", "kind": "limitation", "anchor": "心理困境需要专业和长期支持", "shotRef": "s18-02" },
+    { "id": "km21", "segmentId": "s19", "kind": "modern-analogy", "anchor": "民间组织小摩托与国家系统大火车", "shotRef": "s19-01" },
+    { "id": "km22", "segmentId": "s20", "kind": "modern-analogy", "anchor": "普通人在现实转弯处建立支持与机制", "shotRef": "s20-01" },
+    { "id": "km23", "segmentId": "s21", "kind": "limitation", "anchor": "回忆录自述视角的选择性", "shotRef": "s21-01" },
+    { "id": "km24", "segmentId": "s21", "kind": "author-commentary", "anchor": "方向不变时允许人生转弯", "shotRef": "s21-02" }
+  ],
+  "assetReview": {
+    "status": "passed",
+    "semanticCoverageReviewed": true,
+    "noEnglishVisible": true,
+    "reviewedAt": "2026-08-23T14:02:00+08:00",
+    "notes": "已逐格目视检查六张最终分镜表及封面原画；关键来源场景、核心概念、现代类比和局限均有对应画面，最终选用素材未见中文、英文、字母、数字、标志、水印或伪文字。第三张已重绘修复黑角和彩边，第五张已重绘修复疑似标识及边缘噪点。"
+  }
+}

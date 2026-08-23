@@ -1,0 +1,12 @@
+{
+  "bookId": "book-007-影响力",
+  "status": "approved",
+  "version": 1,
+  "scriptSha256": "678632860981FD772F61BAA686E825464A6833BBCE6C682D46CB2709C361E3A0",
+  "approvedAt": "2026-08-22T14:26:21.090Z",
+  "segments": 18,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

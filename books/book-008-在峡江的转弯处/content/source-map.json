@@ -1,0 +1,92 @@
+{
+  "book": "在峡江的转弯处",
+  "author": "陈行甲",
+  "sourceMode": "local-source",
+  "sourcePath": "source/在峡江的转弯处.txt",
+  "sourceSha256": "15ED13D5451BE32E40A804B6B7BB8944D7365EB2E109ADE8D7D68B12B4F230EB",
+  "sourceEncoding": "UTF-8",
+  "chapterLines": {
+    "重印前言": "22-66",
+    "前言与序": "68-134",
+    "第一记 我和我的母亲": "136-320",
+    "第二记 关于我们的事，他们统统猜错": "322-602",
+    "第三记 如果有光，我就能看到你的眼睛": "604-746",
+    "第四记 人生的巴颜喀拉山": "748-806",
+    "第五记 密歇根湖上有一千种飞鸟": "808-926",
+    "第六记 在峡江的转弯处": "928-1190",
+    "第七记 你好，我的下半场": "1192-1388",
+    "后记": "1390-1414",
+    "跋 父亲的礼物": "1416-1442"
+  },
+  "terminology": [
+    {
+      "canonical": "陈行甲",
+      "pronunciation": "chén xíng jiǎ",
+      "avoid": ["陈行佳", "陈行嘉", "陈航甲"],
+      "sourceRefs": ["1-2", "1094-1126"]
+    },
+    {
+      "canonical": "吴治杰",
+      "pronunciation": "wú zhì jié",
+      "avoid": ["吴志杰"],
+      "sourceRefs": ["146-180"]
+    },
+    {
+      "canonical": "向琼",
+      "pronunciation": "xiàng qióng",
+      "avoid": ["向穷"],
+      "sourceRefs": ["722-732"]
+    },
+    {
+      "canonical": "巴东",
+      "pronunciation": "bā dōng",
+      "avoid": ["巴东县城故事"],
+      "sourceRefs": ["928-1190"]
+    },
+    {
+      "canonical": "邓玉娇",
+      "pronunciation": "dèng yù jiāo",
+      "avoid": ["邓玉姣"],
+      "sourceRefs": ["970-974", "1010-1012"]
+    },
+    {
+      "canonical": "联爱工程",
+      "pronunciation": "lián ài gōng chéng",
+      "avoid": ["连爱工程"],
+      "sourceRefs": ["1206-1226"]
+    },
+    {
+      "canonical": "知更鸟计划",
+      "pronunciation": "zhī gēng niǎo jì huà",
+      "avoid": ["知更鸟工程"],
+      "sourceRefs": ["1282-1306"]
+    }
+  ],
+  "selfReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-23T08:00:00+08:00",
+    "scriptSha256": "5BA942BB87C32F17E8E10A959BC717DCD6CC5E555DC8FCBB57E9C89947ACFDAE",
+    "checks": {
+      "terminologyVerified": true,
+      "openingRetentionReviewed": true,
+      "retentionStructureReviewed": true,
+      "sentenceFluencyReviewed": true,
+      "sourceConsistencyReviewed": true,
+      "storyCoverageReviewed": true,
+      "contentFlowReviewed": true,
+      "contentLayerDistinctionReviewed": true,
+      "semanticVisualMomentsReviewed": true,
+      "closingBrandLineReviewed": true,
+      "originalityAndCommentaryReviewed": true
+    }
+  },
+  "editorialRules": [
+    "成片是原创评论，不是有声书或逐章复述。",
+    "人物、情节、反转、结局和作品判断只以绑定原文为内容事实来源。",
+    "不限题材，默认服务没读过原著的观众；先让观众进入具体场景，再进行分析。",
+    "核心内容链为：现实问题→具体场景→原著核心案例或剧情→解释原理→回到现实→补充局限。",
+    "自然提示原著内容、现代类比和作者判断的边界，但不要切成生硬的标签段。",
+    "整条口播最后一句固定为“这里是陈拾叁，陪你一起读书破万卷。”。",
+    "不展示原书内页、连续长段文字、影视剧照或演员形象。"
+  ]
+}

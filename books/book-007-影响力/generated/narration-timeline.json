@@ -1,0 +1,170 @@
+{
+  "bookId": "book-007-影响力",
+  "scriptSha256": "678632860981FD772F61BAA686E825464A6833BBCE6C682D46CB2709C361E3A0",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [],
+  "pronunciationOverridesSha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+  "bookPickerIntroSha256": "8350C7108CF3A3CE0F42E4F29CB2E24C6443E57A5E8D30F6F3DFD5C605803E60",
+  "intro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《影响力》。",
+    "spokenStartSeconds": 3.74875,
+    "spokenEndSeconds": 6.65,
+    "contentStartsSeconds": 7.2,
+    "requestedDurationSeconds": 7.2
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 712.6750833333333,
+  "segments": [
+    {
+      "id": "s01",
+      "section": "价格翻倍，为什么反而卖光",
+      "startSeconds": 7.2,
+      "endSeconds": 26.737166666666667,
+      "durationSeconds": 19.537166666666668,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s02",
+      "section": "大脑为什么需要快捷键",
+      "startSeconds": 27.15716666666667,
+      "endSeconds": 56.19266666666667,
+      "durationSeconds": 29.0355,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s03",
+      "section": "七个按钮，三类任务",
+      "startSeconds": 56.61266666666667,
+      "endSeconds": 88.38808333333334,
+      "durationSeconds": 31.77541666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s04",
+      "section": "互惠：一瓶可乐的重量",
+      "startSeconds": 88.80808333333334,
+      "endSeconds": 127.17325000000001,
+      "durationSeconds": 38.36516666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s05",
+      "section": "退一步，为什么更难拒绝",
+      "startSeconds": 127.59325000000001,
+      "endSeconds": 171.07475,
+      "durationSeconds": 43.4815,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s06",
+      "section": "喜好：别把人和交易绑在一起",
+      "startSeconds": 171.49474999999998,
+      "endSeconds": 214.608625,
+      "durationSeconds": 43.113875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s07",
+      "section": "社会认同：大家都选的那一道",
+      "startSeconds": 215.02862499999998,
+      "endSeconds": 251.6055833333333,
+      "durationSeconds": 36.57695833333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s08",
+      "section": "人越多，为什么有时越没人动",
+      "startSeconds": 252.0255833333333,
+      "endSeconds": 292.1517083333333,
+      "durationSeconds": 40.126125,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s09",
+      "section": "权威：服从从哪里开始失控",
+      "startSeconds": 292.57170833333333,
+      "endSeconds": 328.11975,
+      "durationSeconds": 35.54804166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s10",
+      "section": "怎样尊重专家，又不盲从",
+      "startSeconds": 328.53975,
+      "endSeconds": 365.80920833333334,
+      "durationSeconds": 37.26945833333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s11",
+      "section": "稀缺：想要不等于值得",
+      "startSeconds": 366.22920833333336,
+      "endSeconds": 406.89933333333335,
+      "durationSeconds": 40.670125,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s12",
+      "section": "稀缺时，先问用途",
+      "startSeconds": 407.31933333333336,
+      "endSeconds": 449.3639166666667,
+      "durationSeconds": 42.044583333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s13",
+      "section": "承诺：一句答应怎样改变行动",
+      "startSeconds": 449.7839166666667,
+      "endSeconds": 488.2073333333334,
+      "durationSeconds": 38.42341666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s14",
+      "section": "小承诺，怎样改写自我形象",
+      "startSeconds": 488.6273333333334,
+      "endSeconds": 529.8497500000001,
+      "durationSeconds": 41.22241666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s15",
+      "section": "坚持，还是替过去找借口",
+      "startSeconds": 530.26975,
+      "endSeconds": 566.6975416666667,
+      "durationSeconds": 36.427791666666664,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s16",
+      "section": "联盟：从像我到我们",
+      "startSeconds": 567.1175416666666,
+      "endSeconds": 611.234875,
+      "durationSeconds": 44.117333333333335,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s17",
+      "section": "把七项原则变成三次检查",
+      "startSeconds": 611.654875,
+      "endSeconds": 654.5268749999999,
+      "durationSeconds": 42.872,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s18",
+      "section": "真正要防的，是伪造线索",
+      "startSeconds": 654.9468749999999,
+      "endSeconds": 711.2750833333332,
+      "durationSeconds": 56.328208333333336,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

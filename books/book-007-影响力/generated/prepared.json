@@ -1,0 +1,970 @@
+{
+  "bookId": "book-007-影响力",
+  "scriptSha256": "678632860981FD772F61BAA686E825464A6833BBCE6C682D46CB2709C361E3A0",
+  "title": "《影响力》：你为什么会在没想清楚时说好",
+  "author": "罗伯特·西奥迪尼",
+  "angle": "从原著七项影响力原则的关键实验与现实案例出发，解释人为什么会自动答应，以及怎样辨认真实线索和人为操纵。",
+  "deliveryMode": "audio-master",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 21381,
+  "totalDurationSeconds": 712.7,
+  "openingIntro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《影响力》。",
+    "durationInFrames": 216,
+    "spokenStartFrame": 112,
+    "spokenEndFrame": 200
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "voice": {
+    "engine": "火山引擎豆包语音合成2.0",
+    "name": "刘飞男声",
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "section": "价格翻倍，为什么反而卖光",
+      "kicker": "决定之前，开关已经被按下",
+      "narration": "你以为自己在做决定，其实很多“是”，早在思考之前就被按下了开关。原著开头，一批滞销的绿宝石被店员误按双倍价格出售，结果价格翻倍，反而卖光。顾客买走的，不只是宝石，还有“贵就更好”的判断捷径。",
+      "sourceRefs": [
+        {
+          "label": "绿宝石误标双倍价格",
+          "lines": "201-207"
+        }
+      ],
+      "narrationDurationSeconds": 19.537166666666668,
+      "narrationStartFrame": 216,
+      "narrationEndFrame": 802,
+      "startFrame": 0,
+      "durationInFrames": 815
+    },
+    {
+      "id": "s02",
+      "section": "大脑为什么需要快捷键",
+      "kicker": "一个信号，启动整套反应",
+      "narration": "西奥迪尼先让我们看雌火鸡：真正触发母性照料的，常常不是幼崽的样子，而是“叽叽”声，连装着发声器的天敌模型都能蒙混过关。复印机前也一样，只要请求里多出“因为”，哪怕理由没有新增信息，答应插队的人仍明显增多。我的理解是，人不是天生愚蠢，而是在用一个通常有效的信号，节省处理全部信息的成本。",
+      "sourceRefs": [
+        {
+          "label": "雌火鸡的自动反应",
+          "lines": "213-228"
+        },
+        {
+          "label": "复印机与因为实验",
+          "lines": "229-240"
+        }
+      ],
+      "narrationDurationSeconds": 29.0355,
+      "narrationStartFrame": 815,
+      "narrationEndFrame": 1686,
+      "startFrame": 815,
+      "durationInFrames": 883
+    },
+    {
+      "id": "s03",
+      "section": "七个按钮，三类任务",
+      "kicker": "先看它在替你解决什么",
+      "narration": "原著归纳了七项原则：互惠、喜好、社会认同、权威、稀缺、承诺与一致、联盟。它们并不是七句魔法，而是在替我们解决三类高频任务：跟谁建立关系，怎样在不确定中判断，以及何时立刻行动。理解这张地图很重要，因为防范影响，不是逢人就怀疑，而是看清此刻是谁在借关系、借证据，或者借紧迫感推动你。",
+      "sourceRefs": [
+        {
+          "label": "七项影响力原则",
+          "lines": "117-125"
+        },
+        {
+          "label": "关系判断行动三类目标",
+          "lines": "131-143"
+        }
+      ],
+      "narrationDurationSeconds": 31.77541666666667,
+      "narrationStartFrame": 1698,
+      "narrationEndFrame": 2652,
+      "startFrame": 1698,
+      "durationInFrames": 966
+    },
+    {
+      "id": "s04",
+      "section": "互惠：一瓶可乐的重量",
+      "kicker": "礼物不贵，债感很重",
+      "narration": "互惠的核心不是“别人送我什么，我就原样还什么”，而是接受恩惠后，我们会产生回报压力。实验里，乔离开房间后给一部分人带回一瓶可乐，稍后再请大家买抽奖券。收过可乐的人，购买量大约是没收过者的两倍。更关键的是，没送可乐时，大家会看自己喜不喜欢乔；送过以后，喜欢与否的差别几乎消失。放到今天，免费试用、平台红包、额外服务都可能是诚意，也可能是在提前制造一笔心理账。",
+      "sourceRefs": [
+        {
+          "label": "乔送可乐后推销彩票",
+          "lines": "529-543"
+        },
+        {
+          "label": "免费样品与互惠",
+          "lines": "617-645"
+        }
+      ],
+      "narrationDurationSeconds": 38.36516666666667,
+      "narrationStartFrame": 2664,
+      "narrationEndFrame": 3815,
+      "startFrame": 2664,
+      "durationInFrames": 1164
+    },
+    {
+      "id": "s05",
+      "section": "退一步，为什么更难拒绝",
+      "kicker": "让步也会制造回报义务",
+      "narration": "互惠还有一种更隐蔽的形态：拒绝后撤。作者拒绝童子军的五美元马戏票，对方随即改卖一美元巧克力，他便买了两块。另一项动物园实验中，直接请学生带少年参观动物园，答应者只有约百分之十七；先提一个长期、耗时的志愿请求，被拒后再退到同一个参观要求，答应率升到约百分之五十。这里既有大小请求的对比，也有“对方已经让步，我也该让一步”的互惠。防线不是拒绝所有协商，而是把最终请求单独拿出来：如果它一开始就这样出现，我还会答应吗？",
+      "sourceRefs": [
+        {
+          "label": "童子军马戏票与巧克力",
+          "lines": "749-765"
+        },
+        {
+          "label": "动物园拒绝后撤实验",
+          "lines": "767-784"
+        }
+      ],
+      "narrationDurationSeconds": 43.4815,
+      "narrationStartFrame": 3828,
+      "narrationEndFrame": 5132,
+      "startFrame": 3828,
+      "durationInFrames": 1317
+    },
+    {
+      "id": "s06",
+      "section": "喜好：别把人和交易绑在一起",
+      "kicker": "喜欢对方，不等于条件合算",
+      "narration": "特百惠家庭聚会把互惠、承诺和社会认同都搬进客厅，但原著指出，最有力的仍是朋友关系。参加者知道购买会让主办聚会的熟人获益，而这份社会纽带对购买的预测力，甚至超过对产品本身喜爱的两倍。相貌、相似、赞美、熟悉感，也会快速增加喜好。问题不在喜欢，而在我们把对人的好感偷渡给了交易。作者给出的防守很实用：一旦发现自己对刚认识的人好感异常强烈，先把请求者从请求里拿开，只问价格、条款和后果本身值不值得。",
+      "sourceRefs": [
+        {
+          "label": "特百惠家庭聚会",
+          "lines": "984-1019"
+        },
+        {
+          "label": "喜好原则的防范",
+          "lines": "1428-1449"
+        }
+      ],
+      "narrationDurationSeconds": 43.113875,
+      "narrationStartFrame": 5145,
+      "narrationEndFrame": 6438,
+      "startFrame": 5145,
+      "durationInFrames": 1306
+    },
+    {
+      "id": "s07",
+      "section": "社会认同：大家都选的那一道",
+      "kicker": "多数人的选择，是低成本证据",
+      "narration": "在北京一家餐厅的现场研究里，菜单只给部分菜加上“本店最受欢迎”的标签，对应菜品销量就提高了约百分之十三到二十。这就是社会认同：当我们不确定时，会把别人的行为当作正确答案。今天你看到的销量、热榜、点赞和排队人数，正扮演同样角色。这个类比不是说热门一定造假，而是提醒你区分两件事：真实的多数选择，可以降低试错成本；刷出来的评论、刻意制造的长队，则是在伪造证据。",
+      "sourceRefs": [
+        {
+          "label": "北京餐厅最受欢迎标签",
+          "lines": "1474-1480"
+        },
+        {
+          "label": "虚假队列与评论",
+          "lines": "1496-1507"
+        }
+      ],
+      "narrationDurationSeconds": 36.57695833333333,
+      "narrationStartFrame": 6451,
+      "narrationEndFrame": 7548,
+      "startFrame": 6451,
+      "durationInFrames": 1110
+    },
+    {
+      "id": "s08",
+      "section": "人越多，为什么有时越没人动",
+      "kicker": "不确定会在人群中彼此放大",
+      "narration": "社会认同在紧急场景里尤其微妙。原著明确提醒，著名的吉诺维斯事件曾被新闻报道夸大，不能把它简单讲成人性的冷漠。更可靠的实验结论是：情境模糊时，每个人都会观察别人；别人也在观察，于是所有人的平静被误读成“没事”。一旦大家确信这是紧急情况，援助率可升到九成甚至更高。所以真正求助时，不要只朝人群喊“谁来帮我”，而要指向一个具体的人，描述他的特征，再给出一个明确动作，比如请他立刻联系急救。",
+      "sourceRefs": [
+        {
+          "label": "旁观者与多元无知",
+          "lines": "1652-1708"
+        },
+        {
+          "label": "尾注对吉诺维斯报道的修正",
+          "lines": "6263-6266"
+        }
+      ],
+      "narrationDurationSeconds": 40.126125,
+      "narrationStartFrame": 7561,
+      "narrationEndFrame": 8765,
+      "startFrame": 7561,
+      "durationInFrames": 1216
+    },
+    {
+      "id": "s09",
+      "section": "权威：服从从哪里开始失控",
+      "kicker": "头衔会替我们接管责任",
+      "narration": "米尔格拉姆实验里，实验人员以研究者身份要求被试不断提高电击强度，约三分之二的人一路服从到最高刻度。原著又写到医院里的电话实验：一个陌生人自称医生，要求护士给病人使用明显过量的药物，多数护士仍准备照做，直到研究人员介入。真实世界需要专业分工，服从权威经常能救命；危险出现在头衔、白大褂和命令语气取代了核对，人把“他应该知道”误当成“我不必再判断”。",
+      "sourceRefs": [
+        {
+          "label": "米尔格拉姆服从实验",
+          "lines": "2123-2192"
+        },
+        {
+          "label": "护士与假医生电话指令",
+          "lines": "2245-2296"
+        }
+      ],
+      "narrationDurationSeconds": 35.54804166666667,
+      "narrationStartFrame": 8777,
+      "narrationEndFrame": 9844,
+      "startFrame": 8777,
+      "durationInFrames": 1079
+    },
+    {
+      "id": "s10",
+      "section": "怎样尊重专家，又不盲从",
+      "kicker": "查专长，也查利益",
+      "narration": "西奥迪尼没有让我们反权威，而是给了两道核对题。第一，这个人真的是这件事的专家吗？一个领域的头衔，不能自动迁移到另一个领域。第二，他此刻有多可信，他的利益和我一致吗？书里的服务员文森特会先反对客人的较贵选择，推荐一道更便宜的菜，建立诚实又专业的形象，之后再卖出昂贵的酒和甜点。放到职场或消费里，我会再补一问：如果拿掉制服、粉丝数和职位，只留下证据，这个建议还站得住吗？",
+      "sourceRefs": [
+        {
+          "label": "权威防范的两道问题",
+          "lines": "2421-2456"
+        },
+        {
+          "label": "服务员文森特建立信任",
+          "lines": "2460-2474"
+        }
+      ],
+      "narrationDurationSeconds": 37.26945833333333,
+      "narrationStartFrame": 9856,
+      "narrationEndFrame": 10974,
+      "startFrame": 9856,
+      "durationInFrames": 1131
+    },
+    {
+      "id": "s11",
+      "section": "稀缺：想要不等于值得",
+      "kicker": "害怕失去，会挤走价值判断",
+      "narration": "书中有个极端场景：一名女子听说手机可能短缺，为了抢到队伍前两个位置，把一个装着两千八百美元现金的包交给排在前面的人。稀缺不只提高吸引力，还叠加了损失厌恶和竞争。饼干实验把这件事说得更清楚：人们更想要罐子里仅剩的饼干，也愿意为它多付钱，却不认为它真的更好吃。也就是说，稀缺改变的首先是占有欲，不是使用价值。倒计时、仅剩一件和多人正在看，都可能让你把“快没了”错听成“更好了”。",
+      "sourceRefs": [
+        {
+          "label": "用现金包交换排队位置",
+          "lines": "2507-2525"
+        },
+        {
+          "label": "稀缺饼干的想要与味道",
+          "lines": "2889-2891"
+        }
+      ],
+      "narrationDurationSeconds": 40.670125,
+      "narrationStartFrame": 10987,
+      "narrationEndFrame": 12207,
+      "startFrame": 10987,
+      "durationInFrames": 1233
+    },
+    {
+      "id": "s12",
+      "section": "稀缺时，先问用途",
+      "kicker": "把情绪当成暂停按钮",
+      "narration": "原著也承认，只懂稀缺原理并不够，因为竞争和倒计时会让人亢奋、眼光变窄，理性分析来不及接管。它建议把这种身体反应反过来当警报：先暂停，再问自己为什么要它。如果主要为了收藏、身份或转售，稀缺的确可能影响你愿意出的价格；如果为了开、吃、喝或长期使用，供给多少不会改变功能。对应到今天的限时课程、会员名额或抢购页面，可以先关掉页面几分钟，写下不用“最后”“限量”这些词时，你仍愿意付钱的三个具体理由。写不出来，就先别买。",
+      "sourceRefs": [
+        {
+          "label": "稀缺情绪与两步防范",
+          "lines": "2881-2891,2939-2943"
+        }
+      ],
+      "narrationDurationSeconds": 42.044583333333335,
+      "narrationStartFrame": 12220,
+      "narrationEndFrame": 13481,
+      "startFrame": 12220,
+      "durationInFrames": 1274
+    },
+    {
+      "id": "s13",
+      "section": "承诺：一句答应怎样改变行动",
+      "kicker": "人会努力成为刚才那个自己",
+      "narration": "承诺与一致的力量，在海滩实验里几乎肉眼可见。研究助手离开收音机后，假装的小偷来拿走它；没有额外承诺时，二十次里只有四名旁观者阻止。另一组人先答应“帮我看着东西”，二十人里竟有十九人出手制止。承诺让人不只是执行一个任务，还在维护“我是会守约的人”这个自我形象。一致性让生活稳定、合作可预期，本身不是缺点；但当别人刻意先拿走一个轻微的“好”，再据此升级要求，它就变成了杠杆。",
+      "sourceRefs": [
+        {
+          "label": "海滩看守收音机实验",
+          "lines": "2995-3005"
+        },
+        {
+          "label": "承诺触发一致行动",
+          "lines": "3099-3104"
+        }
+      ],
+      "narrationDurationSeconds": 38.42341666666667,
+      "narrationStartFrame": 13494,
+      "narrationEndFrame": 14646,
+      "startFrame": 13494,
+      "durationInFrames": 1165
+    },
+    {
+      "id": "s14",
+      "section": "小承诺，怎样改写自我形象",
+      "kicker": "最危险的不是要求变大，而是你变了",
+      "narration": "登门槛实验先请住户在院前放一块很小的“安全驾驶”标牌，几乎人人答应。两周后，研究者要求在草坪竖一块遮住房子的巨大告示牌，直接请求时只有百分之十七答应，做过小承诺的那组却达到百分之七十六。研究者认为，小牌子把住户对自己的认识改成了“我是一位热心公益的好公民”，后续大要求便像在要求他证明这个身份。今天的低价试用、连续签到和先填一项资料，也可能形成类似路径。关键不是小步骤一定有害，而是每次升级时，都把新成本当作一份新决定。",
+      "sourceRefs": [
+        {
+          "label": "登门槛与安全驾驶告示牌",
+          "lines": "3172-3200"
+        },
+        {
+          "label": "抛低球的自我支撑",
+          "lines": "3478-3491"
+        }
+      ],
+      "narrationDurationSeconds": 41.22241666666667,
+      "narrationStartFrame": 14659,
+      "narrationEndFrame": 15895,
+      "startFrame": 14659,
+      "durationInFrames": 1249
+    },
+    {
+      "id": "s15",
+      "section": "坚持，还是替过去找借口",
+      "kicker": "把现在的信息带回第一次选择",
+      "narration": "承诺还会自己“长出腿”。书中的莎拉为蒂姆取消婚礼，蒂姆随后收回戒酒和结婚承诺，她却找到更多理由相信自己选得对。作者在加油站也经历过类似时刻：看见招牌低价才停下，发现油泵实际更贵后，脑中立刻冒出“正好缺油”“赶时间”等留下理由。防线是一道很锋利的问题：知道现在掌握的一切，如果能回到当时，我还会做同样的选择吗？这不是鼓励反复无常，而是把真正的坚持，与维护面子的惯性分开。",
+      "sourceRefs": [
+        {
+          "label": "莎拉与蒂姆的选择",
+          "lines": "2972-2986"
+        },
+        {
+          "label": "加油站与关键反问",
+          "lines": "3637-3646"
+        }
+      ],
+      "narrationDurationSeconds": 36.427791666666664,
+      "narrationStartFrame": 15908,
+      "narrationEndFrame": 17001,
+      "startFrame": 15908,
+      "durationInFrames": 1106
+    },
+    {
+      "id": "s16",
+      "section": "联盟：从像我到我们",
+      "kicker": "共同身份，会扩大自我的边界",
+      "narration": "联盟比单纯相似更强，它不是“这个人像我”，而是“这个人属于我们”。原著用同步行动说明这种感觉怎样形成：两个人按相同节奏敲击桌面后，愿意留下帮助搭档的比例，从不同步组的百分之十八升到同步组的百分之四十九；齐步走也提高了团队合作。现实中，一起唱歌、共同创作、共同经历困难，都可能制造我们感。它能带来信任和互助，也会让人对圈内成员放松标准。所以听到“都是自己人”时，既要看见连接的温度，也要保留对事实和规则的同一把尺子。",
+      "sourceRefs": [
+        {
+          "label": "联盟是共同身份",
+          "lines": "3721-3728"
+        },
+        {
+          "label": "同步敲击与齐步走实验",
+          "lines": "4032-4046"
+        },
+        {
+          "label": "联盟包庇的风险",
+          "lines": "4277-4296"
+        }
+      ],
+      "narrationDurationSeconds": 44.117333333333335,
+      "narrationStartFrame": 17014,
+      "narrationEndFrame": 18337,
+      "startFrame": 17014,
+      "durationInFrames": 1336
+    },
+    {
+      "id": "s17",
+      "section": "把七项原则变成三次检查",
+      "kicker": "关系、证据、行动，逐层复位",
+      "narration": "回到开头的问题：怎样避免在没想清楚时说“好”？我的归纳不是背七个名词，而是做三次检查。先查关系：这份好感、人情或“自己人”身份，是否正在替交易条件加分？再查证据：热度是真的，专家的专长相关吗，评价和稀缺能被独立验证吗？最后查行动：对方是否用倒计时、竞争或你过去的承诺，逼你立刻决定？这三问分别对应原著说的建立关系、降低不确定性和激发行动。它们不会让你免疫影响，却能把自动反应重新交还给思考。",
+      "sourceRefs": [
+        {
+          "label": "三类影响目标",
+          "lines": "131-143"
+        },
+        {
+          "label": "复杂环境下的单一线索",
+          "lines": "4353-4364"
+        }
+      ],
+      "narrationDurationSeconds": 42.872,
+      "narrationStartFrame": 18350,
+      "narrationEndFrame": 19636,
+      "startFrame": 18350,
+      "durationInFrames": 1298
+    },
+    {
+      "id": "s18",
+      "section": "真正要防的，是伪造线索",
+      "kicker": "别摧毁捷径，要保护它的可靠性",
+      "narration": "最后要补上一条重要局限：《影响力》不是一份“所有人都在操纵你”的阴谋清单，也不保证每项原则在每个文化、每段关系、每个个体身上强度相同。我们离不开互惠、社会认同、专业权威和一致性，它们大多数时候让合作更快、生活更可预测。末章里，作者专门区分了真实的“最后一台电视”和捏造的稀缺：信息真实，销售员是在帮助决策；信息伪造，才是在破坏捷径。联盟章节同样提醒，温暖的我们感也可能包庇圈内错误。真正成熟的做法，不是拒绝一切影响，而是要求线索可核验、请求可退出、决定可重来。这样你保留信任，也保留说“不”的自由。这里是陈拾叁，陪你一起读书破万卷。",
+      "sourceRefs": [
+        {
+          "label": "真实与伪造的稀缺信息",
+          "lines": "4410-4424"
+        },
+        {
+          "label": "保护可靠捷径",
+          "lines": "4395-4408"
+        },
+        {
+          "label": "联盟与组织内不诚实",
+          "lines": "4277-4316"
+        }
+      ],
+      "narrationDurationSeconds": 56.328208333333336,
+      "narrationStartFrame": 19648,
+      "narrationEndFrame": 21338,
+      "startFrame": 19648,
+      "durationInFrames": 1733
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01-01",
+      "segmentId": "s01",
+      "section": "价格翻倍，为什么反而卖光",
+      "kicker": "决定之前，开关已经被按下",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 0,
+      "label": "未思考先确认",
+      "purpose": "author-commentary",
+      "weight": 1.2,
+      "isSegmentStart": true,
+      "startFrame": 0,
+      "durationInFrames": 360,
+      "contentOffsetFrames": 216
+    },
+    {
+      "id": "s01-02",
+      "segmentId": "s01",
+      "section": "价格翻倍，为什么反而卖光",
+      "kicker": "决定之前，开关已经被按下",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 1,
+      "label": "双倍价格售罄",
+      "purpose": "source-scene",
+      "weight": 2.4,
+      "isSegmentStart": false,
+      "startFrame": 360,
+      "durationInFrames": 287
+    },
+    {
+      "id": "s01-03",
+      "segmentId": "s01",
+      "section": "价格翻倍，为什么反而卖光",
+      "kicker": "决定之前，开关已经被按下",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 2,
+      "label": "价格改变感知",
+      "purpose": "core-concept",
+      "weight": 1.4,
+      "isSegmentStart": false,
+      "startFrame": 647,
+      "durationInFrames": 168
+    },
+    {
+      "id": "s02-01",
+      "segmentId": "s02",
+      "section": "大脑为什么需要快捷键",
+      "kicker": "一个信号，启动整套反应",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 3,
+      "label": "火鸡自动反应",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 815,
+      "durationInFrames": 442
+    },
+    {
+      "id": "s02-02",
+      "segmentId": "s02",
+      "section": "大脑为什么需要快捷键",
+      "kicker": "一个信号，启动整套反应",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 0,
+      "label": "复印机因为实验",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 1257,
+      "durationInFrames": 441
+    },
+    {
+      "id": "s03-01",
+      "segmentId": "s03",
+      "section": "七个按钮，三类任务",
+      "kicker": "先看它在替你解决什么",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 1,
+      "label": "三类决策任务",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 1698,
+      "durationInFrames": 966
+    },
+    {
+      "id": "s04-01",
+      "segmentId": "s04",
+      "section": "互惠：一瓶可乐的重量",
+      "kicker": "礼物不贵，债感很重",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 2,
+      "label": "乔递来可乐",
+      "purpose": "source-scene",
+      "weight": 1.8,
+      "isSegmentStart": true,
+      "startFrame": 2664,
+      "durationInFrames": 524
+    },
+    {
+      "id": "s04-02",
+      "segmentId": "s04",
+      "section": "互惠：一瓶可乐的重量",
+      "kicker": "礼物不贵，债感很重",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 3,
+      "label": "可乐后的抽奖券",
+      "purpose": "source-scene",
+      "weight": 2.2,
+      "isSegmentStart": false,
+      "startFrame": 3188,
+      "durationInFrames": 640
+    },
+    {
+      "id": "s05-01",
+      "segmentId": "s05",
+      "section": "退一步，为什么更难拒绝",
+      "kicker": "让步也会制造回报义务",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 0,
+      "label": "先推销马戏票",
+      "purpose": "source-scene",
+      "weight": 1.7,
+      "isSegmentStart": true,
+      "startFrame": 3828,
+      "durationInFrames": 560
+    },
+    {
+      "id": "s05-02",
+      "segmentId": "s05",
+      "section": "退一步，为什么更难拒绝",
+      "kicker": "让步也会制造回报义务",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 1,
+      "label": "退到巧克力",
+      "purpose": "source-scene",
+      "weight": 2.3,
+      "isSegmentStart": false,
+      "startFrame": 4388,
+      "durationInFrames": 757
+    },
+    {
+      "id": "s06-01",
+      "segmentId": "s06",
+      "section": "喜好：别把人和交易绑在一起",
+      "kicker": "喜欢对方，不等于条件合算",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 2,
+      "label": "熟人家庭聚会",
+      "purpose": "source-scene",
+      "weight": 2.2,
+      "isSegmentStart": true,
+      "startFrame": 5145,
+      "durationInFrames": 718
+    },
+    {
+      "id": "s06-02",
+      "segmentId": "s06",
+      "section": "喜好：别把人和交易绑在一起",
+      "kicker": "喜欢对方，不等于条件合算",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 3,
+      "label": "分开人和交易",
+      "purpose": "core-concept",
+      "weight": 1.8,
+      "isSegmentStart": false,
+      "startFrame": 5863,
+      "durationInFrames": 588
+    },
+    {
+      "id": "s07-01",
+      "segmentId": "s07",
+      "section": "社会认同：大家都选的那一道",
+      "kicker": "多数人的选择，是低成本证据",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 0,
+      "label": "餐厅热门菜",
+      "purpose": "source-scene",
+      "weight": 2.1,
+      "isSegmentStart": true,
+      "startFrame": 6451,
+      "durationInFrames": 583
+    },
+    {
+      "id": "s07-02",
+      "segmentId": "s07",
+      "section": "社会认同：大家都选的那一道",
+      "kicker": "多数人的选择，是低成本证据",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 1,
+      "label": "人为长队",
+      "purpose": "modern-analogy",
+      "weight": 1.9,
+      "isSegmentStart": false,
+      "startFrame": 7034,
+      "durationInFrames": 527
+    },
+    {
+      "id": "s08-01",
+      "segmentId": "s08",
+      "section": "人越多，为什么有时越没人动",
+      "kicker": "不确定会在人群中彼此放大",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 2,
+      "label": "人群彼此观望",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 7561,
+      "durationInFrames": 608
+    },
+    {
+      "id": "s08-02",
+      "segmentId": "s08",
+      "section": "人越多，为什么有时越没人动",
+      "kicker": "不确定会在人群中彼此放大",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 3,
+      "label": "点名具体求助",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 8169,
+      "durationInFrames": 608
+    },
+    {
+      "id": "s09-01",
+      "segmentId": "s09",
+      "section": "权威：服从从哪里开始失控",
+      "kicker": "头衔会替我们接管责任",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 0,
+      "label": "权威催促电击",
+      "purpose": "source-scene",
+      "weight": 2.3,
+      "isSegmentStart": true,
+      "startFrame": 8777,
+      "durationInFrames": 620
+    },
+    {
+      "id": "s09-02",
+      "segmentId": "s09",
+      "section": "权威：服从从哪里开始失控",
+      "kicker": "头衔会替我们接管责任",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 1,
+      "label": "护士接到电话",
+      "purpose": "source-scene",
+      "weight": 1.7,
+      "isSegmentStart": false,
+      "startFrame": 9397,
+      "durationInFrames": 459
+    },
+    {
+      "id": "s10-01",
+      "segmentId": "s10",
+      "section": "怎样尊重专家，又不盲从",
+      "kicker": "查专长，也查利益",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 2,
+      "label": "专长与利益核对",
+      "purpose": "core-concept",
+      "weight": 2.2,
+      "isSegmentStart": true,
+      "startFrame": 9856,
+      "durationInFrames": 622
+    },
+    {
+      "id": "s10-02",
+      "segmentId": "s10",
+      "section": "怎样尊重专家，又不盲从",
+      "kicker": "查专长，也查利益",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 3,
+      "label": "只留下证据",
+      "purpose": "modern-analogy",
+      "weight": 1.8,
+      "isSegmentStart": false,
+      "startFrame": 10478,
+      "durationInFrames": 509
+    },
+    {
+      "id": "s11-01",
+      "segmentId": "s11",
+      "section": "稀缺：想要不等于值得",
+      "kicker": "害怕失去，会挤走价值判断",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 0,
+      "label": "手提包换位置",
+      "purpose": "source-scene",
+      "weight": 2.4,
+      "isSegmentStart": true,
+      "startFrame": 10987,
+      "durationInFrames": 519
+    },
+    {
+      "id": "s11-02",
+      "segmentId": "s11",
+      "section": "稀缺：想要不等于值得",
+      "kicker": "害怕失去，会挤走价值判断",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 1,
+      "label": "稀缺饼干",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 11506,
+      "durationInFrames": 433
+    },
+    {
+      "id": "s11-03",
+      "segmentId": "s11",
+      "section": "稀缺：想要不等于值得",
+      "kicker": "害怕失去，会挤走价值判断",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 2,
+      "label": "竞争放大价值",
+      "purpose": "modern-analogy",
+      "weight": 1.3,
+      "isSegmentStart": false,
+      "startFrame": 11939,
+      "durationInFrames": 281
+    },
+    {
+      "id": "s12-01",
+      "segmentId": "s12",
+      "section": "稀缺时，先问用途",
+      "kicker": "把情绪当成暂停按钮",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 3,
+      "label": "离开界面冷静",
+      "purpose": "author-commentary",
+      "weight": 2.2,
+      "isSegmentStart": true,
+      "startFrame": 12220,
+      "durationInFrames": 701
+    },
+    {
+      "id": "s12-02",
+      "segmentId": "s12",
+      "section": "稀缺时，先问用途",
+      "kicker": "把情绪当成暂停按钮",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 0,
+      "label": "占有还是使用",
+      "purpose": "modern-analogy",
+      "weight": 1.8,
+      "isSegmentStart": false,
+      "startFrame": 12921,
+      "durationInFrames": 573
+    },
+    {
+      "id": "s13-01",
+      "segmentId": "s13",
+      "section": "承诺：一句答应怎样改变行动",
+      "kicker": "人会努力成为刚才那个自己",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 1,
+      "label": "答应照看收音机",
+      "purpose": "source-scene",
+      "weight": 1.8,
+      "isSegmentStart": true,
+      "startFrame": 13494,
+      "durationInFrames": 524
+    },
+    {
+      "id": "s13-02",
+      "segmentId": "s13",
+      "section": "承诺：一句答应怎样改变行动",
+      "kicker": "人会努力成为刚才那个自己",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 2,
+      "label": "起身阻止偷窃",
+      "purpose": "source-scene",
+      "weight": 2.2,
+      "isSegmentStart": false,
+      "startFrame": 14018,
+      "durationInFrames": 641
+    },
+    {
+      "id": "s14-01",
+      "segmentId": "s14",
+      "section": "小承诺，怎样改写自我形象",
+      "kicker": "最危险的不是要求变大，而是你变了",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 3,
+      "label": "小型院前提示",
+      "purpose": "source-scene",
+      "weight": 1.5,
+      "isSegmentStart": true,
+      "startFrame": 14659,
+      "durationInFrames": 360
+    },
+    {
+      "id": "s14-02",
+      "segmentId": "s14",
+      "section": "小承诺，怎样改写自我形象",
+      "kicker": "最危险的不是要求变大，而是你变了",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 0,
+      "label": "巨大草坪告示",
+      "purpose": "source-scene",
+      "weight": 2.3,
+      "isSegmentStart": false,
+      "startFrame": 15019,
+      "durationInFrames": 553
+    },
+    {
+      "id": "s14-03",
+      "segmentId": "s14",
+      "section": "小承诺，怎样改写自我形象",
+      "kicker": "最危险的不是要求变大，而是你变了",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 1,
+      "label": "现代承诺升级",
+      "purpose": "modern-analogy",
+      "weight": 1.4,
+      "isSegmentStart": false,
+      "startFrame": 15572,
+      "durationInFrames": 336
+    },
+    {
+      "id": "s15-01",
+      "segmentId": "s15",
+      "section": "坚持，还是替过去找借口",
+      "kicker": "把现在的信息带回第一次选择",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 2,
+      "label": "关系分岔选择",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 15908,
+      "durationInFrames": 553
+    },
+    {
+      "id": "s15-02",
+      "segmentId": "s15",
+      "section": "坚持，还是替过去找借口",
+      "kicker": "把现在的信息带回第一次选择",
+      "image": "assets/storyboards/sheet-08.png",
+      "panel": 3,
+      "label": "放回油枪",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 16461,
+      "durationInFrames": 553
+    },
+    {
+      "id": "s16-01",
+      "segmentId": "s16",
+      "section": "联盟：从像我到我们",
+      "kicker": "共同身份，会扩大自我的边界",
+      "image": "assets/storyboards/sheet-09.png",
+      "panel": 0,
+      "label": "同步敲击",
+      "purpose": "source-scene",
+      "weight": 1.7,
+      "isSegmentStart": true,
+      "startFrame": 17014,
+      "durationInFrames": 454
+    },
+    {
+      "id": "s16-02",
+      "segmentId": "s16",
+      "section": "联盟：从像我到我们",
+      "kicker": "共同身份，会扩大自我的边界",
+      "image": "assets/storyboards/sheet-09.png",
+      "panel": 1,
+      "label": "齐步合作",
+      "purpose": "source-scene",
+      "weight": 1.7,
+      "isSegmentStart": false,
+      "startFrame": 17468,
+      "durationInFrames": 454
+    },
+    {
+      "id": "s16-03",
+      "segmentId": "s16",
+      "section": "联盟：从像我到我们",
+      "kicker": "共同身份，会扩大自我的边界",
+      "image": "assets/storyboards/sheet-09.png",
+      "panel": 2,
+      "label": "圈内包庇",
+      "purpose": "limitation",
+      "weight": 1.6,
+      "isSegmentStart": false,
+      "startFrame": 17922,
+      "durationInFrames": 428
+    },
+    {
+      "id": "s17-01",
+      "segmentId": "s17",
+      "section": "把七项原则变成三次检查",
+      "kicker": "关系、证据、行动，逐层复位",
+      "image": "assets/storyboards/sheet-09.png",
+      "panel": 3,
+      "label": "三次检查",
+      "purpose": "core-concept",
+      "weight": 2.2,
+      "isSegmentStart": true,
+      "startFrame": 18350,
+      "durationInFrames": 714
+    },
+    {
+      "id": "s17-02",
+      "segmentId": "s17",
+      "section": "把七项原则变成三次检查",
+      "kicker": "关系、证据、行动，逐层复位",
+      "image": "assets/storyboards/sheet-10.png",
+      "panel": 0,
+      "label": "暂停重新判断",
+      "purpose": "modern-analogy",
+      "weight": 1.8,
+      "isSegmentStart": false,
+      "startFrame": 19064,
+      "durationInFrames": 584
+    },
+    {
+      "id": "s18-01",
+      "segmentId": "s18",
+      "section": "真正要防的，是伪造线索",
+      "kicker": "别摧毁捷径，要保护它的可靠性",
+      "image": "assets/storyboards/sheet-10.png",
+      "panel": 1,
+      "label": "核实最后一台",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 19648,
+      "durationInFrames": 578
+    },
+    {
+      "id": "s18-02",
+      "segmentId": "s18",
+      "section": "真正要防的，是伪造线索",
+      "kicker": "别摧毁捷径，要保护它的可靠性",
+      "image": "assets/storyboards/sheet-10.png",
+      "panel": 2,
+      "label": "伪造稀缺库存",
+      "purpose": "limitation",
+      "weight": 1.8,
+      "isSegmentStart": false,
+      "startFrame": 20226,
+      "durationInFrames": 520
+    },
+    {
+      "id": "s18-03",
+      "segmentId": "s18",
+      "section": "真正要防的，是伪造线索",
+      "kicker": "别摧毁捷径，要保护它的可靠性",
+      "image": "assets/storyboards/sheet-10.png",
+      "panel": 3,
+      "label": "保护可靠捷径",
+      "purpose": "limitation",
+      "weight": 2.2,
+      "isSegmentStart": false,
+      "startFrame": 20746,
+      "durationInFrames": 635
+    }
+  ]
+}

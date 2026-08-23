@@ -1,0 +1,773 @@
+{
+  "bookId": "book-008-在峡江的转弯处",
+  "scriptSha256": "5BA942BB87C32F17E8E10A959BC717DCD6CC5E555DC8FCBB57E9C89947ACFDAE",
+  "title": "《在峡江的转弯处》：一个人如何守住自己的底色",
+  "author": "陈行甲",
+  "angle": "从母亲留下的共情底色、巴东的制度突围和辞职后的公益实验，理解人在命运转弯处如何选择，又为何不能把希望只押在个人英雄身上。",
+  "deliveryMode": "audio-master",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 20400,
+  "totalDurationSeconds": 680,
+  "openingIntro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《在峡江的转弯处》。",
+    "durationInFrames": 216,
+    "spokenStartFrame": 87,
+    "spokenEndFrame": 200
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "voice": {
+    "engine": "火山引擎豆包语音合成2.0",
+    "name": "刘飞男声",
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "section": "站到高处以后",
+      "kicker": "为什么还要转身",
+      "narration": "一个人已经站到仕途高处，为什么反而要转身离开？陈行甲获得“全国优秀县委书记”荣誉后，没有把答案写成升迁，而是在任期结束时辞职做公益。真正的转弯，不是逃离，而是认清自己愿意为谁负责。",
+      "sourceRefs": [
+        {
+          "label": "获评荣誉与辞职决定",
+          "lines": "1094-1126"
+        }
+      ],
+      "narrationDurationSeconds": 19.563291666666668,
+      "narrationStartFrame": 216,
+      "narrationEndFrame": 803,
+      "startFrame": 0,
+      "durationInFrames": 815
+    },
+    {
+      "id": "s02",
+      "section": "离开巴东的清晨",
+      "kicker": "他先抱走母亲",
+      "narration": "原文把这个决定落在一个很安静的场景里。二〇一六年十二月二日清晨六点，天还黑着，他从办公室书柜中央取下母亲的遗像，反抱在胸前上车。车从巴东驶向宜昌，窗外一点点亮起来。此刻他带走的不是官位留下的纪念，而是那双始终提醒他怎样做人的眼睛。",
+      "sourceRefs": [
+        {
+          "label": "抱母亲遗像离开巴东",
+          "lines": "1128-1130"
+        }
+      ],
+      "narrationDurationSeconds": 23.9575,
+      "narrationStartFrame": 815,
+      "narrationEndFrame": 1534,
+      "startFrame": 815,
+      "durationInFrames": 732
+    },
+    {
+      "id": "s03",
+      "section": "一把来自童年的尺",
+      "kicker": "穷，也要护住体面",
+      "narration": "这把尺来自母亲吴治杰。家里本就缺粮，她仍把盐借给更穷、总也还不起的邻居；有人家的女儿出嫁没有像样衣服，她送出自己珍爱的白底红格衣裳。陈行甲穿着补丁衣服弄脏回家，母亲严肃地告诉他，补丁衣服也要干干净净。这里的“干净”不只是整洁，更是穷困不能成为轻慢自己、轻慢别人的理由。",
+      "sourceRefs": [
+        {
+          "label": "母亲帮助更穷的邻居",
+          "lines": "224-238"
+        },
+        {
+          "label": "补丁衣服也要干净",
+          "lines": "246-250"
+        }
+      ],
+      "narrationDurationSeconds": 29.237,
+      "narrationStartFrame": 1547,
+      "narrationEndFrame": 2424,
+      "startFrame": 1547,
+      "durationInFrames": 890
+    },
+    {
+      "id": "s04",
+      "section": "带妈妈一起上任",
+      "kicker": "亲情变成自我监督",
+      "narration": "母亲病重时，他在病床边给她洗头。最后听清的一句话是：“甲儿，带妈回家。”几年后调任巴东，他真的带着母亲的遗像上任，放在县委办公室书柜正中。任何人推门都能看见母亲的笑容。原文当然没有说这是一套监督制度，但在我看来，那幅遗像让公共权力始终处在一个贫穷、善良母亲的注视之下。",
+      "sourceRefs": [
+        {
+          "label": "母亲临终与遗像",
+          "lines": "274-302"
+        }
+      ],
+      "narrationDurationSeconds": 28.411,
+      "narrationStartFrame": 2437,
+      "narrationEndFrame": 3289,
+      "startFrame": 2437,
+      "durationInFrames": 864
+    },
+    {
+      "id": "s05",
+      "section": "矿井里的眼睛",
+      "kicker": "先看见具体的人",
+      "narration": "大学毕业后，他没有直接坐进机关，而是做矿山安全员。第一次下煤矿，他在低矮巷道里倒着爬，矿灯渐暗，前方忽明忽灭几个光点。科长告诉他，那是矿工为省电关掉矿灯后，眼睛反射回来的光。走近时，黑灰中的矿工向他咧嘴一笑，只露出眼睛和牙齿的白。抽象的劳动者，从此成了一双双具体的眼睛。",
+      "sourceRefs": [
+        {
+          "label": "矿山安全员与井下矿工",
+          "lines": "614-636"
+        }
+      ],
+      "narrationDurationSeconds": 30.03175,
+      "narrationStartFrame": 3301,
+      "narrationEndFrame": 4202,
+      "startFrame": 3301,
+      "durationInFrames": 914
+    },
+    {
+      "id": "s06",
+      "section": "阁楼上的书柜",
+      "kicker": "眼泪背后是失学",
+      "narration": "担任团县委书记后，他牵头寻找近千名没有返校的孩子。最偏远的和平村，一名五年级女孩住在黑黢黢的阁楼，床头整齐竖着她从一年级读到五年级的课本，像世界上最简陋的书柜。父亲在场时，她不敢回答想不想读书；背着父亲再问，她一边掉大颗眼泪，一边不停点头。团队最终把近千名孩子送回了学校。",
+      "sourceRefs": [
+        {
+          "label": "寻找失学儿童",
+          "lines": "678-686"
+        }
+      ],
+      "narrationDurationSeconds": 28.676791666666666,
+      "narrationStartFrame": 4215,
+      "narrationEndFrame": 5075,
+      "startFrame": 4215,
+      "durationInFrames": 873
+    },
+    {
+      "id": "s07",
+      "section": "好意并不是万能药",
+      "kicker": "向琼的结局",
+      "narration": "但原文也留下了一个不能轻易圆满的故事。重度残疾的向琼，双手套着拖鞋，在地上爬着种田、喂猪、做饭。陈行甲蹲在地上和她说话，资助女儿重新读书，还年年去探望，让村里知道她有这样一门亲戚。多年后再去，他才得知向琼在一次家暴后喝农药自杀。一个人的关照可以照亮一段路，却未必拆得掉暴力、偏见和孤立。",
+      "sourceRefs": [
+        {
+          "label": "向琼一家与女儿复学",
+          "lines": "722-732"
+        }
+      ],
+      "narrationDurationSeconds": 30.558083333333332,
+      "narrationStartFrame": 5088,
+      "narrationEndFrame": 6005,
+      "startFrame": 5088,
+      "durationInFrames": 929
+    },
+    {
+      "id": "s08",
+      "section": "勇敢也需要后援",
+      "kicker": "霞替他承担失去",
+      "narration": "陈行甲后来敢于一次次转弯，也不是只靠个人意志。爱人霞当年放弃广东的工作，坐着九曲十八弯的长途车走进山区和他成家。多年后，面对巴东的风险，霞又告诉他：我们本来一无所有，大不了再回下湾村，你种田，我做饭。她不是在喊口号，而是在明确告诉他，失去职位和收入的后果，我愿意一起承担。勇敢背后，往往站着具体的人。",
+      "sourceRefs": [
+        {
+          "label": "霞进山成家",
+          "lines": "508-520"
+        },
+        {
+          "label": "霞支持他承担风险",
+          "lines": "554-568"
+        }
+      ],
+      "narrationDurationSeconds": 31.792875,
+      "narrationStartFrame": 6017,
+      "narrationEndFrame": 6971,
+      "startFrame": 6017,
+      "durationInFrames": 967
+    },
+    {
+      "id": "s09",
+      "section": "巴东先给了他一堵墙",
+      "kicker": "不信任扑面而来",
+      "narration": "二〇一一年到巴东上任，迎接他的不是英雄舞台。网上有五千字公开信，邮箱每天涌来几十封意见；大楼门口常有成群上访者，有人下跪、抱腿、撞柱；他的私人手机号被人扩散，半夜也有人打来骂他连下水道都管不好。更危险的是，有干部在背后等着看新书记被群众拖垮。这个地方真正的难题，是老百姓不得不找政府，却已经不再相信政府。",
+      "sourceRefs": [
+        {
+          "label": "公开信与网络民意",
+          "lines": "938-948"
+        },
+        {
+          "label": "围堵上访与手机号扩散",
+          "lines": "950-960"
+        }
+      ],
+      "narrationDurationSeconds": 30.636,
+      "narrationStartFrame": 6984,
+      "narrationEndFrame": 7903,
+      "startFrame": 6984,
+      "durationInFrames": 931
+    },
+    {
+      "id": "s10",
+      "section": "他先被压力击倒",
+      "kicker": "抑郁不是软弱",
+      "narration": "陈行甲试图硬扛，结果连续失眠、食欲下降、身体消瘦，最后连安眠药也无法让他入睡。他梦见去世的母亲在门外喊乳名，醒来后给霞打电话，说自己病了。霞马上安排请假、转院和陪护；住院十七天后，他才从崩溃边缘回来。出院后又按医生要求长期服药，直到真正稳定。原文在这里提醒我们：理想主义者也会生病，专业治疗不能被意志论代替。",
+      "sourceRefs": [
+        {
+          "label": "重度焦虑抑郁与住院康复",
+          "lines": "542-550"
+        },
+        {
+          "label": "巴东压力背景",
+          "lines": "960-962"
+        }
+      ],
+      "narrationDurationSeconds": 33.77316666666667,
+      "narrationStartFrame": 7915,
+      "narrationEndFrame": 8929,
+      "startFrame": 7915,
+      "durationInFrames": 1026
+    },
+    {
+      "id": "s11",
+      "section": "不再责怪刁民",
+      "kicker": "追问怨气从哪里来",
+      "narration": "康复后，他没有把困局简单归咎于“刁民”。他复盘邓玉娇事件，又走进贫困户、艾滋病患者和偏远学校，看到的是腐败的干部作风、漫长难行的道路，以及大病和贫困把人逼到绝境。于是他得出结论：老百姓的怨气，是坏作风逼出来的，是崎岖山路颠出来的，也是封闭贫困憋出来的。解释一变，治理方法才可能跟着变。",
+      "sourceRefs": [
+        {
+          "label": "复盘作风与信任危机",
+          "lines": "970-974"
+        },
+        {
+          "label": "贫困、疾病与道路困境",
+          "lines": "976-984"
+        }
+      ],
+      "narrationDurationSeconds": 31.111958333333334,
+      "narrationStartFrame": 8941,
+      "narrationEndFrame": 9874,
+      "startFrame": 8941,
+      "durationInFrames": 946
+    },
+    {
+      "id": "s12",
+      "section": "先让干部看见人",
+      "kicker": "与小航结穷亲",
+      "narration": "他的第一步，是号召干部结穷亲。他自己选择满身红疮、被村民躲着走的艾滋病患儿小航，承诺“只要我还在，只要他还在”。那年除夕，他去小航家吃团年饭。对其他干部，他不规定送多少钱，却要求一年至少入户三次、住一晚。这样的关系不能替代公共政策，但能先刺破报表，让决策者亲眼看见政策对象如何吃饭、睡觉和等待。",
+      "sourceRefs": [
+        {
+          "label": "小航与干部结穷亲",
+          "lines": "977-990"
+        }
+      ],
+      "narrationDurationSeconds": 34.12504166666667,
+      "narrationStartFrame": 9887,
+      "narrationEndFrame": 10911,
+      "startFrame": 9887,
+      "durationInFrames": 1036
+    },
+    {
+      "id": "s13",
+      "section": "再把善意写进规则",
+      "kicker": "不认识书记也能办事",
+      "narration": "更关键的一步，是把个人愿望变成制度。巴东设置行政时钟，承诺期限内办不完就追责；五千多场屋场院子会，让村民当面评谁是真贫困户；第三方再随机打出数万通电话，让群众评价乡镇干部的德、能、勤、绩、廉，满意度太低就不能提拔。一个地方不能永远等好书记出现。真正可靠的改变，是普通人不认识书记，也有记录、申诉和评价的权利。",
+      "sourceRefs": [
+        {
+          "label": "限时办结与屋场院子会",
+          "lines": "1000-1002"
+        },
+        {
+          "label": "群众评价干部",
+          "lines": "1003-1006"
+        }
+      ],
+      "narrationDurationSeconds": 35.90154166666667,
+      "narrationStartFrame": 10923,
+      "narrationEndFrame": 12000,
+      "startFrame": 10923,
+      "durationInFrames": 1090
+    },
+    {
+      "id": "s14",
+      "section": "规则开始反咬利益",
+      "kicker": "威胁打到了家人",
+      "narration": "制度碰到工程利益，反击很快来了。四千五百万元修建的河堤被不大的涨水冲垮，调查受到层层阻挠。有人知道他住哪里，也有人给霞打电话，准确说出她的单位和儿子的学校。陈行甲连夜重写纪委全会讲话，把暗处的威胁公开到会场。后来他签字查办大批官员和不法商人。这里的代价不是一句“虽千万人吾往矣”，而是家人安全、个人前途和再次患病的风险。",
+      "sourceRefs": [
+        {
+          "label": "家人遭威胁与公开宣战",
+          "lines": "556-564"
+        },
+        {
+          "label": "河堤工程与查办结果",
+          "lines": "1046-1090"
+        }
+      ],
+      "narrationDurationSeconds": 35.42808333333333,
+      "narrationStartFrame": 12013,
+      "narrationEndFrame": 13076,
+      "startFrame": 12013,
+      "durationInFrames": 1076
+    },
+    {
+      "id": "s15",
+      "section": "荣誉不是离开的理由",
+      "kicker": "他曾请求留下",
+      "narration": "二〇一五年，他获评全国优秀县委书记。省委领导流露出重用之意，他却连夜写信，请求让自己继续留在巴东直到换届，因为助养贫困儿童、农村信息服务等工作还没有做完。他说，宁愿行政生涯的顶点就是县委书记，也想把这份工作做到极致。所以后来的辞职并不是厌倦基层，更不是用离开证明从政无意义；恰恰是做完一届之后，重新选择服务方式。",
+      "sourceRefs": [
+        {
+          "label": "全国优秀县委书记荣誉",
+          "lines": "1092-1100"
+        },
+        {
+          "label": "请求留任完成工作",
+          "lines": "1102-1116"
+        }
+      ],
+      "narrationDurationSeconds": 33.528666666666666,
+      "narrationStartFrame": 13089,
+      "narrationEndFrame": 14094,
+      "startFrame": 13089,
+      "durationInFrames": 1018
+    },
+    {
+      "id": "s16",
+      "section": "峡江真正的转弯",
+      "kicker": "方向不变，路线可以变",
+      "narration": "真正把决定想清楚，是在大面山顶。滚滚长江被山体挡住，向右急转九十度，再进入开阔江面。他由此想到，追求理想的灵魂像奔向大海的河流，方向不变，却要绕开漩涡和暗礁。于是他决定任期结束后辞职，以普通党员身份反映基层行政问题，再去公益领域服务弱者。这不是“世界太坏，所以我走了”，而是“目标仍在，我换一条能继续前进的河道”。",
+      "sourceRefs": [
+        {
+          "label": "大面山俯瞰长江转弯",
+          "lines": "1120-1124"
+        },
+        {
+          "label": "辞职、上书与转场",
+          "lines": "1123-1126"
+        }
+      ],
+      "narrationDurationSeconds": 34.53941666666667,
+      "narrationStartFrame": 14107,
+      "narrationEndFrame": 15143,
+      "startFrame": 14107,
+      "durationInFrames": 1049
+    },
+    {
+      "id": "s17",
+      "section": "公益也要做实验",
+      "kicker": "从救一个人到改一套系统",
+      "narration": "转入公益后，他没有满足于讲苦难、募一笔钱、救一个人。联爱工程选择河源儿童白血病做小范围试点：一边把患儿目录内报销比例提高到九成，一边帮助当地医院建立儿童血液科，还委托大学做药物评估，把结果交给医保部门。这个思路像一块试验田，用有限资源验证流程、沉淀数据，再推动更大的公共系统改善。共情到这里，才被翻译成可以复制的方法。",
+      "sourceRefs": [
+        {
+          "label": "因病致贫与联爱工程设计",
+          "lines": "1206-1220"
+        },
+        {
+          "label": "河源试点结果与药物评估",
+          "lines": "1222-1226"
+        }
+      ],
+      "narrationDurationSeconds": 32.20283333333333,
+      "narrationStartFrame": 15156,
+      "narrationEndFrame": 16122,
+      "startFrame": 15156,
+      "durationInFrames": 978
+    },
+    {
+      "id": "s18",
+      "section": "仍然会有接不住的人",
+      "kicker": "小乐没有回来",
+      "narration": "但专业化也不等于万能。抑郁症少年小乐住院时，陈行甲和霞专程探望，凭自己的康复经验陪他散步、协助和医生沟通。孩子一度好转，去上大学，还在微信里为陈叔叔加油。两年后，噩耗传来，小乐在学校自杀。陈行甲由此发起知更鸟计划，希望连接医院、学校和公益组织。这个失败很重要：一次温暖的会面、一次短期好转，都不能被误认为长期康复。",
+      "sourceRefs": [
+        {
+          "label": "探望并陪伴小乐",
+          "lines": "1282-1296"
+        },
+        {
+          "label": "小乐去世与知更鸟计划",
+          "lines": "1298-1306"
+        }
+      ],
+      "narrationDurationSeconds": 34.899625,
+      "narrationStartFrame": 16134,
+      "narrationEndFrame": 17181,
+      "startFrame": 16134,
+      "durationInFrames": 1060
+    },
+    {
+      "id": "s19",
+      "section": "小电驴要给列车让道",
+      "kicker": "公益的边界",
+      "narration": "新冠疫情中，恒晖先补防护物资，随后支援医疗队生活，再转向滞留人员和困境群体；当政府保障全面接手，他们就退出。陈行甲把国家队比作大列车，把公益组织比作小电驴：小电驴启动快，可以先补缺口，但列车提速后就该让开主道。这个比喻也适用于所有理想主义行动——帮助不是抢占舞台，组织的价值，是在最需要的环节出现，也在任务完成时退场。",
+      "sourceRefs": [
+        {
+          "label": "公益组织与国家队的定位",
+          "lines": "1310-1334"
+        }
+      ],
+      "narrationDurationSeconds": 34.12779166666667,
+      "narrationStartFrame": 17194,
+      "narrationEndFrame": 18218,
+      "startFrame": 17194,
+      "durationInFrames": 1036
+    },
+    {
+      "id": "s20",
+      "section": "把转弯放回自己的人生",
+      "kicker": "先问三个问题",
+      "narration": "回到今天，如果你也站在职业或人生的岔路口，这本书给的不是“立刻辞职”。我的判断是，先问三个问题：第一，你真正想守住的价值是什么；第二，转弯的代价由谁承担，你有没有像霞那样真实可靠的支持；第三，你的善意能不能形成专业、透明、可重复的机制。没有这些准备，转弯可能只是冲动；有了这些准备，留在原地同样可以是一种坚定。",
+      "sourceRefs": [
+        {
+          "label": "霞的支持与制度、公益实践",
+          "lines": "554-568；1000-1006；1218-1226"
+        }
+      ],
+      "narrationDurationSeconds": 32.465333333333334,
+      "narrationStartFrame": 18230,
+      "narrationEndFrame": 19204,
+      "startFrame": 18230,
+      "durationInFrames": 987
+    },
+    {
+      "id": "s21",
+      "section": "不神化，也不放弃",
+      "kicker": "守住共情的底色",
+      "narration": "最后还要保留一个边界：《在峡江的转弯处》是陈行甲对自己半生的回望，不是对所有事件的独立调查，他也承认写作中有所取舍。个人英雄不能代替制度，公益不能代替国家，善意也不能代替专业。但儿子在跋里看见，父亲后来不同身份下的事业，都像童年春节去探望向琼的自然延伸。值得带走的不是复制他的履历，而是在失落、诱惑和嘲讽里，仍不轻易洗掉共情的底色。这里是陈拾叁，陪你一起读书破万卷。",
+      "sourceRefs": [
+        {
+          "label": "作者对回忆与写作的说明",
+          "lines": "1120-1126；1394-1408"
+        },
+        {
+          "label": "儿子作跋对父亲的理解",
+          "lines": "1420-1438"
+        }
+      ],
+      "narrationDurationSeconds": 38.01745833333333,
+      "narrationStartFrame": 19217,
+      "narrationEndFrame": 20358,
+      "startFrame": 19217,
+      "durationInFrames": 1183
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01-01",
+      "segmentId": "s01",
+      "section": "站到高处以后",
+      "kicker": "为什么还要转身",
+      "image": "assets/storyboards/storyboard-01.png",
+      "panel": 0,
+      "label": "高处的转弯",
+      "purpose": "author-commentary",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 0,
+      "durationInFrames": 815,
+      "contentOffsetFrames": 216
+    },
+    {
+      "id": "s02-01",
+      "segmentId": "s02",
+      "section": "离开巴东的清晨",
+      "kicker": "他先抱走母亲",
+      "image": "assets/storyboards/storyboard-01.png",
+      "panel": 1,
+      "label": "带母亲回家",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 815,
+      "durationInFrames": 732
+    },
+    {
+      "id": "s03-01",
+      "segmentId": "s03",
+      "section": "一把来自童年的尺",
+      "kicker": "穷，也要护住体面",
+      "image": "assets/storyboards/storyboard-01.png",
+      "panel": 2,
+      "label": "母亲借盐",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 1547,
+      "durationInFrames": 890
+    },
+    {
+      "id": "s04-01",
+      "segmentId": "s04",
+      "section": "带妈妈一起上任",
+      "kicker": "亲情变成自我监督",
+      "image": "assets/storyboards/storyboard-01.png",
+      "panel": 3,
+      "label": "书柜中央",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 2437,
+      "durationInFrames": 864
+    },
+    {
+      "id": "s05-01",
+      "segmentId": "s05",
+      "section": "矿井里的眼睛",
+      "kicker": "先看见具体的人",
+      "image": "assets/storyboards/storyboard-02.png",
+      "panel": 0,
+      "label": "矿井里的眼睛",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 3301,
+      "durationInFrames": 914
+    },
+    {
+      "id": "s06-01",
+      "segmentId": "s06",
+      "section": "阁楼上的书柜",
+      "kicker": "眼泪背后是失学",
+      "image": "assets/storyboards/storyboard-02.png",
+      "panel": 1,
+      "label": "阁楼里的课本",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 4215,
+      "durationInFrames": 873
+    },
+    {
+      "id": "s07-01",
+      "segmentId": "s07",
+      "section": "好意并不是万能药",
+      "kicker": "向琼的结局",
+      "image": "assets/storyboards/storyboard-02.png",
+      "panel": 2,
+      "label": "与向琼平视",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 5088,
+      "durationInFrames": 619
+    },
+    {
+      "id": "s07-02",
+      "segmentId": "s07",
+      "section": "好意并不是万能药",
+      "kicker": "向琼的结局",
+      "image": "assets/storyboards/storyboard-06.png",
+      "panel": 2,
+      "label": "一次帮助的边界",
+      "purpose": "limitation",
+      "weight": 1.5,
+      "isSegmentStart": false,
+      "startFrame": 5707,
+      "durationInFrames": 310
+    },
+    {
+      "id": "s08-01",
+      "segmentId": "s08",
+      "section": "勇敢也需要后援",
+      "kicker": "霞替他承担失去",
+      "image": "assets/storyboards/storyboard-02.png",
+      "panel": 3,
+      "label": "夫妻同行",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 6017,
+      "durationInFrames": 967
+    },
+    {
+      "id": "s09-01",
+      "segmentId": "s09",
+      "section": "巴东先给了他一堵墙",
+      "kicker": "不信任扑面而来",
+      "image": "assets/storyboards/storyboard-03.png",
+      "panel": 0,
+      "label": "走到人群面前",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 6984,
+      "durationInFrames": 931
+    },
+    {
+      "id": "s10-01",
+      "segmentId": "s10",
+      "section": "他先被压力击倒",
+      "kicker": "抑郁不是软弱",
+      "image": "assets/storyboards/storyboard-03.png",
+      "panel": 1,
+      "label": "被接住的人",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 7915,
+      "durationInFrames": 1026
+    },
+    {
+      "id": "s11-01",
+      "segmentId": "s11",
+      "section": "不再责怪刁民",
+      "kicker": "追问怨气从哪里来",
+      "image": "assets/storyboards/storyboard-03.png",
+      "panel": 2,
+      "label": "走向根因",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 8941,
+      "durationInFrames": 946
+    },
+    {
+      "id": "s12-01",
+      "segmentId": "s12",
+      "section": "先让干部看见人",
+      "kicker": "与小航结穷亲",
+      "image": "assets/storyboards/storyboard-03.png",
+      "panel": 3,
+      "label": "结穷亲",
+      "purpose": "source-scene",
+      "weight": 2.5,
+      "isSegmentStart": true,
+      "startFrame": 9887,
+      "durationInFrames": 1036
+    },
+    {
+      "id": "s13-01",
+      "segmentId": "s13",
+      "section": "再把善意写进规则",
+      "kicker": "不认识书记也能办事",
+      "image": "assets/storyboards/storyboard-04.png",
+      "panel": 0,
+      "label": "让善意进入程序",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 10923,
+      "durationInFrames": 1090
+    },
+    {
+      "id": "s14-01",
+      "segmentId": "s14",
+      "section": "规则开始反咬利益",
+      "kicker": "威胁打到了家人",
+      "image": "assets/storyboards/storyboard-04.png",
+      "panel": 1,
+      "label": "威胁中的行动",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 12013,
+      "durationInFrames": 1076
+    },
+    {
+      "id": "s15-01",
+      "segmentId": "s15",
+      "section": "荣誉不是离开的理由",
+      "kicker": "他曾请求留下",
+      "image": "assets/storyboards/storyboard-04.png",
+      "panel": 2,
+      "label": "荣誉之后留任",
+      "purpose": "source-scene",
+      "weight": 2.5,
+      "isSegmentStart": true,
+      "startFrame": 13089,
+      "durationInFrames": 1018
+    },
+    {
+      "id": "s16-01",
+      "segmentId": "s16",
+      "section": "峡江真正的转弯",
+      "kicker": "方向不变，路线可以变",
+      "image": "assets/storyboards/storyboard-04.png",
+      "panel": 3,
+      "label": "峡江转弯",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 14107,
+      "durationInFrames": 1049
+    },
+    {
+      "id": "s17-01",
+      "segmentId": "s17",
+      "section": "公益也要做实验",
+      "kicker": "从救一个人到改一套系统",
+      "image": "assets/storyboards/storyboard-05.png",
+      "panel": 0,
+      "label": "联爱系统",
+      "purpose": "core-concept",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 15156,
+      "durationInFrames": 978
+    },
+    {
+      "id": "s18-01",
+      "segmentId": "s18",
+      "section": "仍然会有接不住的人",
+      "kicker": "小乐没有回来",
+      "image": "assets/storyboards/storyboard-05.png",
+      "panel": 1,
+      "label": "陪伴小乐",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 16134,
+      "durationInFrames": 707
+    },
+    {
+      "id": "s18-02",
+      "segmentId": "s18",
+      "section": "仍然会有接不住的人",
+      "kicker": "小乐没有回来",
+      "image": "assets/storyboards/storyboard-06.png",
+      "panel": 3,
+      "label": "心理支持的边界",
+      "purpose": "limitation",
+      "weight": 1.5,
+      "isSegmentStart": false,
+      "startFrame": 16841,
+      "durationInFrames": 353
+    },
+    {
+      "id": "s19-01",
+      "segmentId": "s19",
+      "section": "小电驴要给列车让道",
+      "kicker": "公益的边界",
+      "image": "assets/storyboards/storyboard-05.png",
+      "panel": 2,
+      "label": "小摩托与大火车",
+      "purpose": "modern-analogy",
+      "weight": 2.5,
+      "isSegmentStart": true,
+      "startFrame": 17194,
+      "durationInFrames": 1036
+    },
+    {
+      "id": "s20-01",
+      "segmentId": "s20",
+      "section": "把转弯放回自己的人生",
+      "kicker": "先问三个问题",
+      "image": "assets/storyboards/storyboard-05.png",
+      "panel": 3,
+      "label": "今天的转弯",
+      "purpose": "modern-analogy",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 18230,
+      "durationInFrames": 987
+    },
+    {
+      "id": "s21-01",
+      "segmentId": "s21",
+      "section": "不神化，也不放弃",
+      "kicker": "守住共情的底色",
+      "image": "assets/storyboards/storyboard-06.png",
+      "panel": 0,
+      "label": "自述的边界",
+      "purpose": "limitation",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 19217,
+      "durationInFrames": 473
+    },
+    {
+      "id": "s21-02",
+      "segmentId": "s21",
+      "section": "不神化，也不放弃",
+      "kicker": "守住共情的底色",
+      "image": "assets/storyboards/storyboard-06.png",
+      "panel": 1,
+      "label": "方向不变",
+      "purpose": "author-commentary",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 19690,
+      "durationInFrames": 710
+    }
+  ]
+}
