@@ -1,6 +1,130 @@
 # AI 读书视频工程
 
-这是一个“共享生成引擎＋每本书独立工程”的抖音书单视频项目。Codex 负责脚本、分镜、原创插画、有声视频和两种发布封面；剪映负责根据最终音频一键识别字幕。
+这是一个“智能体编排＋确定性生产引擎”的中文书籍解读视频项目。Codex 负责理解原著、编写与复审脚本、规划分镜、生成原创插画并推进制作；Node.js、豆包 TTS 与 Remotion 负责来源校验、音频主时钟、视频渲染和交付验收。每本书拥有独立工程，最终交付有声 MP4、两种发布封面和发布文案；剪映只负责根据最终音频识别并校对字幕。
+
+[查看完整制作过程（Bilibili）](https://www.bilibili.com/video/BV1NnhP6PEXm/) · [查看最终成品（抖音）](https://www.douyin.com/user/self?from_tab_name=main&modal_id=7677543869105425679)
+
+本项目代码采用 [MIT License](./LICENSE) 开源。原著文本、生成素材、成片以及第三方服务仍分别受其来源版权、平台条款和依赖许可证约束。
+
+## 它如何工作
+
+这个项目把生成式 AI 擅长的语义决策，与传统程序擅长的稳定执行拆成两层：
+
+```mermaid
+flowchart LR
+    A[本地合法原文] --> B[Codex 制作智能体]
+    B --> C[脚本与来源映射]
+    C --> D[自审与 SHA-256 审批门]
+    D --> E[语义分镜与原创插画]
+    E --> F[豆包 TTS]
+    F --> G[真实音频时间轴]
+    G --> H[Remotion 画面合成]
+    H --> I[MP4 封面与发布文案]
+    I --> J[交付文件验收]
+```
+
+- **智能体层**处理需要理解和判断的任务：读完整原著、提炼故事、区分原著内容与现代类比、设计留存节奏、规划关键画面，以及根据检查结果修复问题。
+- **确定性引擎层**处理必须可复现的任务：绑定原文哈希、锁定批准脚本、调用固定 TTS、按真实采样数生成时间轴、用 Remotion 合成音画，并验证交付文件。
+- **质量门**位于两层之间。智能体不能跳过来源、审批、素材、配音或交付检查，也不能为了让流程通过而降低标准。
+
+## 快速开始：运行 `book:auto`
+
+### 1. 准备环境
+
+当前工作流主要在 Windows 与 PowerShell 下验证。建议准备：
+
+- Node.js 20 或更高版本；
+- 已安装并登录的 Codex CLI，以及可用的内置 `imagegen` Skill；
+- Git LFS，用于获取和管理仓库声明保留的完整媒体示例；
+- 火山引擎豆包语音合成 API Key；
+- 一本合法取得、内容完整的 UTF-8 `.txt` 或 `.md` 原文。
+
+```powershell
+git clone https://github.com/Mars13333/reader.git
+Set-Location reader
+npm install
+git lfs install
+codex login
+Copy-Item .env.example .env.local
+```
+
+编辑 `.env.local`，填入：
+
+```dotenv
+MODEL_SPEECH_API_KEY=你的火山引擎语音APIKey
+MODEL_SPEECH_API_BASE=openspeech.bytedance.com
+```
+
+原文只放在根目录 `source/`，不要提交到 Git。项目会在建书时记录其相对路径、UTF-8 编码和 SHA-256，并在恢复运行时重新校验。
+
+### 2. 先做无费用环境检查
+
+```powershell
+npm run book:auto:check
+```
+
+这个命令只检查 Codex CLI、登录状态、仓库 Skill 和图片生成能力，不会创建书籍，也不会调用图片生成或 TTS。
+
+### 3. 一条命令从原著生成成片
+
+交互运行：
+
+```powershell
+npm run book:auto
+```
+
+或者直接传入参数：
+
+```powershell
+npm run book:auto -- --title "活着" --author "余华" --audience "25～40岁泛读书用户" --source "活着.txt"
+```
+
+`book:auto` 会创建单本书工程，并启动一次可恢复的 Codex 非交互会话，依次完成：
+
+1. 校验并读取绑定原文；
+2. 编写脚本、来源映射和发布文案；
+3. 完成语义自审、质量检查和脚本哈希审批；
+4. 规划关键画面并生成原创分镜与无字封面插画；
+5. 调用豆包 TTS 生成 WAV 主音频；
+6. 按音频真实采样数生成镜头时间轴；
+7. 用 Remotion 渲染视频与两种封面；
+8. 验证全部声明交付物。
+
+默认终端只显示阶段、素材计数、渲染帧数、耗时与网络恢复状态。完整 JSONL、stderr 和交付复检日志保存在 `.runtime/book-auto/`。
+
+### 4. 中断后继续
+
+网络、认证、额度或渲染中断后，不需要重新制作仍然有效的内容和素材：
+
+```powershell
+npm run book:auto -- --resume --book "book-003-活着"
+```
+
+需要查看完整工具输出时追加 `--verbose`：
+
+```powershell
+npm run book:auto -- --resume --book "book-003-活着" --verbose
+```
+
+### 5. 获取交付物
+
+制作完成后，当前书的 `output/` 包含：
+
+```text
+output/final.mp4
+output/cover-3x4.png
+output/cover-4x3.png
+output/publish-copy.txt
+```
+
+把 `final.mp4` 导入剪映识别并校对字幕，再手动上传。`book:auto` 不联网搜索书评或剧情梗概，也不会自动发布到抖音或其他平台。
+
+## 成本与能力边界
+
+- `book:auto:check`、来源校验和本地质量门不会产生图片或 TTS 调用费用。
+- 当前方案不依赖逐镜视频生成 API；原创插画使用现有 Codex 图片生成能力，另行配置的云端服务主要是豆包 TTS。个人试验中其免费额度通常足以完成口播，但具体额度与规则以服务商当期说明为准。
+- 分镜插画降低了角色一致性、动作连续性和逐镜抽卡成本，但不等于没有生成成本。希望改成漫剧或图生视频时，可以替换视觉资产层，来源、脚本、TTS、音频时间轴和 Remotion 交付链仍可复用。
+- 用户必须自行确认原文和最终发布内容的合法使用边界。仓库不收录原著正文，不使用原书封面、影视截图或演员形象。
 
 ## 固定标准
 
@@ -35,7 +159,7 @@ ai_media/
 ├─ active-book.json              # 当前选中的书
 ├─ source/                       # 用户提供的本地原文；正文默认不纳入 Git
 ├─ books/
-│  └─ book-001-长安的荔枝/
+│  └─ book-010-浮生六记/        # 开源仓库唯一完整媒体示例
 │     ├─ book.json               # 书籍元数据与制作状态
 │     ├─ approval.json           # 已批准脚本的 SHA-256
 │     ├─ content/                # 人工/Codex 编辑的输入
@@ -239,17 +363,19 @@ npm run book:studio
 
 `book:preflight` 是 `book:produce` 内部自动执行的诊断命令，日常流程不需要手动运行；仅在排查素材缺失时单独使用。
 
-## 当前第一本书
+## 开源完整示例
 
-《长安的荔枝》已迁移到 [books/book-001-长安的荔枝](E:/code/ai_media/books/book-001-长安的荔枝)。正式交付在该目录的 `output` 中，原始成片和封面只迁移、未重新编码。
+《浮生六记》位于 `books/book-010-浮生六记`，是开源仓库唯一保留完整分镜、封面插画、WAV 主音频和正式 MP4 的端到端示例。`book-001`～`book-009` 继续保留脚本、来源映射、视觉计划、时间轴和发布文案等工程文本，但不在当前版本中携带大体积媒体。
+
+历史书缺少 `public/assets` 或 `output` 媒体是有意的开源体积控制，不代表这些旧工程仍能直接通过 `--outputs` 验收。需要复现时，应使用合法原文和自己的服务额度重新生成素材，或从项目维护者另行发布的演示中查看成片。
 
 ## Git 与媒体文件
 
-- 每本书的 `public` 必须纳入版本管理，包括分镜插画、封面插画和内部 WAV 主音频。
-- 每本书 `output` 中的 `final.mp4` 和当前书声明的正式封面必须纳入版本管理，作为可发布的最终档案。
-- 视频、音频和位图通过 Git LFS 追踪，避免大二进制文件直接写入普通 Git 历史。
+- `book-010-浮生六记` 是当前唯一完整媒体示例，其分镜、封面插画、WAV 主音频、正式 MP4 和两种封面通过 Git LFS 跟踪。
+- `book-001`～`book-009` 以及以后新建书籍默认只提交工程文本；本地 `public/assets`、QA 截图和 `output` 媒体由 `.gitignore` 排除，除非明确将另一部书指定为新的完整示例。
+- 所有需要提交的视频、音频和位图仍必须通过 Git LFS，禁止把大二进制文件直接写入普通 Git 历史。
 - `source/` 中的原文、`output/preview.mp4`、`.runtime`、临时配音片段、依赖、日志和本机密钥继续忽略；只跟踪 `source/README.md`。
-- 当前目录已初始化 Git；提交正式媒体前应确认 `git lfs install` 和追踪规则正常。
+- 克隆完整示例或更换完整示例前，应确认 `git lfs install` 和追踪规则正常。
 
 ## 内容与版权边界
 

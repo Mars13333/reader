@@ -9,3 +9,14 @@ books/*/output/preview.mp4
 source/*
 !source/README.md
 books/*/output/*.zip
+
+# 开源仓库只保留 book-010 的完整媒体示例。其他书的工程文本继续跟踪，
+# 本地生成的图片、WAV 和 MP4 默认不进入 Git。
+books/*/public/assets/**
+books/*/generated/qa-*.png
+books/*/output/*.mp4
+books/*/output/*.png
+!books/book-010-浮生六记/public/assets/**
+!books/book-010-浮生六记/generated/qa-*.png
+!books/book-010-浮生六记/output/*.mp4
+!books/book-010-浮生六记/output/*.png

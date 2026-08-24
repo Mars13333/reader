@@ -16,7 +16,7 @@ This repository produces original Chinese book-commentary videos. Start by readi
 - Do not weaken SHA-256 approval, retention, source, asset, voice, or delivery checks to make a run pass.
 - Keep visible text in standard spelling; use `pronunciationOverrides` only for TTS input.
 - Preserve the fixed Liu Fei voice and speech rate unless the repository standard is explicitly changed.
-- Keep formal `public` and `output` media; do not delete or overwrite another book's artifacts.
+- Keep formal `public` and `output` media during active production. In the open-source tree, `book-010-浮生六记` is the sole full-media example; historical books retain their text/configuration artifacts while heavy media may be omitted. Do not delete user media unless the user explicitly requests that scope.
 - Do not modify book-001, book-002, book-003, or book-004 while adopting a new channel standard.
 - Do not retrofit the `book-jacket-v2` visual standard into book-001 or book-002. New books use a black first-frame canvas, a larger persistent book title, chapter-keyword reading time of at least six seconds, and only declared 3:4 and 4:3 cover deliveries.
 - For `book-jacket-v2` covers, the exact book title must be the largest visible text. Generate unlettered original artwork and let Remotion typeset the book title, author, and short recommendation line; do not ask image generation to spell Chinese.

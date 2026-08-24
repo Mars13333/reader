@@ -1,0 +1,740 @@
+{
+  "bookId": "book-010-浮生六记",
+  "scriptSha256": "DFC611547F4DFE1B4DA24FDD7692CD3288EAA88384D399AA5F7CBF3E3BC30DBC",
+  "title": "《浮生六记》：最深的爱为何没能护住一生",
+  "author": "沈复",
+  "angle": "从沈复与陈芸二十三年的相伴、共创生活与最终失散，理解亲密关系为何既需要深情，也需要经济缓冲、家庭边界和照护能力。",
+  "deliveryMode": "audio-master",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 20314,
+  "totalDurationSeconds": 677.1333333333333,
+  "openingIntro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《浮生六记》。",
+    "durationInFrames": 216,
+    "spokenStartFrame": 107,
+    "spokenEndFrame": 200
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "voice": {
+    "engine": "火山引擎豆包语音合成2.0",
+    "name": "刘飞男声",
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  },
+  "segments": [
+    {
+      "id": "s01",
+      "section": "深情为何仍会失守",
+      "kicker": "爱不是唯一变量",
+      "narration": "一段婚姻最危险的，真是不爱吗？沈复和陈芸相伴二十三年，彼此始终有情；他们真正失去的，不是感情，而是让感情落地的安全空间。看懂这一点，才看得懂后来的粥、月亮、债务与诀别。",
+      "sourceRefs": [
+        {
+          "label": "相伴二十三年与临终回望",
+          "lines": "35，153-155"
+        }
+      ],
+      "narrationDurationSeconds": 19.771541666666668,
+      "narrationStartFrame": 216,
+      "narrationEndFrame": 809,
+      "startFrame": 0,
+      "durationInFrames": 822
+    },
+    {
+      "id": "s02",
+      "section": "一碗粥的开始",
+      "kicker": "先看见一个具体动作",
+      "narration": "原文最早让两个人靠近的，不是山盟海誓，而是一碗暖粥。少年沈复夜归腹饥，陈芸暗暗牵住他的衣袖，把他带进房里。她明明对堂兄说粥已经没有了，却单独留下一碗给沈复。秘密被撞破后，满屋人哄笑，她羞得避开；可沈复记住的，是有人愿意冒着被取笑的风险照顾他。",
+      "sourceRefs": [
+        {
+          "label": "藏粥待婿",
+          "lines": "17-19"
+        }
+      ],
+      "narrationDurationSeconds": 26.224875,
+      "narrationStartFrame": 822,
+      "narrationEndFrame": 1608,
+      "startFrame": 822,
+      "durationInFrames": 799
+    },
+    {
+      "id": "s03",
+      "section": "婚姻先从知己开始",
+      "kicker": "被理解比被赞美更难",
+      "narration": "陈芸四岁丧父，家里贫寒，靠刺绣供养母亲和弟弟，又从《琵琶行》一个字一个字认起。婚后，她在烛下读《西厢记》，和沈复谈李白、杜甫，甚至拿三白这个字开玩笑。书中写到，两人像密友重逢。我的理解是，他们的亲密并不只靠才子佳人的想象，而是彼此愿意认真听对方如何看诗、看人、看生活。共同语言，成了关系的第一层骨架。",
+      "sourceRefs": [
+        {
+          "label": "陈芸自学与诗才",
+          "lines": "17"
+        },
+        {
+          "label": "婚后读书谈诗",
+          "lines": "23，31-33"
+        }
+      ],
+      "narrationDurationSeconds": 33.331375,
+      "narrationStartFrame": 1621,
+      "narrationEndFrame": 2621,
+      "startFrame": 1621,
+      "durationInFrames": 1013
+    },
+    {
+      "id": "s04",
+      "section": "把喜欢过成日常",
+      "kicker": "长期亲密依靠共同注意力",
+      "narration": "真正稀有的，是热烈之后仍能一起过普通日子。沧浪亭畔的我取轩里，他们课书论古，品月评花；七夕并坐水窗，看云经过月亮。沈复说，两人相伴二十三年，年纪越长感情越密，哪怕在暗处偶遇，也会握手问一句去哪里。原著中的这些细节说明，关系不是靠一次表白续命，而是靠持续把注意力交给同一个人：你看见的云，我也愿意停下来看看。",
+      "sourceRefs": [
+        {
+          "label": "我取轩消夏",
+          "lines": "31-35"
+        },
+        {
+          "label": "七夕观月",
+          "lines": "37"
+        }
+      ],
+      "narrationDurationSeconds": 37.140791666666665,
+      "narrationStartFrame": 2634,
+      "narrationEndFrame": 3748,
+      "startFrame": 2634,
+      "durationInFrames": 1126
+    },
+    {
+      "id": "s05",
+      "section": "誓言照不住所有风险",
+      "kicker": "幸福越具体，脆弱也越具体",
+      "narration": "他们刻下两方印章，约定生生世世做夫妻。可紧接着的鬼节夜里，月亮被云遮住，两人先是联句笑闹，后又被桥下一声巨响吓得关窗，双双病了二十天。沈复在回忆中把它看作后来不能白头的预兆。我们不必接受这种宿命解释，却能看见一个事实：誓言确认的是此刻的心，疾病、收入与家庭环境，却要靠另一套能力应对。浪漫可以照亮生活，不能自动替生活兜底。",
+      "sourceRefs": [
+        {
+          "label": "七夕印章与鬼节受惊患病",
+          "lines": "37-41"
+        }
+      ],
+      "narrationDurationSeconds": 33.596,
+      "narrationStartFrame": 3760,
+      "narrationEndFrame": 4768,
+      "startFrame": 3760,
+      "durationInFrames": 1021
+    },
+    {
+      "id": "s06",
+      "section": "贫寒里的共同创造",
+      "kicker": "审美不是有钱后的装饰",
+      "narration": "陈芸最动人的能力，是把有限条件重新排列。沈复原本厌恶卤腐和卤瓜，她调成双鲜酱，让他从嫌弃吃到喜欢；残书破画到了她手里，会被补成可以翻看的册页。住进菜圃边的小屋，两人钓鱼、看晚霞，设想以后画画刺绣，换来布衣菜饭。换到今天，这像一种低成本但高投入的共同生活设计：不靠昂贵消费证明幸福，而是两个人一起决定，手上的东西还能怎样变好。",
+      "sourceRefs": [
+        {
+          "label": "双鲜酱与修补残书",
+          "lines": "49-51"
+        },
+        {
+          "label": "菜圃生活愿景",
+          "lines": "55"
+        }
+      ],
+      "narrationDurationSeconds": 37.254416666666664,
+      "narrationStartFrame": 4781,
+      "narrationEndFrame": 5899,
+      "startFrame": 4781,
+      "durationInFrames": 1130
+    },
+    {
+      "id": "s07",
+      "section": "陈芸想看更大的世界",
+      "kicker": "快乐也有时代的门槛",
+      "narration": "陈芸遗憾自己不是男子，许多地方不能自由去。沈复便给她换发式、穿男装，带她夜游水仙庙。她紧张得一度反悔，最后还是走进灯火与人群，直到误按一位少妇的肩，才脱帽说明自己也是女子，众人转怒为欢。后来她又借归宁之名随船过太湖，看见水天一色，感叹闺中人有多少一生都见不到这样的天地。两次出游很甜，也提醒我们：这份自由依赖丈夫的带领和掩护，并不真正属于她。",
+      "sourceRefs": [
+        {
+          "label": "女扮男装夜游水仙庙",
+          "lines": "57"
+        },
+        {
+          "label": "过太湖与万年桥待月",
+          "lines": "59-61"
+        }
+      ],
+      "narrationDurationSeconds": 38.18841666666667,
+      "narrationStartFrame": 5911,
+      "narrationEndFrame": 7057,
+      "startFrame": 5911,
+      "durationInFrames": 1158
+    },
+    {
+      "id": "s08",
+      "section": "浪漫越界后的代价",
+      "kicker": "共同愿望也可能共同误判",
+      "narration": "故事的转折，不是两个人忽然不再相爱，而是他们把浪漫推向了高风险处。陈芸见到年轻的憨园，主动与她结为姐妹，希望将她迎进家里；沈复虽说家贫、夫妻情笃，不必外求，最终仍接受这份安排。后来憨园被有财势的人聘走，陈芸觉得受骗，血疾再次发作。这里不能只把责任推给某一个人。原著呈现的，是夫妻共同把理想化愿望放进金钱和权力悬殊的现实，结果最先受伤的仍是处境更弱的陈芸。",
+      "sourceRefs": [
+        {
+          "label": "憨园结盟与约定",
+          "lines": "63-69"
+        },
+        {
+          "label": "憨园被夺与陈芸病发",
+          "lines": "71，125-127"
+        }
+      ],
+      "narrationDurationSeconds": 39.503875,
+      "narrationStartFrame": 7069,
+      "narrationEndFrame": 8255,
+      "startFrame": 7069,
+      "durationInFrames": 1198
+    },
+    {
+      "id": "s09",
+      "section": "误解如何变成驱逐",
+      "kicker": "没有边界的家庭会放大每次错误",
+      "narration": "更深的裂缝来自家族内部。陈芸曾替婆家代写书信，后来因婆婆不满而停笔，公公却误以为她故意怠慢。她替公公物色姚氏，又因事前没有禀明，被婆婆认作欺瞒。再后来，小叔借债让她作保，回信被公公拆看，小叔又否认，陈芸便被指为背夫借债、诬陷小叔。她宁可自己受责，也不愿让沈复与母亲失和。可模糊的授权、层层转述和长幼权力，最终把沉默变成了罪证。",
+      "sourceRefs": [
+        {
+          "label": "代写家书与姚氏误会",
+          "lines": "119-121"
+        },
+        {
+          "label": "启堂债务与逐书",
+          "lines": "123"
+        }
+      ],
+      "narrationDurationSeconds": 36.61595833333333,
+      "narrationStartFrame": 8267,
+      "narrationEndFrame": 9366,
+      "startFrame": 8267,
+      "durationInFrames": 1111
+    },
+    {
+      "id": "s10",
+      "section": "贫困不是背景音",
+      "kicker": "风险会在同一时刻叠加",
+      "narration": "这时，经济问题已经不是节俭可以解决的。沈复开的书画铺，三天收入不够一天开支；女儿青君典当首饰衣物补贴家用。陈芸带病赶绣《心经》，十天交工，身体反而更坏。沈复又替朋友担保五十金，朋友卷款逃走，债主只向担保人追索。年关债主上门，父亲听见后震怒，限他们三日离开。关系真正被击穿的瞬间，是慢性病、收入断裂、替人担保和亲族排斥，一起压到一个没有储备的家庭上。",
+      "sourceRefs": [
+        {
+          "label": "书画铺困境与带病绣经",
+          "lines": "127-129"
+        },
+        {
+          "label": "担保债务与限期离家",
+          "lines": "131"
+        }
+      ],
+      "narrationDurationSeconds": 38.017625,
+      "narrationStartFrame": 9378,
+      "narrationEndFrame": 10519,
+      "startFrame": 9378,
+      "durationInFrames": 1153
+    },
+    {
+      "id": "s11",
+      "section": "第二碗粥",
+      "kicker": "相聚的意象变成永诀",
+      "narration": "离开前，他们必须先安置孩子。十四岁的青君被许给亲族，十二岁的逢森托人送去学贸易。腊月二十六日五更，陈芸与家人喝下暖粥，强笑说，当年因一碗粥相聚，如今又因一碗粥分散。她告诉孩子只是去就医，几天便回。逢森却突然大哭，说母亲不会回来了。陈芸病得走不动，沈复背着她穿过黑暗小巷登船。开头那碗藏起来的粥，到了这里不再只是爱情纪念，而是一家人被迫拆散的见证。",
+      "sourceRefs": [
+        {
+          "label": "安置青君与逢森",
+          "lines": "133-135"
+        },
+        {
+          "label": "五更喝粥与母子永诀",
+          "lines": "137"
+        }
+      ],
+      "narrationDurationSeconds": 40.830416666666665,
+      "narrationStartFrame": 10531,
+      "narrationEndFrame": 11756,
+      "startFrame": 10531,
+      "durationInFrames": 1238
+    },
+    {
+      "id": "s12",
+      "section": "朋友能托住多久",
+      "kicker": "善意救急，不能替代稳定系统",
+      "narration": "无锡华家给了他们难得的喘息。陈芸住下两旬，已经能走去看元宵龙灯；可沈复必须继续找钱。他在风雪里赶往靖江，钱袋见底，幸遇曾受过他帮助的曹姓老人，才得以付清食宿并继续渡江。后来工作又被裁撤，陈芸病发，沈复甚至带着干粮步行八九十里，再去借二十五金。原著没有把朋友写得冷酷，恰恰相反，许多人都伸过手。但零散的人情只能一次次救急，无法给长期疾病和生活建立稳定底盘。",
+      "sourceRefs": [
+        {
+          "label": "华家休养与风雪求助",
+          "lines": "139-145"
+        },
+        {
+          "label": "工作裁撤与徒步借钱",
+          "lines": "147-149"
+        }
+      ],
+      "narrationDurationSeconds": 40.43545833333334,
+      "narrationStartFrame": 11769,
+      "narrationEndFrame": 12982,
+      "startFrame": 11769,
+      "durationInFrames": 1226
+    },
+    {
+      "id": "s13",
+      "section": "来世二字",
+      "kicker": "结局不是感情耗尽",
+      "narration": "最后一重打击，是华家送来帮忙的阿双逃走。陈芸担心无法向盟姊交代，梦里反复喊阿双逃了、憨园负我，病势急转直下。临终前，她说自己曾想过布衣暖、菜饭饱，两个人安稳住在一室，已经像神仙；又劝沈复在她死后回到父母身边，另娶能奉养双亲、照顾孩子的人。沈复不肯。陈芸握着他的手，只断续说出来世二字，便在孤灯下去世。不是爱消失了，而是照护、金钱和退路全都耗尽了。",
+      "sourceRefs": [
+        {
+          "label": "阿双逃走与病势加重",
+          "lines": "151"
+        },
+        {
+          "label": "陈芸临终与去世",
+          "lines": "153-155"
+        }
+      ],
+      "narrationDurationSeconds": 37.489041666666665,
+      "narrationStartFrame": 12995,
+      "narrationEndFrame": 14119,
+      "startFrame": 12995,
+      "durationInFrames": 1137
+    },
+    {
+      "id": "s14",
+      "section": "失去没有在葬礼结束",
+      "kicker": "回忆为何越来越重",
+      "narration": "陈芸死后，沈复守在房中等待她的魂归，抚着旧衣，闻见余香，却什么也没有见到。他把她暂葬扬州，卖画度日，常去墓前哭。随后父亲去世，他赶回家也未能进入家事安排；再后来，随友人远行时收到女儿来信，得知儿子逢森也已夭亡。妻、父、子接连离开，前文那些粥、花、月和小屋便不再是闲笔。它们是一个人回头确认：我确实拥有过那些时刻，只是再也无法回去。",
+      "sourceRefs": [
+        {
+          "label": "守候回煞与祭墓",
+          "lines": "157-159"
+        },
+        {
+          "label": "父亲与逢森去世",
+          "lines": "161-169"
+        }
+      ],
+      "narrationDurationSeconds": 37.343375,
+      "narrationStartFrame": 14132,
+      "narrationEndFrame": 15252,
+      "startFrame": 14132,
+      "durationInFrames": 1133
+    },
+    {
+      "id": "s15",
+      "section": "闲情不是旁枝",
+      "kicker": "幸福是一种共同生产能力",
+      "narration": "所以《闲情记趣》里的插花、盆景和饮食，不该被当成故事暂停。最典型的一幕，是朋友们想去菜花地饮酒，却苦于只能吃冷食。陈芸想到雇一副卖馄饨的担子，把锅灶、酒菜和砂罐都带去。众人在柳阴下先煮茶，再热酒烹肴，直到日落。她解决的不是一道菜，而是怎样用有限的钱、现成的工具和彼此分工，创造一段共享时间。幸福不是静态的运气，它也可以是一种共同设计、共同执行的能力。",
+      "sourceRefs": [
+        {
+          "label": "菜花地雇馄饨担野餐",
+          "lines": "109"
+        },
+        {
+          "label": "插花与园居方法",
+          "lines": "83-101"
+        }
+      ],
+      "narrationDurationSeconds": 38.50416666666667,
+      "narrationStartFrame": 15265,
+      "narrationEndFrame": 16420,
+      "startFrame": 15265,
+      "durationInFrames": 1167
+    },
+    {
+      "id": "s16",
+      "section": "把古人的故事带回今天",
+      "kicker": "深情需要四个支点",
+      "narration": "换到今天，我会把这段婚姻拆成四个支点。第一，共同生活：两个人要有不靠消费攀比的快乐。第二，经济缓冲：不替超出承受力的人情债担保，也为疾病和失业留出余地。第三，家庭边界：谁作决定、谁传话、谁承担后果，要说清楚。第四，求助机制：朋友的善意很珍贵，但长期照护不能只靠临时借钱。沈复和陈芸最值得珍惜的，是他们真能一起创造生活；最值得警惕的，是他们把太多风险留给深情硬扛。",
+      "sourceRefs": [
+        {
+          "label": "共同生活与经济风险的原文依据",
+          "lines": "55，103-109，117，129-153"
+        }
+      ],
+      "narrationDurationSeconds": 38.43245833333334,
+      "narrationStartFrame": 16432,
+      "narrationEndFrame": 17585,
+      "startFrame": 16432,
+      "durationInFrames": 1166
+    },
+    {
+      "id": "s17",
+      "section": "必须保留的距离",
+      "kicker": "动人不等于完整",
+      "narration": "不过，这本书不能被直接当成理想婚姻说明书。当前绑定文本的目录和正文只列出闺房、闲情、坎坷、浪游四记，没有出现的内容，我们不能替原文补写。更重要的是，叙述主要来自沈复。陈芸的愿望、委屈和选择，多由丈夫转述；我们能看见她的才情，也要看见她受制于当时的家族秩序和女性行动边界。沈复会反省自己的多情与失责，却也会用宿命解释悲剧。感动可以保留，判断仍要留一段距离。",
+      "sourceRefs": [
+        {
+          "label": "绑定文本四章目录",
+          "lines": "1-7，13，77，115，175"
+        },
+        {
+          "label": "沈复自述立场与结尾反省",
+          "lines": "15，155"
+        }
+      ],
+      "narrationDurationSeconds": 40.69204166666667,
+      "narrationStartFrame": 17598,
+      "narrationEndFrame": 18819,
+      "startFrame": 17598,
+      "durationInFrames": 1233
+    },
+    {
+      "id": "s18",
+      "section": "爱要落在可持续的生活里",
+      "kicker": "记住粥，也记住承托粥的屋檐",
+      "narration": "沈复在开篇说，他只想把实情实事留下；写到最后，他没有把自己塑造成胜利者，而是留下追问：如此深情，为什么仍走到孤灯、空屋和一座异乡坟墓？我的答案是，爱当然重要，但爱不是用来替代收入、边界、健康和责任的。我们可以记住那碗暖粥、月下联句和花田热酒，也要记住，温柔若想走得更远，必须有一间不被轻易夺走的屋子，有拒绝高风险人情的能力，有在疾病来临前就准备好的退路。把深情落成可以持续的生活，才是对这段往事最好的回应。这里是陈拾叁，陪你一起读书破万卷。",
+      "sourceRefs": [
+        {
+          "label": "自述宗旨、芸娘去世与作者反省",
+          "lines": "15，153-159"
+        }
+      ],
+      "narrationDurationSeconds": 47.99675,
+      "narrationStartFrame": 18831,
+      "narrationEndFrame": 20271,
+      "startFrame": 18831,
+      "durationInFrames": 1483
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01-01",
+      "segmentId": "s01",
+      "section": "深情为何仍会失守",
+      "kicker": "爱不是唯一变量",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 0,
+      "label": "相爱仍会失守的现实提问",
+      "purpose": "author-commentary",
+      "weight": 1,
+      "isSegmentStart": true,
+      "startFrame": 0,
+      "durationInFrames": 822,
+      "contentOffsetFrames": 216
+    },
+    {
+      "id": "s02-01",
+      "segmentId": "s02",
+      "section": "一碗粥的开始",
+      "kicker": "先看见一个具体动作",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 1,
+      "label": "少年陈芸藏起暖粥等待沈复",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 822,
+      "durationInFrames": 799
+    },
+    {
+      "id": "s03-01",
+      "segmentId": "s03",
+      "section": "婚姻先从知己开始",
+      "kicker": "被理解比被赞美更难",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 2,
+      "label": "婚后烛下共读谈诗",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 1621,
+      "durationInFrames": 1013
+    },
+    {
+      "id": "s04-01",
+      "segmentId": "s04",
+      "section": "把喜欢过成日常",
+      "kicker": "长期亲密依靠共同注意力",
+      "image": "assets/storyboards/sheet-01.png",
+      "panel": 3,
+      "label": "我取轩水窗共赏云月",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 2634,
+      "durationInFrames": 1126
+    },
+    {
+      "id": "s05-01",
+      "segmentId": "s05",
+      "section": "誓言照不住所有风险",
+      "kicker": "幸福越具体，脆弱也越具体",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 0,
+      "label": "七夕刻印盟誓",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 3760,
+      "durationInFrames": 681
+    },
+    {
+      "id": "s05-02",
+      "segmentId": "s05",
+      "section": "誓言照不住所有风险",
+      "kicker": "幸福越具体，脆弱也越具体",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 1,
+      "label": "鬼节夜受惊后双双患病",
+      "purpose": "source-scene",
+      "weight": 1,
+      "isSegmentStart": false,
+      "startFrame": 4441,
+      "durationInFrames": 340
+    },
+    {
+      "id": "s06-01",
+      "segmentId": "s06",
+      "section": "贫寒里的共同创造",
+      "kicker": "审美不是有钱后的装饰",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 2,
+      "label": "双鲜酱与修补残书",
+      "purpose": "source-scene",
+      "weight": 1,
+      "isSegmentStart": true,
+      "startFrame": 4781,
+      "durationInFrames": 377
+    },
+    {
+      "id": "s06-02",
+      "segmentId": "s06",
+      "section": "贫寒里的共同创造",
+      "kicker": "审美不是有钱后的装饰",
+      "image": "assets/storyboards/sheet-02.png",
+      "panel": 3,
+      "label": "菜圃小屋的布衣愿景",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 5158,
+      "durationInFrames": 753
+    },
+    {
+      "id": "s07-01",
+      "segmentId": "s07",
+      "section": "陈芸想看更大的世界",
+      "kicker": "快乐也有时代的门槛",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 0,
+      "label": "陈芸换男装夜游水仙庙",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 5911,
+      "durationInFrames": 579
+    },
+    {
+      "id": "s07-02",
+      "segmentId": "s07",
+      "section": "陈芸想看更大的世界",
+      "kicker": "快乐也有时代的门槛",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 1,
+      "label": "太湖舟中看见水天一色",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 6490,
+      "durationInFrames": 579
+    },
+    {
+      "id": "s08-01",
+      "segmentId": "s08",
+      "section": "浪漫越界后的代价",
+      "kicker": "共同愿望也可能共同误判",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 2,
+      "label": "陈芸与憨园焚香结盟",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 7069,
+      "durationInFrames": 1198
+    },
+    {
+      "id": "s09-01",
+      "segmentId": "s09",
+      "section": "误解如何变成驱逐",
+      "kicker": "没有边界的家庭会放大每次错误",
+      "image": "assets/storyboards/sheet-03.png",
+      "panel": 3,
+      "label": "家书误会与家族审问",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 8267,
+      "durationInFrames": 1111
+    },
+    {
+      "id": "s10-01",
+      "segmentId": "s10",
+      "section": "贫困不是背景音",
+      "kicker": "风险会在同一时刻叠加",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 0,
+      "label": "陈芸病中刺绣而债主逼门",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 9378,
+      "durationInFrames": 1153
+    },
+    {
+      "id": "s11-01",
+      "segmentId": "s11",
+      "section": "第二碗粥",
+      "kicker": "相聚的意象变成永诀",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 1,
+      "label": "五更暖粥后的母子永诀",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 10531,
+      "durationInFrames": 1238
+    },
+    {
+      "id": "s12-01",
+      "segmentId": "s12",
+      "section": "朋友能托住多久",
+      "kicker": "善意救急，不能替代稳定系统",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 2,
+      "label": "沈复风雪渡江求助",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 11769,
+      "durationInFrames": 1226
+    },
+    {
+      "id": "s13-01",
+      "segmentId": "s13",
+      "section": "来世二字",
+      "kicker": "结局不是感情耗尽",
+      "image": "assets/storyboards/sheet-04.png",
+      "panel": 3,
+      "label": "阿双逃走后的空门与病榻",
+      "purpose": "source-scene",
+      "weight": 1,
+      "isSegmentStart": true,
+      "startFrame": 12995,
+      "durationInFrames": 284
+    },
+    {
+      "id": "s13-02",
+      "segmentId": "s13",
+      "section": "来世二字",
+      "kicker": "结局不是感情耗尽",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 0,
+      "label": "孤灯病榻只余来世二字",
+      "purpose": "source-scene",
+      "weight": 3,
+      "isSegmentStart": false,
+      "startFrame": 13279,
+      "durationInFrames": 853
+    },
+    {
+      "id": "s14-01",
+      "segmentId": "s14",
+      "section": "失去没有在葬礼结束",
+      "kicker": "回忆为何越来越重",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 1,
+      "label": "回煞夜守着旧衣等待",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 14132,
+      "durationInFrames": 567
+    },
+    {
+      "id": "s14-02",
+      "segmentId": "s14",
+      "section": "失去没有在葬礼结束",
+      "kicker": "回忆为何越来越重",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 2,
+      "label": "异乡墓前接连失亲",
+      "purpose": "source-scene",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 14699,
+      "durationInFrames": 566
+    },
+    {
+      "id": "s15-01",
+      "segmentId": "s15",
+      "section": "闲情不是旁枝",
+      "kicker": "幸福是一种共同生产能力",
+      "image": "assets/storyboards/sheet-05.png",
+      "panel": 3,
+      "label": "菜花地馄饨担把巧思变成共享幸福",
+      "purpose": "core-concept",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 15265,
+      "durationInFrames": 1167
+    },
+    {
+      "id": "s16-01",
+      "segmentId": "s16",
+      "section": "把古人的故事带回今天",
+      "kicker": "深情需要四个支点",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 0,
+      "label": "现代伴侣共同规划日常",
+      "purpose": "modern-analogy",
+      "weight": 1,
+      "isSegmentStart": true,
+      "startFrame": 16432,
+      "durationInFrames": 389
+    },
+    {
+      "id": "s16-02",
+      "segmentId": "s16",
+      "section": "把古人的故事带回今天",
+      "kicker": "深情需要四个支点",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 1,
+      "label": "四个现实支点共同承托亲密",
+      "purpose": "modern-analogy",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 16821,
+      "durationInFrames": 777
+    },
+    {
+      "id": "s17-01",
+      "segmentId": "s17",
+      "section": "必须保留的距离",
+      "kicker": "动人不等于完整",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 2,
+      "label": "四记文本与单一叙述视角",
+      "purpose": "limitation",
+      "weight": 2,
+      "isSegmentStart": true,
+      "startFrame": 17598,
+      "durationInFrames": 1233
+    },
+    {
+      "id": "s18-01",
+      "segmentId": "s18",
+      "section": "爱要落在可持续的生活里",
+      "kicker": "记住粥，也记住承托粥的屋檐",
+      "image": "assets/storyboards/sheet-06.png",
+      "panel": 3,
+      "label": "暖粥月窗与稳固屋檐",
+      "purpose": "author-commentary",
+      "weight": 3,
+      "isSegmentStart": true,
+      "startFrame": 18831,
+      "durationInFrames": 890
+    },
+    {
+      "id": "s18-02",
+      "segmentId": "s18",
+      "section": "爱要落在可持续的生活里",
+      "kicker": "记住粥，也记住承托粥的屋檐",
+      "image": "assets/storyboards/sheet-07.png",
+      "panel": 0,
+      "label": "共同加固屋檐承托温柔",
+      "purpose": "author-commentary",
+      "weight": 2,
+      "isSegmentStart": false,
+      "startFrame": 19721,
+      "durationInFrames": 593
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "bookId": "book-010-浮生六记",
+  "status": "approved",
+  "version": 1,
+  "scriptSha256": "DFC611547F4DFE1B4DA24FDD7692CD3288EAA88384D399AA5F7CBF3E3BC30DBC",
+  "approvedAt": "2026-08-24T09:20:37.758Z",
+  "segments": 18,
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "speechRate": -10
+  }
+}

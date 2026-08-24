@@ -1,0 +1,26 @@
+{
+  "design": "book-jacket-v2",
+  "image": "assets/cover/cover-art.png",
+  "bookTitle": "浮生六记",
+  "eyebrow": "沈复 著",
+  "subtitle": "在深情与人间风雨之间相守",
+  "badge": "陈拾叁读书",
+  "treatment": "bright",
+  "artPrompt": "清代苏州园林与水窗意象的原创无字书衣插画，一只暖粥碗、一扇临水窗、月光与花枝形成含蓄叙事，明亮通透的工笔水彩质感，中央和上部保留大面积干净排字空间；不出现任何文字、字母、数字、标志、水印、乱码或原书封面元素。",
+  "layouts": {
+    "portrait3x4": {
+      "left": 72,
+      "eyebrowTop": 78,
+      "headlineTop": 220,
+      "badgeTop": 1220,
+      "artObjectPosition": "center 50%"
+    },
+    "landscape4x3": {
+      "left": 88,
+      "eyebrowTop": 70,
+      "headlineTop": 180,
+      "badgeTop": 870,
+      "artObjectPosition": "center 40%"
+    }
+  }
+}

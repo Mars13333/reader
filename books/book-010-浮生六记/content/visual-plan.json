@@ -1,0 +1,110 @@
+{
+  "standard": "semantic-key-moments-v1",
+  "durationPolicy": "semantic-weighted-v1",
+  "visibleTextLanguage": "zh-CN",
+  "generatedTextPolicy": "no-text-in-generated-images",
+  "storyboardStandard": "portrait-2x2-9x16-v1",
+  "canvasAspectRatio": "9:16",
+  "panelLayout": "2x2",
+  "panelOrder": [
+    "top-left",
+    "top-right",
+    "bottom-left",
+    "bottom-right"
+  ],
+  "visualDirection": {
+    "style": "原创清代江南工笔水彩与电影分镜融合，人物服饰和室内器物符合原文时代气质，明亮通透，暗部保留细节，人物形象跨母图保持一致。",
+    "palette": "月白、竹青、杏黄、朱砂作小面积点缀，苦难段仍保持可辨的自然光或灯光。",
+    "avoid": ["英文", "字母", "数字", "标志", "水印", "中文", "生成式文字", "乱码", "伪文字", "原书封面", "影视演员形象", "大面积纯黑", "重度暗角"]
+  },
+  "generationSheets": [
+    {
+      "id": "sheet-01",
+      "file": "assets/storyboards/sheet-01.png",
+      "panels": ["现代关系的脆弱提问", "少年藏粥", "婚后烛下共读", "我取轩共赏云月"]
+    },
+    {
+      "id": "sheet-02",
+      "file": "assets/storyboards/sheet-02.png",
+      "panels": ["七夕刻印盟誓", "鬼节夜受惊患病", "双鲜酱与修补残书", "菜圃小屋的布衣愿景"]
+    },
+    {
+      "id": "sheet-03",
+      "file": "assets/storyboards/sheet-03.png",
+      "panels": ["陈芸男装夜游水仙庙", "太湖舟中看水天", "陈芸与憨园结盟", "家书误会与家族审问"]
+    },
+    {
+      "id": "sheet-04",
+      "file": "assets/storyboards/sheet-04.png",
+      "panels": ["病中刺绣与债主上门", "五更暖粥后的母子永诀", "沈复风雪渡江求助", "阿双逃走后的空门与病榻"]
+    },
+    {
+      "id": "sheet-05",
+      "file": "assets/storyboards/sheet-05.png",
+      "panels": ["孤灯病榻诀别", "回煞夜守旧衣", "异乡墓前接连失亲", "菜花地馄饨担热饮"]
+    },
+    {
+      "id": "sheet-06",
+      "file": "assets/storyboards/sheet-06.png",
+      "panels": ["现代伴侣共同规划生活", "经济缓冲与家庭边界的现代隐喻", "四记文本与单一叙述视角的限制", "暖粥月窗与稳固屋檐的收束"]
+    },
+    {
+      "id": "sheet-07",
+      "file": "assets/storyboards/sheet-07.png",
+      "panels": ["共同加固屋檐承托温柔", "风雨中的稳固桥梁", "储备与照护的日常", "黎明窗前的相伴空椅"]
+    }
+  ],
+  "keyMoments": [
+    {"id": "k01", "segmentId": "s01", "kind": "author-commentary", "anchor": "相爱仍可能因现实支撑不足而失守", "shotRef": "s01-01"},
+    {"id": "k02", "segmentId": "s02", "kind": "source-scene", "anchor": "陈芸把暖粥藏在房中等待少年沈复", "shotRef": "s02-01"},
+    {"id": "k03", "segmentId": "s03", "kind": "source-scene", "anchor": "婚后烛下共读《西厢记》并谈诗", "shotRef": "s03-01"},
+    {"id": "k04", "segmentId": "s04", "kind": "source-scene", "anchor": "夫妇在我取轩共读并赏云月", "shotRef": "s04-01"},
+    {"id": "k05", "segmentId": "s05", "kind": "source-scene", "anchor": "七夕刻下愿世世为夫妇的两方印章", "shotRef": "s05-01"},
+    {"id": "k06", "segmentId": "s05", "kind": "source-scene", "anchor": "鬼节夜受惊后两人双双患病", "shotRef": "s05-02"},
+    {"id": "k07", "segmentId": "s06", "kind": "source-scene", "anchor": "陈芸调双鲜酱并修补残书旧画", "shotRef": "s06-01"},
+    {"id": "k08", "segmentId": "s06", "kind": "source-scene", "anchor": "菜圃小屋里设想布衣菜饭的未来", "shotRef": "s06-02"},
+    {"id": "k09", "segmentId": "s07", "kind": "source-scene", "anchor": "陈芸换男装夜游水仙庙", "shotRef": "s07-01"},
+    {"id": "k10", "segmentId": "s07", "kind": "source-scene", "anchor": "陈芸乘船过太湖看见水天一色", "shotRef": "s07-02"},
+    {"id": "k11", "segmentId": "s08", "kind": "source-scene", "anchor": "陈芸与憨园焚香结盟并赠玉钏", "shotRef": "s08-01"},
+    {"id": "k12", "segmentId": "s09", "kind": "source-scene", "anchor": "家书被拆读后陈芸在家族审问中失去申辩空间", "shotRef": "s09-01"},
+    {"id": "k13", "segmentId": "s10", "kind": "source-scene", "anchor": "陈芸病中刺绣而债主在门外逼索", "shotRef": "s10-01"},
+    {"id": "k14", "segmentId": "s11", "kind": "source-scene", "anchor": "五更喝粥后陈芸与青君逢森永诀", "shotRef": "s11-01"},
+    {"id": "k15", "segmentId": "s12", "kind": "source-scene", "anchor": "沈复在风雪和江风中求助渡江", "shotRef": "s12-01"},
+    {"id": "k16", "segmentId": "s13", "kind": "source-scene", "anchor": "阿双逃走后空门与病榻加重陈芸忧惧", "shotRef": "s13-01"},
+    {"id": "k17", "segmentId": "s13", "kind": "source-scene", "anchor": "孤灯下陈芸只说出来世二字便去世", "shotRef": "s13-02"},
+    {"id": "k18", "segmentId": "s14", "kind": "source-scene", "anchor": "回煞夜沈复抚旧衣等待陈芸魂归", "shotRef": "s14-01"},
+    {"id": "k19", "segmentId": "s14", "kind": "source-scene", "anchor": "沈复在异乡墓前又收到父子死讯", "shotRef": "s14-02"},
+    {"id": "k20", "segmentId": "s15", "kind": "core-concept", "anchor": "用馄饨担把有限资源变成花田共享时光", "shotRef": "s15-01"},
+    {"id": "k21", "segmentId": "s16", "kind": "modern-analogy", "anchor": "现代伴侣共同规划不靠攀比的日常", "shotRef": "s16-01"},
+    {"id": "k22", "segmentId": "s16", "kind": "modern-analogy", "anchor": "经济缓冲、家庭边界与求助机制共同承托亲密", "shotRef": "s16-02"},
+    {"id": "k23", "segmentId": "s17", "kind": "limitation", "anchor": "绑定文本只有四记且陈芸声音主要经沈复转述", "shotRef": "s17-01"},
+    {"id": "k24", "segmentId": "s18", "kind": "author-commentary", "anchor": "暖粥与月窗要由稳定屋檐和现实退路承托", "shotRef": "s18-01"},
+    {"id": "k25", "segmentId": "s18", "kind": "author-commentary", "anchor": "两双手共同加固屋檐，把深情变成可持续的生活", "shotRef": "s18-02"}
+  ],
+  "assetReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-24T09:42:00.000Z",
+    "semanticCoverageReviewed": true,
+    "noEnglishVisible": true
+  },
+  "segments": [
+    {"id": "s01", "shots": [{"image": "assets/storyboards/sheet-01.png", "panel": 0, "label": "相爱仍会失守的现实提问", "purpose": "author-commentary", "weight": 1}]},
+    {"id": "s02", "shots": [{"image": "assets/storyboards/sheet-01.png", "panel": 1, "label": "少年陈芸藏起暖粥等待沈复", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s03", "shots": [{"image": "assets/storyboards/sheet-01.png", "panel": 2, "label": "婚后烛下共读谈诗", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s04", "shots": [{"image": "assets/storyboards/sheet-01.png", "panel": 3, "label": "我取轩水窗共赏云月", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s05", "shots": [{"image": "assets/storyboards/sheet-02.png", "panel": 0, "label": "七夕刻印盟誓", "purpose": "source-scene", "weight": 2}, {"image": "assets/storyboards/sheet-02.png", "panel": 1, "label": "鬼节夜受惊后双双患病", "purpose": "source-scene", "weight": 1}]},
+    {"id": "s06", "shots": [{"image": "assets/storyboards/sheet-02.png", "panel": 2, "label": "双鲜酱与修补残书", "purpose": "source-scene", "weight": 1}, {"image": "assets/storyboards/sheet-02.png", "panel": 3, "label": "菜圃小屋的布衣愿景", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s07", "shots": [{"image": "assets/storyboards/sheet-03.png", "panel": 0, "label": "陈芸换男装夜游水仙庙", "purpose": "source-scene", "weight": 2}, {"image": "assets/storyboards/sheet-03.png", "panel": 1, "label": "太湖舟中看见水天一色", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s08", "shots": [{"image": "assets/storyboards/sheet-03.png", "panel": 2, "label": "陈芸与憨园焚香结盟", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s09", "shots": [{"image": "assets/storyboards/sheet-03.png", "panel": 3, "label": "家书误会与家族审问", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s10", "shots": [{"image": "assets/storyboards/sheet-04.png", "panel": 0, "label": "陈芸病中刺绣而债主逼门", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s11", "shots": [{"image": "assets/storyboards/sheet-04.png", "panel": 1, "label": "五更暖粥后的母子永诀", "purpose": "source-scene", "weight": 3}]},
+    {"id": "s12", "shots": [{"image": "assets/storyboards/sheet-04.png", "panel": 2, "label": "沈复风雪渡江求助", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s13", "shots": [{"image": "assets/storyboards/sheet-04.png", "panel": 3, "label": "阿双逃走后的空门与病榻", "purpose": "source-scene", "weight": 1}, {"image": "assets/storyboards/sheet-05.png", "panel": 0, "label": "孤灯病榻只余来世二字", "purpose": "source-scene", "weight": 3}]},
+    {"id": "s14", "shots": [{"image": "assets/storyboards/sheet-05.png", "panel": 1, "label": "回煞夜守着旧衣等待", "purpose": "source-scene", "weight": 2}, {"image": "assets/storyboards/sheet-05.png", "panel": 2, "label": "异乡墓前接连失亲", "purpose": "source-scene", "weight": 2}]},
+    {"id": "s15", "shots": [{"image": "assets/storyboards/sheet-05.png", "panel": 3, "label": "菜花地馄饨担把巧思变成共享幸福", "purpose": "core-concept", "weight": 2}]},
+    {"id": "s16", "shots": [{"image": "assets/storyboards/sheet-06.png", "panel": 0, "label": "现代伴侣共同规划日常", "purpose": "modern-analogy", "weight": 1}, {"image": "assets/storyboards/sheet-06.png", "panel": 1, "label": "四个现实支点共同承托亲密", "purpose": "modern-analogy", "weight": 2}]},
+    {"id": "s17", "shots": [{"image": "assets/storyboards/sheet-06.png", "panel": 2, "label": "四记文本与单一叙述视角", "purpose": "limitation", "weight": 2}]},
+    {"id": "s18", "shots": [{"image": "assets/storyboards/sheet-06.png", "panel": 3, "label": "暖粥月窗与稳固屋檐", "purpose": "author-commentary", "weight": 3}, {"image": "assets/storyboards/sheet-07.png", "panel": 0, "label": "共同加固屋檐承托温柔", "purpose": "author-commentary", "weight": 2}]}
+  ]
+}

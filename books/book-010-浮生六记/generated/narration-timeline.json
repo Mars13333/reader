@@ -1,0 +1,176 @@
+{
+  "bookId": "book-010-浮生六记",
+  "scriptSha256": "DFC611547F4DFE1B4DA24FDD7692CD3288EAA88384D399AA5F7CBF3E3BC30DBC",
+  "engine": "火山引擎豆包语音合成2.0",
+  "voiceName": "刘飞男声",
+  "speaker": "zh_male_liufei_uranus_bigtts",
+  "resourceId": "seed-tts-2.0",
+  "speechRate": -10,
+  "pitchRate": 0,
+  "sampleRate": 24000,
+  "pronunciationOverrides": [
+    {
+      "term": "沈复",
+      "ttsText": "审复",
+      "pronunciation": "shěn fù"
+    }
+  ],
+  "pronunciationOverridesSha256": "4D8F0E14DCE13EC6349175F525160E5C77A64D9897F47E026C5732097D093835",
+  "bookPickerIntroSha256": "D6C19D65BA6C15AB08EC56A5CF5B0D107FF9C49C9FEA6571ABACA5BA8E48DEDC",
+  "intro": {
+    "standard": "book-picker-v2",
+    "text": "大家好，今天我们讲《浮生六记》。",
+    "spokenStartSeconds": 3.5614166666666667,
+    "spokenEndSeconds": 6.65,
+    "contentStartsSeconds": 7.2,
+    "requestedDurationSeconds": 7.2
+  },
+  "audioFile": "assets/audio/narration.wav",
+  "totalDurationSeconds": 677.1085833333333,
+  "segments": [
+    {
+      "id": "s01",
+      "section": "深情为何仍会失守",
+      "startSeconds": 7.2,
+      "endSeconds": 26.971541666666667,
+      "durationSeconds": 19.771541666666668,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s02",
+      "section": "一碗粥的开始",
+      "startSeconds": 27.39154166666667,
+      "endSeconds": 53.616416666666666,
+      "durationSeconds": 26.224875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s03",
+      "section": "婚姻先从知己开始",
+      "startSeconds": 54.03641666666667,
+      "endSeconds": 87.36779166666668,
+      "durationSeconds": 33.331375,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s04",
+      "section": "把喜欢过成日常",
+      "startSeconds": 87.78779166666668,
+      "endSeconds": 124.92858333333334,
+      "durationSeconds": 37.140791666666665,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s05",
+      "section": "誓言照不住所有风险",
+      "startSeconds": 125.34858333333334,
+      "endSeconds": 158.94458333333333,
+      "durationSeconds": 33.596,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s06",
+      "section": "贫寒里的共同创造",
+      "startSeconds": 159.36458333333331,
+      "endSeconds": 196.61899999999997,
+      "durationSeconds": 37.254416666666664,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s07",
+      "section": "陈芸想看更大的世界",
+      "startSeconds": 197.03899999999996,
+      "endSeconds": 235.2274166666666,
+      "durationSeconds": 38.18841666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s08",
+      "section": "浪漫越界后的代价",
+      "startSeconds": 235.6474166666666,
+      "endSeconds": 275.1512916666666,
+      "durationSeconds": 39.503875,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s09",
+      "section": "误解如何变成驱逐",
+      "startSeconds": 275.57129166666664,
+      "endSeconds": 312.18724999999995,
+      "durationSeconds": 36.61595833333333,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s10",
+      "section": "贫困不是背景音",
+      "startSeconds": 312.60724999999996,
+      "endSeconds": 350.624875,
+      "durationSeconds": 38.017625,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s11",
+      "section": "第二碗粥",
+      "startSeconds": 351.044875,
+      "endSeconds": 391.87529166666667,
+      "durationSeconds": 40.830416666666665,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s12",
+      "section": "朋友能托住多久",
+      "startSeconds": 392.2952916666667,
+      "endSeconds": 432.73075,
+      "durationSeconds": 40.43545833333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s13",
+      "section": "来世二字",
+      "startSeconds": 433.15075,
+      "endSeconds": 470.63979166666667,
+      "durationSeconds": 37.489041666666665,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s14",
+      "section": "失去没有在葬礼结束",
+      "startSeconds": 471.0597916666667,
+      "endSeconds": 508.40316666666666,
+      "durationSeconds": 37.343375,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s15",
+      "section": "闲情不是旁枝",
+      "startSeconds": 508.8231666666667,
+      "endSeconds": 547.3273333333334,
+      "durationSeconds": 38.50416666666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s16",
+      "section": "把古人的故事带回今天",
+      "startSeconds": 547.7473333333334,
+      "endSeconds": 586.1797916666667,
+      "durationSeconds": 38.43245833333334,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s17",
+      "section": "必须保留的距离",
+      "startSeconds": 586.5997916666666,
+      "endSeconds": 627.2918333333333,
+      "durationSeconds": 40.69204166666667,
+      "pauseAfterSeconds": 0.42
+    },
+    {
+      "id": "s18",
+      "section": "爱要落在可持续的生活里",
+      "startSeconds": 627.7118333333333,
+      "endSeconds": 675.7085833333333,
+      "durationSeconds": 47.99675,
+      "pauseAfterSeconds": 1.4
+    }
+  ]
+}

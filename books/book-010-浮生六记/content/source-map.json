@@ -1,0 +1,50 @@
+{
+  "book": "浮生六记",
+  "author": "沈复",
+  "sourceMode": "local-source",
+  "sourcePath": "source/浮生六记.txt",
+  "sourceSha256": "6207A44680B5DC7DF5114FD71993710C9078D30BBA5497308843CDE8448F6B9E",
+  "sourceEncoding": "UTF-8",
+  "chapterLines": {
+    "目录": "1-7",
+    "闺房记乐": "13-71",
+    "闲情记趣": "77-109",
+    "坎坷记愁": "115-169",
+    "浪游记快": "175-261"
+  },
+  "terminology": [
+    {"canonical": "沈复", "pronunciation": "shěn fù", "requiredInScript": true, "avoid": ["沈覆"], "sourceRefs": ["15"]},
+    {"canonical": "陈芸", "pronunciation": "chén yún", "requiredInScript": true, "avoid": ["陈云", "芸娘子"], "sourceRefs": ["17"]},
+    {"canonical": "沧浪亭", "pronunciation": "cāng làng tíng", "requiredInScript": true, "avoid": ["沧郎亭"], "sourceRefs": ["15", "31"]},
+    {"canonical": "憨园", "pronunciation": "hān yuán", "requiredInScript": true, "avoid": ["憨院"], "sourceRefs": ["65-71"]},
+    {"canonical": "逢森", "pronunciation": "féng sēn", "requiredInScript": true, "avoid": ["逢生"], "sourceRefs": ["129", "169"]},
+    {"canonical": "青君", "pronunciation": "qīng jūn", "requiredInScript": true, "avoid": ["清君"], "sourceRefs": ["129"]}
+  ],
+  "selfReview": {
+    "status": "passed",
+    "reviewedAt": "2026-08-24T09:19:54.3857518Z",
+    "scriptSha256": "DFC611547F4DFE1B4DA24FDD7692CD3288EAA88384D399AA5F7CBF3E3BC30DBC",
+    "checks": {
+      "terminologyVerified": true,
+      "openingRetentionReviewed": true,
+      "retentionStructureReviewed": true,
+      "sentenceFluencyReviewed": true,
+      "sourceConsistencyReviewed": true,
+      "storyCoverageReviewed": true,
+      "contentFlowReviewed": true,
+      "contentLayerDistinctionReviewed": true,
+      "semanticVisualMomentsReviewed": true,
+      "closingBrandLineReviewed": true,
+      "originalityAndCommentaryReviewed": true
+    }
+  },
+  "editorialRules": [
+    "成片是原创评论，不是有声书或逐章复述。",
+    "人物、情节、反转、结局和作品判断只以绑定原文为内容事实来源。",
+    "不限题材，默认服务没读过原著的观众；先让观众进入具体场景，再进行分析。",
+    "核心内容链为：现实问题→具体场景→原著核心案例或剧情→解释原理→回到现实→补充局限。",
+    "自然提示原著内容、现代类比和作者判断的边界，但不要切成生硬的标签段。",
+    "整条口播最后一句固定为“这里是陈拾叁，陪你一起读书破万卷。”。",
+    "不展示原书内页、连续长段文字、影视剧照或演员形象。"
+  ]
+}

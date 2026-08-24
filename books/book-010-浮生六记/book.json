@@ -1,0 +1,42 @@
+{
+  "id": "book-010-浮生六记",
+  "title": "浮生六记",
+  "author": "沈复",
+  "audience": "泛读书用户",
+  "status": "completed",
+  "createdAt": "2026-08-24T09:07:41.903Z",
+  "updatedAt": "2026-08-24T10:00:55.357Z",
+  "fixedNarration": {
+    "speaker": "zh_male_liufei_uranus_bigtts",
+    "voiceName": "刘飞男声",
+    "speechRate": -10
+  },
+  "editorialStandards": {
+    "allowClosingBrandLine": false,
+    "requiredClosingBrandLine": "这里是陈拾叁，陪你一起读书破万卷。",
+    "channelStandard": "source-led-unbounded-v2",
+    "retentionStandard": "hook-payoff-loops-v1",
+    "visualStandard": "book-jacket-v2",
+    "storyboardStandard": "portrait-2x2-9x16-v1",
+    "sourceStandard": "local-source-v1",
+    "contentStandard": "source-analogy-commentary-v2",
+    "visualCoverageStandard": "semantic-key-moments-v1",
+    "introStandard": "book-picker-v2",
+    "durationRangeSeconds": {
+      "minimum": 480,
+      "maximum": 1140,
+      "default": 720
+    }
+  },
+  "deliverables": {
+    "video": "output/final.mp4",
+    "covers": [
+      "output/cover-3x4.png",
+      "output/cover-4x3.png"
+    ],
+    "publishCopy": "output/publish-copy.txt",
+    "subtitles": false,
+    "standaloneAudio": false
+  },
+  "completedAt": "2026-08-24T10:00:55.358Z"
+}

@@ -2,6 +2,7 @@
   "name": "ai-book-video",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "book:auto": "node scripts/book-auto.mjs",
